@@ -31,7 +31,7 @@ sizes and checksums). Three ways:
 - **Read the documents and reports** on GitHub: nothing to download.
 - **Everything** (about 28 GB): `git clone https://github.com/sradha-tcs/tcs-corp-delivery.git`, or GitHub Desktop
   (it always downloads everything).
-- **Without the packages** (about 0.4 GB), then only the packages you need:
+- **Without the packages** (about 0.6 GB), then only the packages you need:
 
   ```bash
   git clone --filter=blob:none --sparse https://github.com/sradha-tcs/tcs-corp-delivery.git
