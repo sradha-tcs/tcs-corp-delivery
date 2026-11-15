@@ -55,7 +55,7 @@ The decision log is kept in the code repository (https://github.com/sradha-tcs/t
 | KB-D-066 | Project documents on migrated-page-content-edam | Approved |
 | KB-D-067 | Dynamic Media for all assets (new root) | Approved |
 | KB-D-068 | Three review roots and their purposes | Approved |
-| KB-D-070 | Delivery content in its own repository, sradha-tcs/tcs-corp-delivery | Proposed |
+| KB-D-070 | Delivery content in its own repository, sradha-tcs/tcs-corp-delivery | Approved |
 
 ## Screenshots
 

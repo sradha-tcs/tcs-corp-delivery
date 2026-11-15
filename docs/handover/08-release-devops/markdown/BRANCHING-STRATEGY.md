@@ -49,7 +49,7 @@ primary: true
 | feature/*, fix/*, docs/* | Short-lived; deleted after merge |
 | main-backup-27-10-2026, release/main-code, qa | Kept on request (not merged through a PR) |
 
-The delivery content (migration packages, sheets, scripts and this documentation) is in its own repository, `sradha-tcs/tcs-corp-delivery` (KB-D-070, 15 November 2026); the former delivery branch `migrated-page-content-edam` and `home-content-package` stay in the code repository until they are retired. The former delivery branch `migrated-page-content` was deleted on 8 November 2026 (tag `archive/migrated-page-content-2026-11-08`); `edam-main` was merged into main (PR #198) and deleted.
+The delivery content (migration packages, sheets, scripts and this documentation) is in its own repository, `sradha-tcs/tcs-corp-delivery` (KB-D-070, 15 November 2026); the former delivery branch `migrated-page-content-edam` and `home-content-package` were deleted from the code repository on 15 November 2026, with their tags. The former delivery branch `migrated-page-content` was deleted on 8 November 2026 (tag `archive/migrated-page-content-2026-11-08`); `edam-main` was merged into main (PR #198) and deleted.
 
 ## Screenshots
 
