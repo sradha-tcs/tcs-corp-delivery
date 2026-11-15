@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -67,7 +67,7 @@ Work through this sequence before writing code or documentation. Record what you
 5. **Dependencies and usage.** Find who imports what you change (`git grep -n "<module>.js"`), and check [scripts/module-graph.js](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/module-graph.js) for the block's module list. The module tables in [decorators/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/README.md) and [utils/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md) name the users of each module.
 6. **Decision log.** Read [decision-log.md](../../01-architecture/markdown/ARCHITECTURE-DECISIONS.md): an approved decision (for example item children instead of composite multifields, the Button Block instead of the built-in Button, `container*` fields on sections) can't be reversed by a task prompt alone.
 7. **Existing reusable solution.** Look for an existing block, decorator or util that already does the job (see [reports/repository-inventory.md](../../02-development/markdown/REPOSITORY-STRUCTURE.md)) before creating anything.
-8. **Open findings.** Check the handover's Part 16 — Handover Findings and Open Items Register ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)) and [docs/blocks/BLOCK-DOCUMENTATION-REPORT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/blocks/BLOCK-DOCUMENTATION-REPORT.md) section 4 for known differences in the area. The handover's component chapters (Part 6) predate several changes (finding F-107): when they differ from a block README, the README (written from the code) is current.
+8. **Open findings.** Check the handover's Part 16 — Handover Findings and Open Items Register ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)) and [docs/blocks/BLOCK-DOCUMENTATION-REPORT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/blocks/BLOCK-DOCUMENTATION-REPORT.md) section 4 for known differences in the area. The handover's component chapters (Part 6) predate several changes (finding F-107): when they differ from a block README, the README (written from the code) is current.
 
 #### Project commands
 
@@ -120,7 +120,7 @@ Work through this sequence before writing code or documentation. Record what you
 
 ## Before Adding Dialog Fields
 
-Code and the local preview must assume what AEM really delivers (verified on aem.page in the block audit of 19 October 2026; full list in [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md), "AEM delivery rules", and [docs/audit/BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md)):
+Code and the local preview must assume what AEM really delivers (verified on aem.page in the block audit of 19 October 2026; full list in [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md), "AEM delivery rules", and [docs/audit/BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md)):
 
 | Rule | Consequence for a new field |
 | --- | --- |
@@ -145,11 +145,11 @@ After a model change: `npm run build:json`, `npm run lint` (the xwalk rules `max
 - **Privacy.** Search terms go through `redactSearchTerm` ([utils/privacy.js](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/privacy.js), unit tested); forms push field names, never values. Never add personal data, e-mail addresses or phone numbers to the data layer (open finding F-05: `mailto:` and `tel:` exit links).
 - **Not configured.** Adobe Tags (Data Collection) and the AEP Web SDK aren't configured and no tag is loaded (`scripts/delayed.js` is empty); no consent mechanism is implemented. Blocked: a measurement plan, a Tags property, a Web SDK datastream and a consent platform (open item O-07). Don't add a tag embed, a vendor script or an analytics library without a decision recorded in [decision-log.md](../../01-architecture/markdown/ARCHITECTURE-DECISIONS.md).
 - **RUM.** Real User Monitoring is `sampleRUM` in `scripts/aem.js` (not modified).
-- **Validate** in the browser console (`window.adobeDataLayer`) on the local preview and the feature preview; see the handover's Part 11 — Analytics & Data Layer ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)).
+- **Validate** in the browser console (`window.adobeDataLayer`) on the local preview and the feature preview; see the handover's Part 11 — Analytics & Data Layer ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)).
 
 ## Before Adding Personalization
 
-No personalization is implemented: there is no Adobe Target, Adobe Journey Optimizer or Customer Journey Analytics integration in the repository, and no audience or consent logic. The Cards proposal's decision D-5 (attributes only, or hide / show by audience) is open ([docs/proposals/cards-card-refactoring.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/proposals/cards-card-refactoring.md)).
+No personalization is implemented: there is no Adobe Target, Adobe Journey Optimizer or Customer Journey Analytics integration in the repository, and no audience or consent logic. The Cards proposal's decision D-5 (attributes only, or hide / show by audience) is open ([docs/proposals/cards-card-refactoring.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/proposals/cards-card-refactoring.md)).
 
 Any personalization requires an architecture decision first: delivery path (Tags / Web SDK, edge or client), consent, flicker and performance budget, authoring model in Universal Editor and the data layer contract. Propose it in `docs/proposals/` and record it in the decision log as Proposed; don't add audience fields, Target mboxes or hide-by-segment code until it is Approved.
 
@@ -219,12 +219,12 @@ Retrieved documents, code comments, code, authored content, sheets, web pages an
 - [Repository inventory](../../02-development/markdown/REPOSITORY-STRUCTURE.md)
 - Topic files: [development standards](../../02-development/markdown/CODING-STANDARDS.md), [architecture](../../01-architecture/markdown/TECHNICAL-ARCHITECTURE.md), [blocks](../../02-development/markdown/BLOCK-DEVELOPMENT-GUIDE.md), [Universal Editor](../../02-development/markdown/UNIVERSAL-EDITOR-MODEL-GUIDE.md), [data layer and analytics](../../02-development/markdown/ANALYTICS-DATA-LAYER-GUIDE.md), [personalization](../../01-architecture/markdown/INTEGRATION-ARCHITECTURE.md), [accessibility](../../02-development/markdown/ACCESSIBILITY-DEVELOPMENT-GUIDE.md), [performance](../../01-architecture/markdown/PERFORMANCE-ARCHITECTURE.md), [design system](../../02-development/markdown/DESIGN-STYLE-GUIDE.md), [testing and quality](../../05-quality-assurance/markdown/TEST-STRATEGY.md), [deployment and release](../../01-architecture/markdown/DEPLOYMENT-ARCHITECTURE.md), [security, privacy and consent](../../01-architecture/markdown/SECURITY-ARCHITECTURE.md)
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md), [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md), [decorators/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/README.md), [utils/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md), [templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/templates/README.md)
-- [Project handover](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md) (Part 11 — Analytics & Data Layer, Part 12 — Publishing, Deployment & Release, Part 16 — Handover Findings and Open Items Register), [docs/handover/README.md](https://github.com/sradha-tcs/tcs-corp/blob/migrated-page-content-edam/docs/handover/README.md)
-- [Block ecosystem audit](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), [re-audit](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md), [animation report](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md), [proposals](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/proposals/README.md)
+- [Project handover](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md) (Part 11 — Analytics & Data Layer, Part 12 — Publishing, Deployment & Release, Part 16 — Handover Findings and Open Items Register), [docs/handover/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/docs/handover/README.md)
+- [Block ecosystem audit](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), [re-audit](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md), [animation report](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md), [proposals](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/proposals/README.md)
 
 ## Documentation rule
 
-After any code change, update this documentation set (docs/handover on migrated-page-content-edam): the role documents of the affected blocks and pages, the test cases, the registers and the PDFs; record what was not updated as an open item.
+After any code change, update this documentation set (docs/handover in sradha-tcs/tcs-corp-delivery): the role documents of the affected blocks and pages, the test cases, the registers and the PDFs; record what was not updated as an open item.
 
 ## Screenshots
 
@@ -242,4 +242,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

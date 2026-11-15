@@ -213,7 +213,7 @@ Every block model except the header and footer ends with an **Additional** tab (
 | Anchor ID | `classes_anchor` | Must match `anchor-…` (lower case, digits, hyphens); becomes the block's `id` ([decorators/block-options-decorator.js](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/block-options-decorator.js)), de-duplicated as `-2`, `-3`; also the block's data layer id |
 | Hide block | `classes_hideblock` | Hidden on the site and in Preview; faded in edit mode; the content stays in the delivered HTML (not an embargo mechanism) |
 | Padding / Margin Left, Right, Top, Bottom | `classes_padding*`, `classes_margin*` | `--space-*` tokens, the same at every breakpoint |
-| Animation Type, Motion Speed, Animation Trigger | `classes_animation*` | Content animation on 19 blocks; never in edit mode or for reduced motion ([docs/animation/README.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md)) |
+| Animation Type, Motion Speed, Animation Trigger | `classes_animation*` | Content animation on 19 blocks; never in edit mode or for reduced motion ([docs/animation/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md)) |
 | Background animation | `classes_bganimation` | Hero, Teaser, Quote, Testimonial, Form Variations, Conversation Canvas |
 
 Container sections (Columns Container, Tabs Container, Gen Carousel) carry the same options as `container*` fields (`containerAnchor`, `containerHide`, ...), applied by `applySectionBlockOptions` in [scripts/scripts.js](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/scripts.js).
@@ -256,7 +256,7 @@ Pages under `block-library/` and `site-global-templates/` can't be published (`e
 
 Re-publication after a correction is the verified recovery path, recorded in the handover revision history:
 
-- Package 1.0.9 was published; on `aem.live` the container sections' Additional tab had no effect (re-audit finding R-L-1). The code was corrected (PR #121), package 1.0.10 installed, and its 312 pages previewed, published and reindexed (312 / 312) (handover revisions 2.30, 2.31; [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md)).
+- Package 1.0.9 was published; on `aem.live` the container sections' Additional tab had no effect (re-audit finding R-L-1). The code was corrected (PR #121), package 1.0.10 installed, and its 312 pages previewed, published and reindexed (312 / 312) (handover revisions 2.30, 2.31; [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md)).
 - Package 1.0.12: one page timed out on its first preview and went through on retry (handover revision 2.35).
 
 For one page: fix the content (or restore a version), check it in Preview mode, publish to preview, verify, then publish to live. If a correction is not visible, check that the referenced item (fragment, sheet, asset) was published too, then escalate to L1 (Admin API status, re-preview and cache operations are for administrators; see [administration-and-operations.md](../../07-administration-governance/markdown/ADMINISTRATION-AND-GOVERNANCE-GUIDE.md#publishing-and-the-admin-api)).
@@ -382,7 +382,7 @@ This is the author definition of done V-01 of handover Part 17 — Operations Gu
 | Bulk metadata ignored | `metadata.source` not configured or pattern wrong | 13.17 |
 | Block missing on the site | Hide block on | 13.18 |
 | Anchor link doesn't jump | Missing `anchor-` prefix or duplicate id | 13.19 |
-| Lottie, video or captions 404 | Non-image asset not published | 13.30 and [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) |
+| Lottie, video or captions 404 | Non-image asset not published | 13.30 and [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) |
 | Fragment, modal or tab content missing | Fragment not published | 13.31 |
 
 Escalate to L1 with the AEM and published path, locale, steps, screenshot and time (handover Part 14, 14.5).
@@ -393,9 +393,9 @@ Escalate to L1 with the AEM and published path, locale, steps, screenshot and ti
 - [blocks.md](../../02-development/markdown/BLOCK-DEVELOPMENT-GUIDE.md), [content-architecture.md](../../01-architecture/markdown/CONTENT-ARCHITECTURE.md), [indexing-and-search.md](../../01-architecture/markdown/INTEGRATION-ARCHITECTURE.md), [data-layer-and-analytics.md](../../02-development/markdown/ANALYTICS-DATA-LAYER-GUIDE.md), [personalization.md](../../01-architecture/markdown/INTEGRATION-ARCHITECTURE.md), [design-system.md](../../02-development/markdown/DESIGN-STYLE-GUIDE.md)
 - [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md) and each block README
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md): AEM delivery rules, Additional tab, item children, site structure and site data
-- [docs/animation/README.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md), [templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/templates/README.md)
-- Handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)): Part 5 — Authoring Fundamentals, Part 6 — Component Library, Part 7 — Taxonomy, Part 8 — Metadata, Part 9 — Data Sheets, Part 15 — Appendix (15.5 Authoring Cheat Sheets), Part 18 — New Joiner Training Guide
-- [docs/audit/README.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/README.md): block audit and re-audit
+- [docs/animation/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md), [templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/templates/README.md)
+- Handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)): Part 5 — Authoring Fundamentals, Part 6 — Component Library, Part 7 — Taxonomy, Part 8 — Metadata, Part 9 — Data Sheets, Part 15 — Appendix (15.5 Authoring Cheat Sheets), Part 18 — New Joiner Training Guide
+- [docs/audit/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/README.md): block audit and re-audit
 
 ## Screenshots
 

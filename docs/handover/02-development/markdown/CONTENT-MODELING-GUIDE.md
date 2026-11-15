@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: ["AGENTS.md","docs/handover/knowledge-base/universal-editor.md","docs/handover/knowledge-base/blocks.md"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | AGENTS.md, docs/handover/knowledge-base/universal-editor.md, docs/handover/knowledge-base/blocks.md |
 | Related documents | — |
 | Related AEM paths | — |
@@ -52,7 +52,7 @@ primary: true
 
 The rules below are verified on aem.page (block audit of 19 October 2026) and in AGENTS.md; code and the local preview must assume what AEM really delivers.
 
-**AEM delivery rules (verified on aem.page, block audit of 19 October 2026, docs/audit/ on the branch migrated-page-content-edam).** Code and the local preview must assume what AEM really delivers:
+**AEM delivery rules (verified on aem.page, block audit of 19 October 2026, archive/docs-before-role-docs-2026-11-08/docs/audit/ in the repository sradha-tcs/tcs-corp-delivery).** Code and the local preview must assume what AEM really delivers:
 - A block that isn't key-value gets an **empty row for each dialog tab** of its model (Form Variations, Table, Accordion, Hero, Embed, Fragment, Modal): read rows by `data-aue-prop` in the editor, else skip empty tab rows, never "the first row".
 - An item row whose model has a `classes` field starts with a cell **"&lt;node name&gt;, &lt;classes&gt;"** (e.g. `email, field-text`); a `name` field is the item node's name, not a cell.
 - In key-value blocks, **grouped fields** (`prefix_name`) aren't delivered: use plain names (Video `poster` / `posterAlt`).
@@ -127,4 +127,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

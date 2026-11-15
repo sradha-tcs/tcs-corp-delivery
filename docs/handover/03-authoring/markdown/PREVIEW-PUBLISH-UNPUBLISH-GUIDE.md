@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: ["docs/handover/knowledge-base/authoring.md"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | docs/handover/knowledge-base/authoring.md |
 | Related documents | — |
 | Related AEM paths | — |
@@ -76,7 +76,7 @@ Pages under `block-library/` and `site-global-templates/` can't be published (`e
 
 Re-publication after a correction is the verified recovery path, recorded in the handover revision history:
 
-- Package 1.0.9 was published; on `aem.live` the container sections' Additional tab had no effect (re-audit finding R-L-1). The code was corrected (PR #121), package 1.0.10 installed, and its 312 pages previewed, published and reindexed (312 / 312) (handover revisions 2.30, 2.31; [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md)).
+- Package 1.0.9 was published; on `aem.live` the container sections' Additional tab had no effect (re-audit finding R-L-1). The code was corrected (PR #121), package 1.0.10 installed, and its 312 pages previewed, published and reindexed (312 / 312) (handover revisions 2.30, 2.31; [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md)).
 - Package 1.0.12: one page timed out on its first preview and went through on retry (handover revision 2.35).
 
 For one page: fix the content (or restore a version), check it in Preview mode, publish to preview, verify, then publish to live. If a correction is not visible, check that the referenced item (fragment, sheet, asset) was published too, then escalate to L1 (Admin API status, re-preview and cache operations are for administrators; see [administration-and-operations.md](../../07-administration-governance/markdown/ADMINISTRATION-AND-GOVERNANCE-GUIDE.md#publishing-and-the-admin-api)).
@@ -124,4 +124,4 @@ Source: handover Part 12, 12.1.9. Admin API operations act immediately on the pu
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

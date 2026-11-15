@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -45,7 +45,7 @@ primary: true
 
 - Code merged into `main` through a PR with green checks and a feature preview URL.
 - `npm run lint` and `npm test` pass (real results).
-- Block README, knowledge base, decision log and **docs/handover on migrated-page-content-edam** updated.
+- Block README, knowledge base, decision log and **docs/handover in sradha-tcs/tcs-corp-delivery** updated.
 - Test cases executed with evidence; defects closed or accepted.
 - Content published and indexed where needed.
 
@@ -65,4 +65,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

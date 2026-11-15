@@ -8,8 +8,8 @@ owner: "Solution Architect"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: ["docs/handover/knowledge-base/decision-log.md","docs/handover/knowledge-base/reports/discrepancy-report.md"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | docs/handover/knowledge-base/decision-log.md, docs/handover/knowledge-base/reports/discrepancy-report.md |
 | Related documents | — |
 | Related AEM paths | — |
@@ -69,7 +69,7 @@ Recommendations recorded in the handover (Part 16 recommendations, 11.7, 12.3) a
 | --- | --- | --- |
 | Integrate Adobe Tags with the Web SDK and the ACDL extension in `scripts/delayed.js`, with consent | Handover 11.7; F-06; O-07 (blocked: measurement plan, Tags property, datastream, consent platform) | Recommendation (not approved) |
 | Run `npm test` in the Build workflow; tag releases; replace the boilerplate values of `package.json`, the PR template and the Sidekick project name | F-37; handover 12.3 | Recommendation (not approved) |
-| Configure a CDN or root redirect for `/` → `/en/` and apply the per-locale redirects sheets | F-36; O-03 | Specified in [redirects-cdn.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/proposals/redirects-cdn.md) (KB-D-055, Proposed) |
+| Configure a CDN or root redirect for `/` → `/en/` and apply the per-locale redirects sheets | F-36; O-03 | Specified in [redirects-cdn.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/proposals/redirects-cdn.md) (KB-D-055, Proposed) |
 | Add hreflang alternates and a language switcher | F-39 | Recommendation (not approved) |
 | Connect a form back end before publishing any form, or hide forms | F-01; O-08 | Recommendation (not approved) |
 | Align the handover's Part 6 component chapters with the block READMEs | F-107 | Recommendation (not approved) |
@@ -92,4 +92,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Release Lead / DevOps Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -47,10 +47,9 @@ primary: true
 | --- | --- |
 | main | The site; every code PR targets it (since 8 November 2026) |
 | feature/*, fix/*, docs/* | Short-lived; deleted after merge |
-| migrated-page-content-edam | Delivery branch: migration packages, sheets, scripts and this documentation; not served (.hlxignore *) |
 | main-backup-27-10-2026, release/main-code, qa | Kept on request (not merged through a PR) |
 
-The former delivery branch `migrated-page-content` was deleted on 8 November 2026 (tag `archive/migrated-page-content-2026-11-08`); `edam-main` was merged into main (PR #198) and deleted.
+The delivery content (migration packages, sheets, scripts and this documentation) is in its own repository, `sradha-tcs/tcs-corp-delivery` (KB-D-070, 15 November 2026); the former delivery branch `migrated-page-content-edam` and `home-content-package` stay in the code repository until they are retired. The former delivery branch `migrated-page-content` was deleted on 8 November 2026 (tag `archive/migrated-page-content-2026-11-08`); `edam-main` was merged into main (PR #198) and deleted.
 
 ## Screenshots
 
@@ -68,4 +67,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

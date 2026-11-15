@@ -8,8 +8,8 @@ owner: "AMS / Support Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -154,7 +154,7 @@ primary: true
 
 ## Further Site-Wide Issues
 
-Each of these has symptoms, root cause, diagnosis, resolution, validation and escalation in the handover's Part 13 — Global Troubleshooting Guide ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)):
+Each of these has symptoms, root cause, diagnosis, resolution, validation and escalation in the handover's Part 13 — Global Troubleshooting Guide ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)):
 
 | Issue | Handover section |
 | --- | --- |
@@ -197,8 +197,8 @@ Don't collect:
 ## Related
 
 - [development-standards.md](../../02-development/markdown/CODING-STANDARDS.md), [testing-and-quality.md](../../05-quality-assurance/markdown/TEST-STRATEGY.md), [universal-editor.md](../../02-development/markdown/UNIVERSAL-EDITOR-MODEL-GUIDE.md), [decorators-and-utilities.md](../../02-development/markdown/DECORATORS-AND-UTILITIES-GUIDE.md), [architecture.md](../../01-architecture/markdown/TECHNICAL-ARCHITECTURE.md), [indexing-and-search.md](../../01-architecture/markdown/INTEGRATION-ARCHITECTURE.md), [data-layer-and-analytics.md](../../02-development/markdown/ANALYTICS-DATA-LAYER-GUIDE.md), [security-privacy-consent.md](../../01-architecture/markdown/SECURITY-ARCHITECTURE.md), [personalization.md](../../01-architecture/markdown/INTEGRATION-ARCHITECTURE.md), [administration-and-operations.md](../../07-administration-governance/markdown/ADMINISTRATION-AND-GOVERNANCE-GUIDE.md), [deployment-and-release.md](../../01-architecture/markdown/DEPLOYMENT-ARCHITECTURE.md)
-- Handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)): Part 13 — Global Troubleshooting Guide, 14.3 Logs, 14.4 Common Errors, 14.5 Escalation Matrix, 12.6 Rollback
-- [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md) "AEM delivery rules", "Module preloading"; [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md); [docs/audit/REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) (operations and content actions)
+- Handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)): Part 13 — Global Troubleshooting Guide, 14.3 Logs, 14.4 Common Errors, 14.5 Escalation Matrix, 12.6 Rollback
+- [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md) "AEM delivery rules", "Module preloading"; [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md); [docs/audit/REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) (operations and content actions)
 
 ## Screenshots
 
@@ -216,4 +216,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

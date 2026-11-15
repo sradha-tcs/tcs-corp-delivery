@@ -8,8 +8,8 @@ owner: "Solution Architect"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: ["docs/handover/knowledge-base/security-privacy-consent.md","utils/privacy.js"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | docs/handover/knowledge-base/security-privacy-consent.md, utils/privacy.js |
 | Related documents | — |
 | Related AEM paths | — |
@@ -208,7 +208,7 @@ Third-party services loaded at runtime: the X widget script, the YouTube / Vimeo
 | Third-party players and the X widget load without consent | Blocked: consent model | Audit section 7 |
 | Form Submit action accepts any URL; no form back end defined | Requires validation (handover O-08: form back end and privacy notices) | `blocks/form-variations/form-variations.js` |
 | `mailto:` / `tel:` links in the data layer | Open (F-05) | Handover Part 16 |
-| Raw query in the Search page URL (`?q=`) | Blocked until Tags / Web SDK exists (R-D-12) | [`docs/audit/REAUDIT-2026-10-20.md`](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) |
+| Raw query in the Search page URL (`?q=`) | Blocked until Tags / Web SDK exists (R-D-12) | [`docs/audit/REAUDIT-2026-10-20.md`](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) |
 | CSP leaves `frame-src`, `connect-src`, `img-src`, `style-src` unrestricted | By design for embeds; Requires validation by a security review | `head.html` |
 | Preview / live access restriction, Admin API roles | Not recorded | Handover 2.7.3 |
 
@@ -220,8 +220,8 @@ Third-party services loaded at runtime: the X widget script, the YouTube / Vimeo
 - [`AGENTS.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md) (Security Considerations, Accessibility)
 - [`utils/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md), [`decorators/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/README.md)
 - [`blocks/embed/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/embed/README.md), [`blocks/video/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/video/README.md), [`blocks/form-variations/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/form-variations/README.md)
-- [`docs/audit/BLOCK-ECOSYSTEM-AUDIT.md`](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) (section 7), [`docs/audit/REAUDIT-2026-10-20.md`](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md)
-- Handover Part 2 — Solution Architecture (2.7), Part 11 — Analytics & Data Layer (11.7.6, 11.9), Part 13 — Global Troubleshooting Guide (13.23, 13.24), Part 16 — Handover Findings and Open Items Register ([`TCS-CORP-HANDOVER.md`](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md))
+- [`docs/audit/BLOCK-ECOSYSTEM-AUDIT.md`](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) (section 7), [`docs/audit/REAUDIT-2026-10-20.md`](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md)
+- Handover Part 2 — Solution Architecture (2.7), Part 11 — Analytics & Data Layer (11.7.6, 11.9), Part 13 — Global Troubleshooting Guide (13.23, 13.24), Part 16 — Handover Findings and Open Items Register ([`TCS-CORP-HANDOVER.md`](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md))
 
 ## Screenshots
 
@@ -239,4 +239,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

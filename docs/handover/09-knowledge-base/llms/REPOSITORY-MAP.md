@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -77,8 +77,8 @@ Only paths tracked by Git (file counts from `git ls-files`):
 ├── component-models.json          generated: dialog fields
 ├── decorators/                    28 decorator modules + README.md
 ├── docs/                          not served: handover/knowledge-base/ (this knowledge base); the handover, audit,
-│                                  blocks report, animation, proposals and EDAM set-up are on the branch
-│                                  migrated-page-content-edam under docs/ (KB-D-066)
+│                                  blocks report, animation, proposals and EDAM set-up are in the repository
+│                                  sradha-tcs/tcs-corp-delivery (KB-D-066, KB-D-070)
 ├── drafts/                        14 tracked local-preview drafts (header / Canvas journey pages, 2 logos)
 ├── favicon.ico
 ├── fonts/inter-variable.woff2     self-hosted Inter variable font
@@ -109,7 +109,7 @@ Only paths tracked by Git (file counts from `git ls-files`):
 | `head.html` modulepreload block, `scripts/module-graph.js` | [tools/modules/generate-module-graph.mjs](https://github.com/sradha-tcs/tcs-corp/blob/main/tools/modules/generate-module-graph.mjs) | `npm run build:modules` | [test/modules/module-graph.test.mjs](https://github.com/sradha-tcs/tcs-corp/blob/main/test/modules/module-graph.test.mjs) |
 | Generated sections of `blocks/README.md` and the block READMEs | [tools/docs/generate-block-docs.mjs](https://github.com/sradha-tcs/tcs-corp/blob/main/tools/docs/generate-block-docs.mjs) | `npm run build:docs` | [test/docs/block-docs.test.mjs](https://github.com/sradha-tcs/tcs-corp/blob/main/test/docs/block-docs.test.mjs) |
 | `docs/blocks/BLOCK-DOCUMENTATION-REPORT.md` | [tools/docs/report-block-docs.mjs](https://github.com/sradha-tcs/tcs-corp/blob/main/tools/docs/report-block-docs.mjs) | `node tools/docs/report-block-docs.mjs` | — |
-| Handover PDF | Local scripts in `.handover-work/` (pandoc, typst) | See [docs/handover/README.md](https://github.com/sradha-tcs/tcs-corp/blob/migrated-page-content-edam/docs/handover/README.md) | — |
+| Handover PDF | Local scripts in `.handover-work/` (pandoc, typst) | See [docs/handover/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/docs/handover/README.md) | — |
 
 ## What Is Served
 
@@ -131,4 +131,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

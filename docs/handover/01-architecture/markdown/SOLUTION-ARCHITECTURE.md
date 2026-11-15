@@ -8,8 +8,8 @@ owner: "Solution Architect"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: ["docs/handover/knowledge-base/project-overview.md","AGENTS.md"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | docs/handover/knowledge-base/project-overview.md, AGENTS.md |
 | Related documents | — |
 | Related AEM paths | /content/tcs-corp/language-masters/en |
@@ -75,7 +75,7 @@ This page gives anyone joining the TCS Corporate Website project, human or AI ag
 | Sites | 13 locale sites, plus the language master published temporarily for review |
 | Hosts in use | `main--tcs-corp--sradha-tcs.aem.page` (preview) and `main--tcs-corp--sradha-tcs.aem.live` (live) |
 | Production domain and CDN | Not recorded (handover open item O-03, "To be confirmed") |
-| Handover | [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md) version 2.37 (PDF: [TCS-CORP-HANDOVER.pdf](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.pdf)), status "Draft for review"; approvals pending |
+| Handover | [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md) version 2.37 (PDF: [TCS-CORP-HANDOVER.pdf](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.pdf)), status "Draft for review"; approvals pending |
 
 ## Business and Program Objectives
 
@@ -212,7 +212,7 @@ flowchart LR
 | Live (main) | `https://main--tcs-corp--sradha-tcs.aem.live/` | Published content | `main` |
 | Production | Not recorded (open item O-03) | Published content | `main` |
 
-Code is trunk-based: short-lived branches merged into `main` through pull requests; Code Sync deploys every push (handover 12.2, 12.3; [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md#publishing-process)). CI ([.github/workflows/main.yaml](https://github.com/sradha-tcs/tcs-corp/blob/main/.github/workflows/main.yaml)) runs `npm ci` and `npm run lint` on every push; unit tests and PageSpeed checks are not run by CI. Content is previewed and published from AEM. The only Git tags (`home-content-package_*`) mark earlier states of the `home-content-package` downloads branch (deliverables such as the handover PDF), not code releases. Branch protection, approval workflows and SLAs are not recorded (open items O-05, O-06, O-13).
+Code is trunk-based: short-lived branches merged into `main` through pull requests; Code Sync deploys every push (handover 12.2, 12.3; [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md#publishing-process)). CI ([.github/workflows/main.yaml](https://github.com/sradha-tcs/tcs-corp/blob/main/.github/workflows/main.yaml)) runs `npm ci` and `npm run lint` on every push; unit tests and PageSpeed checks are not run by CI. Content is previewed and published from AEM. The Git tags (`home-content-package_*`, `migrated-page-content-edam_*`) mark earlier states of the content branches, whose content moved to `sradha-tcs/tcs-corp-delivery` (KB-D-070), not code releases. Branch protection, approval workflows and SLAs are not recorded (open items O-05, O-06, O-13).
 
 ## Technology Stack
 
@@ -303,7 +303,7 @@ Full definitions: [glossary.md](../../GLOSSARY.md).
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md): verified project rules
 - [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md): block inventory
 - [utils/site.js](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/site.js): locales and the language master review
-- Handover Part 1 — Project Overview, Part 3 — Site Structure, Part 16 — Handover Findings and Open Items Register: [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)
+- Handover Part 1 — Project Overview, Part 3 — Site Structure, Part 16 — Handover Findings and Open Items Register: [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)
 
 ## Screenshots
 
@@ -321,4 +321,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

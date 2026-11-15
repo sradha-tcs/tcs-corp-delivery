@@ -395,7 +395,7 @@ Ownership, review cadences and approval flows: Not recorded in the repository (h
 - [blocks.md](../../02-development/markdown/BLOCK-DEVELOPMENT-GUIDE.md), [project-overview.md](./SOLUTION-ARCHITECTURE.md), [repository-structure.md](../../02-development/markdown/REPOSITORY-STRUCTURE.md) — related knowledge base files
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md) — "Site structure and site data", "AEM delivery rules"
 - [utils/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md), [templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/templates/README.md), [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md)
-- Handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)): Part 3 — Site Structure, Part 4 — Content Architecture, Part 7 — Taxonomy Documentation, Part 8 — Metadata Documentation, Part 9 — Data Sheets Documentation, Part 10 — Error Pages
+- Handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)): Part 3 — Site Structure, Part 4 — Content Architecture, Part 7 — Taxonomy Documentation, Part 8 — Metadata Documentation, Part 9 — Data Sheets Documentation, Part 10 — Error Pages
 
 ## Screenshots
 

@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: ["docs/handover/knowledge-base/blocks.md","tools/docs/blocks.json"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | docs/handover/knowledge-base/blocks.md, tools/docs/blocks.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -184,7 +184,7 @@ How the relationships work:
 | Unused candidate | No usage found | None recorded. Columns has 0 instances in the library package (its 37 library instances were migrated), but production usage is not verified |
 | Requires validation | Behaviour not verifiable from the repository | Production usage of compatibility-only components and legacy multifields (blocked: AEM author access or a content export) |
 
-The deprecation precedents (built-in Columns and Button, PR #119; audit section 4) define how a block is retired: remove it from every filter, keep its definition and model, keep the code reading its content, migrate the block library content (`.home-work/bl/bl-migrate.mjs`, not in git), record the replacement and the migration in the block README and `tools/docs/blocks.json` (`replacement`, `deprecation`), and leave production content until its usage is known ([BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), sections 4 and 11).
+The deprecation precedents (built-in Columns and Button, PR #119; audit section 4) define how a block is retired: remove it from every filter, keep its definition and model, keep the code reading its content, migrate the block library content (`.home-work/bl/bl-migrate.mjs`, not in git), record the replacement and the migration in the block README and `tools/docs/blocks.json` (`replacement`, `deprecation`), and leave production content until its usage is known ([BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), sections 4 and 11).
 
 ## Variation Strategy
 
@@ -199,7 +199,7 @@ A visual or behavioural variant is expressed inside the existing block, in this 
 | Background colour | Shared labels, classes and tokens | Teaser BG Color, Columns Container BG Color (`containerBgColor`), Section Style (`bg-grey`, `bg-dark`, `bg-dark-green`) | Sets only the colour; use the theme tokens for text |
 | Item model | Child items with their own fields | Card style and Card colour per Card / List Item; Teaser Link and Stat | Repeating content is items, never a new block per variant |
 
-Duplicate options were removed in the audit in favour of one canonical control: Hero and Table List Motion Type became the Additional tab animations (`addLegacyMotion` in `utils/motion.js` still maps old values), List / Cards Component ID became the Anchor ID, Separator Width "Auto" and Variant "Custom" were dropped, Quote / Testimonial Style (one option, no effect) and the Teaser Personalization option (no runtime) were removed ([BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), section 4). A new option must do something on the delivered page; options AEM never delivers (the built-in Button's View, Icon and Alignment; the built-in Columns' Additional tab) are not offered.
+Duplicate options were removed in the audit in favour of one canonical control: Hero and Table List Motion Type became the Additional tab animations (`addLegacyMotion` in `utils/motion.js` still maps old values), List / Cards Component ID became the Anchor ID, Separator Width "Auto" and Variant "Custom" were dropped, Quote / Testimonial Style (one option, no effect) and the Teaser Personalization option (no runtime) were removed ([BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), section 4). A new option must do something on the delivered page; options AEM never delivers (the built-in Button's View, Icon and Alignment; the built-in Columns' Additional tab) are not offered.
 
 ## Dialog Standards
 
@@ -227,7 +227,7 @@ The full module inventory and the rules for shared code are in [decorators-and-u
 
 ## Extend an Existing Block or Create a New One
 
-The audits assessed every pair of similar blocks and retained both only where the authored structure, the data source or the design component differs ([BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), section 4):
+The audits assessed every pair of similar blocks and retained both only where the authored structure, the data source or the design component differs ([BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), section 4):
 
 | Pair | Decision | Reason |
 | --- | --- | --- |
@@ -355,12 +355,12 @@ These counts describe the library package, not production usage; production usag
 - [universal-editor.md](./UNIVERSAL-EDITOR-MODEL-GUIDE.md): models, definitions, filters, dialog and field conventions
 - [decorators-and-utilities.md](./DECORATORS-AND-UTILITIES-GUIDE.md): shared modules and their rules
 - [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md): generated inventory, categories, relationships and shared conventions
-- [docs/blocks/BLOCK-DOCUMENTATION-REPORT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/blocks/BLOCK-DOCUMENTATION-REPORT.md): documentation inventory and handover-vs-code discrepancies
-- [docs/audit/BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) and [docs/audit/REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md): audits, redundancy assessments, migrations
-- [docs/proposals/README.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/proposals/README.md): the open Cards and Card refactoring proposal (decisions D-1 to D-6 open)
-- [docs/animation/README.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md): animation and skeleton loading
+- [docs/blocks/BLOCK-DOCUMENTATION-REPORT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/blocks/BLOCK-DOCUMENTATION-REPORT.md): documentation inventory and handover-vs-code discrepancies
+- [docs/audit/BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) and [docs/audit/REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md): audits, redundancy assessments, migrations
+- [docs/proposals/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/proposals/README.md): the open Cards and Card refactoring proposal (decisions D-1 to D-6 open)
+- [docs/animation/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md): animation and skeleton loading
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md): project rules
-- Handover Part 6 — Component Library and Part 15.4 — Content Modeling Standards: [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)
+- Handover Part 6 — Component Library and Part 15.4 — Content Modeling Standards: [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)
 - Other knowledge base files: [architecture.md](../../01-architecture/markdown/TECHNICAL-ARCHITECTURE.md), [authoring.md](../../03-authoring/markdown/AUTHORING-GUIDE.md), [design-system.md](./DESIGN-STYLE-GUIDE.md), [accessibility.md](./ACCESSIBILITY-DEVELOPMENT-GUIDE.md), [data-layer-and-analytics.md](./ANALYTICS-DATA-LAYER-GUIDE.md), [testing-and-quality.md](../../05-quality-assurance/markdown/TEST-STRATEGY.md), [decision-log.md](../../01-architecture/markdown/ARCHITECTURE-DECISIONS.md)
 
 ## Per-block developer documentation
@@ -414,4 +414,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

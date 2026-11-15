@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: ["docs/handover/knowledge-base/universal-editor.md","models/","component-models.json"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | docs/handover/knowledge-base/universal-editor.md, models/, component-models.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -258,7 +258,7 @@ The code keeps reading values authored before a model change; content is migrate
 | Separator Width Auto, Variant Custom | Widths, Default | Still read | None required |
 | Page Header CTA style `''` | `tertiary` | `''` still a text link | None required |
 
-Sources: [BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) section 11, [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) section 5, [DIALOG-OPTIONS-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/DIALOG-OPTIONS-2026-10-20.md) section 5.
+Sources: [BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) section 11, [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) section 5, [DIALOG-OPTIONS-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/DIALOG-OPTIONS-2026-10-20.md) section 5.
 
 ## Procedure: Adding or Changing a Field
 
@@ -314,8 +314,8 @@ Sources: [BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp/blob/
 - [decorators-and-utilities.md](./DECORATORS-AND-UTILITIES-GUIDE.md): `properties.js`, `cells.js`, `multifield.js`, `links.js` and the other shared modules
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md): "AEM delivery rules", "Dialog tabs", "Item children", "Additional tab", "Content Modeling"
 - [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md) and the generated field tables in each block README
-- [docs/audit/DIALOG-OPTIONS-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/DIALOG-OPTIONS-2026-10-20.md), [docs/audit/BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), [docs/audit/REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md)
-- Handover Part 15.4 — Content Modeling Standards and 13.5 — Component Dialog Fields Missing or Outdated in Universal Editor: [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)
+- [docs/audit/DIALOG-OPTIONS-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/DIALOG-OPTIONS-2026-10-20.md), [docs/audit/BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), [docs/audit/REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md)
+- Handover Part 15.4 — Content Modeling Standards and 13.5 — Component Dialog Fields Missing or Outdated in Universal Editor: [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)
 - [aem.live: component model definitions](https://www.aem.live/developer/component-model-definitions)
 - Other knowledge base files: [authoring.md](../../03-authoring/markdown/AUTHORING-GUIDE.md), [content-architecture.md](../../01-architecture/markdown/CONTENT-ARCHITECTURE.md), [development-standards.md](./CODING-STANDARDS.md), [testing-and-quality.md](../../05-quality-assurance/markdown/TEST-STRATEGY.md), [troubleshooting.md](../../06-operations-support/markdown/TROUBLESHOOTING-RUNBOOK.md), [decision-log.md](../../01-architecture/markdown/ARCHITECTURE-DECISIONS.md)
 
@@ -335,4 +335,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

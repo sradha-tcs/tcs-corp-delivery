@@ -240,9 +240,9 @@ Pure logic goes into utils or block-local data modules with a Node test in `test
 - [universal-editor.md](./UNIVERSAL-EDITOR-MODEL-GUIDE.md): models whose values these helpers read
 - [decorators/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/README.md) (with the data layer contract) and [utils/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md)
 - [templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/templates/README.md): templates using the template, author-bio and contact-list decorators
-- [docs/animation/README.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md): motion and skeleton decorators
+- [docs/animation/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md): motion and skeleton decorators
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md#shared-code-decorators-and-utils): shared code rules, data layer, module preloading
-- Handover Part 2.3 — Component Architecture and Part 11 — Analytics & Data Layer: [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)
+- Handover Part 2.3 — Component Architecture and Part 11 — Analytics & Data Layer: [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)
 - Other knowledge base files: [architecture.md](../../01-architecture/markdown/TECHNICAL-ARCHITECTURE.md), [development-standards.md](./CODING-STANDARDS.md), [performance.md](../../01-architecture/markdown/PERFORMANCE-ARCHITECTURE.md), [data-layer-and-analytics.md](./ANALYTICS-DATA-LAYER-GUIDE.md), [security-privacy-consent.md](../../01-architecture/markdown/SECURITY-ARCHITECTURE.md), [testing-and-quality.md](../../05-quality-assurance/markdown/TEST-STRATEGY.md)
 
 ## Module inventory (from the READMEs)

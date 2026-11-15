@@ -8,8 +8,8 @@ owner: "Product Owner / Program Governance"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -112,7 +112,7 @@ No verified permission model was identified. AEM user groups, permissions per lo
 ## Assets
 
 - Assets live under `/content/dam/tcs-corp/`; the path is in the `includes` of [paths.json](https://github.com/sradha-tcs/tcs-corp/blob/main/paths.json).
-- Images are copied to the media bus when the page using them is published. **Other DAM files** (Lottie JSON, videos, captions) are served only once they are published themselves; the re-audit lists publishing them as an open operations action (R-B-2, R-D-6 in [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md); handover revision 2.31 "Open").
+- Images are copied to the media bus when the page using them is published. **Other DAM files** (Lottie JSON, videos, captions) are served only once they are published themselves; the re-audit lists publishing them as an open operations action (R-B-2, R-D-6 in [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md); handover revision 2.31 "Open").
 - The DAM folder convention, image licensing rules, maximum video size and approved embed domains are not recorded (open item O-16).
 
 ## Metadata
@@ -198,7 +198,7 @@ The handover (14.2) proposes thresholds of LCP ≤ 2.5 s, CLS ≤ 0.1 and INP �
 ## Support handoff
 
 - The AMS handover checklist (access, knowledge transfer sessions, documentation, open items) is handover Part 14, 14.10; no item of it is recorded as completed in the repository.
-- Documentation to hand over: [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md), [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md) and the block READMEs, [decorators/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/README.md), [utils/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md), [templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/templates/README.md), the handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md), PDF built as described in [docs/handover/README.md](https://github.com/sradha-tcs/tcs-corp/blob/migrated-page-content-edam/docs/handover/README.md)), the audits in [docs/audit/](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/README.md).
+- Documentation to hand over: [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md), [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md) and the block READMEs, [decorators/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/README.md), [utils/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md), [templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/templates/README.md), the handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md), PDF built as described in [docs/handover/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/docs/handover/README.md)), the audits in [docs/audit/](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/README.md).
 - Blocked: support hours, ticketing tool and queue, contacts and SLAs (open item O-13), a site configuration export (14.10.3 #7).
 
 ## Routine operations
@@ -224,8 +224,8 @@ The handover proposes an escalation path (Part 14, 14.5): Author → L1 → L2 �
 | Item | Rule / state | Source |
 | --- | --- | --- |
 | Withdrawn components | Remove from the filters, keep the definition and model; content authored before stays editable (Columns, Button (basic), Interactive Dashboard) | [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md#deprecated-blocks) |
-| Legacy composite multifields (labelled as authored before in Hero, Teaser, Page Header, Testimonial, List, Filter List; Anchor List and Footer multifields also still read) | Still read; remove only after confirming no production content uses them (blocked: a production content check) | [BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), handover F-87 |
-| Renamed or replaced fields | Video `placeholder_image` → `poster` (code reads both); Canvas Button `linkType` → `buttonVariant`; Hero `classes_motion` and Table List `motion` → Animation Type (mapped in code); form item `name` → `fieldName` when key case matters | [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) "Operations and content actions" |
+| Legacy composite multifields (labelled as authored before in Hero, Teaser, Page Header, Testimonial, List, Filter List; Anchor List and Footer multifields also still read) | Still read; remove only after confirming no production content uses them (blocked: a production content check) | [BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md), handover F-87 |
+| Renamed or replaced fields | Video `placeholder_image` → `poster` (code reads both); Canvas Button `linkType` → `buttonVariant`; Hero `classes_motion` and Table List `motion` → Animation Type (mapped in code); form item `name` → `fieldName` when key case matters | [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) "Operations and content actions" |
 | Production content migration | Built-in Columns → Columns Container / Column Breaks, built-in Buttons → Button blocks, and the field moves above: listed as content actions; done for the block library packages, not recorded for production content | Re-audit, section 5 |
 | Removed options | Teaser Personalization, Quote / Testimonial Style, Separator Auto / Custom, Columns Additional tab, Teaser Title size | Audit section 11; handover revision 2.32 |
 | Temporary language master review | Remove the `REVIEW*` code and paths after the rollout to `/en` | [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md#site-structure-and-site-data) |
@@ -251,8 +251,8 @@ The full list is handover Part 14, 14.9 and Part 16 — Handover Findings and Op
 - [authoring.md](../../03-authoring/markdown/AUTHORING-GUIDE.md), [deployment-and-release.md](../../01-architecture/markdown/DEPLOYMENT-ARCHITECTURE.md)
 - [architecture.md](../../01-architecture/markdown/TECHNICAL-ARCHITECTURE.md), [content-architecture.md](../../01-architecture/markdown/CONTENT-ARCHITECTURE.md), [indexing-and-search.md](../../01-architecture/markdown/INTEGRATION-ARCHITECTURE.md), [security-privacy-consent.md](../../01-architecture/markdown/SECURITY-ARCHITECTURE.md), [decision-log.md](../../01-architecture/markdown/ARCHITECTURE-DECISIONS.md)
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md): site structure and site data, notes on `paths.json`, bulk metadata and redirects
-- [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md), [docs/audit/README.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/README.md)
-- Handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)): Part 12 — Publishing, Deployment & Release, Part 13 — Global Troubleshooting Guide, Part 14 — Operational Runbook & AMS Handover, Part 16 — Handover Findings and Open Items Register, Part 17 — Operations Guide
+- [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md), [docs/audit/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/README.md)
+- Handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)): Part 12 — Publishing, Deployment & Release, Part 13 — Global Troubleshooting Guide, Part 14 — Operational Runbook & AMS Handover, Part 16 — Handover Findings and Open Items Register, Part 17 — Operations Guide
 
 ## Screenshots
 
@@ -270,4 +270,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

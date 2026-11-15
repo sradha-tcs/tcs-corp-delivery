@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -64,7 +64,7 @@ The code implements WCAG 2.1 AA behaviour ([AGENTS.md](https://github.com/sradha
 - Authored icons are `img` with an empty alt (`decorateIcons` in `scripts/aem.js`); button arrows and list arrows are CSS masks, not content.
 - Lottie animations: `role="img"` with the label, or `aria-hidden` without one; a non-image reference's link text is its Alt (`animationLabel`, `utils/media.js`; AGENTS.md "AEM delivery rules").
 - Background videos are `aria-hidden` and their iframe has `tabindex="-1"`.
-- Text over images (Hero, Teaser Background image / Card) relies on overlays; axe can't judge text over images, so the re-audit tested them in targeted browser checks ([re-audit](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md), section 2).
+- Text over images (Hero, Teaser Background image / Card) relies on overlays; axe can't judge text over images, so the re-audit tested them in targeted browser checks ([re-audit](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md), section 2).
 
 ## Links and buttons
 
@@ -107,4 +107,4 @@ The code implements WCAG 2.1 AA behaviour ([AGENTS.md](https://github.com/sradha
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

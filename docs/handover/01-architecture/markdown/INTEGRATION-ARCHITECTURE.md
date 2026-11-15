@@ -8,8 +8,8 @@ owner: "Solution Architect"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: ["docs/handover/knowledge-base/indexing-and-search.md","docs/handover/knowledge-base/personalization.md","docs/handover/knowledge-base/data-layer-and-analytics.md","helix-query.yaml"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | docs/handover/knowledge-base/indexing-and-search.md, docs/handover/knowledge-base/personalization.md, docs/handover/knowledge-base/data-layer-and-analytics.md, helix-query.yaml |
 | Related documents | — |
 | Related AEM paths | — |
@@ -245,9 +245,9 @@ A checklist derived from the configuration and code (results of a full run are N
 - [content-architecture.md](./CONTENT-ARCHITECTURE.md) — metadata model, taxonomy, locales, references
 - [blocks.md](../../02-development/markdown/BLOCK-DEVELOPMENT-GUIDE.md), [data-layer-and-analytics.md](../../02-development/markdown/ANALYTICS-DATA-LAYER-GUIDE.md) — related knowledge base files
 - [blocks/list/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/list/README.md), [blocks/filter-list/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/filter-list/README.md), [blocks/conversation-canvas/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/conversation-canvas/README.md), [blocks/cards/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/cards/README.md)
-- [utils/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md), [decorators/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/README.md), [docs/animation/README.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md) (skeletons)
+- [utils/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md), [decorators/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/README.md), [docs/animation/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md) (skeletons)
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md) — "Site structure and site data" notes on the query index
-- Handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)): Part 2 — Solution Architecture (2.10.7, 2.11.4), Part 12 — Publishing, Deployment & Release (12.1.7, 12.1.9), Part 13 — Global Troubleshooting Guide (13.9–13.11, 13.25), Part 16 — Handover Findings and Open Items Register
+- Handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)): Part 2 — Solution Architecture (2.10.7, 2.11.4), Part 12 — Publishing, Deployment & Release (12.1.7, 12.1.9), Part 13 — Global Troubleshooting Guide (13.9–13.11, 13.25), Part 16 — Handover Findings and Open Items Register
 
 ## Personalization (section)
 
@@ -269,7 +269,7 @@ A checklist derived from the configuration and code (results of a full run are N
 
 | Decision | Source |
 | --- | --- |
-| The Teaser's Personalization option (a class `personalization` and `data-personalization="true"` that nothing read) was removed from the dialog and the code; library content was migrated; Teasers authored with it still render | Handover revision 2.27 (19 October 2026), audit defect D-B-3 ([`docs/audit/BLOCK-ECOSYSTEM-AUDIT.md`](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md)), re-audit section 1 ([`docs/audit/REAUDIT-2026-10-20.md`](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md)), [`blocks/teaser/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/teaser/README.md) |
+| The Teaser's Personalization option (a class `personalization` and `data-personalization="true"` that nothing read) was removed from the dialog and the code; library content was migrated; Teasers authored with it still render | Handover revision 2.27 (19 October 2026), audit defect D-B-3 ([`docs/audit/BLOCK-ECOSYSTEM-AUDIT.md`](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md)), re-audit section 1 ([`docs/audit/REAUDIT-2026-10-20.md`](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md)), [`blocks/teaser/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/teaser/README.md) |
 | Every block is classified "Not personalizable"; personalized rendering, fallback, flicker, cache-key and analytics tests are blocked until an approved personalization design exists | Audit section 8 |
 | Area-specific navigation and footers are content choices (inherited Navigation / Footer pages), not audience personalization | [`blocks/header/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/header/README.md), [`blocks/footer/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/footer/README.md) |
 
@@ -345,8 +345,8 @@ Requirements recorded for a future design; none is implemented, and the design i
 - [Security, privacy and consent](./SECURITY-ARCHITECTURE.md)
 - [`blocks/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md) and the block READMEs (Personalization sections)
 - [`AGENTS.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md) (Site structure and site data: metadata columns)
-- [`docs/audit/BLOCK-ECOSYSTEM-AUDIT.md`](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) (sections 7, 8, 9)
-- Handover Part 2 — Solution Architecture (2.9.8), Part 11 — Analytics & Data Layer (11.7.7), Part 16 — Handover Findings and Open Items Register ([`TCS-CORP-HANDOVER.md`](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md))
+- [`docs/audit/BLOCK-ECOSYSTEM-AUDIT.md`](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) (sections 7, 8, 9)
+- Handover Part 2 — Solution Architecture (2.9.8), Part 11 — Analytics & Data Layer (11.7.7), Part 16 — Handover Findings and Open Items Register ([`TCS-CORP-HANDOVER.md`](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md))
 
 ## Screenshots
 
@@ -364,4 +364,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

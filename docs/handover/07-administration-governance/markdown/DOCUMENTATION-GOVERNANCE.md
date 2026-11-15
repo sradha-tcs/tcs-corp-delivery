@@ -8,8 +8,8 @@ owner: "Product Owner / Program Governance"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -49,7 +49,7 @@ primary: true
 
 ## Where the documentation lives
 
-- **This set** (role documents, registers, knowledge base for humans and agents, PDFs): branch `migrated-page-content-edam`, folder `docs/handover/`.
+- **This set** (role documents, registers, knowledge base for humans and agents, PDFs): repository `sradha-tcs/tcs-corp-delivery`, folder `docs/handover/`.
 - **The knowledge base for code work**: `docs/handover/knowledge-base/` in the code repository (`main`), the starting point of AGENTS.md; this set's knowledge base (09) is generated from it.
 - **Block READMEs**: `blocks/<block>/README.md` in the code repository (generated sections by `npm run build:docs`).
 
@@ -84,4 +84,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

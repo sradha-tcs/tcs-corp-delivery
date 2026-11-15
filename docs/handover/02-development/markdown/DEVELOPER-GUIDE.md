@@ -61,7 +61,7 @@ primary: true
 3. Change code, models (`npm run build:json`), imports (`npm run build:modules`), block docs (`npm run build:docs`).
 4. Run `npm run lint` and `npm test`; report the real results.
 5. Open a PR into `main` with a feature preview URL; checks green; a human merges.
-6. **Update this documentation set** (docs/handover on migrated-page-content-edam) in the same change (see the documentation governance).
+6. **Update this documentation set** (docs/handover in sradha-tcs/tcs-corp-delivery) in the same change (see the documentation governance).
 
 ## Commands (results of 15 November 2026)
 

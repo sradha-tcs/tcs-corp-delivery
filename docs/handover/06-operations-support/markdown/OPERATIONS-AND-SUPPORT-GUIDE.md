@@ -8,8 +8,8 @@ owner: "AMS / Support Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -89,7 +89,7 @@ The operations calendar of Part 17, 17.8 is a proposed default (time zone and ca
 ## Support handoff
 
 - The AMS handover checklist (access, knowledge transfer sessions, documentation, open items) is handover Part 14, 14.10; no item of it is recorded as completed in the repository.
-- Documentation to hand over: [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md), [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md) and the block READMEs, [decorators/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/README.md), [utils/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md), [templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/templates/README.md), the handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md), PDF built as described in [docs/handover/README.md](https://github.com/sradha-tcs/tcs-corp/blob/migrated-page-content-edam/docs/handover/README.md)), the audits in [docs/audit/](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/README.md).
+- Documentation to hand over: [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md), [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md) and the block READMEs, [decorators/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/README.md), [utils/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/README.md), [templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/templates/README.md), the handover ([TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md), PDF built as described in [docs/handover/README.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/docs/handover/README.md)), the audits in [docs/audit/](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/README.md).
 - Blocked: support hours, ticketing tool and queue, contacts and SLAs (open item O-13), a site configuration export (14.10.3 #7).
 
 ## Screenshots
@@ -108,4 +108,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

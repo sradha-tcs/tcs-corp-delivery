@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -52,7 +52,7 @@ primary: true
 | 5 | Is Adobe Tags configured? | No: data layer only (integration architecture) |
 | 6 | Which command regenerates component-models.json? | npm run build:json |
 | 7 | Where is a test result allowed to say Passed? | Only with execution evidence (test strategy) |
-| 8 | Where is this documentation updated after a code change? | docs/handover on migrated-page-content-edam (documentation governance) |
+| 8 | Where is this documentation updated after a code change? | docs/handover in sradha-tcs/tcs-corp-delivery (documentation governance) |
 
 ## Screenshots
 
@@ -70,4 +70,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

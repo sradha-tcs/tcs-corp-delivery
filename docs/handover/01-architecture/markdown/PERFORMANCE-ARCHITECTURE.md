@@ -8,8 +8,8 @@ owner: "Solution Architect"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-15"
+lastValidated: "2026-11-15"
 sourceFiles: ["docs/handover/knowledge-base/performance.md","scripts/scripts.js","styles/styles.css"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 15 November 2026 |
+| Last validated | 15 November 2026 |
 | Source files | docs/handover/knowledge-base/performance.md, scripts/scripts.js, styles/styles.css |
 | Related documents | — |
 | Related AEM paths | — |
@@ -160,7 +160,7 @@ flowchart LR
 
 ## DOM size, listeners and observers
 
-- DOM size: no measurement or limit is recorded. Skeletons add about 20–40 small spans per block, removed with the skeleton; animations add no wrapper elements ([animation report](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md), section I).
+- DOM size: no measurement or limit is recorded. Skeletons add about 20–40 small spans per block, removed with the skeleton; animations add no wrapper elements ([animation report](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md), section I).
 - Data-layer listeners are delegated: one capturing listener per event type on `document` (`click`, `toggle`, `close`, `play` / `pause` / `ended`, `submit`, `change`), registered once (`trackInteractions`).
 - Observers: one IntersectionObserver for all animations (`decorators/motion-decorator.js`); `utils/viewport.js` `onVisible` / `watchVisibility` for deferred work (Embed, Video, Gen Carousel, Lottie in `decorators/animation-decorator.js`); own IntersectionObservers in the Separator (motion) and the Modal (inside the editor); ResizeObserver in scrollers, masonry, Table, Anchor List, Header and the Canvas controller (resizes measured once they settle).
 - Scroll listeners are passive and scheduled (Anchor List, Canvas controller); the Canvas never measures while scrolling.
@@ -207,7 +207,7 @@ None: no Adobe Target, AJO or edge personalization runtime exists, so there is n
 | Lighthouse (local, Chrome) | Lab scores with mobile / desktop presets | handover revision 2.36 |
 | Throttled browser runs (4× CPU, mobile network) | LCP, header time, all-sections time, blocking time on the local preview and on aem.live (branch vs main, 3 runs) | handover revision 2.36 |
 | Performance panel recording | Long tasks, forced layouts, the block that decorates last in the first section | handover 13.16 diagnosis |
-| Audit harness ([`docs/audit/tools/harness.mjs`](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/tools/harness.mjs)) | Every block library and curated page at 1440 / 1024 / 768 / 600 / 390px: console errors, failed requests, block status, overflow, broken images, axe, data layer, clicks | [audit](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) section 2, [re-audit](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) section 2; uses delivery-workspace paths (Requires validation before re-use) |
+| Audit harness ([`docs/audit/tools/harness.mjs`](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/tools/harness.mjs)) | Every block library and curated page at 1440 / 1024 / 768 / 600 / 390px: console errors, failed requests, block status, overflow, broken images, axe, data layer, clicks | [audit](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) section 2, [re-audit](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) section 2; uses delivery-workspace paths (Requires validation before re-use) |
 | `npm test` | `test/modules/module-graph.test.mjs` keeps the preload graph and `head.html` current | repository |
 | RUM (`sampleRUM`) | Field Core Web Vitals | No results recorded |
 
@@ -220,7 +220,7 @@ Validate before merging (AGENTS.md "Publishing Process"; handover 12.4 release c
 | Change | Validate |
 | --- | --- |
 | A block's JS or CSS | PageSpeed Insights 100 on the feature preview of a page using the block (mobile and desktop); `npm run build:modules` if imports changed, then `npm test`; no forced layout while decorating (reads before writes in one frame); no new eager work in the first section; the block README's "Performance Considerations" updated |
-| A dialog option or combination | The block library page of the option, first section and below the fold; options that load media or data (Image loading Eager / Lazy, Background animation, Lotto, autoplay video, List sources) checked for LCP and CLS; the [dialog options report](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/DIALOG-OPTIONS-2026-10-20.md) "Responsive and performance" section is the model (CSS-only options: no new requests, listeners or blocking resources) |
+| A dialog option or combination | The block library page of the option, first section and below the fold; options that load media or data (Image loading Eager / Lazy, Background animation, Lotto, autoplay video, List sources) checked for LCP and CLS; the [dialog options report](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/DIALOG-OPTIONS-2026-10-20.md) "Responsive and performance" section is the model (CSS-only options: no new requests, listeners or blocking resources) |
 | Block library pages | The harness run (0 errors, 0 failed requests, 0 overflow) and Lighthouse on a representative library page |
 | Curated design pages and key templates (Home, Insights, What we do, article) | Lighthouse mobile / desktop and a throttled run against main on aem.live; CLS from the font swap on Android-like metrics (long intro paragraphs) |
 | A new third-party script | Loaded from `scripts/delayed.js` or on interaction / visibility, never in `head.html`; CSP compatible |
@@ -247,8 +247,8 @@ Author guidance that affects performance: keep the LCP image in the first block 
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md#three-phase-page-loading) "Three-Phase Page Loading" and [Performance](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md#performance)
 - [`scripts/scripts.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/scripts.js), [`head.html`](https://github.com/sradha-tcs/tcs-corp/blob/main/head.html), [`scripts/module-graph.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/module-graph.js), [`tools/modules/generate-module-graph.mjs`](https://github.com/sradha-tcs/tcs-corp/blob/main/tools/modules/generate-module-graph.mjs), [`decorators/skeleton-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/skeleton-decorator.js), [`utils/query-index.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/query-index.js)
 - Each block README's "Performance Considerations" ([`blocks/README.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md))
-- [Animation report](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md) (I. Performance), [block ecosystem audit](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md)
-- [Handover](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md): Part 1 — 1.7.1 Performance, 2.10.14 Operational Telemetry (RUM), 13.15 and 13.16 (troubleshooting), Part 16 — F-106, revision 2.36
+- [Animation report](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/animation/README.md) (I. Performance), [block ecosystem audit](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md)
+- [Handover](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md): Part 1 — 1.7.1 Performance, 2.10.14 Operational Telemetry (RUM), 13.15 and 13.16 (troubleshooting), Part 16 — F-106, revision 2.36
 
 ## Screenshots
 
@@ -266,4 +266,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

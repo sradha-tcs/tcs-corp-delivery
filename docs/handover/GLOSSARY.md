@@ -213,10 +213,10 @@ Status from [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/
 | O-01 … O-20 | Open items "To be confirmed" (names, KPIs, domain, configuration, integrations) | Handover Part 16.3 |
 | P1 / P2 / P3 | Finding priority: blocks go-live of the feature / fix before or soon after go-live / improvement | Handover Part 16.1 |
 | BO-n, PG-n, SC-n | Business objectives, program goals, success criteria | Handover Part 1 |
-| D-A-n, D-B-n, D-C-n, D-D-n | Defects of the block ecosystem audit, by code review group (A card lists, B heroes and teasers, C containers, D forms, media and chrome) | [BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) section 10, [audit/blocks/](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/blocks/group-a-card-lists.md) |
+| D-A-n, D-B-n, D-C-n, D-D-n | Defects of the block ecosystem audit, by code review group (A card lists, B heroes and teasers, C containers, D forms, media and chrome) | [BLOCK-ECOSYSTEM-AUDIT.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/BLOCK-ECOSYSTEM-AUDIT.md) section 10, [audit/blocks/](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/blocks/group-a-card-lists.md) |
 | L-n | Audit defects found on the live (published) site | Same register |
-| R-A-n … R-D-n, R-L-n | Re-audit defects by review (a–d) and found live after publishing (L) | [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) section 4 |
-| D-1 … D-6, C-n, G1 | Cards proposal: open product owner decisions, confirmations to test, groups of existing Cards | [cards-card-refactoring.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/proposals/cards-card-refactoring.md) |
+| R-A-n … R-D-n, R-L-n | Re-audit defects by review (a–d) and found live after publishing (L) | [REAUDIT-2026-10-20.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/audit/REAUDIT-2026-10-20.md) section 4 |
+| D-1 … D-6, C-n, G1 | Cards proposal: open product owner decisions, confirmations to test, groups of existing Cards | [cards-card-refactoring.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/proposals/cards-card-refactoring.md) |
 | Handover version (e.g. 2.37) | Revision of the handover document; each row of its revision history names the change | Handover Document Control |
 
 ## Acronyms
@@ -258,7 +258,7 @@ Status from [blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/
 - [project-overview.md](./01-architecture/markdown/SOLUTION-ARCHITECTURE.md), [repository-structure.md](./02-development/markdown/REPOSITORY-STRUCTURE.md), [references.md](./09-knowledge-base/llms/SOURCE-OF-TRUTH.md)
 - [architecture.md](./01-architecture/markdown/TECHNICAL-ARCHITECTURE.md), [blocks.md](./02-development/markdown/BLOCK-DEVELOPMENT-GUIDE.md), [content-architecture.md](./01-architecture/markdown/CONTENT-ARCHITECTURE.md), [data-layer-and-analytics.md](./02-development/markdown/ANALYTICS-DATA-LAYER-GUIDE.md), [design-system.md](./02-development/markdown/DESIGN-STYLE-GUIDE.md), [personalization.md](./01-architecture/markdown/INTEGRATION-ARCHITECTURE.md)
 - [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md): delivery rules, Additional tab, item children, animation, theme
-- Handover Part 15 — Appendix (15.1 Glossary, 15.2 Acronyms) and Part 16 — Handover Findings and Open Items Register: [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp/blob/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)
+- Handover Part 15 — Appendix (15.1 Glossary, 15.2 Acronyms) and Part 16 — Handover Findings and Open Items Register: [TCS-CORP-HANDOVER.md](https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/archive/docs-before-role-docs-2026-11-08/docs/handover/TCS-CORP-HANDOVER.md)
 
 ## Screenshots
 
