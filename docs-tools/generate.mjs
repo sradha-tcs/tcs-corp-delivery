@@ -1,5 +1,5 @@
 // Documentation program (master documentation prompt, 8 November 2026): generates the role-specific
-// documentation tree docs/handover/ of the branch migrated-page-content-edam from the repository (code,
+// documentation tree docs/handover/ of the repository sradha-tcs/tcs-corp-delivery from the repository (code,
 // models, tests, READMEs, knowledge base) and the evidence of the published reference pages.
 // Usage: node generate.mjs <repo> <data dir> <evidence dir> <handover screenshots dir> <out dir>
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';

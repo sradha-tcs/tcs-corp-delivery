@@ -6,8 +6,8 @@
 > `aem-sites.sh` (the pages rebuilt with the delivery URLs, `--images dynamic-media` by default, and installed).
 > Step by step: `docs/handover/07-administration-governance/markdown/DYNAMIC-MEDIA-SETUP.md`. The full set-up below is for a separate AEM Assets environment.
 
-Everything the EDAM set-up needs from this branch runs with two scripts, each in a macOS and a Windows version,
-from the branch's root folder (the downloaded branch):
+Everything the EDAM set-up needs from this repository runs with two scripts, each in a macOS and a Windows version,
+from the repository's folder, with the packages the step needs downloaded (`download-packages.sh` / `.ps1`, README "Getting the content"):
 
 | # | Script | Where it works | What it does |
 |---|---|---|---|
@@ -20,7 +20,7 @@ same command runs again, so after an interruption or an error, run it again.
 ## Before you start
 
 - **Decisions:** E-D2 (the delivery host) is needed by step 2; E-D3 chooses `media-bus` (default) or `dynamic-media` for images.
-- **Site code for EDAM assets deployed** on the site (branch `edam-main` of the site repository) before step 2.
+- **Site code for EDAM assets deployed** on the site (the site repository) before step 2.
 - **Language master moved** on the Sites author from `/content/tcs-corp/language-master` to `/content/tcs-corp/language-masters` (Sites console > Move) and the site's path mapping changed.
 - **Access tokens** (Developer Console > Integrations > Local token, valid 24 hours) of a user allowed to upload
   assets on EDAM, and of a user allowed to install packages on the Sites author. Leave them out of the
@@ -30,7 +30,7 @@ same command runs again, so after an interruption or an error, run it again.
 
 ## Pilot: batch B001
 
-macOS (Terminal, in the branch's folder):
+macOS (Terminal, in the repository's folder):
 
 ```bash
 export EDAM_AUTHOR=https://author-p<program>-e<environment>.adobeaemcloud.com    # the Assets environment
@@ -41,7 +41,7 @@ export SITES_AUTHOR=https://author-p<program>-e<environment>.adobeaemcloud.com  
 bash aem-sites.sh --batch B001
 ```
 
-Windows (PowerShell, in the branch's folder):
+Windows (PowerShell, in the repository's folder):
 
 ```powershell
 $env:EDAM_AUTHOR = "https://author-p<program>-e<environment>.adobeaemcloud.com"   # the Assets environment

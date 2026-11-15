@@ -1,42 +1,70 @@
-# migrated-page-content-edam
+# tcs-corp-delivery
 
-Delivery branch of the tcs.com content migration driven by `URLMapping_Final_All_Levels.csv` (8,447
-rows) and the EMA ETL migration prompt. It holds migration deliverables only (no site code): the
-discovery and readiness report, the Knowledge Base, and the content packages, batch by batch.
+Delivery repository of the TCS Corporate Website (the site's code: [sradha-tcs/tcs-corp](https://github.com/sradha-tcs/tcs-corp)):
+the tcs.com content migration driven by `URLMapping_Final_All_Levels.csv` (8,447 rows) and the EMA ETL migration
+prompt. It holds migration deliverables only (no site code): the discovery and readiness report, the Knowledge Base,
+the content packages batch by batch, the consolidated sheets and reports, the tools and scripts, and the site's
+role-specific documentation (`docs/handover/`).
+
+> **Moved here on 15 November 2026** from the branch `migrated-page-content-edam` of the code repository (decision
+> KB-D-070), so that the code repository holds only code. The content is the same, at the same paths, with a fresh
+> history. The packages of the former branch `home-content-package` and of the tag
+> `archive/migrated-page-content-2026-11-08` are kept below [`archive/`](archive), the documents of the tag
+> `archive/docs-before-role-docs-2026-11-08` below `archive/docs-before-role-docs-2026-11-08/`.
 
 | Folder | Contents |
 |---|---|
-| `discovery/` | Discovery and Migration Readiness Report (`00-DISCOVERY-READINESS-REPORT.md`) and the reports 01–17 (workbook validation, target path resolution, existing pages, block inventory and variations, design archetypes, package examples, source patterns, classification, batch plan, pilot plan, decision log, migration model `17-MIGRATION-MODEL.md`) |
+| `discovery/` | Discovery and Migration Readiness Report (`00-DISCOVERY-READINESS-REPORT.md`) and the reports 01–17 |
 | `knowledge-base/` | The structured Knowledge Base (JSON): blocks, variations, design pages, canonical mapping, gaps, batches, pilot, decisions |
 | `packages/<batch>/` | The content packages of each batch (installed in AEM with Package Manager; each page and asset has its own filter) with the batch report and `batch-results.csv` |
-| `consolidated/` | Every package in installation order, the consolidated sheets (metadata, redirects, authors, placeholders, data sheets, unmapped tags), the final reconciliation and reports, and `tools/` (automatic installation, asset ID export; macOS and Windows) |
-| `packages-earlier-run-assets/` | 13 asset packages with the 1,342 assets of earlier migration runs the pages use, for **fresh environments** (merge filters: nothing changes where they exist) |
-| `packages-for-edam-sites/` | The **EDAM set-up** (assets on a separate AEM Assets environment, where content packages can't be installed): `edam-zips/` (the assets as plain zips at their DAM paths, built locally with its tools, pilot B001 included; the Metadata Import file and the tags) and `content-packages/` (the page packages with the assets' delivery URLs, built after the asset ID export). `packages/` and `consolidated/packages/` stay for a local or non-EDAM set-up |
+| `consolidated/` | Every package in installation order (`packages/`), the fix packages (`packages-fixes/`), the consolidated sheets, the reconciliation and reports, and `tools/` (automatic installation, Mac and Windows) |
+| `packages-earlier-run-assets/` | 13 asset packages with the 1,342 assets of earlier migration runs the pages use, for **fresh environments** |
+| `packages-for-edam-sites/` | The EDAM set-up (assets on a separate AEM Assets environment) |
+| `docs/handover/` | The role-specific documentation of the site (below) |
+| `archive/` | Older packages and documents (above) |
 
-## This branch
+## Getting the content
 
-The **current packages only**, for the language master below **`/content/tcs-corp/language-masters`** (published
-at `/language-masters/en/`, KB-D-065) and the EDAM set-up:
+The repository is about **28 GB**, almost all of it package zips ([PACKAGES.md](PACKAGES.md) lists them with their
+sizes and checksums). Three ways:
+
+- **Read the documents and reports** on GitHub: nothing to download.
+- **Everything** (about 28 GB): `git clone https://github.com/sradha-tcs/tcs-corp-delivery.git`, or GitHub Desktop
+  (it always downloads everything).
+- **Without the packages** (about 0.4 GB), then only the packages you need:
+
+  ```bash
+  git clone --filter=blob:none --sparse https://github.com/sradha-tcs/tcs-corp-delivery.git
+  cd tcs-corp-delivery
+  git sparse-checkout set --no-cone '/*' '!*.zip'
+  bash download-packages.sh --batch B001        # or --release <group>, --all, --archive; --dry-run lists
+  ```
+
+  On Windows (PowerShell, with Git installed) the same `git` commands, then
+  `powershell -ExecutionPolicy Bypass -File download-packages.ps1 -Batch B001`. The download scripts put every
+  package at its usual path (so the scripts below find it) and check its SHA-256.
+
+## The packages
+
+The **current packages**, for the language master below **`/content/tcs-corp/language-masters`** (published at
+`/language-masters/en/`, KB-D-065) and the EDAM set-up:
 
 | Packages | Version | Where |
 |---|---|---|
 | Page packages (60 batches) | **1.3.0** (below `/content/tcs-corp/language-masters`) | `packages/<batch>/`, `consolidated/packages/` |
 | Asset packages (338) | **1.2.0** (DAM paths, unchanged by the move) | `packages/<batch>/`, `consolidated/packages/` |
+| Fix packages (unpublished pages, folder renames) | 1.0.0 | `consolidated/packages-fixes/` |
 | Assets of earlier runs (13, fresh environments) | 1.2.0, merge filters | `packages-earlier-run-assets/` |
 | EDAM zips and content packages | pilot B001's zips; `1.3.0-edam` once the asset IDs are exported | `packages-for-edam-sites/` |
 
 Install as in `consolidated/packages/INSTALL-ORDER.md` (per batch the asset packages, then the page package); on a
 fresh environment `packages-earlier-run-assets/` first. The packages of the old root (`/content/tcs-corp/language-master`:
-page packages 1.2.0) and the superseded 1.0.0 / 1.1.0 packages are not on this branch: they are kept in the tag
-`archive/migrated-page-content-2026-11-08` (the former `migrated-page-content` branch, deleted on 8 November 2026;
-this branch is the only delivery branch since). The reports (`batch-results.csv`, the reconciliation) keep the workbook's
-paths (below the old root; the new path is the same with `language-masters`). See `discovery/17-MIGRATION-MODEL.md`,
-sections 7 to 9.
+page packages 1.2.0) and the superseded 1.0.0 / 1.1.0 packages are in `archive/archive-migrated-page-content-2026-11-08/`
+(the former `migrated-page-content` branch, deleted on 8 November 2026), the home content packages in
+`archive/home-content-package/`. The reports (`batch-results.csv`, the reconciliation) keep the workbook's paths (below
+the old root; the new path is the same with `language-masters`). See `discovery/17-MIGRATION-MODEL.md`, sections 7 to 9.
 
-Before installing on an author that has the old root, move the existing tree (Sites console > Move, references
-adjusted) and have the site's path mapping changed for the new root (`edam-main` of the site repository).
-
-## Documentation (KB-D-066, KB-D-069)
+## Documentation (KB-D-066, KB-D-069, KB-D-070)
 
 [`docs/handover/`](docs/handover/README.md) holds the **role-specific documentation** of the site (KB-D-069, 8 November
 2026): 01 architecture, 02 development (a folder per block and curated design page), 03 authoring (a guide per
@@ -45,7 +73,7 @@ component), 04 business analysis, 05 quality assurance (test cases, execution re
 AI agents, LLM retrieval, machine-readable inventories), 10 training, 11 audit and remediation; Markdown with paired
 PDFs and real screenshots of the published reference pages. Every code change updates it: its generator is
 [`docs-tools/`](docs-tools/README.md). The former consolidated handover, guides, proposals and reports are kept in the
-tag `archive/docs-before-role-docs-2026-11-08`. The knowledge base for code work stays in the code repository
+folder [`archive/docs-before-role-docs-2026-11-08/`](archive/docs-before-role-docs-2026-11-08/docs) (copied from that tag of the code repository). The knowledge base for code work stays in the code repository
 ([docs/handover/knowledge-base](https://github.com/sradha-tcs/tcs-corp/blob/main/docs/handover/knowledge-base/README.md)).
 
 ## Dynamic Media (decided 8 November 2026, KB-D-067)

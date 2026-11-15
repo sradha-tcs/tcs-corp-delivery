@@ -17,7 +17,7 @@ const TOOLS = process.env.DOC_TOOLS || new URL('.', import.meta.url).pathname;
 const { marked } = require(`${TOOLS}/node_modules/marked`);
 const MERMAID = `${TOOLS}/node_modules/mermaid/dist/mermaid.min.js`;
 const DOCS = process.argv[2];
-const BRANCH_URL = 'https://github.com/sradha-tcs/tcs-corp/blob/migrated-page-content-edam/docs/handover';
+const BRANCH_URL = 'https://github.com/sradha-tcs/tcs-corp-delivery/blob/main/docs/handover';
 const walk = (dir, base = '') => readdirSync(dir).flatMap((f) => { const p = join(dir, f); return statSync(p).isDirectory() ? walk(p, `${base}${f}/`) : [`${base}${f}`]; });
 const files = walk(DOCS);
 const md = (re) => files.filter((f) => f.endsWith('.md') && re.test(f)).sort();
@@ -107,7 +107,7 @@ function render(b) {
 <tr><th>Version</th><td>${esc(m0.version || '1.0')}</td></tr><tr><th>Status</th><td>${esc(m0.status || '')}</td></tr>
 <tr><th>Owner</th><td>${esc(m0.owner || '')} (proposed)</td></tr><tr><th>Last validated</th><td>${esc(m0.lastValidated || '')}</td></tr>
 <tr><th>Documents</th><td>${docsIn.length}</td></tr><tr><th>Classification</th><td>INTERNAL — classification to be confirmed</td></tr></table>
-<p class="note">Generated from the Markdown sources of docs/handover (branch migrated-page-content-edam); do not edit this PDF.</p></section>`;
+<p class="note">Generated from the Markdown sources of docs/handover (repository sradha-tcs/tcs-corp-delivery); do not edit this PDF.</p></section>`;
   const tocHtml = `<section class="toc"><h1>Contents</h1><ol>${toc.filter((t) => t.level === 1 || docsIn.length === 1 || true).map((t) => `<li class="l${t.level}"><a href="#${t.id}">${esc(t.text)}</a></li>`).join('')}</ol></section>`;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${esc(title)}</title><style>
 @page { size: A4; margin: 18mm 12mm 16mm 12mm; }

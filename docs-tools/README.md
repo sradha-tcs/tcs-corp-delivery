@@ -1,8 +1,8 @@
 # docs-tools: the documentation program
 
-Generates `docs/handover/` of this branch (the role-specific documentation set, KB-D-069) from the code
+Generates `docs/handover/` of this repository, sradha-tcs/tcs-corp-delivery (the role-specific documentation set, KB-D-069, KB-D-070), from the code
 repository and the published reference pages. Run it after every code change (AGENTS.md, documentation rule),
-review the changes, and push them with the delivery-branch tooling.
+review the changes, and push them with the delivery tooling (`.home-work/push-branch-changes.sh main …`: commits under 180 MB).
 
 ## Requirements
 

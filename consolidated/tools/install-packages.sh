@@ -55,7 +55,9 @@ grep -E '^\| [0-9]+ \|' "$ORDER" | while IFS='|' read -r _ n b name mb _; do
   [ -f "$f" ] || { echo "#$n missing file $name"; exit 1; }
   # a batch whose rows weren't migrated (e.g. B004: the source page is gone) has a page package without
   # content, which Package Manager refuses ("Missing 'jcr_root'"): nothing to install
-  if ! unzip -Z1 "$f" 2> /dev/null | grep -q '^jcr_root/'; then
+  # grep -c reads the whole listing: with grep -q, unzip ends on a broken pipe (141) and pipefail made
+  # every larger package look empty
+  if ! unzip -Z1 "$f" 2> /dev/null | grep -c '^jcr_root/' > /dev/null; then
     echo "#$n $b $name: no content in it (no pages migrated), skipped"
     [ $DRY -eq 1 ] || echo "$name" >> "$LOG"
     continue
