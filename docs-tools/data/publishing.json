@@ -1,0 +1,36 @@
+{
+ "roots": [
+  {
+   "root": "/design-block-master/en",
+   "paths": 345,
+   "published": 344,
+   "indexed": 335,
+   "notPublished": [
+    "/design-block-master/en/error-pages/404 (the root has no error pages)"
+   ],
+   "state": "done"
+  },
+  {
+   "root": "/language-master/en",
+   "paths": 3567,
+   "published": 3566,
+   "indexed": 3557,
+   "notPublished": [],
+   "state": "done"
+  },
+  {
+   "root": "/language-masters/en",
+   "paths": 8442,
+   "published": 8317,
+   "indexed": 8317,
+   "notPublished": [
+    "125 pages: see consolidated/reports/NOT-PUBLISHED-LANGUAGE-MASTERS-2026-11-08.csv on the delivery branch"
+   ],
+   "state": "done"
+  }
+ ],
+ "notPublished": [
+  "/design-block-master/en/error-pages/404 (the root has no error pages)",
+  "125 pages: see consolidated/reports/NOT-PUBLISHED-LANGUAGE-MASTERS-2026-11-08.csv on the delivery branch"
+ ]
+}

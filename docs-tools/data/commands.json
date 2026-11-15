@@ -1,0 +1,46 @@
+{
+ "date": "15 November 2026",
+ "clean": true,
+ "list": [
+  {
+   "cmd": "npm run lint",
+   "purpose": "ESLint (Airbnb, json, xwalk model rules) and Stylelint",
+   "result": "Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #218 and PR #224"
+  },
+  {
+   "cmd": "npm test",
+   "purpose": "Unit tests (Node test runner)",
+   "result": "399 of 402 passed, 3 failed: the 2 Form Variations motion tests (failing on main since the model change of 27 October) and page-header-cta renders the cells its block reads (failing on main)"
+  },
+  {
+   "cmd": "npm run build:json",
+   "purpose": "Aggregate the Universal Editor models",
+   "result": "Passed; no change to the committed files"
+  },
+  {
+   "cmd": "npm run build:docs",
+   "purpose": "Generated sections of the block READMEs",
+   "result": "Passed; no change to the committed files"
+  },
+  {
+   "cmd": "node docs/handover/knowledge-base/validate-knowledge-base.mjs",
+   "purpose": "Knowledge base structure and pointers",
+   "result": "Passed (34 pages, nothing missing or failing)"
+  },
+  {
+   "cmd": "node capture.mjs (documentation program)",
+   "purpose": "Automated checks and screenshots of 200 reference pages at 4 widths",
+   "result": "8 November 2026: Completed: 200 pages, 800 screenshots"
+  },
+  {
+   "cmd": "node analyze-links.mjs (documentation program)",
+   "purpose": "Links of the published pages of the roots",
+   "result": "8 November 2026: Completed for the three roots"
+  },
+  {
+   "cmd": "perf.mjs (documentation program)",
+   "purpose": "Load timing and query index requests of a page",
+   "result": "8 November 2026: Before PR #203: index done after 18.4 s (24 requests, 1.37 MB); after: 2.9 s (9 parallel requests, 0.87 MB) on /language-masters/en, 1.1 s (1 request) on /design-block-master/en"
+  }
+ ]
+}
