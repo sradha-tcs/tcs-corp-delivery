@@ -11,22 +11,25 @@
 #   AEM_TOKEN    an access token of a user allowed to manage packages (Developer Console > Integrations > Local token,
 #                valid 24 hours). Never commit it or put it in a file.
 #
-# Usage: bash uninstall-asset-packages.sh [--batch B0xx] [--delete-only] [--yes]
+# Usage: bash uninstall-asset-packages.sh [--batch B0xx] [--match '<regex>'] [--delete-only] [--yes]
 #   without --yes: lists what would be done, changes nothing
 #   --yes:         does it, after you type the confirmation it asks for
 #   --batch B0xx:  only that batch's asset packages
+#   --match RE:    only the asset packages whose file name matches the extended regular expression RE
+#                  (e.g. 'B00[1-5]-' or 'assets-0[12]-1\.2\.0\.zip$'); it narrows the asset packages, never widens
 #   --delete-only: delete the packages from Package Manager without uninstalling them (the assets stay)
 # Order: newest-installed first (the reverse of the installation), so overlapping assets are restored in order.
 # Resumable: every package done is recorded in uninstall-progress-<fingerprint>.log next to this script; a rerun
 # skips them.
 set -uo pipefail
-BATCH="" DELETE_ONLY=0 YES=0
+BATCH="" MATCH="" DELETE_ONLY=0 YES=0
 while [ $# -gt 0 ]; do
   case $1 in
     --batch) BATCH=${2:?missing batch}; shift ;;
+    --match) MATCH=${2:?missing regular expression}; shift ;;
     --delete-only) DELETE_ONLY=1 ;;
     --yes) YES=1 ;;
-    -h|--help) sed -n '2,22p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,25p' "$0"; exit 0 ;;
     *) echo "unknown option $1"; exit 2 ;;
   esac
   shift
@@ -56,12 +59,16 @@ LIST=$(curl -sS --max-time 300 -H "Authorization: Bearer $AEM_TOKEN" "$AUTHOR/cr
 if [ -n "$BATCH" ]; then
   LIST=$(printf '%s\n' "$LIST" | grep -E "\|tcs-corp-ema-$BATCH-" || true)
 fi
+if [ -n "$MATCH" ]; then
+  # the regular expression on the file name only (the third field)
+  LIST=$(printf '%s\n' "$LIST" | awk -F'|' -v re="$MATCH" '$3 ~ re') || { echo "invalid regular expression: $MATCH"; exit 2; }
+fi
 LIST=$(printf '%s\n' "$LIST" | grep -v '^$' || true)
 total=$(printf '%s\n' "$LIST" | grep -c . || true)
 installed=$(printf '%s\n' "$LIST" | grep -c '^[^|]' || true)
 action=$([ $DELETE_ONLY -eq 1 ] && echo "delete (assets kept)" || echo "uninstall (assets removed from the DAM) and delete")
 echo "progress log: $(basename "$LOG")"
-echo "asset packages found: $total ($installed installed)${BATCH:+ in batch $BATCH}; action: $action"
+echo "asset packages found: $total ($installed installed)${BATCH:+ in batch $BATCH}${MATCH:+ matching $MATCH}; action: $action"
 [ "$total" -gt 0 ] || exit 0
 
 if [ $YES -eq 0 ]; then
