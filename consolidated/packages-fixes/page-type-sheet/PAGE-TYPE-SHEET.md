@@ -19,3 +19,10 @@ published and the code merged, reindex the pages so the index gets the `sheetPag
 
 Values today: article 5,556, press-release 2,420, listing 667, home 3, blog 1, empty 1,147. The dialog's Page Type of the
 7,965 migrated pages that have one has the same value as the sheet, so no page changes its template when the sheet is installed.
+
+**16 November 2026:** `keyword-action` is `default` on every row (it was empty, which means the same). A column that is
+empty on every row is left out when the CSV is imported as an AEM sheet, so the column wasn't there for authors to set;
+with `default` written in it, it is kept. Set a row to `override` or `merge` to change that page's keywords. The other
+columns that are empty on every row (`og-image`, `twitter-image`, `canonical-url`, `country`, `thumbnail-image`,
+`featured-image`, `tag-ref-id`, `audio-time`) can be left out by the import too; they hold page-specific values only
+where a page needs them, so they can be added to the sheet when a value is first set.
