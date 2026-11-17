@@ -4,7 +4,8 @@
 #                (packages-earlier-run-assets) into edam-upload/tcs-corp/... (their DAM paths)
 #   2. tags      the 41 taxonomy tags the assets use (packages-for-edam-sites/edam-zips/metadata/edam-tags.csv)
 #   3. upload    every file with AEM's direct binary upload (folders created as needed)
-#   4. metadata  once an asset is processed: title, description, tags, source (edam-metadata.csv) and approval
+#   4. metadata  once an asset is processed: title, description, tags, source (edam-metadata.csv) and approval;
+#                assets not in the DAM are listed at once, with their package, in edam-state/missing-assets.csv
 #   5. export    the asset IDs (consolidated/tools/export-asset-ids.sh) -> edam-state/asset-ids.csv, which
 #                aem-sites.sh uses; with DELIVERY_HOST set, a spot check of delivered images
 # Resumable: what is done is recorded in edam-state/ and skipped when the script runs again.
@@ -28,7 +29,7 @@ while [ $# -gt 0 ]; do
     --no-approve) APPROVE=0 ;;
     --wait) WAIT=$2; shift ;;
     --steps) STEPS=$2; shift ;;
-    -h|--help) sed -n '2,24p' "$0"; exit 0 ;;
+    -h|--help) sed -n '2,25p' "$0"; exit 0 ;;
     *) echo "unknown option $1 (see --help)"; exit 2 ;;
   esac
   shift
@@ -223,11 +224,15 @@ if ($STEP{4}) {
   my %meta = map { $_->{assetPath} => $_ } @{ csv_rows("$ROOT/packages-for-edam-sites/edam-zips/metadata/edam-metadata.csv") };
   my @pending = grep { !$done->{$_} } map { $_->{path} } @sel;
   my $deadline = time + 60 * $WAIT; my ($n, $failed) = (0, 0);
+  # assets not in the DAM (HTTP 404: never installed, uninstalled or deleted) are reported at once in
+  # missing-assets.csv with the package that installs them, not waited for; a rerun checks them again
+  my %row = map { $_->{path} => $_ } @sel; my @missing;
   say_ '4 metadata: ', scalar(@pending), ' assets', ($APPROVE ? ', approved' : '');
   while (@pending) {
     my @later;
     for my $p (@pending) {
       my ($c, $b) = http(url => "$A$p/jcr:content.json", auth => 1);
+      if ($c == 404) { push @missing, $p; next }
       my $st = ($c == 200 && json($b)) ? (json($b)->{'dam:assetState'} // '') : '';
       if ($st ne 'processed' && $st ne 'failed') { push @later, $p; next }
       $failed++ if $st eq 'failed';
@@ -247,6 +252,20 @@ if ($STEP{4}) {
     say_ scalar(@pending), ' assets still processing, waiting 30 s'; sleep 30;
   }
   say_ "4 metadata: $n written", ($failed ? ", $failed assets whose processing failed (check them in the Assets view)" : '');
+  my $mfile = "$STATE/missing-assets.csv";
+  open my $mh, '>:raw', $mfile or die "$mfile: $!\n";
+  print $mh "path,batch,package,needed by\n";
+  for my $p (sort @missing) {
+    my $r = $row{$p} || {};
+    # the package that installs it (as step 1 reads it: an earlier-run asset from packages-earlier-run-assets/)
+    my $pkg = $earlier{$p} ? "packages-earlier-run-assets/$earlier{$p}" : ($r->{package} ? "consolidated/packages/$r->{package}" : '');
+    print $mh join(',', map { my $v = $_ // ''; $v =~ /[",]/ ? '"' . ($v =~ s/"/""/gr) . '"' : $v } $p, $r->{batch}, $pkg, $r->{'needed by'}), "\n";
+  }
+  close $mh;
+  if (@missing) {
+    say_ scalar(@missing), ' assets are not in the DAM (not installed, uninstalled or deleted): listed with their package in ', $mfile;
+    say_ '  e.g. ', $_ for (sort @missing)[0 .. ($#missing < 4 ? $#missing : 4)];
+  } else { say_ 'no asset missing from the DAM' }
   exit 3 if @pending;
 }
 PERL

@@ -8,7 +8,8 @@
                (packages-earlier-run-assets) into edam-upload\tcs-corp\... (their DAM paths)
   2. tags      the 41 taxonomy tags the assets use (packages-for-edam-sites\edam-zips\metadata\edam-tags.csv)
   3. upload    every file with AEM's direct binary upload (folders created as needed)
-  4. metadata  once an asset is processed: title, description, tags, source (edam-metadata.csv) and approval
+  4. metadata  once an asset is processed: title, description, tags, source (edam-metadata.csv) and approval;
+               assets not in the DAM are listed at once, with their package, in edam-state\missing-assets.csv
   5. export    the asset IDs (consolidated\tools\export-asset-ids.ps1) -> edam-state\asset-ids.csv, which
                aem-sites.ps1 uses; with DELIVERY_HOST set, a spot check of delivered images
   Resumable: what is done is recorded in edam-state\ and skipped when the script runs again.
@@ -210,11 +211,15 @@ try {
     $meta = @{}; Import-Csv -Encoding UTF8 (Join-Path $Root "packages-for-edam-sites/edam-zips/metadata/edam-metadata.csv") | ForEach-Object { $meta[$_.assetPath] = $_ }
     $pending = @($sel | ForEach-Object { $_.path } | Where-Object { -not $done.ContainsKey($_) })
     $deadline = (Get-Date).AddMinutes($Wait); $n = 0; $failed = 0
+    # assets not in the DAM (HTTP 404: never installed, uninstalled or deleted) are reported at once in
+    # missing-assets.csv with the package that installs them, not waited for; a rerun checks them again
+    $row = @{}; $sel | ForEach-Object { $row[$_.path] = $_ }; $missing = @()
     Say ("4 metadata: {0} assets{1}" -f $pending.Count, $(if ($NoApprove) { "" } else { ", approved" }))
     while ($pending.Count) {
       $later = @()
       foreach ($p in $pending) {
         $r = Http -Url "$A$p/jcr:content.json" -Auth
+        if ($r.Code -eq 404) { $missing += $p; continue }
         $st = if ($r.Code -eq 200) { $j = Json $r.Body; if ($j) { [string]$j.'dam:assetState' } else { "" } } else { "" }
         if ($st -ne 'processed' -and $st -ne 'failed') { $later += $p; continue }
         if ($st -eq 'failed') { $failed++ }
@@ -235,6 +240,17 @@ try {
       Say "$($pending.Count) assets still processing, waiting 30 s"; Start-Sleep 30
     }
     Say ("4 metadata: {0} written{1}" -f $n, $(if ($failed) { ", $failed assets whose processing failed (check them in the Assets view)" } else { "" }))
+    $mfile = Join-Path $State "missing-assets.csv"
+    @($missing | Sort-Object | ForEach-Object {
+      $x = $row[$_]
+      $pkg = if ($earlier.ContainsKey($_)) { "packages-earlier-run-assets/" + $earlier[$_] } elseif ($x -and $x.package) { "consolidated/packages/" + $x.package } else { "" }
+      [pscustomobject]@{ path = $_; batch = $(if ($x) { $x.batch } else { "" }); package = $pkg; 'needed by' = $(if ($x) { $x.'needed by' } else { "" }) }
+    }) | Export-Csv -NoTypeInformation -Encoding UTF8 -Path $mfile
+    if (-not $missing.Count) { Set-Content -Encoding UTF8 -Path $mfile -Value 'path,batch,package,needed by' }
+    if ($missing.Count) {
+      Say "$($missing.Count) assets are not in the DAM (not installed, uninstalled or deleted): listed with their package in $mfile"
+      $missing | Sort-Object | Select-Object -First 5 | ForEach-Object { Say "  e.g. $_" }
+    } else { Say "no asset missing from the DAM" }
     if ($pending.Count) { $code = 3 }
   }
 } finally {
