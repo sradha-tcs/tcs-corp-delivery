@@ -5,22 +5,22 @@
   {
    "cmd": "npm run lint",
    "purpose": "ESLint (Airbnb, json, xwalk model rules) and Stylelint",
-   "result": "Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #265 (51885b3)"
+   "result": "Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #204 (4fb4a1d)"
   },
   {
    "cmd": "npm test",
    "purpose": "Unit tests (Node test runner)",
-   "result": "488 of 488 passed on main after PR #265 (51885b3)"
+   "result": "488 of 488 passed on main after PR #204 (4fb4a1d)"
   },
   {
    "cmd": "npm run build:json",
    "purpose": "Aggregate the Universal Editor models",
-   "result": "Passed; no change to the committed files (main after PR #265)"
+   "result": "Passed; no change to the committed files (main after PR #204)"
   },
   {
    "cmd": "npm run build:docs",
    "purpose": "Generated sections of the block READMEs",
-   "result": "Passed; no change to the committed files (main after PR #265)"
+   "result": "Passed; no change to the committed files (main after PR #204)"
   },
   {
    "cmd": "node docs/handover/knowledge-base/validate-knowledge-base.mjs",
