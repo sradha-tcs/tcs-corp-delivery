@@ -8,8 +8,8 @@ owner: "Solution Architect"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["docs/handover/knowledge-base/architecture.md","scripts/scripts.js","scripts/aem.js","head.html"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | docs/handover/knowledge-base/architecture.md, scripts/scripts.js, scripts/aem.js, head.html |
 | Related documents | — |
 | Related AEM paths | — |
@@ -181,7 +181,7 @@ There is no bundler, so a module's imports are only discovered after it loads (A
 | Dialogs | `component-models.json` (fields per model) | generated from `models/_component-models.json` and partials |
 | Allowed children | `component-filters.json`: `main` allows `section`, `gen-carousel`, `tabs`, `columns-container`; `section` allows 26 components | generated from `models/_component-filters.json` and partials |
 | Page properties | `models/_page.json` (model `page-metadata`): Title, Description, Keywords, Page Type, Navigation, Footer, 404 Page | [content-architecture.md](./CONTENT-ARCHITECTURE.md) |
-| Section properties | `models/_section.json`: Section Name, Style, Width Type, Rounded edge, Background Image, Image alt text, Anchor name | `scripts.js` `decorateSectionsWithOptions` |
+| Section properties | `models/_section.json`: Section Name, Style, Width Type, Text width (mobile / tablet / desktop), Rounded edge, Background Image, Image alt text, Anchor name | `scripts.js` `decorateSectionsWithOptions` |
 | xwalk features | `xwalk.json`: `public.xwalk.multi-field.enabled: true` | AGENTS.md: repeating content uses item children, not composite multifields |
 | Live editing | `scripts/editor-support.js` | below |
 
@@ -423,4 +423,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

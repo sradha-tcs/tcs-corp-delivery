@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -50,8 +50,8 @@ primary: true
 | F-E01-03 Footer | decorators/motion-decorator.js, decorators/button-decorator.js, decorators/content-decorator.js, decorators/editor-item-decorator.js, decorators/link-decorator.js, decorators/social-links-decorator.js, utils/cells.js, utils/data.js, utils/inherited-metadata.js, utils/links.js, utils/placeholders.js, utils/site.js |
 | F-E01-04 Fragment | decorators/motion-decorator.js, utils/environment.js, utils/placeholders.js |
 | F-E01-05 Modal | decorators/button-decorator.js, decorators/icon-button-decorator.js, decorators/data-layer-decorator.js, utils/analytics.js, utils/environment.js, utils/ids.js, utils/placeholders.js |
-| F-E02-01 Hero | decorators/animation-decorator.js, decorators/button-decorator.js, decorators/editor-item-decorator.js, utils/buttons.js, utils/cells.js, utils/links.js, utils/motion.js, utils/media.js, utils/placeholders.js |
-| F-E02-02 Page Header | decorators/article-meta-decorator.js, decorators/button-decorator.js, decorators/editor-item-decorator.js, decorators/link-decorator.js, decorators/responsive-image-decorator.js, decorators/tag-decorator.js, utils/cells.js, utils/data.js, utils/links.js, utils/metadata.js, utils/placeholders.js, utils/properties.js, utils/taxonomy.js |
+| F-E02-01 Hero | decorators/animation-decorator.js, decorators/button-decorator.js, decorators/editor-item-decorator.js, decorators/media-decorator.js, utils/buttons.js, utils/cells.js, utils/links.js, utils/motion.js, utils/media.js, utils/placeholders.js |
+| F-E02-02 Page Header | decorators/article-meta-decorator.js, decorators/button-decorator.js, decorators/editor-item-decorator.js, decorators/heading-decorator.js, decorators/link-decorator.js, decorators/responsive-image-decorator.js, decorators/tag-decorator.js, utils/cells.js, utils/data.js, utils/links.js, utils/metadata.js, utils/placeholders.js, utils/properties.js, utils/taxonomy.js |
 | F-E03-01 Teaser | decorators/a11y-decorator.js, decorators/animation-decorator.js, decorators/article-meta-decorator.js, decorators/button-decorator.js, decorators/content-decorator.js, decorators/editor-item-decorator.js, decorators/heading-decorator.js, decorators/image-decorator.js, decorators/link-decorator.js, decorators/stats-decorator.js, decorators/tag-decorator.js, utils/cells.js, utils/links.js, utils/media.js, utils/placeholders.js, utils/properties.js, utils/tags.js, utils/taxonomy.js |
 | F-E03-02 Cards | utils/card-list-config.js, utils/dates.js, decorators/card-list-decorator.js, utils/cells.js, utils/environment.js, utils/placeholders.js, utils/properties.js, utils/tags.js, utils/taxonomy.js |
 | F-E03-03 Columns Container | utils/placeholders.js |
@@ -74,9 +74,9 @@ primary: true
 | F-E05-01 List | utils/card-list-config.js, utils/dates.js, utils/query-index.js, decorators/card-list-decorator.js, decorators/skeleton-decorator.js, utils/cells.js, utils/data.js, utils/environment.js, utils/placeholders.js, utils/links.js, utils/properties.js, utils/redirects.js, utils/site.js, utils/tags.js, utils/taxonomy.js |
 | F-E05-02 Filter List | decorators/article-meta-decorator.js, decorators/button-decorator.js, decorators/date-decorator.js, decorators/editor-item-decorator.js, decorators/icon-button-decorator.js, decorators/masonry-decorator.js, decorators/skeleton-decorator.js, decorators/responsive-image-decorator.js, utils/cells.js, utils/data.js, utils/environment.js, utils/ids.js, utils/multifield.js, utils/placeholders.js, utils/properties.js, utils/query-index.js, utils/site.js, utils/card-list-config.js, utils/tags.js, utils/taxonomy.js, utils/viewport.js |
 | F-E05-03 Table List | decorators/button-decorator.js, utils/buttons.js, utils/environment.js, utils/cells.js, utils/properties.js, utils/urls.js, utils/placeholders.js, utils/motion.js |
-| F-E05-04 Media Contacts | decorators/contact-list-decorator.js, decorators/editor-item-decorator.js, decorators/heading-decorator.js, utils/cells.js, utils/environment.js, utils/placeholders.js, utils/properties.js |
-| F-E06-01 Form Variations | decorators/button-decorator.js, decorators/content-decorator.js, decorators/heading-decorator.js, utils/environment.js, utils/links.js, utils/properties.js, utils/ids.js, utils/placeholders.js |
-| F-E07-01 Conversation Canvas | decorators/responsive-image-decorator.js, utils/metadata.js, utils/query-index.js, utils/site.js, utils/taxonomy.js, decorators/a11y-decorator.js, decorators/button-decorator.js, decorators/icon-button-decorator.js, utils/buttons.js, utils/properties.js, utils/urls.js, utils/ids.js, utils/placeholders.js, decorators/skeleton-decorator.js, decorators/editor-item-decorator.js |
+| F-E05-04 Media Contacts | utils/links.js, decorators/contact-list-decorator.js, decorators/editor-item-decorator.js, decorators/heading-decorator.js, utils/cells.js, utils/environment.js, utils/placeholders.js, utils/properties.js |
+| F-E06-01 Form Variations | decorators/content-decorator.js, decorators/heading-decorator.js, decorators/image-decorator.js, utils/environment.js, utils/links.js, utils/properties.js, utils/ids.js, utils/placeholders.js |
+| F-E07-01 Conversation Canvas | decorators/responsive-image-decorator.js, utils/metadata.js, utils/query-index.js, utils/site.js, utils/taxonomy.js, decorators/a11y-decorator.js, decorators/button-decorator.js, decorators/icon-button-decorator.js, utils/buttons.js, utils/properties.js, utils/urls.js, utils/ids.js, utils/page-visibility.js, utils/placeholders.js, decorators/skeleton-decorator.js, decorators/editor-item-decorator.js |
 | F-E08-01 Locale sites by path | utils/site.js LOCALES, paths.json |
 | F-E08-02 Review roots with their own references and sheets | utils/site.js REVIEW_ROOTS |
 | F-E08-03 Inherited navigation, footer and 404 page | utils/inherited-metadata.js |
@@ -106,4 +106,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: ["button-block"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -39,7 +39,7 @@ primary: false
 ## Contents
 
 - [Unit tests](#unit-tests)
-- [Automated checks of the block library pages (executed 15 November 2026)](#automated-checks-of-the-block-library-pages-executed-15-november-2026)
+- [Automated checks of the block library pages (executed 22 November 2026)](#automated-checks-of-the-block-library-pages-executed-22-november-2026)
 - [Manual test guidance (block README)](#manual-test-guidance-block-readme)
 - [Screenshots](#screenshots)
 - [Known limitations](#known-limitations)
@@ -50,7 +50,7 @@ primary: false
 
 No unit test is specific to this block (shared tests: test/models, test/items, test/docs, test/motion).
 
-## Automated checks of the block library pages (executed 15 November 2026)
+## Automated checks of the block library pages (executed 22 November 2026)
 
 Per page: HTTP status and horizontal overflow at 375 / 768 / 1024 / 1440 px, console errors, failed requests and DOM accessibility checks at 1440 px (evidence: [screenshot register](../../../SCREENSHOT-REGISTER.md)).
 
@@ -93,4 +93,4 @@ No block library page: no evidence screenshot.
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

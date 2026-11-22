@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -39,7 +39,7 @@ primary: true
 ## Contents
 
 - [Statistics](#statistics)
-- [Fields without a description (384)](#fields-without-a-description-384)
+- [Fields without a description (415)](#fields-without-a-description-415)
 - [Screenshots](#screenshots)
 - [Known limitations](#known-limitations)
 - [Open items](#open-items)
@@ -49,24 +49,23 @@ primary: true
 
 | Measure | Value |
 | --- | --- |
-| blocks | 32 |
-| components | 72 |
-| fields | 1030 |
-| variationFields | 514 |
-| variationOptions | 4453 |
-| testFiles | 21 |
-| testCases | 268 |
-| tokens | 353 |
+| blocks | 34 |
+| components | 76 |
+| fields | 1140 |
+| variationFields | 589 |
+| variationOptions | 5076 |
+| testFiles | 25 |
+| testCases | 318 |
+| tokens | 409 |
 
-Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #218 and PR #224.
+Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #264 (3996bfd).
 
-## Fields without a description (384)
+## Fields without a description (415)
 
 | Block | Component | Field |
 | --- | --- | --- |
 | accordion | accordion-item | Summary |
 | accordion | accordion-item | Text |
-| cards | cards | Heading type |
 | cards | cards | Description |
 | cards | cards | CTA link |
 | cards | cards | CTA text |
@@ -101,6 +100,12 @@ Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-hea
 | cards | card | Description |
 | cards | card | Tags |
 | cards | card | Open in a new tab |
+| cards | card | CTA 1 Title |
+| cards | card | CTA 1 Style |
+| cards | card | CTA 1 Open in a new tab |
+| cards | card | CTA 2 Title |
+| cards | card | CTA 2 Style |
+| cards | card | CTA 2 Open in a new tab |
 | cards | card | Card style |
 | cards | card | Analytics label |
 | columns | columns | Columns |
@@ -166,40 +171,58 @@ Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-hea
 | footer | footer-link | Link Path |
 | footer | footer-link | Link text |
 | footer | footer-link | Open in |
+| form-variations | form-variations | Eyebrow Icon Asset (Optional) |
 | form-variations | form-variations | Form Title / Heading |
 | form-variations | form-variations | Form Description |
-| form-variations | form-variations | Theme |
 | form-variations | field-text | Field type |
+| form-variations | field-text | Field Name / ID |
+| form-variations | field-text | Field Label |
 | form-variations | field-text | Input Type |
+| form-variations | field-text | Field Width |
 | form-variations | field-text | Mandatory Field (*) |
 | form-variations | field-text | Show only if dropdown value equals |
 | form-variations | field-select | Field type |
 | form-variations | field-select | Dropdown Name / ID |
 | form-variations | field-select | Dropdown Label |
+| form-variations | field-select | Field Width |
 | form-variations | field-select | Mandatory Field (*) |
 | form-variations | field-select | Options |
 | form-variations | field-select | Show only if dropdown value equals |
 | form-variations | field-combined | Field type |
+| form-variations | field-combined | Field Name / ID |
+| form-variations | field-combined | Field Label |
+| form-variations | field-combined | Field Width |
 | form-variations | field-combined | Mandatory Field (*) |
 | form-variations | field-combined | Show only if dropdown value equals |
 | form-variations | field-textarea | Field type |
 | form-variations | field-textarea | Field Name / ID |
 | form-variations | field-textarea | Field Label |
 | form-variations | field-textarea | Max Character Limit |
+| form-variations | field-textarea | Field Width |
 | form-variations | field-textarea | Mandatory Field (*) |
 | form-variations | field-textarea | Show only if dropdown value equals |
 | form-variations | field-checkbox | Field type |
 | form-variations | field-checkbox | Checkbox Name / ID |
 | form-variations | field-checkbox | Consent Text / Disclaimer |
+| form-variations | field-checkbox | Field Width |
 | form-variations | field-checkbox | Mandatory Field (*) |
 | form-variations | field-checkbox | Show only if dropdown value equals |
+| form-variations | field-richtext | Field type |
+| form-variations | field-richtext | Element ID / Name |
+| form-variations | field-richtext | Rich Text Content |
+| form-variations | field-richtext | Field Width |
+| form-variations | field-richtext | Show only if dropdown value equals |
 | form-variations | contact-card | Field type |
 | form-variations | contact-card | Show when dropdown value equals |
 | form-variations | contact-card | Contact Name |
 | form-variations | contact-card | Emails |
 | form-variations | contact-card | Phones |
+| form-variations | contact-card | Email Icon Asset (Optional) |
+| form-variations | contact-card | Phone Icon Asset (Optional) |
+| form-variations | contact-card | Field Width |
 | form-variations | field-submit | Field type |
 | form-variations | field-submit | Button Label |
+| form-variations | field-submit | Field Width |
 | form-variations | field-submit | Show only if dropdown value equals |
 | fragment | fragment | Reference |
 | gen-carousel | gen-carousel | Style |
@@ -223,6 +246,10 @@ Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-hea
 | hero | hero-cta | CTA Title |
 | hero | hero-cta | CTA Link Type |
 | hero | hero-cta | CTA view |
+| history-timeline | history-timeline | Hide closing panel |
+| history-timeline | history-timeline-item | Title |
+| history-timeline | history-timeline-item | Description |
+| history-timeline | history-timeline-item | Image |
 | image-collage | image-collage | Title |
 | image-collage | image-collage | Description |
 | image-collage | image-collage | Show Description |
@@ -284,6 +311,7 @@ Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-hea
 | media-contacts | media-contacts | Email color |
 | media-contacts | media-contacts | Phone color |
 | modal | modal | Button Text |
+| page-header | page-header | Description Font |
 | page-header | page-header | CTA List › CTA Title |
 | page-header | page-header | CTA List › CTA Link |
 | page-header | page-header | CTA List › CTA Link Type |
@@ -418,14 +446,17 @@ Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-hea
 | teaser | teaser | Primary CTA Link |
 | teaser | teaser | Primary CTA Link Type |
 | teaser | teaser | Primary CTA Link Style |
+| teaser | teaser | Primary CTA Label Font |
 | teaser | teaser | Secondary CTA Title |
 | teaser | teaser | Secondary CTA Link |
 | teaser | teaser | Secondary CTA Link Type |
+| teaser | teaser | Secondary CTA Label Font |
 | teaser | teaser | Secondary CTA Link Style |
 | teaser | teaser | Stats (authored before Stat items) › Stats Title |
 | teaser | teaser | Title weight |
-| teaser | teaser | Description size |
+| teaser | teaser | Description weight |
 | teaser | teaser | Description Color |
+| teaser | teaser | Column gap |
 | teaser | teaser-link | CTA Link |
 | teaser | teaser-link | CTA Title |
 | teaser | teaser-link | CTA Link Type |
@@ -465,4 +496,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

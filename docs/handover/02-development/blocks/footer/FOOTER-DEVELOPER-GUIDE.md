@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/footer/README.md","blocks/footer/_footer.json","blocks/footer/footer.css","blocks/footer/footer.js"]
 relatedComponents: ["footer","footer-link"]
 relatedPages: ["/design-block-master/en/block-library/footer","/design-block-master/en/block-library/footer/campaign-page","/design-block-master/en/block-library/footer/default-footer-page","/design-block-master/en/block-library/footer/footer-campaign","/design-block-master/en/block-library/footer/footer-conversation-canvas","/design-block-master/en/block-library/footer/footer-default","/design-block-master/en/block-library/footer/footer-investors","/design-block-master/en/block-library/footer/investors-page"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/footer/README.md, blocks/footer/_footer.json, blocks/footer/footer.css, blocks/footer/footer.js |
 | Related documents | [Variations](./FOOTER-VARIATIONS.md), [Test coverage](./FOOTER-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/footer/FOOTER-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/footer, /content/tcs-corp/design-block-master/en/block-library/footer/campaign-page, /content/tcs-corp/design-block-master/en/block-library/footer/default-footer-page |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | Site footer bar on the footer reference page (copyright, links, Conversation Canvas) |
 | Variations (summary) | Footer Link items; Conversation Canvas page |
 | Children | footer-link (Footer Link) |
-| Code size | 633 lines of JS and CSS |
+| Code size | 636 lines of JS and CSS |
 
 ## Overview
 
@@ -181,7 +181,7 @@ blocks/footer/
 | [`decorators/link-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/link-decorator.js) | `setLinkTarget` (open in a new window), `announceNewTab` (tells screen reader users a link opens in a new tab: hidden text, or added to its aria-label) | `footer.js`: { announceNewTab, setLinkTarget } |
 | [`decorators/social-links-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/social-links-decorator.js) | `buildSocialLinks` (Social Links data sheet as an icon list) | `footer.js`: { buildSocialLinks } |
 | [`utils/cells.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/cells.js) | `itemRows`, `KEY_VALUE_ITEM`, `FIELD_ROW_ITEM` (the item rows of a block: by model in the editor, by their cells on the page), `withoutTabCells` (drops the empty cell AEM renders for each dialog tab of an item model), `m | `footer.js`: { FIELD_ROW_ITEM, itemRows } |
-| [`utils/data.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/data.js) | `loadDataSheet`, `getAuthor`, `getAuthors`, `getLocations`, `getPartners`, `getSocialLinks`, `getMediaContacts`, `inRegion` (the locale's data sheets) | `footer.js`: { getSocialLinks } |
+| [`utils/data.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/data.js) | `loadDataSheet`, `getAuthor`, `getAuthors`, `getLocations`, `getPartners`, `getSocialLinks`, `getMediaContacts`, `getConfMedCont` (the three `data/conf-med-cont/` sheets: contacts, regions, media-contacts-config), `inReg | `footer.js`: { getSocialLinks } |
 | [`utils/inherited-metadata.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/inherited-metadata.js) | `getInheritedMetadata`, `INHERITED_METADATA` (nav, footer and error-page of the page, else of the nearest parent page up to Home; parent heads loaded in parallel and cached per session) | `footer.js`: { getInheritedMetadata } |
 | [`utils/links.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/links.js) | `NEW_WINDOW`, `linkOf`, `linkPathsOf` (the paths of a page property, one or many), `readLinkItems` (CTA lists with Link Type and the items' other select values), `readLinkRows` (the same from link item rows, e.g. Hero CT | `footer.js`: { readLinkItems, readLinkRows } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `footer.js`: { getPlaceholders } |
@@ -349,6 +349,7 @@ Evidence to collect: page URL, the `footer` meta values, network status of the f
 | Handover 2.27 | Block ecosystem audit: new-tab footer and social links announced (D-D-24) | docs/handover revision history; docs/audit/BLOCK-ECOSYSTEM-AUDIT.md | 19 October 2026 |
 | Handover 2.29 | Re-audit: Footer Link labels (Link text, Open in) and the social list named (R-D-13) | docs/handover revision history; docs/audit/REAUDIT-2026-10-20.md | 20 October 2026 |
 | Handover 2.36 | Footer blocks' modules and stylesheets preloaded (F-106) | docs/handover revision history | 20 October 2026 |
+| KB-D-071 (Approved), PR #228 | Page property Hide Footer: `scripts.js` doesn't load the footer on that page (`utils/page-visibility.js`) | branch feature/header-footer-canvas-toggle | 16 November 2026 |
 
 ## Reference pages
 
@@ -457,4 +458,4 @@ Evidence to collect: page URL, the `footer` meta values, network status of the f
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

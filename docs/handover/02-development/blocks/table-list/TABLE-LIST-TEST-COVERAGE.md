@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: ["table-list"]
 relatedPages: ["/design-block-master/en/block-library/table-list","/design-block-master/en/block-library/table-list/item-actions","/design-block-master/en/block-library/table-list/motion","/design-block-master/en/block-library/table-list/numbers","/design-block-master/en/block-library/table-list/numbers-on-mobile","/design-block-master/en/block-library/table-list/table-list"]
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -39,7 +39,7 @@ primary: false
 ## Contents
 
 - [Unit tests](#unit-tests)
-- [Automated checks of the block library pages (executed 15 November 2026)](#automated-checks-of-the-block-library-pages-executed-15-november-2026)
+- [Automated checks of the block library pages (executed 22 November 2026)](#automated-checks-of-the-block-library-pages-executed-22-november-2026)
 - [Manual test guidance (block README)](#manual-test-guidance-block-readme)
 - [Screenshots](#screenshots)
 - [Known limitations](#known-limitations)
@@ -50,7 +50,7 @@ primary: false
 
 No unit test is specific to this block (shared tests: test/models, test/items, test/docs, test/motion).
 
-## Automated checks of the block library pages (executed 15 November 2026)
+## Automated checks of the block library pages (executed 22 November 2026)
 
 Per page: HTTP status and horizontal overflow at 375 / 768 / 1024 / 1440 px, console errors, failed requests and DOM accessibility checks at 1440 px (evidence: [screenshot register](../../../SCREENSHOT-REGISTER.md)).
 
@@ -84,14 +84,6 @@ Per page: HTTP status and horizontal overflow at 375 / 768 / 1024 / 1440 px, con
 | TABLE-LIST-QA-15 | Legacy motion | Block with stored `motion` = fade | Rows fade in (Animation Type Fade in, slow) outside the editor |
 | TABLE-LIST-QA-16 | Legacy header regression | Block with a heading / link header row | Header rendered from it |
 | TABLE-LIST-QA-17 | Reduced motion | `prefers-reduced-motion: reduce` | No animation, no arrow transition |
-| TABLE-LIST-QA-18 | Variation 4 | Variation 4, 4 items, call to action Text and Link | Outline call to action on light grey, no numbers, arrows; title / description / arrow columns from 600px, description at most 21.15rem from 900px; divider below the last row |
-| TABLE-LIST-QA-19 | Variation 4 states | Hover a row, then Tab to its arrow | Row background `--color-bg-secondary`, arrow dark, focus outline on the arrow; a Button item link row isn't highlighted |
-| TABLE-LIST-QA-20 | Variation 4 mobile | 375px | Call to action below the heading; title, description and arrow stacked |
-| TABLE-LIST-QA-22 | Variation 5 | Variation 5, Dark Green, three items without Link | Uppercase labels beside 23.55rem descriptions from 44rem, no arrows, dividers below every row |
-| TABLE-LIST-QA-23 | Variation 6 | Variation 6, four items with Trademark ™ and Links | Description top left, right-aligned 4rem title with ™, 24px arrow centred on the title |
-| TABLE-LIST-QA-24 | Models & Data | Variation 4, Navy, Eyebrow, Heading position Beside, Numbers Show, Circled arrow | Two columns from 900px; titles above descriptions; circled arrows 40% white; no divider below the last row |
-| TABLE-LIST-QA-25 | Narrow list | Variation 4 or 5 in a Columns Container column | Rows switch layout by the list width (container query), not the screen width |
-| TABLE-LIST-QA-21 | Variation 4 dark | Background color Black or Dark Green | Light text, white arrow, transparent outline call to action; hover 5% white |
 
 Test cases: [05-quality-assurance/test-cases/blocks/table-list](../../../05-quality-assurance/test-cases/blocks/table-list/TABLE-LIST-TEST-CASES.md).
 
@@ -205,4 +197,4 @@ Test cases: [05-quality-assurance/test-cases/blocks/table-list](../../../05-qual
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

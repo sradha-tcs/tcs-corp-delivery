@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/columns-container/README.md","blocks/columns-container/_columns-container.json","blocks/columns-container/columns-container.css","blocks/columns-container/columns-container.js"]
 relatedComponents: ["columns-container"]
 relatedPages: ["/design-block-master/en/block-library/columns-container","/design-block-master/en/block-library/columns-container/alignment-gap-and-breakpoints","/design-block-master/en/block-library/columns-container/columns-of-blocks","/design-block-master/en/block-library/columns-container/columns-per-row","/design-block-master/en/curated-design-pages/industry-landing-page","/design-block-master/en/curated-design-pages/services","/design-block-master/en/curated-design-pages/story","/design-block-master/en/curated-design-pages/what-we-do"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/columns-container/README.md, blocks/columns-container/_columns-container.json, blocks/columns-container/columns-container.css, blocks/columns-container/columns-container.js |
 | Related documents | [Variations](./COLUMNS-CONTAINER-VARIATIONS.md), [Test coverage](./COLUMNS-CONTAINER-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/columns-container/COLUMNS-CONTAINER-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/columns-container, /content/tcs-corp/design-block-master/en/block-library/columns-container/alignment-gap-and-breakpoints, /content/tcs-corp/design-block-master/en/block-library/columns-container/columns-of-blocks |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | A section laid out in columns of default content and blocks |
 | Variations (summary) | Columns per row, gap, vertical alignment, side by side from, BG Color |
 | Children | column-break (Column Break), the components of its filter |
-| Code size | 194 lines of JS and CSS |
+| Code size | 195 lines of JS and CSS |
 
 ## Overview
 
@@ -105,7 +105,7 @@ primary: true
 
 | Component | Title | Resource type | Template name | Model | Children allowed |
 | --- | --- | --- | --- | --- | --- |
-| `columns-container` | Columns Container | `core/franklin/components/section/v1/section` | Columns Container | `columns-container` | column-break, text, image, button-block, title, hero, teaser, image-collage, quote, media-contacts, testimonial, anchor-list, accordion, tabs-block, table, table-list, list, separator, embed, video, modal, form-variations, filter-list, conversation-canvas, cards, fragment |
+| `columns-container` | Columns Container | `core/franklin/components/section/v1/section` | Columns Container | `columns-container` | column-break, text, image, button-block, title, hero, teaser, image-collage, history-timeline, quote, media-contacts, conf-med-cont, testimonial, anchor-list, accordion, tabs-block, table, table-list, list, separator, embed, video, modal, form-variations, filter-list, conversation-canvas, cards, fragment |
 
 ## Fields
 
@@ -122,7 +122,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Content | Image alt text | `backgroundImageAlt` | text | No | — | — | — |
 | Content | Anchor name | `anchorName` | text | No | — | — | — |
 | Layout | Columns per row | `columnsPerRow` | select | No | `auto` | 5 options | — |
-| Layout | Gap | `columnsGap` | select | No | `medium` | 4 options | — |
+| Layout | Gap | `columnsGap` | select | No | `medium` | 5 options | — |
 | Layout | Vertical alignment | `columnsAlign` | select | No | `top` | 4 options | — |
 | Layout | Side by side from | `columnsFrom` | select | No | `desktop` | 3 options | — |
 | Additional | Anchor ID | `containerAnchor` | text | No | — | — | — |
@@ -368,4 +368,4 @@ Evidence to collect (no secrets): page URL, viewport width, the section's classe
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

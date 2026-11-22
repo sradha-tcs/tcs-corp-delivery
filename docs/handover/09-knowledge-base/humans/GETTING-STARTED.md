@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -49,7 +49,7 @@ primary: true
 | Code | github.com/sradha-tcs/tcs-corp, main |
 | Live | https://main--tcs-corp--sradha-tcs.aem.live |
 | Roots | /content/tcs-corp/language-masters/en (language master), /content/tcs-corp/language-master/en (testing), /content/tcs-corp/design-block-master/en (block library, curated pages), 13 locales |
-| Blocks | 32 blocks, 72 components |
+| Blocks | 34 blocks, 76 components |
 | Analytics | Adobe Client Data Layer only (no Tags / Web SDK) |
 | Assets | Sites DAM; Dynamic Media with OpenAPI for the migrated pages (KB-D-067, in progress) |
 
@@ -71,4 +71,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -112,6 +112,9 @@ primary: true
 | DEV-B-columns-container | [Columns Container Block — Developer Guide](02-development/blocks/columns-container/COLUMNS-CONTAINER-DEVELOPER-GUIDE.md) | Developers, technical leads, block owners, AI coding agents |
 | DEV-V-columns-container | [Columns Container Block — Variations](02-development/blocks/columns-container/COLUMNS-CONTAINER-VARIATIONS.md) | Developers, technical leads, block owners, AI coding agents |
 | DEV-T-columns-container | [Columns Container Block — Test Coverage](02-development/blocks/columns-container/COLUMNS-CONTAINER-TEST-COVERAGE.md) | Developers, technical leads, block owners, AI coding agents |
+| DEV-B-conf-med-cont | [Configurable Media Contacts Block — Developer Guide](02-development/blocks/conf-med-cont/CONF-MED-CONT-DEVELOPER-GUIDE.md) | Developers, technical leads, block owners, AI coding agents |
+| DEV-V-conf-med-cont | [Configurable Media Contacts Block — Variations](02-development/blocks/conf-med-cont/CONF-MED-CONT-VARIATIONS.md) | Developers, technical leads, block owners, AI coding agents |
+| DEV-T-conf-med-cont | [Configurable Media Contacts Block — Test Coverage](02-development/blocks/conf-med-cont/CONF-MED-CONT-TEST-COVERAGE.md) | Developers, technical leads, block owners, AI coding agents |
 | DEV-B-conversation-canvas | [Conversation Canvas Block — Developer Guide](02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-DEVELOPER-GUIDE.md) | Developers, technical leads, block owners, AI coding agents |
 | DEV-V-conversation-canvas | [Conversation Canvas Block — Variations](02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-VARIATIONS.md) | Developers, technical leads, block owners, AI coding agents |
 | DEV-T-conversation-canvas | [Conversation Canvas Block — Test Coverage](02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-TEST-COVERAGE.md) | Developers, technical leads, block owners, AI coding agents |
@@ -139,6 +142,9 @@ primary: true
 | DEV-B-hero | [Hero Block — Developer Guide](02-development/blocks/hero/HERO-DEVELOPER-GUIDE.md) | Developers, technical leads, block owners, AI coding agents |
 | DEV-V-hero | [Hero Block — Variations](02-development/blocks/hero/HERO-VARIATIONS.md) | Developers, technical leads, block owners, AI coding agents |
 | DEV-T-hero | [Hero Block — Test Coverage](02-development/blocks/hero/HERO-TEST-COVERAGE.md) | Developers, technical leads, block owners, AI coding agents |
+| DEV-B-history-timeline | [History Timeline Block — Developer Guide](02-development/blocks/history-timeline/HISTORY-TIMELINE-DEVELOPER-GUIDE.md) | Developers, technical leads, block owners, AI coding agents |
+| DEV-V-history-timeline | [History Timeline Block — Variations](02-development/blocks/history-timeline/HISTORY-TIMELINE-VARIATIONS.md) | Developers, technical leads, block owners, AI coding agents |
+| DEV-T-history-timeline | [History Timeline Block — Test Coverage](02-development/blocks/history-timeline/HISTORY-TIMELINE-TEST-COVERAGE.md) | Developers, technical leads, block owners, AI coding agents |
 | DEV-B-image-collage | [Image Collage Block — Developer Guide](02-development/blocks/image-collage/IMAGE-COLLAGE-DEVELOPER-GUIDE.md) | Developers, technical leads, block owners, AI coding agents |
 | DEV-V-image-collage | [Image Collage Block — Variations](02-development/blocks/image-collage/IMAGE-COLLAGE-VARIATIONS.md) | Developers, technical leads, block owners, AI coding agents |
 | DEV-T-image-collage | [Image Collage Block — Test Coverage](02-development/blocks/image-collage/IMAGE-COLLAGE-TEST-COVERAGE.md) | Developers, technical leads, block owners, AI coding agents |
@@ -245,6 +251,7 @@ primary: true
 | AUT-C-column-break | [Column Break — Authoring Guide](03-authoring/components/column-break/COLUMN-BREAK-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
 | AUT-C-columns | [Columns — Authoring Guide](03-authoring/components/columns/COLUMNS-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
 | AUT-C-columns-container | [Columns Container — Authoring Guide](03-authoring/components/columns-container/COLUMNS-CONTAINER-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
+| AUT-C-conf-med-cont | [Configurable Media Contacts — Authoring Guide](03-authoring/components/conf-med-cont/CONF-MED-CONT-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
 | AUT-C-conversation-canvas | [Conversation Canvas — Authoring Guide](03-authoring/components/conversation-canvas/CONVERSATION-CANVAS-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
 | AUT-C-embed | [Embed — Authoring Guide](03-authoring/components/embed/EMBED-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
 | AUT-C-filter-list | [Filter List — Authoring Guide](03-authoring/components/filter-list/FILTER-LIST-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
@@ -253,6 +260,7 @@ primary: true
 | AUT-C-fragment | [Fragment — Authoring Guide](03-authoring/components/fragment/FRAGMENT-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
 | AUT-C-gen-carousel | [Gen Carousel — Authoring Guide](03-authoring/components/gen-carousel/GEN-CAROUSEL-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
 | AUT-C-hero | [Hero — Authoring Guide](03-authoring/components/hero/HERO-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
+| AUT-C-history-timeline | [History Timeline — Authoring Guide](03-authoring/components/history-timeline/HISTORY-TIMELINE-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
 | AUT-C-image-collage | [Image Collage — Authoring Guide](03-authoring/components/image-collage/IMAGE-COLLAGE-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
 | AUT-C-interactive-dashboard | [Interactive Dashboard — Authoring Guide](03-authoring/components/interactive-dashboard/INTERACTIVE-DASHBOARD-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
 | AUT-C-list | [List — Authoring Guide](03-authoring/components/list/LIST-AUTHORING-GUIDE.md) | Content authors, content managers, AEM authoring leads |
@@ -286,6 +294,7 @@ primary: true
 | QA-TC-column-break | [Column Break — Test Cases](05-quality-assurance/test-cases/blocks/column-break/COLUMN-BREAK-TEST-CASES.md) | QA lead, testers, release lead |
 | QA-TC-columns | [Columns — Test Cases](05-quality-assurance/test-cases/blocks/columns/COLUMNS-TEST-CASES.md) | QA lead, testers, release lead |
 | QA-TC-columns-container | [Columns Container — Test Cases](05-quality-assurance/test-cases/blocks/columns-container/COLUMNS-CONTAINER-TEST-CASES.md) | QA lead, testers, release lead |
+| QA-TC-conf-med-cont | [Configurable Media Contacts — Test Cases](05-quality-assurance/test-cases/blocks/conf-med-cont/CONF-MED-CONT-TEST-CASES.md) | QA lead, testers, release lead |
 | QA-TC-conversation-canvas | [Conversation Canvas — Test Cases](05-quality-assurance/test-cases/blocks/conversation-canvas/CONVERSATION-CANVAS-TEST-CASES.md) | QA lead, testers, release lead |
 | QA-TC-embed | [Embed — Test Cases](05-quality-assurance/test-cases/blocks/embed/EMBED-TEST-CASES.md) | QA lead, testers, release lead |
 | QA-TC-filter-list | [Filter List — Test Cases](05-quality-assurance/test-cases/blocks/filter-list/FILTER-LIST-TEST-CASES.md) | QA lead, testers, release lead |
@@ -295,6 +304,7 @@ primary: true
 | QA-TC-gen-carousel | [Gen Carousel — Test Cases](05-quality-assurance/test-cases/blocks/gen-carousel/GEN-CAROUSEL-TEST-CASES.md) | QA lead, testers, release lead |
 | QA-TC-header | [Header — Test Cases](05-quality-assurance/test-cases/blocks/header/HEADER-TEST-CASES.md) | QA lead, testers, release lead |
 | QA-TC-hero | [Hero — Test Cases](05-quality-assurance/test-cases/blocks/hero/HERO-TEST-CASES.md) | QA lead, testers, release lead |
+| QA-TC-history-timeline | [History Timeline — Test Cases](05-quality-assurance/test-cases/blocks/history-timeline/HISTORY-TIMELINE-TEST-CASES.md) | QA lead, testers, release lead |
 | QA-TC-image-collage | [Image Collage — Test Cases](05-quality-assurance/test-cases/blocks/image-collage/IMAGE-COLLAGE-TEST-CASES.md) | QA lead, testers, release lead |
 | QA-TC-interactive-dashboard | [Interactive Dashboard — Test Cases](05-quality-assurance/test-cases/blocks/interactive-dashboard/INTERACTIVE-DASHBOARD-TEST-CASES.md) | QA lead, testers, release lead |
 | QA-TC-list | [List — Test Cases](05-quality-assurance/test-cases/blocks/list/LIST-TEST-CASES.md) | QA lead, testers, release lead |
@@ -634,4 +644,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/","tools/docs/blocks.json","component-definition.json"]
 relatedComponents: []
 relatedPages: []
@@ -30,22 +30,22 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/, tools/docs/blocks.json, component-definition.json |
 | Related documents | — |
 | Related AEM paths | — |
 
 ## Contents
 
-- [Blocks (32)](#blocks-32)
+- [Blocks (34)](#blocks-34)
 - [Default-content components](#default-content-components)
 - [Screenshots](#screenshots)
 - [Known limitations](#known-limitations)
 - [Open items](#open-items)
 - [Change history](#change-history)
 
-## Blocks (32)
+## Blocks (34)
 
 | Block | Folder | Type | Category | Status | Components | Library pages | Curated pages using it | Unit test files |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -56,15 +56,17 @@ primary: false
 | [Column Break](./column-break/COLUMN-BREAK-DEVELOPER-GUIDE.md) | `column-break` | Child item | child-item | Active | column-break | 0 | 4 | 0 |
 | [Columns](./columns/COLUMNS-DEVELOPER-GUIDE.md) | `columns` | Independent | deprecated | Compatibility-only | columns | 3 | 0 | 0 |
 | [Columns Container](./columns-container/COLUMNS-CONTAINER-DEVELOPER-GUIDE.md) | `columns-container` | Container (section) | container | Active | columns-container | 4 | 4 | 0 |
+| [Configurable Media Contacts](./conf-med-cont/CONF-MED-CONT-DEVELOPER-GUIDE.md) | `conf-med-cont` | Independent | listing | Active | conf-med-cont | 2 | 0 | 1 |
 | [Conversation Canvas](./conversation-canvas/CONVERSATION-CANVAS-DEVELOPER-GUIDE.md) | `conversation-canvas` | Container | interactive | Active | conversation-canvas, conversation-canvas-button | 6 | 2 | 1 |
 | [Embed](./embed/EMBED-DEVELOPER-GUIDE.md) | `embed` | Independent | media | Active | embed | 2 | 0 | 0 |
 | [Filter List](./filter-list/FILTER-LIST-DEVELOPER-GUIDE.md) | `filter-list` | Container | listing | Active | filter-list, filter-list-tag, filter-list-category, filter-list-page | 7 | 4 | 0 |
 | [Footer](./footer/FOOTER-DEVELOPER-GUIDE.md) | `footer` | Structural | navigation | Active | footer, footer-link | 8 | 0 | 0 |
-| [Form Variations](./form-variations/FORM-VARIATIONS-DEVELOPER-GUIDE.md) | `form-variations` | Container | interactive | Active | form-variations, field-text, field-select, field-combined, field-textarea, field-checkbox, contact-card, field-submit | 3 | 8 | 0 |
+| [Form Variations](./form-variations/FORM-VARIATIONS-DEVELOPER-GUIDE.md) | `form-variations` | Container | interactive | Active | form-variations, field-text, field-select, field-combined, field-textarea, field-checkbox, field-richtext, contact-card, field-submit | 3 | 8 | 1 |
 | [Fragment](./fragment/FRAGMENT-DEVELOPER-GUIDE.md) | `fragment` | Structural | utility | Active | fragment | 4 | 0 | 0 |
 | [Gen Carousel](./gen-carousel/GEN-CAROUSEL-DEVELOPER-GUIDE.md) | `gen-carousel` | Container (section) | container | Active | gen-carousel | 6 | 1 | 0 |
-| [Header](./header/HEADER-DEVELOPER-GUIDE.md) | `header` | Structural | navigation | Active | none (code only) | 5 | 0 | 0 |
+| [Header](./header/HEADER-DEVELOPER-GUIDE.md) | `header` | Structural | navigation | Active | none (code only) | 5 | 0 | 1 |
 | [Hero](./hero/HERO-DEVELOPER-GUIDE.md) | `hero` | Container | content | Active | hero, hero-cta | 5 | 6 | 0 |
+| [History Timeline](./history-timeline/HISTORY-TIMELINE-DEVELOPER-GUIDE.md) | `history-timeline` | Container | content | Active | history-timeline, history-timeline-item | 0 | 0 | 0 |
 | [Image Collage](./image-collage/IMAGE-COLLAGE-DEVELOPER-GUIDE.md) | `image-collage` | Container | content | Active (Proposed, KB-D-063) | image-collage, image-collage-item | 0 | 0 | 0 |
 | [Interactive Dashboard](./interactive-dashboard/INTERACTIVE-DASHBOARD-DEVELOPER-GUIDE.md) | `interactive-dashboard` | Independent | utility | Experimental (placeholder) | interactive-dashboard | 2 | 0 | 0 |
 | [List](./list/LIST-DEVELOPER-GUIDE.md) | `list` | Container | listing | Active | list, list-item | 15 | 11 | 3 |
@@ -77,7 +79,7 @@ primary: false
 | [Table](./table/TABLE-DEVELOPER-GUIDE.md) | `table` | Container | content | Active | table, table-row, table-col-2, table-col-3, table-col-4, table-col-5, table-col-6, table-col-7, table-col-8, table-col-9 | 2 | 0 | 0 |
 | [Table List](./table-list/TABLE-LIST-DEVELOPER-GUIDE.md) | `table-list` | Container | listing | Active | table-list, table-list-card | 6 | 6 | 0 |
 | [Tabs](./tabs/TABS-DEVELOPER-GUIDE.md) | `tabs` | Container (section) and block | container | Active | tabs, tabs-block, tabs-item | 14 | 1 | 0 |
-| [TCS Header](./tcs-header/TCS-HEADER-DEVELOPER-GUIDE.md) | `tcs-header` | Independent | navigation | Active | tcs-header | 0 | 0 | 0 |
+| [TCS Header](./tcs-header/TCS-HEADER-DEVELOPER-GUIDE.md) | `tcs-header` | Independent | navigation | Active | tcs-header | 0 | 0 | 1 |
 | [Teaser](./teaser/TEASER-DEVELOPER-GUIDE.md) | `teaser` | Container | content | Active | teaser, teaser-link, teaser-stat, teaser-collage-image | 11 | 12 | 0 |
 | [Testimonial](./testimonial/TESTIMONIAL-DEVELOPER-GUIDE.md) | `testimonial` | Container | content | Active | testimonial, testimonial-stat | 2 | 7 | 0 |
 | [Video](./video/VIDEO-DEVELOPER-GUIDE.md) | `video` | Independent | media | Active | video | 3 | 3 | 0 |
@@ -108,4 +110,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

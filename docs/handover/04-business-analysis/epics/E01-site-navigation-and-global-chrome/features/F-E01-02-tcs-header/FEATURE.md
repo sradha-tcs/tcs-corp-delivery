@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/tcs-header"]
 relatedComponents: ["tcs-header"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/tcs-header |
 | Related documents | — |
 | Related AEM paths | — |
@@ -63,7 +63,7 @@ primary: true
 | SEO requirements | Semantic headings; metadata from the page |
 | Localization requirements | UI text from placeholders with an English fallback |
 | Security/privacy requirements | No personal data; announced new-tab links |
-| Dependencies | ../../decorators/image-decorator.js, ../../utils/header-space.js, ../../utils/links.js, ../../utils/properties.js, ../../utils/placeholders.js, ../../utils/urls.js, ../../utils/site.js, ../../utils/query-index.js |
+| Dependencies | ../../decorators/image-decorator.js, ../../utils/header-space.js, ../../utils/links.js, ../../utils/properties.js, ../../utils/placeholders.js, ../../utils/urls.js, ../../utils/site.js, ../../utils/query-index.js, ./header-theme.js |
 | Acceptance criteria | See the user stories |
 | Related user stories | US-F-E01-02-01, US-F-E01-02-02, US-F-E01-02-03 |
 | Related components | tcs-header |
@@ -89,4 +89,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

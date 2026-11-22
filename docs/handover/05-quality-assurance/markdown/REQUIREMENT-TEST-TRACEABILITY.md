@@ -8,8 +8,8 @@ owner: "QA Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -85,12 +85,12 @@ primary: false
 | US-F-E01-05-02 | F-E01-05 | modal | TC-MODAL-006 | Passed |
 | US-F-E01-05-02 | F-E01-05 | modal | TC-MODAL-007 | Not Run |
 | US-F-E02-01-01 | F-E02-01 | hero | TC-HERO-002 | Not Run |
-| US-F-E02-01-01 | F-E02-01 | hero | TC-HERO-024 | Not Run |
 | US-F-E02-01-01 | F-E02-01 | hero | TC-HERO-025 | Not Run |
+| US-F-E02-01-01 | F-E02-01 | hero | TC-HERO-026 | Not Run |
 | US-F-E02-01-02 | F-E02-01 | hero | TC-HERO-001 | Failed |
-| US-F-E02-01-02 | F-E02-01 | hero | TC-HERO-026 | Requires Manual Validation |
-| US-F-E02-01-02 | F-E02-01 | hero | TC-HERO-027 | Passed |
-| US-F-E02-01-02 | F-E02-01 | hero | TC-HERO-028 | Not Run |
+| US-F-E02-01-02 | F-E02-01 | hero | TC-HERO-027 | Requires Manual Validation |
+| US-F-E02-01-02 | F-E02-01 | hero | TC-HERO-028 | Passed |
+| US-F-E02-01-02 | F-E02-01 | hero | TC-HERO-029 | Not Run |
 | US-F-E02-01-03 | F-E02-01 | hero | TC-HERO-003 | Not Run |
 | US-F-E02-01-03 | F-E02-01 | hero | TC-HERO-004 | Not Run |
 | US-F-E02-01-03 | F-E02-01 | hero | TC-HERO-005 | Not Run |
@@ -112,13 +112,14 @@ primary: false
 | US-F-E02-01-03 | F-E02-01 | hero | TC-HERO-021 | Not Run |
 | US-F-E02-01-03 | F-E02-01 | hero | TC-HERO-022 | Not Run |
 | US-F-E02-01-03 | F-E02-01 | hero | TC-HERO-023 | Not Run |
+| US-F-E02-01-03 | F-E02-01 | hero | TC-HERO-024 | Not Run |
 | US-F-E02-02-01 | F-E02-02 | page-header | TC-PAGE-HEADER-002 | Not Run |
-| US-F-E02-02-01 | F-E02-02 | page-header | TC-PAGE-HEADER-010 | Not Run |
-| US-F-E02-02-01 | F-E02-02 | page-header | TC-PAGE-HEADER-011 | Not Run |
+| US-F-E02-02-01 | F-E02-02 | page-header | TC-PAGE-HEADER-018 | Not Run |
+| US-F-E02-02-01 | F-E02-02 | page-header | TC-PAGE-HEADER-019 | Not Run |
 | US-F-E02-02-02 | F-E02-02 | page-header | TC-PAGE-HEADER-001 | Failed |
-| US-F-E02-02-02 | F-E02-02 | page-header | TC-PAGE-HEADER-012 | Requires Manual Validation |
-| US-F-E02-02-02 | F-E02-02 | page-header | TC-PAGE-HEADER-013 | Passed |
-| US-F-E02-02-02 | F-E02-02 | page-header | TC-PAGE-HEADER-014 | Not Run |
+| US-F-E02-02-02 | F-E02-02 | page-header | TC-PAGE-HEADER-020 | Requires Manual Validation |
+| US-F-E02-02-02 | F-E02-02 | page-header | TC-PAGE-HEADER-021 | Passed |
+| US-F-E02-02-02 | F-E02-02 | page-header | TC-PAGE-HEADER-022 | Not Run |
 | US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-003 | Not Run |
 | US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-004 | Not Run |
 | US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-005 | Not Run |
@@ -126,13 +127,21 @@ primary: false
 | US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-007 | Not Run |
 | US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-008 | Not Run |
 | US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-009 | Not Run |
+| US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-010 | Not Run |
+| US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-011 | Not Run |
+| US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-012 | Not Run |
+| US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-013 | Not Run |
+| US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-014 | Not Run |
+| US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-015 | Not Run |
+| US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-016 | Not Run |
+| US-F-E02-02-03 | F-E02-02 | page-header | TC-PAGE-HEADER-017 | Not Run |
 | US-F-E03-01-01 | F-E03-01 | teaser | TC-TEASER-002 | Not Run |
-| US-F-E03-01-01 | F-E03-01 | teaser | TC-TEASER-040 | Not Run |
-| US-F-E03-01-01 | F-E03-01 | teaser | TC-TEASER-041 | Not Run |
+| US-F-E03-01-01 | F-E03-01 | teaser | TC-TEASER-056 | Not Run |
+| US-F-E03-01-01 | F-E03-01 | teaser | TC-TEASER-057 | Not Run |
 | US-F-E03-01-02 | F-E03-01 | teaser | TC-TEASER-001 | Failed |
-| US-F-E03-01-02 | F-E03-01 | teaser | TC-TEASER-042 | Requires Manual Validation |
-| US-F-E03-01-02 | F-E03-01 | teaser | TC-TEASER-043 | Passed |
-| US-F-E03-01-02 | F-E03-01 | teaser | TC-TEASER-044 | Not Run |
+| US-F-E03-01-02 | F-E03-01 | teaser | TC-TEASER-058 | Requires Manual Validation |
+| US-F-E03-01-02 | F-E03-01 | teaser | TC-TEASER-059 | Passed |
+| US-F-E03-01-02 | F-E03-01 | teaser | TC-TEASER-060 | Not Run |
 | US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-003 | Not Run |
 | US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-004 | Not Run |
 | US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-005 | Not Run |
@@ -170,13 +179,29 @@ primary: false
 | US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-037 | Not Run |
 | US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-038 | Not Run |
 | US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-039 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-040 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-041 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-042 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-043 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-044 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-045 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-046 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-047 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-048 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-049 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-050 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-051 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-052 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-053 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-054 | Not Run |
+| US-F-E03-01-03 | F-E03-01 | teaser | TC-TEASER-055 | Not Run |
 | US-F-E03-02-01 | F-E03-02 | cards | TC-CARDS-002 | Not Run |
-| US-F-E03-02-01 | F-E03-02 | cards | TC-CARDS-022 | Not Run |
-| US-F-E03-02-01 | F-E03-02 | cards | TC-CARDS-023 | Not Run |
+| US-F-E03-02-01 | F-E03-02 | cards | TC-CARDS-027 | Not Run |
+| US-F-E03-02-01 | F-E03-02 | cards | TC-CARDS-028 | Not Run |
 | US-F-E03-02-02 | F-E03-02 | cards | TC-CARDS-001 | Failed |
-| US-F-E03-02-02 | F-E03-02 | cards | TC-CARDS-024 | Requires Manual Validation |
-| US-F-E03-02-02 | F-E03-02 | cards | TC-CARDS-025 | Passed |
-| US-F-E03-02-02 | F-E03-02 | cards | TC-CARDS-026 | Not Run |
+| US-F-E03-02-02 | F-E03-02 | cards | TC-CARDS-029 | Requires Manual Validation |
+| US-F-E03-02-02 | F-E03-02 | cards | TC-CARDS-030 | Passed |
+| US-F-E03-02-02 | F-E03-02 | cards | TC-CARDS-031 | Not Run |
 | US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-003 | Not Run |
 | US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-004 | Not Run |
 | US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-005 | Not Run |
@@ -196,6 +221,11 @@ primary: false
 | US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-019 | Not Run |
 | US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-020 | Not Run |
 | US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-021 | Not Run |
+| US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-022 | Not Run |
+| US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-023 | Not Run |
+| US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-024 | Not Run |
+| US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-025 | Not Run |
+| US-F-E03-02-03 | F-E03-02 | cards | TC-CARDS-026 | Not Run |
 | US-F-E03-03-01 | F-E03-03 | columns-container | TC-COLUMNS-CONTAINER-002 | Not Run |
 | US-F-E03-03-01 | F-E03-03 | columns-container | TC-COLUMNS-CONTAINER-021 | Not Run |
 | US-F-E03-03-01 | F-E03-03 | columns-container | TC-COLUMNS-CONTAINER-022 | Not Run |
@@ -504,14 +534,23 @@ primary: false
 | US-F-E05-04-03 | F-E05-04 | media-contacts | TC-MEDIA-CONTACTS-007 | Not Run |
 | US-F-E05-04-03 | F-E05-04 | media-contacts | TC-MEDIA-CONTACTS-008 | Not Run |
 | US-F-E06-01-01 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-002 | Not Run |
-| US-F-E06-01-01 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-005 | Not Run |
-| US-F-E06-01-01 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-006 | Not Run |
+| US-F-E06-01-01 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-014 | Not Run |
+| US-F-E06-01-01 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-015 | Not Run |
 | US-F-E06-01-02 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-001 | Failed |
-| US-F-E06-01-02 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-007 | Requires Manual Validation |
-| US-F-E06-01-02 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-008 | Passed |
-| US-F-E06-01-02 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-009 | Not Run |
+| US-F-E06-01-02 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-016 | Requires Manual Validation |
+| US-F-E06-01-02 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-017 | Passed |
+| US-F-E06-01-02 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-018 | Not Run |
 | US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-003 | Not Run |
 | US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-004 | Not Run |
+| US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-005 | Not Run |
+| US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-006 | Not Run |
+| US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-007 | Not Run |
+| US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-008 | Not Run |
+| US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-009 | Not Run |
+| US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-010 | Not Run |
+| US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-011 | Not Run |
+| US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-012 | Not Run |
+| US-F-E06-01-03 | F-E06-01 | form-variations | TC-FORM-VARIATIONS-013 | Not Run |
 | US-F-E07-01-01 | F-E07-01 | conversation-canvas | TC-CONVERSATION-CANVAS-002 | Not Run |
 | US-F-E07-01-01 | F-E07-01 | conversation-canvas | TC-CONVERSATION-CANVAS-013 | Not Run |
 | US-F-E07-01-01 | F-E07-01 | conversation-canvas | TC-CONVERSATION-CANVAS-014 | Not Run |
@@ -558,4 +597,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

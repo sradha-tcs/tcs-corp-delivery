@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/table-list/README.md","blocks/table-list/_table-list.json"]
 relatedComponents: ["table-list"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/table-list/README.md, blocks/table-list/_table-list.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -92,9 +92,9 @@ Stored on a new component (definition template): `variations` = `"industries"`, 
 | Field label | Property | Type | Required | Default | Allowed values | Author guidance | Example |
 | ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
 | Variation | `variations` | select | No | `industries` | Variation 1 - Title, description, arrow (`industries`), Variation 2 - Description, large title, button (`solutions`), Variation 3 - Description, number, large title, arrow (`products`), Variation 4 - Wide title, grey description, arrow (row hover) (`segments`), Variation 5 - Label, large description (steps) (`approach`), Variation 6 - Description, right-aligned title, small arrow (`platforms`) | Variation 1: title, description and arrow. Variation 2: description, large title and button. Variation 3: description, number, large title and arrow. Variation 4: wide title, narrow grey description and arrow; the row is highlighted on hover. Variation 5: small label and large description (steps, without links). Variation 6: description, large right-aligned title and a small arrow. | solutions |
-| Background color | `backgroundColor` | select | No | `white` | White (default) (`white`), Black (`black`), Dark Green (`dark-green`), Navy (`navy`) | Choose the background color for the Table List. | — |
+| Background color | `backgroundColor` | select | No | `white` | White (default) (`white`), Grey (`grey`), Black (`black`), Dark Green (`dark-green`), Navy (`navy`) | Choose the background color for the Table List. | — |
 | Heading | `listHeading` | text | No | "" | — | — | Industries we serve |
-| Heading Type | `listHeadingType` | select | No | `h2` | H2 (`h2`), H3 (`h3`), H4 (`h4`) | Delivered with `listHeading` (field collapse). | h2 |
+| Heading Type | `listHeadingType` | select | No | `h2` | H1 (`h1`), H2 (`h2`), H3 (`h3`), H4 (`h4`) | Delivered with `listHeading` (field collapse). | h2 |
 | Eyebrow | `listEyebrow` | text | No | "" | — | Optional. A short label above the heading, e.g. Models & Data. | — |
 | Heading position | `headerPosition` | select | No | "" | Above the list (""), Beside the list (`beside`) | Beside the list: the eyebrow, heading and call to action in a column on the left of the list from 900px wide (above it on smaller screens), with a larger statement-style heading. | — |
 | Maximum items | `maxCards` | number | No | `4` | numberMin: 1; numberMax: 20; customErrorMsg: Maximum items must be between 1 and 20. | Display between 1 and 20 items. | 3 |
@@ -149,7 +149,7 @@ Model `table-list-card`; template name "Table List Item" (the block class AEM re
 
 Notes the tables can't show:
 
-- **Variation:** becomes the block class (`industries`, `solutions`, `products`, `segments`, `approach`, `platforms`; Variation 6 adds `solutions` too); any other value gives `industries`. Defaults per variation: industries = filled button, numbers on mobile only, arrow; solutions = outline button, numbers hidden, button; products = text link, numbers shown, diagonal arrow; segments = outline button (on the light grey background), numbers hidden, arrow; approach and platforms = outline button, numbers hidden, arrow (approach: only on items with a Link). An explicit Style, Numbers or Item link overrides them.
+- **Variation:** becomes the block class (`industries`, `solutions`, `products`); any other value gives `industries`. Defaults per variation: industries = filled button, numbers on mobile only, arrow; solutions = outline button, numbers hidden, button; products = text link, numbers shown, diagonal arrow. An explicit Style, Numbers or Item link overrides them.
 - **Heading / Heading Type:** Heading Type collapses into the Heading (field collapse): the level is read from the delivered heading element (`h2`, `h3` or `h4`, else `h2`); only the text is kept. Item titles are one level below the heading (`h3` under `h2`); without a heading they are `h2`.
 - **Maximum items:** clamped to 1–10, 4 when empty or not a number. Items above it are left out on the page; in Universal Editor they stay selectable, dimmed (`table-list-item-hidden`).
 - **Text / Link / Style (call to action):** rendered when a Link or Text is set; on the page only with a Link (the editor shows a non-focusable preview without one). Text defaults to "View all" (placeholder `viewAll`). Link values: a page, `/path`, `#anchor` or `http(s)://…`; AEM content paths become published paths (`toSitePath`); other values (e.g. `mailto:`) are ignored.
@@ -404,87 +404,6 @@ C = Title with trademark
 D = Diagonal arrow
 ```
 
-#### Variation 4 - Segments (`segments`)
-
-Source: TCS Designs - Prototypes Figma, component "List Item - Industry" in the "Industries" sections of L1 What we do ("Deep expertise, across industries", desktop / tablet / mobile frames, with the "Industries" call to action) and L2 Industry ("Segments we serve", no call to action, with the hover state).
-
-- **Purpose / when to use:** a directory of industries, segments or offerings where the name leads and a short grey sentence supports it; up to 10 rows, each linking to a page.
-- **Fields:** Title, Description, Link per item; Heading and call to action. No new fields: the variation uses the existing ones.
-- **Dialog:** Variation 4; defaults: Style outline button (`secondary`, drawn on the light grey `--color-bg-secondary` background on a white Table List), Numbers hidden, Item link Arrow. Style, Numbers, Item link, Button text, Background color and Hide button work as for the other variations.
-- **Rendering:** rows `main | description | action`; title 1.75rem medium at every width; description `--color-text-secondary`, 1.25rem medium from 600px (1rem below); 3rem arrow in `--slate-500`; a 1px `--slate-400` divider below every row, the last one too; row padding 2.5rem / 1.25rem / 3.75rem. The block keeps the Figma gutter itself: 1rem / 2.5rem / 5rem from the edge (below 600px / from 600px / from 900px) in a full-width section (the default Section width; a fixed-width section adds its own gutter), and the Figma section padding (2.5rem / 5rem / 7.5rem) inside a background colour of its own.
-- **Dark backgrounds** (Black, Dark Green, Navy; Figma "Models & Data"): white titles, descriptions in 80% `--slate-300` (7.7:1 on navy, 8.1:1 on black), arrows in 40% white (3.8:1; white on hover and focus).
-- **States:** a row with an arrow link gets the `--color-bg-secondary` background and a `--color-text-default` arrow on hover and when its arrow has keyboard focus (5% white on the dark backgrounds); the arrow doesn't move. Rows with a Button item link or without a Link aren't highlighted (the row isn't the link).
-- **Responsive:** the rows follow the width of the list (a container query on `.table-list-items`), not of the screen, so they fit in the Figma columns too: below 25.5rem title, description and the arrow stacked (arrow below the description, Figma mobile); from 25.5rem title above description (12px apart) with the arrow beside them (Figma 476 and 628px columns); from 44.5rem title | description (at most 21.15rem, the Figma's 338px) | arrow. The header: below 600px the call to action below the heading (heading 1.75rem), from 600px beside it when it fits (heading 2.5rem).
-- **Accessibility:** arrow link "Explore {title}" covers the row; the description keeps 6.9:1 on white (the Figma's 80% opacity grey would give 4.3:1, below WCAG 1.4.3), the arrow 3:1 (the Figma's `--slate-400` gives 2:1, below WCAG 1.4.11); hover and focus give the same highlight.
-- **Data layer:** clicks `interaction: link`.
-
-```text
-[Screenshot Placeholder]
-
-File name:
-table-list-segments-desktop.png
-
-Purpose:
-Variation 4 at 1440px: the heading "Segments we serve", four rows with the wide title, the narrow grey description and the arrow, the second row hovered (light grey background, dark arrow).
-
-Annotations:
-A = Heading
-B = Title
-C = Description
-D = Arrow
-E = Hovered row
-```
-
-```text
-[Screenshot Placeholder]
-
-File name:
-table-list-segments-mobile.png
-
-Purpose:
-Variation 4 at 375px: the heading with the Industries call to action below it, rows with the title, description and the arrow stacked.
-
-Annotations:
-A = Heading
-B = Call to action
-C = Title
-D = Description
-E = Arrow
-```
-
-#### Variation 5 - Approach (`approach`)
-
-Source: TCS Designs - Prototypes Figma, L3 Case Study / Customer Story, "Rail - 3 col" (node 57:36224), the "Approach" section: DEFINE, DESIGN, DELIVER on `#003b39`.
-
-- **Purpose / when to use:** steps, phases or principles: a short label and a sentence or two each, usually without links.
-- **Fields:** the item Title is the label, Description the text; Link optional. Heading; call to action optional.
-- **Dialog:** Variation 5 and Background color Dark Green (the Figma); defaults: Style outline button, Numbers hidden, Item link Arrow, shown only on items with a Link (no decorative arrow).
-- **Rendering:** the label 1.25rem medium uppercase (`text-transform`: type it in normal case) in `--slate-300` on dark (7.8:1 on Dark Green), `--color-text-secondary` on white; the description 1.75rem medium (1.5rem below 600px), white on dark; a 1px divider below every row (`--slate-600` on dark); rows 2.5rem / 3.75rem padding, 1.5rem apart; the Figma 80px heading-to-list gap and 120px section padding (7.5rem from 1200px).
-- **Responsive:** rows follow the list width: below 44rem the label above the description; from 44rem label | description (23.55rem, the Figma's 376.8px). The Figma has no tablet or mobile frame for this section: the narrow layout is the block's.
-- **Not reproduced:** the Figma truncates the description after four lines (its text box is named "5 lines max"); the block shows the whole description, so authored text is never hidden. Keep descriptions to about five lines (about 120 characters).
-- **Accessibility:** labels are headings (h3 under the h2 heading); without Links the rows have no focusable element.
-
-#### Variation 6 - Platforms (`platforms`)
-
-Source: TCS Designs - Prototypes Figma, L2 Products, "Rail - 3 col" (node 57:35705), "Our transformation solutions" (TwinX™, Cognix™, BaNCS™, ADD™).
-
-- **Purpose / when to use:** products or platforms with a large name, a one-line promise and a link.
-- **Fields:** Title, Trademark, Description, Link per item; Heading.
-- **Dialog:** Variation 6; defaults: Style outline button, Numbers hidden, Item link Arrow.
-- **Rendering:** built on Variation 2 (the block gets the `solutions` class too and keeps its type: description 1.125rem regular `--grey-900`, title 2.5rem / 4rem semibold right-aligned); differences: a 24px arrow (`--icon-size-s`) centred on the first line of the title, the description at the top of the row, the Figma row spacing (2.5rem above, 3.75rem below, 1.5rem apart) and gutter (as Variation 4).
-- **Responsive:** as Variation 2: stacked below 600px (description, title, arrow); from 600px description | right-aligned title | arrow. The Figma has a desktop frame only.
-- **Accessibility:** arrow link "Explore {title}" (the trademark sign isn't part of the name).
-
-#### Eyebrow, Heading position, Navy and Circled arrow
-
-Added for the TCS Designs - Prototypes Figma, L1 What we do, "Human + AI autonomy model" (node 57:16935): the "Models & Data" list (Variation 4 with Eyebrow "Models & Data", a statement Heading, Heading position Beside, Background color Navy, Numbers Show, Item link Circled arrow, Maximum items 5). Each works with every variation.
-
-- **Eyebrow** (`listEyebrow`): a short label on its own line above the heading, 1rem semibold (0.875rem from 600 to 1199px when beside).
-- **Heading position** (`headerPosition`): Above the list (default) or Beside the list: from 900px the header (eyebrow, heading, call to action) is the left of two equal columns, 24px apart (Figma 628 + 24 + 628px; 24px from the edge between 900 and 1199px, Figma tablet), above the list before; the heading becomes a statement: medium weight, line height 1.2, 1.75 / 2 / 2.5rem; dividers 24px below the rows, none below the last (Figma).
-- **Background color Navy** (`navy`): `--brand-600` (#011627) with the light theme of Black and Dark Green.
-- **Item link Circled arrow** (`arrow-circle`): `icons/arrow-right-circle.svg` (a 42px circle with an 18px arrow in the 48px box, the Figma "Arrow right-circle").
-- **Delivery:** both fields are key-value properties; the reader matches them after the fields authored before them (`FIELDS`), so unkeyed rows of older lists aren't shifted.
-
 #### Call to action style, Numbers and Item link options
 
 Style (Filled button `primary`, Outline button `secondary`, Text link `tertiary`), Numbers (Show, Show on mobile only, Hide: class `numbers-{show,mobile,hide}`) and Item link (Arrow, Diagonal arrow, Button) can be combined with any variation; "Variation default" keeps the variation's value.
@@ -525,10 +444,10 @@ Steps: add the Table List; choose Variation 3; fill the heading and call to acti
 ## Content and Asset Guidelines
 
 - **Heading:** up to about 50 characters (recommendation from the handover, not enforced).
-- **Item titles:** Variation 1 up to about 40 characters, Variation 2 about 25, Variation 3 about 15 (very large type), Variation 4 about 45 (e.g. "Communication, Media & Information Services"); plain text (formatting is dropped). Expect longer titles in other languages.
+- **Item titles:** Variation 1 up to about 40 characters, Variation 2 about 25, Variation 3 about 15 (very large type); plain text (formatting is dropped). Expect longer titles in other languages.
 - **Descriptions:** about 120 characters (Variation 3: 160); one sentence that makes sense without the title.
 - **CTAs and links:** a specific call to action ("View all industries"); short verbs for item buttons ("Explore", "Discover"); link to canonical published pages with the page picker. Only `/`, `#` and `http(s)` links are supported.
-- **Images and icons:** none authored; the arrows are `icons/arrow-right.svg`, `icons/arrow-up-right.svg` and `icons/arrow-right-circle.svg` masks.
+- **Images and icons:** none authored; the arrows are `icons/arrow-right.svg` and `icons/arrow-up-right.svg` masks.
 - **Tags and metadata:** not used.
 - **Min / max items:** at most 10 shown (Maximum items 1–10, default 4); recommended 3–8 (Variation 1) or 3–6 (Variations 2 and 3).
 - **Missing content:** an item without a Link has a decorative arrow or no button; without a Description no description column; without a title no heading.
@@ -579,4 +498,4 @@ Evidence to collect: page URL (preview / live), viewport width, the block's `.pl
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

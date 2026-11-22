@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/page-header/README.md","blocks/page-header/_page-header.json","blocks/page-header/page-header.css","blocks/page-header/page-header.js"]
 relatedComponents: ["page-header","page-header-cta"]
 relatedPages: ["/design-block-master/en/block-library/page-header","/design-block-master/en/block-library/page-header/article","/design-block-master/en/block-library/page-header/article-default","/design-block-master/en/block-library/page-header/cta-primary","/design-block-master/en/block-library/page-header/cta-secondary","/design-block-master/en/block-library/page-header/cta-text-link","/design-block-master/en/block-library/page-header/default-by-page-type","/design-block-master/en/block-library/page-header/display","/design-block-master/en/block-library/page-header/guest-author","/design-block-master/en/block-library/page-header/landing","/design-block-master/en/block-library/page-header/landing-default","/design-block-master/en/block-library/page-header/landing-featured-image","/design-block-master/en/block-library/page-header/landing-text-only","/design-block-master/en/block-library/page-header/press-release","/design-block-master/en/block-library/page-header/secondary","/design-block-master/en/block-library/page-header/tablet-widths","/design-block-master/en/block-library/page-header/tags-and-content-type","/design-block-master/en/curated-design-pages/case-study","/design-block-master/en/curated-design-pages/collection","/design-block-master/en/curated-design-pages/story"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 2026-11-15 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/page-header/README.md, blocks/page-header/_page-header.json, blocks/page-header/page-header.css, blocks/page-header/page-header.js |
 | Related documents | [Variations](./PAGE-HEADER-VARIATIONS.md), [Test coverage](./PAGE-HEADER-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/page-header/PAGE-HEADER-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/page-header, /content/tcs-corp/design-block-master/en/block-library/page-header/article, /content/tcs-corp/design-block-master/en/block-library/page-header/article-default |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | The title area of a page from its metadata (title, description, tags, author, dates) |
 | Variations (summary) | Layouts by page type |
 | Children | page-header-cta (CTA) |
-| Code size | 561 lines of JS and CSS |
+| Code size | 698 lines of JS and CSS |
 
 ## Overview
 
@@ -124,12 +124,20 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 
 | Tab | Label | Property | Type | Required in model | Default | Options | Visibility |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Style | Layout | `classes` | select | No | `""` | 5 options | — |
+| Style | Layout | `classes` | select | No | `""` | 6 options | — |
+| Style | Title Font (Desktop) | `pageHeaderTitleFont` | select | No | `h2` | 6 options | — |
+| Style | Title Font (Tablet) | `pageHeaderTitleFontTablet` | select | No | `h2` | 6 options | — |
+| Style | Title Font (Mobile) | `pageHeaderTitleFontMobile` | select | No | `h2` | 6 options | — |
+| Style | Description Font | `pageHeaderDescriptionFont` | select | No | `""` | 7 options | — |
 | CTAs | CTA List | `ctas` | container | No | — | — | — |
 | CTAs | CTA List › CTA Title | `ctaText` | text | No | — | — | — |
 | CTAs | CTA List › CTA Link | `cta` | aem-content | No | — | — | — |
 | CTAs | CTA List › CTA Link Type | `ctaTarget` | select | No | `""` | 2 options | — |
 | CTAs | CTA List › CTA Link Style | `ctaStyle` | select | No | `primary` | 3 options | — |
+| CTAs | CTA List › Primary CTA Text Color (Primary only) | `pageHeaderPrimaryCtaTextColor` | select | No | `""` | 4 options | — |
+| CTAs | CTA List › Primary CTA Background (Primary only) | `pageHeaderPrimaryCtaBackground` | select | No | `""` | 4 options | — |
+| CTAs | CTA List › Secondary CTA Text Color (Secondary only) | `pageHeaderSecondaryCtaTextColor` | select | No | `""` | 4 options | — |
+| CTAs | CTA List › Secondary CTA Background (Secondary only) | `pageHeaderSecondaryCtaBackground` | select | No | `""` | 4 options | — |
 
 ### CTA (`page-header-cta`)
 
@@ -148,10 +156,12 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 
 | Import |
 | --- |
+| `../../scripts/aem.js` |
 | `../../scripts/scripts.js` |
 | `../../decorators/article-meta-decorator.js` |
 | `../../decorators/button-decorator.js` |
 | `../../decorators/editor-item-decorator.js` |
+| `../../decorators/heading-decorator.js` |
 | `../../decorators/link-decorator.js` |
 | `../../decorators/responsive-image-decorator.js` |
 | `../../decorators/tag-decorator.js` |
@@ -177,19 +187,21 @@ blocks/page-header/
 
 | Decorator/Utility | Purpose | Execution or dependency point |
 | ----------------- | ------- | ----------------------------- |
+| [`scripts/aem.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/aem.js) | Edge Delivery core library (block loading, CSS, metadata, optimized pictures) | `page-header.js`: { toClassName } |
 | [`scripts/scripts.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/scripts.js) | Page decoration (moveInstrumentation and shared page helpers) | `page-header.js`: { moveInstrumentation } |
 | [`decorators/article-meta-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/article-meta-decorator.js) | `buildPublished`, `buildReadingTime`, `buildPageActions` (listen / download / share), `buildAuthorLockup` | `page-header.js`: { buildAuthorLockup, buildPageActions, buildPublished, buildReadingTime, } |
 | [`decorators/button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/button-decorator.js) | `decorateButton` (option `newTabHint`: a link opening a new tab says so), `createButton`, `setButtonDisabled`, `setButtonAlignment`, `removeButtonDecoration` | `page-header.js`: { decorateButton } |
 | [`decorators/editor-item-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/editor-item-decorator.js) | `buildEditorItems`, `editorItemHint` (in Universal Editor, an item the block doesn't render yet, e.g. a CTA just added, as a dashed placeholder the author can select; styles in `styles/lazy-styles.css`; the hint loaded o | `page-header.js`: { buildEditorItems, editorItemHint } |
+| [`decorators/heading-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/heading-decorator.js) | `buildHeading` (Title + Title Type), `HEADINGS` | `page-header.js`: { HEADINGS } |
 | [`decorators/link-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/link-decorator.js) | `setLinkTarget` (open in a new window), `announceNewTab` (tells screen reader users a link opens in a new tab: hidden text, or added to its aria-label) | `page-header.js`: { announceNewTab, setLinkTarget } |
 | [`decorators/responsive-image-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/responsive-image-decorator.js) | `buildImage` (image from a URL; site media and EDAM delivery images optimized), `buildDeliveryPicture` (responsive picture of a Dynamic Media with OpenAPI delivery image), `decorateDeliveryImages` (standalone delivery im | `page-header.js`: { buildImage } |
 | [`decorators/tag-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/tag-decorator.js) | `buildTagList` | `page-header.js`: { buildTagList } |
 | [`utils/cells.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/cells.js) | `itemRows`, `KEY_VALUE_ITEM`, `FIELD_ROW_ITEM` (the item rows of a block: by model in the editor, by their cells on the page), `withoutTabCells` (drops the empty cell AEM renders for each dialog tab of an item model), `m | `page-header.js`: { KEY_VALUE_ITEM, itemRows } |
-| [`utils/data.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/data.js) | `loadDataSheet`, `getAuthor`, `getAuthors`, `getLocations`, `getPartners`, `getSocialLinks`, `getMediaContacts`, `inRegion` (the locale's data sheets) | `page-header.js`: { getAuthor } |
+| [`utils/data.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/data.js) | `loadDataSheet`, `getAuthor`, `getAuthors`, `getLocations`, `getPartners`, `getSocialLinks`, `getMediaContacts`, `getConfMedCont` (the three `data/conf-med-cont/` sheets: contacts, regions, media-contacts-config), `inReg | `page-header.js`: { getAuthor } |
 | [`utils/links.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/links.js) | `NEW_WINDOW`, `linkOf`, `linkPathsOf` (the paths of a page property, one or many), `readLinkItems` (CTA lists with Link Type and the items' other select values), `readLinkRows` (the same from link item rows, e.g. Hero CT | `page-header.js`: { readLinkItems, readLinkRows } |
 | [`utils/metadata.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/metadata.js) | `getPageMetadata`, `getPageTags` (article:tag and the AEM page Tags published as `cq-tags`), `getPageLanguage` (page properties and bulk metadata columns: sheet-page-type / page-type, author-id, publish-date, reading-tim | `page-header.js`: { getPageMetadata } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `page-header.js`: { getPlaceholders } |
-| [`utils/properties.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/properties.js) | `readProperties`, `textOf`, `isOn`, `isOnByDefault` (a toggle that defaults to on), `optionOf`, `normalizeKey`, `textSource` (key-value block properties) | `page-header.js`: { optionOf, readProperties } |
+| [`utils/properties.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/properties.js) | `readProperties`, `textOf`, `isOn`, `isOnByDefault` (a toggle that defaults to on), `optionOf`, `normalizeKey`, `textSource` (key-value block properties) | `page-header.js`: { optionOf, readProperties, textOf } |
 | [`utils/taxonomy.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/taxonomy.js) | `loadTaxonomy`, `resolveTags` (tag labels from the locale's taxonomy) | `page-header.js`: { resolveTags } |
 
 <!-- END GENERATED: files -->
@@ -363,6 +375,7 @@ Evidence to collect (no secrets): URL, viewport, the page's `<meta>` tags, the r
 | Handover 2.10 | CTAs as CTA items (`page-header-cta`) instead of the CTA List multifield, which is still read (F-87: a Page Header with CTAs was left out on published pages) | docs/handover revision history | 17 October 2026 |
 | Handover 2.17 | Item children in the Page Header field specification | docs/handover revision history | 18 October 2026 |
 | Handover 2.18 | Additional tab Content animation | docs/handover revision history | 18 October 2026 |
+| Not recorded | Layout CTA Alignment Left (`cta-alignment-left`): the CTAs below the title on the left. CTA List: Primary CTA Text Color / Background (Primary only) and Secondary CTA Text Color / Background (Secondary only), always shown: Universal Editor doesn't evaluate conditions per entry inside the multi container (KB-D-062, confirmed); text White, Blue, Black (`cta-text-*`), background White, Blue, Translucent white (`button-bg-*`, the Teaser's colours); a CTA applies only its own style's values | fix/page-header-styles | 14 November 2026 |
 
 ## Reference pages
 
@@ -503,4 +516,4 @@ Evidence to collect (no secrets): URL, viewport, the page's `<meta>` tags, the r
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/columns-container/_columns-container.json"]
 relatedComponents: ["columns-container"]
 relatedPages: ["/design-block-master/en/block-library/columns-container","/design-block-master/en/block-library/columns-container/alignment-gap-and-breakpoints","/design-block-master/en/block-library/columns-container/columns-of-blocks","/design-block-master/en/block-library/columns-container/columns-per-row"]
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/columns-container/_columns-container.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -54,7 +54,7 @@ primary: false
 | `columns-container` | BG Color (`containerBgColor`) | Content | No | Default = `""`; Grey = `bg-grey`; Dark = `bg-dark`; Dark green = `bg-dark-green`; Navy = `bg-navy` | `` |
 | `columns-container` | Width Type (`sectionWidth`) | Content | No | Full Width = `full-width`; Fixed Width = `fixed-width` | `full-width` |
 | `columns-container` | Columns per row (`columnsPerRow`) | Layout | No | Automatic = `auto`; 1 = `1`; 2 = `2`; 3 = `3`; 4 = `4` | `auto` |
-| `columns-container` | Gap (`columnsGap`) | Layout | No | None = `none`; Small = `small`; Medium = `medium`; Large = `large` | `medium` |
+| `columns-container` | Gap (`columnsGap`) | Layout | No | None = `none`; Small = `small`; Medium = `medium`; Large = `large`; Extra Large = `xlarge` | `medium` |
 | `columns-container` | Vertical alignment (`columnsAlign`) | Layout | No | Top = `top`; Middle = `middle`; Bottom = `bottom`; Stretch (equal heights) = `stretch` | `top` |
 | `columns-container` | Side by side from (`columnsFrom`) | Layout | No | Tablet (600px) = `tablet`; Desktop (900px) = `desktop`; Large desktop (1200px) = `large` | `desktop` |
 | `columns-container` | Animation Type (`containerAnimation`) | Additional | No | None = `""`; Fade in = `motion-fade-in`; Fade up = `motion-fade-up`; Fade down = `motion-fade-down`; Fade left = `motion-fade-left`; Fade right = `motion-fade-right`; Slide up = `motion-slide-up`; Slide down = `motion-slide-down`; Slide left = `motion-slide-left`; Slide right = `motion-slide-right`; Scale in = `motion-scale-in` | `` |
@@ -93,6 +93,7 @@ Status: every option is supported by the model and the code that reads it. "In t
 | columns-container | Gap | Small | `small` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | Gap | Medium | `medium` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | Gap | Large | `large` | Supported (in the model) | Not checkable (data attribute / field value) |
+| columns-container | Gap | Extra Large | `xlarge` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | Vertical alignment | Top | `top` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | Vertical alignment | Middle | `middle` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | Vertical alignment | Bottom | `bottom` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -298,4 +299,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

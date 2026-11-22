@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-13"
-lastValidated: "2026-11-13"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/hero/README.md","blocks/hero/_hero.json","blocks/hero/hero.css","blocks/hero/hero.js"]
 relatedComponents: ["hero","hero-cta"]
 relatedPages: ["/design-block-master/en/block-library/hero","/design-block-master/en/block-library/hero/hero-ctas","/design-block-master/en/block-library/hero/hero-motion","/design-block-master/en/block-library/hero/hero-overview","/design-block-master/en/block-library/hero/hero-styles","/design-block-master/en/curated-design-pages/home","/design-block-master/en/curated-design-pages/insights","/design-block-master/en/curated-design-pages/media-and-investor","/design-block-master/en/curated-design-pages/news-and-events","/design-block-master/en/curated-design-pages/what-we-do","/design-block-master/en/curated-design-pages/who-we-are"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 13 November 2026 |
-| Last validated | 2026-11-13 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/hero/README.md, blocks/hero/_hero.json, blocks/hero/hero.css, blocks/hero/hero.js |
 | Related documents | [Variations](./HERO-VARIATIONS.md), [Test coverage](./HERO-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/hero/HERO-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/hero, /content/tcs-corp/design-block-master/en/block-library/hero/hero-ctas, /content/tcs-corp/design-block-master/en/block-library/hero/hero-motion |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | Full-width banner with image or Lottie, title, description and CTAs |
 | Variations (summary) | Views, nine positions, BG Color, animation |
 | Children | hero-cta (CTA) |
-| Code size | 908 lines of JS and CSS |
+| Code size | 1036 lines of JS and CSS |
 
 ## Overview
 
@@ -97,6 +97,7 @@ primary: true
 - The opening banner of a locale home page (`/en`, `/de-de`, ...).
 - A service or industry landing page with a photograph, an H1 and two CTAs.
 - A campaign page with a Lottie animation as the background (Hero Image type Lotto).
+- A brand or campaign page with a short, silent video as the background (Hero Image type Video).
 - An annual report banner whose chart illustration must be shown whole (Hero View Contained image).
 - A brand statement on a navy or black overlay with white text.
 - A "Discover our story" banner whose CTA scrolls to a section of the same page (down arrow).
@@ -127,8 +128,8 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Content | Icon | `content_icon` | reference | No | — | — | — |
 | Content | Icon Image Alt Text | `content_iconAlt` | text | No | — | — | — |
-| Content | Hero Image type | `classes_media` | select | No | `""` | 2 options | — |
-| Content | Hero Image Path | `image` | reference | No | — | — | — |
+| Content | Hero Image type | `classes_media` | select | No | `""` | 3 options | — |
+| Content | Hero Media Path | `image` | reference | No | — | — | — |
 | Content | Hero Image alt text | `imageAlt` | text | No | — | — | — |
 | Content | Hero View | `classes` | select | No | `""` | 2 options | — |
 | Content | Eyebrow | `content_eyebrow` | text | No | — | — | — |
@@ -141,14 +142,15 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Content | CTA List › CTA Link | `cta` | aem-content | No | — | — | — |
 | Content | CTA List › CTA Link Type | `ctaTarget` | select | No | `same-window` | 2 options | — |
 | Content | CTA List › CTA view | `ctaType` | select | No | `default` | 3 options | — |
-| Content | CTA List › Primary CTA BG Color (Primary only) | `ctaPrimaryBackground` | select | No | `primary-bg-default` | 2 options | — |
+| Content | CTA List › Primary CTA BG Color (Primary only) | `ctaPrimaryBackground` | select | No | `primary-bg-default` | 4 options | — |
+| Content | CTA List › Primary CTA Border color (Primary only) | `ctaPrimaryBorder` | select | No | `primary-border-default` | 5 options | — |
 | Content | CTA List › Secondary CTA BG Color (Secondary only) | `ctaBackground` | select | No | `secondary-bg-default` | 3 options | — |
-| Content | CTA List › Secondary CTA Border color (Secondary only) | `ctaBorder` | select | No | `secondary-border-default` | 3 options | — |
+| Content | CTA List › Secondary CTA Border color (Secondary only) | `ctaBorder` | select | No | `secondary-border-default` | 4 options | — |
 | Content | CTA List › CTA Arrow | `ctaArrow` | select | No | `right` | 2 options | — |
 | Style | Vertical Alignment | `classes_alignment` | select | No | `align-middle` | 3 options | — |
 | Style | Horizontal Alignment | `classes_horizontal` | select | No | `align-center` | 3 options | — |
 | Style | Text Alignment | `classes_textAlignment` | select | No | `text-center` | 3 options | — |
-| Style | BG Color | `classes_background` | select | No | `""` | 8 options | — |
+| Style | BG Color | `classes_background` | select | No | `""` | 9 options | — |
 | Style | Icon color | `classes_iconcolor` | select | No | `""` | 5 options | — |
 | Style | Eyebrow color | `classes_eyebrowcolor` | select | No | `""` | 3 options | — |
 | Style | Title color | `classes_titlecolor` | select | No | `""` | 3 options | — |
@@ -174,6 +176,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | `../../decorators/animation-decorator.js` |
 | `../../decorators/button-decorator.js` |
 | `../../decorators/editor-item-decorator.js` |
+| `../../decorators/media-decorator.js` |
 | `../../utils/buttons.js` |
 | `../../utils/cells.js` |
 | `../../utils/links.js` |
@@ -199,11 +202,12 @@ blocks/hero/
 | [`decorators/animation-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/animation-decorator.js) | `createAnimation`, `playAnimation` (Lottie animations of the Lotto image type, loaded when near the viewport; a pause / play button as `element.animationToggle`, WCAG 2.2.2; paused for reduced motion) | `hero.js`: { createAnimation } |
 | [`decorators/button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/button-decorator.js) | `decorateButton` (option `newTabHint`: a link opening a new tab says so), `createButton`, `setButtonDisabled`, `setButtonAlignment`, `removeButtonDecoration` | `hero.js`: { decorateButton } |
 | [`decorators/editor-item-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/editor-item-decorator.js) | `buildEditorItems`, `editorItemHint` (in Universal Editor, an item the block doesn't render yet, e.g. a CTA just added, as a dashed placeholder the author can select; styles in `styles/lazy-styles.css`; the hint loaded o | `hero.js`: { buildEditorItems, editorItemHint } |
+| [`decorators/media-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/media-decorator.js) | `createFrame`, `createYoutubeFrame`, `createVimeoFrame`, `createVideoElement`, `createBackgroundVideo` (a muted, looping background video loaded near the viewport in idle time, paused off screen and for reduced motion, i | `hero.js`: { createBackgroundVideo } |
 | [`utils/buttons.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/buttons.js) | `BUTTON_VIEWS`, `BUTTON_TYPES`, `BUTTON_ALIGNMENTS`, `pick`, `readButtonOptions` | `hero.js`: { readButtonOptions } |
 | [`utils/cells.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/cells.js) | `itemRows`, `KEY_VALUE_ITEM`, `FIELD_ROW_ITEM` (the item rows of a block: by model in the editor, by their cells on the page), `withoutTabCells` (drops the empty cell AEM renders for each dialog tab of an item model), `m | `hero.js`: { FIELD_ROW_ITEM, itemRows } |
 | [`utils/links.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/links.js) | `NEW_WINDOW`, `linkOf`, `linkPathsOf` (the paths of a page property, one or many), `readLinkItems` (CTA lists with Link Type and the items' other select values), `readLinkRows` (the same from link item rows, e.g. Hero CT | `hero.js`: { NEW_WINDOW, readLinkItems, readLinkRows } |
 | [`utils/motion.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/motion.js) | `CONTENT_MOTIONS`, `BACKGROUND_MOTIONS`, `contentMotionOf`, `backgroundMotionOf` (the Content animation / Background animation of the Additional tab, read from the block classes `motion-*` / `bg-motion-*`; unknown values | `hero.js`: { addLegacyMotion } |
-| [`utils/media.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/media.js) | `isYoutube`, `isVimeo`, `isAnimation`, `youtubeEmbedUrl`, `vimeoEmbedUrl`, `videoType`, `deliveryAsset` (reads a Dynamic Media with OpenAPI delivery URL of a separate AEM Assets environment), `deliveryImageUrl` (its URL  | `hero.js`: { animationLabel, isAnimation } |
+| [`utils/media.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/media.js) | `isYoutube`, `isVimeo`, `isAnimation`, `isVideoFile` (a video file URL: .mp4, .webm, .ogv, .mov, .m4v), `youtubeEmbedUrl`, `vimeoEmbedUrl`, `videoType`, `deliveryAsset` (reads a Dynamic Media with OpenAPI delivery URL of | `hero.js`: { animationLabel, isAnimation, isVideoFile } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `hero.js`: { getPlaceholders } |
 
 <!-- END GENERATED: files -->
@@ -228,7 +232,7 @@ blocks/hero/
 </div>
 ```
 
-The toggle exists only for Lotto. `hero-has-media` is set only when media rendered.
+The toggle exists only for Lotto (Video has none for now, KB-D-072). `hero-has-media` is set only when media rendered.
 
 **Decoration flow.** `decorate(block)`: find CTA item rows → read the other rows → `editorItemHint` (placeholders only in Universal Editor) → load placeholders for `opensInNewTab` only when a CTA opens a new tab → `buildMedia` (eager / high priority image in the first section, or `createAnimation`) → `buildContent` → `buildCtas` (`readLinkItems` for the legacy multifield, `readLinkRows` for items, `decorateButton` with `view: 'button'`, `moveInstrumentation` from each item row) → move Universal Editor instrumentation to the new elements → `block.replaceChildren` → `mapLegacyMotion`.
 
@@ -366,7 +370,9 @@ Evidence to collect (no secrets): page URL, viewport, the block's classes and re
 
 | Limitation | Impact | Workaround | Planned correction |
 | ---------- | ------ | ---------- | ------------------ |
-| No background video | Video banners can't be built with the Hero | Use the Video or Embed block | Not recorded |
+| Hero Image type Video has no pause / play button (KB-D-072, Proposed) | Not WCAG 2.2.2 conform for a video over 5 seconds | Use a video of 5 seconds or less, or turn the button on | Decision pending |
+| Background video only from a DAM file (Hero Image type Video): no YouTube / Vimeo, sound, controls, captions or poster | A video that needs them can't be the Hero background | Use the Video or Embed block | Not recorded |
+| DAM video files served only once published | Empty background on preview / live if not published | Publish the video | Operations |
 | Lottie JSON served only once published (R-B-2) | Empty background on preview / live if not published | Publish the asset | Operations |
 | Motion Type authored before can't be changed in the dialog (R-B-6) | Legacy animation stays | Migrate to Animation Type | Content migration |
 | Default overlay eyebrow contrast (R-B-4) | Brand eyebrow over the white overlay | — | Design sign-off pending |
@@ -385,6 +391,7 @@ Evidence to collect (no secrets): page URL, viewport, the block's classes and re
 | Handover 2.29 | Re-audit: new-tab hint, Lottie alt text and failed files, dark Hero eyebrow contrast | docs/handover revision history | 20 October 2026 |
 | Not recorded | Desktop min height 56.25rem (900px), tablet 46.875rem (750px) with 7.625rem block padding; the opening hero no longer grows by the header height. Desktop (from 1200px) to Figma "Hero" 57:16843 (What we do) and "Hero Header" 3670:14111 (Home): middle-aligned content with 12.5rem (200px) below it; icon to eyebrow 0.5rem; eyebrow 0.875rem / 22px; CTAs 50px high with 0.875rem text; the opening hero under the header (not on Home, which has its own template rule) has as much space below as above. Mobile unchanged | fix/hero-content | 11 November 2026 |
 | Not recorded | Title color (`classes_titlecolor`: Default, Black `title-black`, White `title-white`) and Description color (`classes_descriptioncolor`: Default, Black `description-black`, White `description-white`) in the Style tab; Default keeps the colour the BG Color sets (black and dark grey on Default and Light, white and 50 % / 85 % white on the dark options), Black and White apply whatever the BG Color | fix/hero-content | 11 November 2026 |
+| Not recorded | Hero Image type Video (`media-video`): a DAM video file (MP4 / WebM) as a muted, looping background without a pause / play button for now (KB-D-072), loaded near the viewport in idle time, paused off screen and for reduced motion (`createBackgroundVideo`, `isVideoFile`) | feature/hero-block-video | 18 November 2026 |
 
 ## Reference pages
 
@@ -584,4 +591,4 @@ Evidence to collect (no secrets): page URL, viewport, the block's classes and re
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 13 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

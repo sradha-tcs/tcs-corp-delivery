@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/embed/README.md","blocks/embed/_embed.json","blocks/embed/embed.css","blocks/embed/embed.js"]
 relatedComponents: ["embed"]
 relatedPages: ["/design-block-master/en/block-library/embed","/design-block-master/en/block-library/embed/embed"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/embed/README.md, blocks/embed/_embed.json, blocks/embed/embed.css, blocks/embed/embed.js |
 | Related documents | [Variations](./EMBED-VARIATIONS.md), [Test coverage](./EMBED-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/embed/EMBED-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/embed, /content/tcs-corp/design-block-master/en/block-library/embed/embed |
@@ -163,8 +163,8 @@ blocks/embed/
 | ----------------- | ------- | ----------------------------- |
 | [`scripts/aem.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/aem.js) | Edge Delivery core library (block loading, CSS, metadata, optimized pictures) | `embed.js`: { loadScript } |
 | [`decorators/icon-button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/icon-button-decorator.js) | `createIconButton` | `embed.js`: { createIconButton } |
-| [`decorators/media-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/media-decorator.js) | `createFrame`, `createYoutubeFrame`, `createVimeoFrame`, `createVideoElement` | `embed.js`: { createFrame, createVimeoFrame, createYoutubeFrame, } |
-| [`utils/media.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/media.js) | `isYoutube`, `isVimeo`, `isAnimation`, `youtubeEmbedUrl`, `vimeoEmbedUrl`, `videoType`, `deliveryAsset` (reads a Dynamic Media with OpenAPI delivery URL of a separate AEM Assets environment), `deliveryImageUrl` (its URL  | `embed.js`: { isVimeo, isYoutube } |
+| [`decorators/media-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/media-decorator.js) | `createFrame`, `createYoutubeFrame`, `createVimeoFrame`, `createVideoElement`, `createBackgroundVideo` (a muted, looping background video loaded near the viewport in idle time, paused off screen and for reduced motion, i | `embed.js`: { createFrame, createVimeoFrame, createYoutubeFrame, } |
+| [`utils/media.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/media.js) | `isYoutube`, `isVimeo`, `isAnimation`, `isVideoFile` (a video file URL: .mp4, .webm, .ogv, .mov, .m4v), `youtubeEmbedUrl`, `vimeoEmbedUrl`, `videoType`, `deliveryAsset` (reads a Dynamic Media with OpenAPI delivery URL of | `embed.js`: { isVimeo, isYoutube } |
 | [`utils/viewport.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/viewport.js) | `onVisible` (once), `watchVisibility` (on / off screen), `currentBreakpoint` (mobile / tablet / desktop) | `embed.js`: { onVisible } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `embed.js`: { getPlaceholders } |
 
@@ -434,4 +434,4 @@ errors (CSP, framing), Network entries of the provider requests, the block's dat
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

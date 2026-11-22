@@ -8,8 +8,8 @@ owner: "QA Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -48,17 +48,17 @@ primary: true
 
 ## Verdict
 
-**Not ready for exit.** Only automated checks ran; manual, authoring, cross-browser and performance testing remain, 1 critical and 7 major defects are open.
+**Not ready for exit.** Only automated checks ran; manual, authoring, cross-browser and performance testing remain, 1 critical and 6 major defects are open.
 
 ## Counts
 
 | Status | Block test cases |
 | --- | --- |
-| Passed | 23 |
+| Passed | 25 |
 | Failed | 29 |
-| Blocked | 12 |
-| Requires Manual Validation | 32 |
-| Not Run | 387 |
+| Blocked | 14 |
+| Requires Manual Validation | 34 |
+| Not Run | 436 |
 
 ## Sign-off
 
@@ -84,4 +84,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

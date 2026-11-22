@@ -8,8 +8,8 @@ owner: "QA Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -45,9 +45,11 @@ primary: false
 
 | File | Tests |
 | --- | --- |
-| `test/cards/cards-data.test.mjs` | 16 |
-| `test/conversation-canvas/canvas-journey.test.mjs` | 36 |
+| `test/cards/cards-data.test.mjs` | 23 |
+| `test/conf-med-cont/conf-med-cont-data.test.mjs` | 11 |
+| `test/conversation-canvas/canvas-journey.test.mjs` | 37 |
 | `test/docs/block-docs.test.mjs` | 5 |
+| `test/form-variations/properties.test.mjs` | 14 |
 | `test/items/item-rows.test.mjs` | 6 |
 | `test/list/display-precedence.test.mjs` | 16 |
 | `test/list/list-data.test.mjs` | 69 |
@@ -63,9 +65,11 @@ primary: false
 | `test/site/index-root.test.mjs` | 23 |
 | `test/site/keywords.test.mjs` | 7 |
 | `test/site/page-tree.test.mjs` | 5 |
+| `test/site/page-visibility.test.mjs` | 9 |
 | `test/site/paths.test.mjs` | 5 |
 | `test/site/query-index-url.test.mjs` | 3 |
 | `test/site/sheet-metadata.test.mjs` | 4 |
+| `test/tcs-header/header-theme.test.mjs` | 8 |
 
 ## Screenshots
 
@@ -83,4 +87,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

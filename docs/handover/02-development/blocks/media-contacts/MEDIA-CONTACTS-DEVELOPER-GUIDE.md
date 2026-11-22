@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/media-contacts/README.md","blocks/media-contacts/_media-contacts.json","blocks/media-contacts/media-contacts-data.js","blocks/media-contacts/media-contacts.css","blocks/media-contacts/media-contacts.js"]
 relatedComponents: ["media-contacts","media-contact"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 2026-11-15 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/media-contacts/README.md, blocks/media-contacts/_media-contacts.json, blocks/media-contacts/media-contacts-data.js, blocks/media-contacts/media-contacts.css, blocks/media-contacts/media-contacts.js |
 | Related documents | [Variations](./MEDIA-CONTACTS-VARIATIONS.md), [Test coverage](./MEDIA-CONTACTS-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/media-contacts/MEDIA-CONTACTS-AUTHORING-GUIDE.md) |
 | Related AEM paths | — |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | The media contacts of the locale's Media Contacts sheet, grouped by designation and region |
 | Variations (summary) | Title and Title Type; contacts of the page's region, else all |
 | Children | — |
-| Code size | 287 lines of JS and CSS |
+| Code size | 325 lines of JS and CSS |
 
 ## Overview
 
@@ -114,11 +114,12 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Content | Title | `title` | text | No | — | — | — |
 | Content | Title Type | `titleType` | select | No | `h2` | 6 options | — |
-| Content | Title color | `titleColor` | select | No | `""` | 4 options | — |
+| Content | Title color | `titleColor` | select | No | `""` | 5 options | — |
 | Content | Columns on desktop | `columns` | select | No | `2` | 3 options | — |
-| Content | Territory title color | `regionColor` | select | No | `""` | 4 options | — |
-| Content | Email color | `emailColor` | select | No | `""` | 4 options | — |
-| Content | Phone color | `phoneColor` | select | No | `""` | 4 options | — |
+| Content | Territory title color | `regionColor` | select | No | `""` | 5 options | — |
+| Content | Email color | `emailColor` | select | No | `""` | 5 options | — |
+| Content | Phone color | `phoneColor` | select | No | `""` | 5 options | — |
+| Content | Hide email and phone icons | `classes_hideicons` | boolean | No | `false` | — | — |
 | Content | Email icon | `emailIcon` | reference | No | — | — | — |
 | Content | Phone icon | `phoneIcon` | reference | No | — | — | — |
 
@@ -136,6 +137,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 
 | Import |
 | --- |
+| `../../utils/links.js` |
 | `../../decorators/contact-list-decorator.js` |
 | `../../decorators/editor-item-decorator.js` |
 | `../../decorators/heading-decorator.js` |
@@ -160,7 +162,8 @@ blocks/media-contacts/
 
 | Decorator/Utility | Purpose | Execution or dependency point |
 | ----------------- | ------- | ----------------------------- |
-| [`decorators/contact-list-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/contact-list-decorator.js) | `buildContactGroups` (groups of contacts, each with its heading and its mail / phone links one below the other; the links carry `data-cmp-interaction` email / phone) | `media-contacts.js`: { buildContactList } |
+| [`utils/links.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/links.js) | `NEW_WINDOW`, `linkOf`, `linkPathsOf` (the paths of a page property, one or many), `readLinkItems` (CTA lists with Link Type and the items' other select values), `readLinkRows` (the same from link item rows, e.g. Hero CT | `media-contacts-data.js`: { telHref } |
+| [`decorators/contact-list-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/contact-list-decorator.js) | `buildContactList` (contacts, each with its heading and its mail / phone links one below the other, or its `people`: name and description above each person's links; the links carry `data-cmp-interaction` email / phone) | `media-contacts.js`: { buildContactList } |
 | [`decorators/editor-item-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/editor-item-decorator.js) | `buildEditorItems`, `editorItemHint` (in Universal Editor, an item the block doesn't render yet, e.g. a CTA just added, as a dashed placeholder the author can select; styles in `styles/lazy-styles.css`; the hint loaded o | `media-contacts.js`: { buildEditorItems, editorItemHint } |
 | [`decorators/heading-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/heading-decorator.js) | `buildHeading` (Title + Title Type), `HEADINGS` | `media-contacts.js`: { buildHeading, HEADINGS } |
 | [`utils/cells.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/cells.js) | `itemRows`, `KEY_VALUE_ITEM`, `FIELD_ROW_ITEM` (the item rows of a block: by model in the editor, by their cells on the page), `withoutTabCells` (drops the empty cell AEM renders for each dialog tab of an item model), `m | `media-contacts.js`: { itemRows, KEY_VALUE_ITEM } |
@@ -367,4 +370,4 @@ graph LR
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

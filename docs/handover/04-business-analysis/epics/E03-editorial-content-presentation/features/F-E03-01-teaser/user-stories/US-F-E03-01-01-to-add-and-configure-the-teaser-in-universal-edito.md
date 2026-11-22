@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/teaser"]
 relatedComponents: ["teaser"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/teaser |
 | Related documents | — |
 | Related AEM paths | — |
@@ -72,7 +72,7 @@ primary: true
 | Related code | blocks/teaser/ |
 | Related block-library example | https://main--tcs-corp--sradha-tcs.aem.live/design-block-master/en/block-library/teaser |
 | Related curated page | /design-block-master/en/curated-design-pages/case-study, /design-block-master/en/curated-design-pages/collection, /design-block-master/en/curated-design-pages/home |
-| Related test cases | TC-TEASER-002, TC-TEASER-040, TC-TEASER-041 |
+| Related test cases | TC-TEASER-002, TC-TEASER-056, TC-TEASER-057 |
 | Definition of Ready / Done | See the BA package |
 
 ## Gherkin acceptance criteria
@@ -112,4 +112,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

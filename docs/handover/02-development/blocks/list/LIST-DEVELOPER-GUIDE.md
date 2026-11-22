@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/list/README.md","blocks/list/_list.json","blocks/list/list-data.js","blocks/list/list.css","blocks/list/list.js"]
 relatedComponents: ["list","list-item"]
 relatedPages: ["/design-block-master/en/block-library/list","/design-block-master/en/block-library/list/card-colours-and-overrides","/design-block-master/en/block-library/list/card-style-from-pages","/design-block-master/en/block-library/list/card-style-from-pages/automatic","/design-block-master/en/block-library/list/card-style-from-pages/image-light-blue","/design-block-master/en/block-library/list/card-style-from-pages/panel-grey","/design-block-master/en/block-library/list/card-style-from-pages/report-navy","/design-block-master/en/block-library/list/card-style-from-pages/statistic","/design-block-master/en/block-library/list/cards","/design-block-master/en/block-library/list/empty-state","/design-block-master/en/block-library/list/figma-variations","/design-block-master/en/block-library/list/layout-and-scrolling","/design-block-master/en/block-library/list/list-item-display","/design-block-master/en/block-library/list/lists-made-before","/design-block-master/en/block-library/list/sources","/design-block-master/en/curated-design-pages","/design-block-master/en/curated-design-pages/case-study","/design-block-master/en/curated-design-pages/collection","/design-block-master/en/curated-design-pages/home","/design-block-master/en/curated-design-pages/industry-landing-page","/design-block-master/en/curated-design-pages/media-and-investor","/design-block-master/en/curated-design-pages/news-and-events","/design-block-master/en/curated-design-pages/product","/design-block-master/en/curated-design-pages/services","/design-block-master/en/curated-design-pages/story","/design-block-master/en/curated-design-pages/who-we-are"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 2026-11-15 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/list/README.md, blocks/list/_list.json, blocks/list/list-data.js, blocks/list/list.css, blocks/list/list.js |
 | Related documents | [Variations](./LIST-VARIATIONS.md), [Test coverage](./LIST-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/list/LIST-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/list, /content/tcs-corp/design-block-master/en/block-library/list/card-colours-and-overrides, /content/tcs-corp/design-block-master/en/block-library/list/card-style-from-pages |
@@ -160,21 +160,21 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Display | Show content type | `showContentLabel` | boolean | No | `true` | — | Conditional |
 | Display | Show call to action | `showCta` | boolean | No | `true` | — | Conditional |
 | Display | Image loading | `imageLoading` | select | No | `lazy` | 2 options | — |
-| Display | Desktop display | `desktopMode` | select | No | `grid` | 2 options | — |
+| Display | Desktop display | `desktopMode` | select | No | `grid` | 3 options | — |
 | Display | Desktop columns | `desktopColumns` | number | No | `4` | — | Conditional |
 | Display | Desktop gap (px) | `desktopGap` | number | No | `24` | — | — |
 | Display | Desktop items visible | `desktopVisible` | number | No | `4.2` | — | Conditional |
 | Display | Desktop card width (px) | `desktopCardWidth` | number | No | `0` | — | Conditional |
 | Display | Previous / next buttons on desktop | `desktopControls` | boolean | No | `false` | — | Conditional |
 | Display | Scroll indicator on desktop | `desktopIndicator` | boolean | No | `false` | — | Conditional |
-| Display | Tablet display | `tabletMode` | select | No | `grid` | 2 options | — |
+| Display | Tablet display | `tabletMode` | select | No | `grid` | 3 options | — |
 | Display | Tablet columns | `tabletColumns` | number | No | `4` | — | Conditional |
 | Display | Tablet gap (px) | `tabletGap` | number | No | `24` | — | — |
 | Display | Tablet items visible | `tabletVisible` | number | No | `3.3` | — | Conditional |
 | Display | Tablet card width (px) | `tabletCardWidth` | number | No | `0` | — | Conditional |
 | Display | Previous / next buttons on tablet | `tabletControls` | boolean | No | `false` | — | Conditional |
 | Display | Scroll indicator on tablet | `tabletIndicator` | boolean | No | `false` | — | Conditional |
-| Display | Mobile display | `mobileMode` | select | No | `grid` | 2 options | — |
+| Display | Mobile display | `mobileMode` | select | No | `grid` | 3 options | — |
 | Display | Mobile columns | `mobileColumns` | number | No | `1` | — | Conditional |
 | Display | Mobile gap (px) | `mobileGap` | number | No | `16` | — | — |
 | Display | Mobile items visible | `mobileVisible` | number | No | `1.2` | — | Conditional |
@@ -195,7 +195,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Display | When there are no items | `emptyBehavior` | select | No | `message` | 3 options | — |
 | Display | Empty message | `emptyMessage` | text | No | — | — | Conditional |
 | Display | Analytics | `analyticsEnabled` | boolean | No | `true` | — | — |
-| Display | Style options | `classes` | multiselect | No | — | 3 options | — |
+| Display | Style options | `classes` | multiselect | No | — | 4 options | — |
 
 ### List Item (`list-item`)
 
@@ -268,7 +268,7 @@ blocks/list/
 | [`decorators/skeleton-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/skeleton-decorator.js) | `renderWhenLoaded` (a block from data that may take time: directly within 150ms, else after a skeleton so its section is shown; removed on success and failure), `skeletonWhile` (a skeleton in a part that fills in by itse | `list.js`: { renderWhenLoaded } |
 | [`utils/card-list-config.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/card-list-config.js) | `normalizePresentation` (the card list settings of List and Cards, with defaults and validation), `PRESENTATION_PROPERTIES`, `kindOf` and `themeOf` (the card's Card style and Card colour: item, list, page metadata, autom | `list.js`: { PRESENTATION_PROPERTIES, contentTypeLabel } |
 | [`utils/cells.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/cells.js) | `itemRows`, `KEY_VALUE_ITEM`, `FIELD_ROW_ITEM` (the item rows of a block: by model in the editor, by their cells on the page), `withoutTabCells` (drops the empty cell AEM renders for each dialog tab of an item model), `m | `list.js`: { matchCells, withoutTabCells } |
-| [`utils/data.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/data.js) | `loadDataSheet`, `getAuthor`, `getAuthors`, `getLocations`, `getPartners`, `getSocialLinks`, `getMediaContacts`, `inRegion` (the locale's data sheets) | `list.js`: { getAuthors } |
+| [`utils/data.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/data.js) | `loadDataSheet`, `getAuthor`, `getAuthors`, `getLocations`, `getPartners`, `getSocialLinks`, `getMediaContacts`, `getConfMedCont` (the three `data/conf-med-cont/` sheets: contacts, regions, media-contacts-config), `inReg | `list.js`: { getAuthors } |
 | [`utils/environment.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/environment.js) | `prefersReducedMotion`, `scrollBehavior`, `isEditing`, `isInEditor`, `isAuthor` (the page is rendered by AEM author, which has no query index) | `list.js`: { isAuthor, isEditing } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `list.js`: { getPlaceholders } |
 | [`utils/links.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/links.js) | `NEW_WINDOW`, `linkOf`, `linkPathsOf` (the paths of a page property, one or many), `readLinkItems` (CTA lists with Link Type and the items' other select values), `readLinkRows` (the same from link item rows, e.g. Hero CT | `list.js`: { linkPathsOf } |
@@ -480,6 +480,8 @@ Evidence to collect: the page URL, the block's settings (screenshots of the dial
 | Handover 2.45 | Show author on feature card (`featureShowAuthor`): the feature card's author lockup can be turned off; on by default; the shared Display fields split (`cards`, `cardsShow`) so the option sits below First card as feature in the List only | docs/handover revision history | 27 October 2026 |
 | Handover 2.46 | Show content type (`showContentLabel`): the content type of image cards (its tag in the kicker and its label before the date) can be turned off; on by default; the shared Display fields split again (`cardsShow`, `cardsAction`) so the option sits between Date format and Show call to action in the List only | docs/handover revision history | 28 October 2026 |
 | Handover 2.47 | Image card hover (Figma): the whole linked card fades the title to brand blue with an underline (300ms ease-out), no layout change | docs/handover revision history | 28 October 2026 |
+| Not recorded | Header CTA with CTA style Text link (e.g. See all, `.list-cta-slot .button.tertiary`): 0.875rem (`--label-font-size`, 14px) medium at every width (Figma "Carousel · 4 columns"); card links and the header's buttons unchanged | Branch fix/list-header-cta-type | 20 November 2026 |
+| Not recorded | Desktop / Tablet / Mobile display Carousel: Columns whole cards per view, previous / next on the image (brand blue, grey at the first and last card), shared with Cards | Branch feature/list-image-carousel | 20 November 2026 |
 
 ## Reference pages
 
@@ -854,4 +856,4 @@ Evidence to collect: the page URL, the block's settings (screenshots of the dial
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

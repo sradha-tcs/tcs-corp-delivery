@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/teaser/README.md","blocks/teaser/_teaser.json","blocks/teaser/teaser.css","blocks/teaser/teaser.js"]
 relatedComponents: ["teaser","teaser-link","teaser-stat","teaser-collage-image"]
 relatedPages: ["/design-block-master/en/block-library/teaser","/design-block-master/en/block-library/teaser/alignment","/design-block-master/en/block-library/teaser/article-meta","/design-block-master/en/block-library/teaser/cta-styles","/design-block-master/en/block-library/teaser/description-eyebrow-spacing","/design-block-master/en/block-library/teaser/image-options-and-colours","/design-block-master/en/block-library/teaser/image-positions","/design-block-master/en/block-library/teaser/layouts","/design-block-master/en/block-library/teaser/links-and-stats","/design-block-master/en/block-library/teaser/mobile-image-position","/design-block-master/en/block-library/teaser/title-sizes-and-weights","/design-block-master/en/curated-design-pages/case-study","/design-block-master/en/curated-design-pages/collection","/design-block-master/en/curated-design-pages/home","/design-block-master/en/curated-design-pages/industry-landing-page","/design-block-master/en/curated-design-pages/insights","/design-block-master/en/curated-design-pages/media-and-investor","/design-block-master/en/curated-design-pages/news-and-events","/design-block-master/en/curated-design-pages/product","/design-block-master/en/curated-design-pages/services","/design-block-master/en/curated-design-pages/story","/design-block-master/en/curated-design-pages/what-we-do","/design-block-master/en/curated-design-pages/who-we-are"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 2026-11-15 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/teaser/README.md, blocks/teaser/_teaser.json, blocks/teaser/teaser.css, blocks/teaser/teaser.js |
 | Related documents | [Variations](./TEASER-VARIATIONS.md), [Test coverage](./TEASER-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/teaser/TEASER-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/teaser, /content/tcs-corp/design-block-master/en/block-library/teaser/alignment, /content/tcs-corp/design-block-master/en/block-library/teaser/article-meta |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | Title, text, image and links in one of four layouts |
 | Variations (summary) | Layouts (Image & Text, Text split, Background image, Card), image positions, BG Color, styles |
 | Children | teaser-link (Link), teaser-stat (Stat) |
-| Code size | 2246 lines of JS and CSS |
+| Code size | 2786 lines of JS and CSS |
 
 ## Overview
 
@@ -121,7 +121,9 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Content | Eyebrow | `eyebrow` | text | No | — | — | — |
 | Content | Show Eyebrow | `showEyebrow` | boolean | No | `true` | — | — |
 | Content | Title | `title` | text | No | — | — | — |
-| Content | Title Type | `titleType` | select | No | `h2` | 6 options | — |
+| Content | Title Type (Desktop) | `titleType` | select | No | `h2` | 7 options | — |
+| Content | Title Type (Tablet) | `titleTypeTablet` | select | No | `h2` | 7 options | — |
+| Content | Title Type (Mobile) | `titleTypeMobile` | select | No | `h2` | 7 options | — |
 | Content | Hide Title | `titleHidden` | boolean | No | `false` | — | — |
 | Content | Description | `description` | richtext | No | `""` | — | — |
 | Content | Show Description | `showDescription` | boolean | No | `true` | — | — |
@@ -159,18 +161,25 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Content | Links (authored before Link items) › CTA Background | `ctaBackground` | select | No | `""` | 4 options | — |
 | Content | Links (authored before Link items) › CTA Shape | `ctaShape` | select | No | `""` | 2 options | — |
 | Content | List arrow | `linkArrow` | select | No | `""` | 3 options | — |
+| Content | Link Arrow Color | `linkArrowColor` | select | No | `""` | 2 options | — |
 | Content | Primary CTA Title | `primaryCtaText` | text | No | — | — | Conditional |
 | Content | Primary CTA Link | `primaryCta` | aem-content | No | — | — | Conditional |
 | Content | Primary CTA Link Type | `primaryCtaTarget` | select | No | `""` | 2 options | Conditional |
 | Content | Primary CTA Link Style | `primaryCtaStyle` | select | No | `primary` | 6 options | Conditional |
+| Content | Primary CTA Label Font | `primaryCtaLabelFont` | select | No | `""` | 2 options | Conditional |
+| Content | Primary CTA Label Color | `primaryCtaLabelColor` | select | No | `""` | 2 options | Conditional |
 | Content | Primary CTA Background | `primaryCtaBackground` | select | No | `""` | 4 options | Conditional |
 | Content | Primary CTA Shape | `primaryCtaShape` | select | No | `""` | 2 options | Conditional |
+| Content | CTA Shadow (Primary Only) | `primaryCtaShadow` | select | No | `""` | 2 options | — |
 | Content | Secondary CTA Title | `secondaryCtaText` | text | No | — | — | Conditional |
 | Content | Secondary CTA Link | `secondaryCta` | aem-content | No | — | — | Conditional |
 | Content | Secondary CTA Link Type | `secondaryCtaTarget` | select | No | `""` | 2 options | Conditional |
+| Content | Secondary CTA Label Font | `secondaryCtaLabelFont` | select | No | `""` | 2 options | Conditional |
 | Content | Secondary CTA Link Style | `secondaryCtaStyle` | select | No | `secondary` | 6 options | Conditional |
+| Content | Secondary CTA Label Color | `secondaryCtaLabelColor` | select | No | `""` | 2 options | Conditional |
 | Content | Secondary CTA Background | `secondaryCtaBackground` | select | No | `""` | 4 options | Conditional |
 | Content | Secondary CTA Shape | `secondaryCtaShape` | select | No | `""` | 2 options | Conditional |
+| Content | CTA Shadow (Secondary Only) | `secondaryCtaShadow` | select | No | `""` | 2 options | — |
 | Content | Buttons side by side | `buttonsSideBySide` | boolean | No | `false` | — | — |
 | Content | Stats (authored before Stat items) | `stats` | container | No | — | — | — |
 | Content | Stats (authored before Stat items) › Stats Title | `statLabel` | richtext | No | `""` | — | — |
@@ -179,14 +188,21 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Style | BG Color | `bgColor` | select | No | `""` | 5 options | — |
 | Style | Text alignment | `textAlignment` | select | No | `""` | 5 options | — |
 | Style | Vertical alignment | `verticalAlignment` | select | No | `""` | 4 options | — |
-| Style | Title weight | `titleWeight` | select | No | `""` | 3 options | — |
-| Style | Title color | `titleColor` | select | No | `""` | 5 options | — |
-| Style | Description size | `descriptionSize` | select | No | `""` | 4 options | — |
+| Style | Title weight | `titleWeight` | select | No | `""` | 6 options | — |
+| Style | Title color | `titleColor` | select | No | `""` | 6 options | — |
+| Style | Description size (Desktop) | `descriptionSize` | select | No | `""` | 11 options | — |
+| Style | Description size (Tablet) | `descriptionSizeTablet` | select | No | `""` | 11 options | — |
+| Style | Description size (Mobile) | `descriptionSizeMobile` | select | No | `""` | 11 options | — |
+| Style | Description weight | `descriptionWeight` | select | No | `""` | 6 options | — |
 | Style | Description Color | `descriptionColor` | select | No | `""` | 3 options | — |
-| Style | Eyebrow Style | `eyebrowStyle` | select | No | `""` | 5 options | — |
+| Style | Eyebrow Style | `eyebrowStyle` | select | No | `""` | 6 options | — |
+| Style | Eyebrow Font size (Desktop) | `eyebrowFontSize` | select | No | `""` | 3 options | — |
+| Style | Eyebrow Font size (Tablet) | `eyebrowFontSizeTablet` | select | No | `""` | 3 options | — |
+| Style | Eyebrow Font size (Mobile) | `eyebrowFontSizeMobile` | select | No | `""` | 3 options | — |
 | Style | Top spacing | `topSpacing` | select | No | `""` | 2 options | — |
 | Style | Teaser Content Fixed Width | `teaserFixedWidth` | select | No | `""` | 2 options | — |
 | Style | Link CTA Alignment | `linkCtaAlignment` | select | No | `right` | 2 options | — |
+| Additional | Column gap | `classes_columngap` | select | No | `""` | 2 options | — |
 
 ### Link (`teaser-link`)
 
@@ -263,14 +279,14 @@ blocks/teaser/
 | [`decorators/button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/button-decorator.js) | `decorateButton` (option `newTabHint`: a link opening a new tab says so), `createButton`, `setButtonDisabled`, `setButtonAlignment`, `removeButtonDecoration` | `teaser.js`: { decorateButton } |
 | [`decorators/content-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/content-decorator.js) | `fromCell` (property content into an element, keeping editor instrumentation) | `teaser.js`: { fromCell } |
 | [`decorators/editor-item-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/editor-item-decorator.js) | `buildEditorItems`, `editorItemHint` (in Universal Editor, an item the block doesn't render yet, e.g. a CTA just added, as a dashed placeholder the author can select; styles in `styles/lazy-styles.css`; the hint loaded o | `teaser.js`: { buildEditorItems, editorItemHint } |
-| [`decorators/heading-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/heading-decorator.js) | `buildHeading` (Title + Title Type), `HEADINGS` | `teaser.js`: { buildHeading } |
+| [`decorators/heading-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/heading-decorator.js) | `buildHeading` (Title + Title Type), `HEADINGS` | `teaser.js`: { HEADINGS, buildHeading } |
 | [`decorators/image-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/image-decorator.js) | `pictureOf` (image with its alt text field) | `teaser.js`: { pictureOf } |
 | [`decorators/link-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/link-decorator.js) | `setLinkTarget` (open in a new window), `announceNewTab` (tells screen reader users a link opens in a new tab: hidden text, or added to its aria-label) | `teaser.js`: { announceNewTab, setLinkTarget } |
 | [`decorators/stats-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/stats-decorator.js) | `buildStats` (Stat items, and the Stats composite multifield authored before them, as a description list) | `teaser.js`: { buildStats } |
 | [`decorators/tag-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/tag-decorator.js) | `buildTagList` | `teaser.js`: { buildTagList } |
 | [`utils/cells.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/cells.js) | `itemRows`, `KEY_VALUE_ITEM`, `FIELD_ROW_ITEM` (the item rows of a block: by model in the editor, by their cells on the page), `withoutTabCells` (drops the empty cell AEM renders for each dialog tab of an item model), `m | `teaser.js`: { KEY_VALUE_ITEM, itemRows, withoutTabCells } |
 | [`utils/links.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/links.js) | `NEW_WINDOW`, `linkOf`, `linkPathsOf` (the paths of a page property, one or many), `readLinkItems` (CTA lists with Link Type and the items' other select values), `readLinkRows` (the same from link item rows, e.g. Hero CT | `teaser.js`: { NEW_WINDOW, linkOf, readLinkItems, readLinkRows, } |
-| [`utils/media.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/media.js) | `isYoutube`, `isVimeo`, `isAnimation`, `youtubeEmbedUrl`, `vimeoEmbedUrl`, `videoType`, `deliveryAsset` (reads a Dynamic Media with OpenAPI delivery URL of a separate AEM Assets environment), `deliveryImageUrl` (its URL  | `teaser.js`: { animationLabel, isAnimation } |
+| [`utils/media.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/media.js) | `isYoutube`, `isVimeo`, `isAnimation`, `isVideoFile` (a video file URL: .mp4, .webm, .ogv, .mov, .m4v), `youtubeEmbedUrl`, `vimeoEmbedUrl`, `videoType`, `deliveryAsset` (reads a Dynamic Media with OpenAPI delivery URL of | `teaser.js`: { animationLabel, isAnimation } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `teaser.js`: { getPlaceholders } |
 | [`utils/properties.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/properties.js) | `readProperties`, `textOf`, `isOn`, `isOnByDefault` (a toggle that defaults to on), `optionOf`, `normalizeKey`, `textSource` (key-value block properties) | `teaser.js`: { isOn, isOnByDefault, optionOf as option, readProperties, textOf, } |
 | [`utils/tags.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/tags.js) | `readTagValues`, `parseTag`, `readTags` (tag IDs; ID-derived labels as the taxonomy fallback) | `teaser.js`: { readTagValues } |
@@ -477,6 +493,13 @@ Evidence to collect: the page URL, viewport width, browser, a screenshot, the bl
 | Handover 2.35 | Packages 1.0.12 and 1.0.13 with the Teaser options verified on aem.live | docs/handover revision history | 20 October 2026 |
 | Handover 2.41 | Primary Button (no arrow) CTA style with navy fill and shared alignment content width | Repository change | 22 October 2026 |
 | Not recorded | Link CTA Alignment (`linkCtaAlignment`, Style tab): Default (`right`) keeps the links and CTAs in the body with the description; Left places them after the text in the content (in Text split, in the left column below the title, after the taller of the two columns) | fix/teaser-links-stat | 11 November 2026 |
+| Not recorded | CTA Shadow (Primary Only) (`primaryCtaShadow`) and CTA Shadow (Secondary Only) (`secondaryCtaShadow`): Default or Shadow; on the Primary / Secondary CTA when it is a Primary or Secondary Button (not a text link or list), the `button-shadow` class: Figma "Ask Canvas" CTA, a 48px pill (radius 3.625rem) on `--color-bg-secondary` with a `--color-border-default` top border, drop shadows -16 14 30 #4E84FF 20 % and -2 1 12 #4E84FF 30 %, background blur 44px; wins over the CTA Background | feature/teaser-block-shadow | 14 November 2026 |
+| Not recorded | Title Type sets the title size on every layout: H2 (the default) gets `--heading-font-size-xxl` (48px from 900px, as the dialog says; before it fell back to the 40px of H3), and the Image collage layout no longer forces its own size (3rem / 2rem / 1.75rem), so its title follows Title Type too | feature/teaser-block-shadow | 14 November 2026 |
+| Not recorded | Title Type is now Title Type (Desktop) (from 1200px: H1 64, H2 48, H3 40, H4 28, H5 24, H6 20px; it still sets the heading level); new Title Type (Tablet) (`titleTypeTablet`, 600 to 1199px) and Title Type (Mobile) (`titleTypeMobile`, below 600px), H2 by default: the title's size there only (H1 40, H2 32, H3 28, H4 24, H5 18, H6 16px; classes `title-tablet-h*`, `title-mobile-h*`); without a value (Teasers authored before) the Desktop Title Type's level | feature/teaser-block-shadow | 14 November 2026 |
+| Not recorded | Title weight gets Light (300), Medium (500) and Bold (700) next to Regular (400) and Semibold (600); Description size gets 4rem (64px), 3rem (48px), 2.5rem (40px), 2rem (32px), 1.75rem (28px) and 1.25rem (20px), the same at every width (`description-2.5rem` and `description-1.75rem` arrive as the classes `description-2-5rem`, `description-1-75rem`); new Description weight (Light to Bold, `description-light` ... `description-bold`). The three are last in `teaser.css`, so a chosen option wins over every layout, Image collage included (before, Image collage kept its own title weight and description size); Layout default keeps the layout's. A description authored as headings (h1 to h6 in its rich text) takes the chosen Description size and weight too (the headings inherit them instead of their global heading styles) | feature/teaser-description-font | 20 November 2026 |
+| Not recorded | Description size is Description size (Desktop) (from 1200px; still `descriptionSize`) with Description size (Tablet) (`descriptionSizeTablet`, 600 to 1199px) and Description size (Mobile) (`descriptionSizeMobile`, below 600px), the same options; Same as Desktop (empty, the default) keeps the Desktop size, so Teasers authored before are unchanged. Classes `description-tablet-*` / `description-mobile-*` (e.g. `description-mobile-2-5rem`, `description-tablet-text-large`), as Title Type (Tablet) / (Mobile) | feature/teaser-description-font | 20 November 2026 |
+| Not recorded | Title Type (Desktop / Tablet / Mobile) 2.25rem (36px, `title-2.25rem`: a size, the heading level stays the authored one, else H2); Title color Soft Gray (`title-soft-gray`, #F3F3F3); Description size (Desktop / Tablet / Mobile) 2.25rem (`description-2.25rem`); Eyebrow Style Medium Light Gray (`eyebrow-medium-light-gray`, #CDCDCD); Link Arrow Color Light Gray (`linkArrowColor`, `label-light-gray`, #E3E3E3: the arrows of List links, Text links and buttons); Primary / Secondary CTA Label Font 0.875rem (14px) and Label Color Soft Gray (`primaryCtaLabelFont`, `primaryCtaLabelColor`, `secondaryCtaLabelFont`, `secondaryCtaLabelColor`: classes `teaser-cta-font-14`, `teaser-cta-label-soft-gray` of that CTA); Column gap 1.5rem (Additional tab, `classes_columngap`, `cg-24`: between the image and the text) | feature/teaser-block-CTA-Font | 20 November 2026 |
+| Not recorded | Eyebrow Font size (Desktop) (`eyebrowFontSize`, after Eyebrow Style, from 1200px), (Tablet) (`eyebrowFontSizeTablet`, 600 to 1199px) and (Mobile) (`eyebrowFontSizeMobile`, below 600px): 0.75rem (12px, `eyebrow-size-12`) or 0.875rem (14px, `eyebrow-size-14`); Default (Desktop) keeps the Eyebrow Style's size, Same as Desktop (Tablet, Mobile) the Desktop one (classes `eyebrow-tablet-size-*`, `eyebrow-mobile-size-*`) | feature/teaser-block-CTA-Font | 20 November 2026 |
 
 ## Reference pages
 
@@ -832,4 +855,4 @@ Evidence to collect: the page URL, viewport width, browser, a screenshot, the bl
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["docs/handover/knowledge-base/blocks.md","tools/docs/blocks.json"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | docs/handover/knowledge-base/blocks.md, tools/docs/blocks.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -62,7 +62,7 @@ primary: true
 
 | Fact | Value | Source |
 | --- | --- | --- |
-| Block folders | 31 (each with a README; Media Contacts added on 22 October 2026, KB-D-054) | `blocks/` |
+| Block folders | 34 (each with a README; Media Contacts added on 22 October 2026, KB-D-054; Configurable Media Contacts on 22 November 2026, KB-D-073) | `blocks/` |
 | Components in the editor | 62: Default Content 4 (Text, Title, Image, Button (basic)), Sections 1, Blocks 57 (blocks, items and section containers) | `component-definition.json` |
 | Models / filters | 63 models, 26 filters | `component-models.json`, `component-filters.json` |
 | Statuses | 28 Active, 1 Compatibility-only (Columns), 1 Experimental (Interactive Dashboard) | `tools/docs/blocks.json` |
@@ -123,6 +123,7 @@ One line per block folder; the field tables, variations and guidance are in each
 | [Interactive Dashboard](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/interactive-dashboard/README.md) (`interactive-dashboard`) | Independent | Experimental | Placeholder reserved for a future dashboard; renders nothing; in no filter |
 | [List](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/list/README.md) (`list`) | Container | Active | Child pages, a fixed list or tagged pages from the query index, as cards or links |
 | [Media Contacts](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/media-contacts/README.md) (`media-contacts`) | Independent | Active | The Media Contacts sheet's contacts, grouped by designation and region; replaces the press-release template's Media contacts (KB-D-054) |
+| [Configurable Media Contacts](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/conf-med-cont/README.md) (`conf-med-cont`) | Independent | Active | The regions of a `data/conf-med-cont/media-contacts-config` row with their contacts, as each region's action shows them (KB-D-073) |
 | [Modal](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/modal/README.md) (`modal`) | Independent | Active | Opens a page's content in a dialog (button or auto-linked `/modals/` links) |
 | [Page Header](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/page-header/README.md) (`page-header`) | Container | Active | The title area of a page from its metadata |
 | [Quote](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/quote/README.md) (`quote`) | Independent | Active | A quotation with author, optional image and title |
@@ -372,6 +373,7 @@ These counts describe the library package, not production usage; production usag
 - [Column Break](../blocks/column-break/COLUMN-BREAK-DEVELOPER-GUIDE.md)
 - [Columns](../blocks/columns/COLUMNS-DEVELOPER-GUIDE.md)
 - [Columns Container](../blocks/columns-container/COLUMNS-CONTAINER-DEVELOPER-GUIDE.md)
+- [Configurable Media Contacts](../blocks/conf-med-cont/CONF-MED-CONT-DEVELOPER-GUIDE.md)
 - [Conversation Canvas](../blocks/conversation-canvas/CONVERSATION-CANVAS-DEVELOPER-GUIDE.md)
 - [Embed](../blocks/embed/EMBED-DEVELOPER-GUIDE.md)
 - [Filter List](../blocks/filter-list/FILTER-LIST-DEVELOPER-GUIDE.md)
@@ -381,6 +383,7 @@ These counts describe the library package, not production usage; production usag
 - [Gen Carousel](../blocks/gen-carousel/GEN-CAROUSEL-DEVELOPER-GUIDE.md)
 - [Header](../blocks/header/HEADER-DEVELOPER-GUIDE.md)
 - [Hero](../blocks/hero/HERO-DEVELOPER-GUIDE.md)
+- [History Timeline](../blocks/history-timeline/HISTORY-TIMELINE-DEVELOPER-GUIDE.md)
 - [Image Collage](../blocks/image-collage/IMAGE-COLLAGE-DEVELOPER-GUIDE.md)
 - [Interactive Dashboard](../blocks/interactive-dashboard/INTERACTIVE-DASHBOARD-DEVELOPER-GUIDE.md)
 - [List](../blocks/list/LIST-DEVELOPER-GUIDE.md)
@@ -414,4 +417,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

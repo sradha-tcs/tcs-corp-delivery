@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/quote/README.md","blocks/quote/_quote.json","blocks/quote/quote.css","blocks/quote/quote.js"]
 relatedComponents: ["quote"]
 relatedPages: ["/design-block-master/en/block-library/quote","/design-block-master/en/block-library/quote/quote-variations","/design-block-master/en/curated-design-pages/who-we-are"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/quote/README.md, blocks/quote/_quote.json, blocks/quote/quote.css, blocks/quote/quote.js |
 | Related documents | [Variations](./QUOTE-VARIATIONS.md), [Test coverage](./QUOTE-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/quote/QUOTE-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/quote, /content/tcs-corp/design-block-master/en/block-library/quote/quote-variations |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | A quotation with author, optional image and title |
 | Variations (summary) | Image position, BG Color |
 | Children | — |
-| Code size | 350 lines of JS and CSS |
+| Code size | 355 lines of JS and CSS |
 
 ## Overview
 
@@ -399,4 +399,4 @@ Evidence to collect: the page URL (preview or live), viewport width, browser, a 
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/tabs/README.md","blocks/tabs/_tabs.json","blocks/tabs/tabs.css","blocks/tabs/tabs.js"]
 relatedComponents: ["tabs","tabs-block","tabs-item"]
 relatedPages: ["/design-block-master/en/block-library/tabs","/design-block-master/en/block-library/tabs/fragments","/design-block-master/en/block-library/tabs/fragments/cloud-overview","/design-block-master/en/block-library/tabs/fragments/consulting-overview","/design-block-master/en/block-library/tabs/fragments/security-overview","/design-block-master/en/block-library/tabs/fragments/tab-industries","/design-block-master/en/block-library/tabs/fragments/tab-overview","/design-block-master/en/block-library/tabs/tab","/design-block-master/en/block-library/tabs/tab-deep-link","/design-block-master/en/block-library/tabs/tabs-block","/design-block-master/en/block-library/tabs/tabs-block-styles","/design-block-master/en/block-library/tabs/tabs-block-with-fragments","/design-block-master/en/block-library/tabs/tabs-fixed-width","/design-block-master/en/block-library/tabs/tabs-section","/design-block-master/en/curated-design-pages/story"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/tabs/README.md, blocks/tabs/_tabs.json, blocks/tabs/tabs.css, blocks/tabs/tabs.js |
 | Related documents | [Variations](./TABS-VARIATIONS.md), [Test coverage](./TABS-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/tabs/TABS-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/tabs, /content/tcs-corp/design-block-master/en/block-library/tabs/fragments, /content/tcs-corp/design-block-master/en/block-library/tabs/fragments/cloud-overview |
@@ -112,7 +112,7 @@ primary: true
 
 | Component | Title | Resource type | Template name | Model | Children allowed |
 | --- | --- | --- | --- | --- | --- |
-| `tabs` | Tabs Container | `core/franklin/components/section/v1/section` | Tabs | `tabs` | tab, column-break, text, image, button-block, title, hero, teaser, image-collage, quote, media-contacts, testimonial, anchor-list, accordion, table, table-list, list, separator, embed, video, modal, form-variations, filter-list, cards, fragment, tabs-block |
+| `tabs` | Tabs Container | `core/franklin/components/section/v1/section` | Tabs | `tabs` | tab, column-break, text, image, button-block, title, hero, teaser, image-collage, history-timeline, quote, media-contacts, conf-med-cont, testimonial, anchor-list, accordion, table, table-list, list, separator, embed, video, modal, form-variations, filter-list, cards, fragment, tabs-block |
 | `tabs-block` | Tabs | `core/franklin/components/block/v1/block` | Tabs | `tabs-block` | tabs-item |
 | `tabs-item` | Tab | `core/franklin/components/block/v1/block/item` | Tab | `tabs-item` | — |
 
@@ -522,4 +522,4 @@ Evidence to collect (no secrets): page URL, viewport width, the section's classe
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

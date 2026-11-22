@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/filter-list/README.md","blocks/filter-list/_filter-list.json","blocks/filter-list/filter-list.css","blocks/filter-list/filter-list.js"]
 relatedComponents: ["filter-list","filter-list-tag","filter-list-category","filter-list-page"]
 relatedPages: ["/design-block-master/en/block-library/filter-list","/design-block-master/en/block-library/filter-list/content-types","/design-block-master/en/block-library/filter-list/filter-list","/design-block-master/en/block-library/filter-list/filters","/design-block-master/en/block-library/filter-list/insights-listing","/design-block-master/en/block-library/filter-list/layouts-and-card-styles","/design-block-master/en/block-library/filter-list/rules","/design-block-master/en/curated-design-pages/collection","/design-block-master/en/curated-design-pages/insights","/design-block-master/en/curated-design-pages/media-and-investor","/design-block-master/en/curated-design-pages/news-and-events"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/filter-list/README.md, blocks/filter-list/_filter-list.json, blocks/filter-list/filter-list.css, blocks/filter-list/filter-list.js |
 | Related documents | [Variations](./FILTER-LIST-VARIATIONS.md), [Test coverage](./FILTER-LIST-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/filter-list/FILTER-LIST-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/filter-list, /content/tcs-corp/design-block-master/en/block-library/filter-list/content-types, /content/tcs-corp/design-block-master/en/block-library/filter-list/filter-list |
@@ -227,7 +227,7 @@ blocks/filter-list/
 | [`decorators/responsive-image-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/responsive-image-decorator.js) | `buildImage` (image from a URL; site media and EDAM delivery images optimized), `buildDeliveryPicture` (responsive picture of a Dynamic Media with OpenAPI delivery image), `decorateDeliveryImages` (standalone delivery im | `filter-list.js`: { buildImage } |
 | [`scripts/aem.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/aem.js) | Edge Delivery core library (block loading, CSS, metadata, optimized pictures) | `filter-list.js`: { toClassName } |
 | [`utils/cells.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/cells.js) | `itemRows`, `KEY_VALUE_ITEM`, `FIELD_ROW_ITEM` (the item rows of a block: by model in the editor, by their cells on the page), `withoutTabCells` (drops the empty cell AEM renders for each dialog tab of an item model), `m | `filter-list.js`: { KEY_VALUE_ITEM, itemRows, withoutTabCells } |
-| [`utils/data.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/data.js) | `loadDataSheet`, `getAuthor`, `getAuthors`, `getLocations`, `getPartners`, `getSocialLinks`, `getMediaContacts`, `inRegion` (the locale's data sheets) | `filter-list.js`: { getAuthors } |
+| [`utils/data.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/data.js) | `loadDataSheet`, `getAuthor`, `getAuthors`, `getLocations`, `getPartners`, `getSocialLinks`, `getMediaContacts`, `getConfMedCont` (the three `data/conf-med-cont/` sheets: contacts, regions, media-contacts-config), `inReg | `filter-list.js`: { getAuthors } |
 | [`utils/environment.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/environment.js) | `prefersReducedMotion`, `scrollBehavior`, `isEditing`, `isInEditor`, `isAuthor` (the page is rendered by AEM author, which has no query index) | `filter-list.js`: { isAuthor, isEditing } |
 | [`utils/ids.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/ids.js) | `nextInstance`, `uniqueId`, `createIdFactory` (unique ids per block instance), `availableId` (an authored id kept, suffixed -2, -3, ... only when taken) | `filter-list.js`: { uniqueId } |
 | [`utils/multifield.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/multifield.js) | `readMultifieldItems` (composite multifield items, authored before item children) | `filter-list.js`: { readMultifieldItems } |
@@ -608,4 +608,4 @@ Evidence to collect (no secrets): page URL, viewport, a screenshot, the block's 
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/cards/README.md","blocks/cards/_cards.json"]
 relatedComponents: ["cards"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/cards/README.md, blocks/cards/_cards.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -65,10 +65,10 @@ primary: true
 
 1. **Add the block.** In Universal Editor select a Section, a Columns Container column or a Tabs Container, use **Add (+)** and choose **Cards**.
 2. **Open its properties.** Select the Cards block (not a Card) in the content tree; the properties panel has the tabs **Content**, **Display** and **Additional**. Universal Editor collapses tabs that don't fit on one line into a dropdown.
-3. **Enter the header (Content tab).** Title and Heading type (H2 under the page H1), an optional Description, and a CTA link with CTA text and CTA style for a "View all" link. Without a Title, fill **Accessible list label** so screen readers can name the cards.
+3. **Enter the header (Content tab).** Title and Heading type (H2 under the page H1; H1, Cards only, for a page whose main heading is the cards' title: 48px on desktop, 40px on tablet, 28px on mobile), an optional Description, and a CTA link with CTA text and CTA style for a "View all" link. Without a Title, fill **Accessible list label** so screen readers can name the cards.
 4. **Choose the presentation (Display tab).** Display as teaser (cards; off: rows of links), Card style, Card colour, Image ratio, Panel height, First card as feature, the Show switches, Date format and Image loading.
-5. **Choose the layout per breakpoint (Display tab).** For Desktop, Tablet and Mobile choose Grid (columns) or Horizontal scroll (items visible or a card width, previous / next buttons, scroll indicator), and the gap. The scroll options (snap, step, loop, initial item, edge) appear once a breakpoint scrolls.
-6. **Add the cards.** Select the Cards block and use **Add (+)** → **Card**. In each Card fill at least a Title, a Description or an Image (otherwise the card isn't shown). Add a Link (a page from the picker, or `https://…`) and, for a button, a Call to action label. Duplicate, delete and drag Cards in the content tree to reorder them; cards render in the content tree order.
+5. **Choose the layout per breakpoint (Display tab).** For Desktop, Tablet and Mobile choose Grid (columns), Horizontal scroll (items visible or a card width, previous / next buttons, scroll indicator) or Carousel (columns whole cards per view, previous / next on the cards, grey at the first and last card; see the List README), and the gap. The scroll options (snap, step, loop, initial item, edge) appear once a breakpoint scrolls.
+6. **Add the cards.** Select the Cards block and use **Add (+)** → **Card**. In each Card fill at least a Title, a Description or an Image (otherwise the card isn't shown); **Title size**, right below the Title, sets that card's title font size (96px, 48px or H1 to H6, the site's heading sizes; the heading level doesn't change). Add a Link (a page from the picker, or `https://…`) and, for a button, a Call to action label. For one or two buttons of their own at the bottom of the card (e.g. "Our Research" and "Our Partners"), fill **CTA 1** and **CTA 2** in the Card's Link tab: Link, Title, Style (Secondary Button by default, Primary, without the arrow, or a Text link) and Open in a new tab. Duplicate, delete and drag Cards in the content tree to reorder them; cards render in the content tree order.
 7. **Exceptions per card (Card › Display tab).** Card style and Card colour override the block's for one card; Analytics label and Accessibility label are optional.
 8. **Preview.** Switch Universal Editor to Preview, or open the page on aem.page; check every breakpoint (desktop from 1200px, tablet 600–1199px, mobile below 600px).
 9. **Publish** the page, and the images it uses, from AEM.
@@ -93,7 +93,7 @@ Stored on a new component (definition template): `titleType` = `"h2"`, `displayA
 | Field label | Property | Type | Required | Default | Allowed values | Author guidance | Example |
 | ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
 | Title | `title` | text | No | — | — | The heading of the cards, e.g. Related to Agentic AI. | Our services |
-| Heading type | `titleType` | select | No | `h2` | H2 (`h2`), H3 (`h3`), H4 (`h4`), H5 (`h5`), H6 (`h6`) | Delivered with `title` (field collapse). | h2 |
+| Heading type | `titleType` | select | No | `h2` | H1 (`h1`), H2 (`h2`), H3 (`h3`), H4 (`h4`), H5 (`h5`), H6 (`h6`) | H1 (48px on desktop, 40px on tablet, 28px on mobile) only for the page's main heading; H2 under the page title. Delivered with `title` (field collapse). | h2 |
 | Description | `description` | richtext | No | — | — | — | — |
 | CTA link | `link` | aem-content | No | — | — | — | /design-block-master/en/curated-design-pages/insights |
 | CTA text | `linkText` | text | No | — | — | Delivered with `link` (field collapse). | View all insights |
@@ -120,22 +120,22 @@ Stored on a new component (definition template): `titleType` = `"h2"`, `displayA
 | Date format | `dateFormat` | select | No | `dd-mmm-yy` | 04 Sep 26 (`dd-mmm-yy`), 04-09-2026 (`dd-mm-yyyy`), 09-04-2026 (`mm-dd-yyyy`), Sep 4, 2026 (`mmm-d-yyyy`), 04/09/26 (`dd/mm/yy`), 4th September 2026 (`do-mmmm-yyyy`) | Shown when `showDate` is `true`. | — |
 | Show call to action | `showCta` | boolean | No | `true` | on / off | — | false |
 | Image loading | `imageLoading` | select | No | `lazy` | Lazy (`lazy`), Eager (first screen) (`eager`) | — | — |
-| Desktop display | `desktopMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`) | Grid or horizontal scroll on desktop (1200px and wider), independently of the other breakpoints. | horizontal-scroll |
-| Desktop columns | `desktopColumns` | number | No | `4` | — | Shown when `desktopMode` is `grid`. | 3 |
+| Desktop display | `desktopMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`), Carousel (buttons on the cards) (`carousel`) | Grid, horizontal scroll or carousel on desktop (1200px and wider), independently of the other breakpoints. Carousel: Columns whole cards per view, with previous / next on the cards (on the image of image cards), grey at the first and last card. | horizontal-scroll |
+| Desktop columns | `desktopColumns` | number | No | `4` | — | Shown when `desktopMode` is `grid` or `desktopMode` is `carousel`. | 3 |
 | Desktop gap (px) | `desktopGap` | number | No | `24` | — | Space between the cards. | — |
 | Desktop items visible | `desktopVisible` | number | No | `4.2` | — | Cards in view, e.g. 4.2 shows 4 and a part of the next one. Shown when `desktopMode` is `horizontal-scroll`. | — |
 | Desktop card width (px) | `desktopCardWidth` | number | No | `0` | — | A fixed card width (120 or more); 0 uses Items visible. Shown when `desktopMode` is `horizontal-scroll`. | 320 |
 | Previous / next buttons on desktop | `desktopControls` | boolean | No | `false` | on / off | Shown when `desktopMode` is `horizontal-scroll`. | true |
 | Scroll indicator on desktop | `desktopIndicator` | boolean | No | `false` | on / off | Shown when `desktopMode` is `horizontal-scroll`. | true |
-| Tablet display | `tabletMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`) | Grid or horizontal scroll on tablet (600 to 1199px), independently of the other breakpoints. | horizontal-scroll |
-| Tablet columns | `tabletColumns` | number | No | `4` | — | Shown when `tabletMode` is `grid`. | 2 |
+| Tablet display | `tabletMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`), Carousel (buttons on the cards) (`carousel`) | Grid, horizontal scroll or carousel on tablet (600 to 1199px), independently of the other breakpoints. Carousel: Columns whole cards per view, with previous / next on the cards (on the image of image cards), grey at the first and last card. | horizontal-scroll |
+| Tablet columns | `tabletColumns` | number | No | `4` | — | Shown when `tabletMode` is `grid` or `tabletMode` is `carousel`. | 2 |
 | Tablet gap (px) | `tabletGap` | number | No | `24` | — | Space between the cards. | — |
 | Tablet items visible | `tabletVisible` | number | No | `3.3` | — | Cards in view, e.g. 4.2 shows 4 and a part of the next one. Shown when `tabletMode` is `horizontal-scroll`. | 2.5 |
 | Tablet card width (px) | `tabletCardWidth` | number | No | `0` | — | A fixed card width (120 or more); 0 uses Items visible. Shown when `tabletMode` is `horizontal-scroll`. | — |
 | Previous / next buttons on tablet | `tabletControls` | boolean | No | `false` | on / off | Shown when `tabletMode` is `horizontal-scroll`. | true |
 | Scroll indicator on tablet | `tabletIndicator` | boolean | No | `false` | on / off | Shown when `tabletMode` is `horizontal-scroll`. | true |
-| Mobile display | `mobileMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`) | Grid or horizontal scroll on mobile (up to 599px), independently of the other breakpoints. | horizontal-scroll |
-| Mobile columns | `mobileColumns` | number | No | `1` | — | Shown when `mobileMode` is `grid`. | 1 |
+| Mobile display | `mobileMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`), Carousel (buttons on the cards) (`carousel`) | Grid, horizontal scroll or carousel on mobile (up to 599px), independently of the other breakpoints. Carousel: Columns whole cards per view, with previous / next on the cards (on the image of image cards), grey at the first and last card. | horizontal-scroll |
+| Mobile columns | `mobileColumns` | number | No | `1` | — | Shown when `mobileMode` is `grid` or `mobileMode` is `carousel`. | 1 |
 | Mobile gap (px) | `mobileGap` | number | No | `16` | — | Space between the cards. | — |
 | Mobile items visible | `mobileVisible` | number | No | `1.2` | — | Cards in view, e.g. 4.2 shows 4 and a part of the next one. Shown when `mobileMode` is `horizontal-scroll`. | 1.2 |
 | Mobile card width (px) | `mobileCardWidth` | number | No | `0` | — | A fixed card width (120 or more); 0 uses Items visible. Shown when `mobileMode` is `horizontal-scroll`. | — |
@@ -143,19 +143,19 @@ Stored on a new component (definition template): `titleType` = `"h2"`, `displayA
 | Scroll indicator on mobile | `mobileIndicator` | boolean | No | `true` | on / off | Shown when `mobileMode` is `horizontal-scroll`. | — |
 | Equal card height | `equalHeight` | boolean | No | `false` | on / off | All rows as tall as the tallest card. | true |
 | Stretch cards to row height | `stretchCards` | boolean | No | `true` | on / off | — | false |
-| Scroll snap | `scrollSnap` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | — |
-| Snap alignment | `snapAlign` | select | No | `start` | Start (`start`), Center (`center`) | Shown when `scrollSnap` is `true` and `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | center |
-| Hide native scrollbar | `hideScrollbar` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | — |
-| Allow mouse drag | `mouseDrag` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | — |
-| Keyboard scrolling | `keyboardScrolling` | boolean | No | `true` | on / off | Arrow keys, Home and End when the list has focus. Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | — |
-| Scroll step | `scrollStep` | select | No | `one-card` | One card (`one-card`), Viewport (`viewport`) | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | viewport |
-| Loop | `loop` | boolean | No | `false` | on / off | Next at the end goes back to the start. Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | true |
-| Initial item index | `initialIndex` | number | No | `0` | — | The card shown first (0: the first). Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | 1 |
+| Scroll snap | `scrollSnap` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | — |
+| Snap alignment | `snapAlign` | select | No | `start` | Start (`start`), Center (`center`) | Shown when `scrollSnap` is `true` and `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | center |
+| Hide native scrollbar | `hideScrollbar` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | — |
+| Allow mouse drag | `mouseDrag` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | — |
+| Keyboard scrolling | `keyboardScrolling` | boolean | No | `true` | on / off | Arrow keys, Home and End when the list has focus. Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | — |
+| Scroll step | `scrollStep` | select | No | `one-card` | One card (`one-card`), Viewport (`viewport`) | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | viewport |
+| Loop | `loop` | boolean | No | `false` | on / off | Next at the end goes back to the start. Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | true |
+| Initial item index | `initialIndex` | number | No | `0` | — | The card shown first (0: the first). Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | 1 |
 | Edge | `edgePadding` | select | No | `bleed` | Cards run to the edge (`bleed`), Inside the content width (`none`) | Fixed-width sections only: the cards run into the section gutter. In full-width sections both look the same. Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | none |
 | When there are no cards | `emptyBehavior` | select | No | `hide` | Hide the block (`hide`), Show a message (`message`) | In the editor a hint is always shown. | message |
 | Empty message | `emptyMessage` | text | No | — | — | Shown when `emptyBehavior` is `message`. | There are no cards to show yet. |
 | Analytics | `analyticsEnabled` | boolean | No | `true` | on / off | Card clicks and scrolling in the Adobe Data Layer. | — |
-| Style options | `classes` | multiselect | No | — | Compact statistic title (`stat-compact`), Dividers between rows (`dividers`), Header centred (`header-center`) | — | — |
+| Style options | `classes` | multiselect | No | — | Compact statistic title (`stat-compact`), Dividers between rows (`dividers`), Header centred (`header-center`), Impact cards (proven impact and outcomes) (`impact-cards`) | — | — |
 
 ##### Additional tab — Cards
 
@@ -187,8 +187,9 @@ Model `card`; template name "Card" (the block class AEM renders).
 | Image alt text | `imageAlt` | text | No | — | — | Describes the image for screen readers; empty: decorative. Delivered with `image` (field collapse). | — |
 | Eyebrow | `eyebrow` | text | No | — | — | A short label above the title, e.g. Perspective. | — |
 | Title | `title` | text | No | — | — | Statistic cards: the number, e.g. 4bn. | — |
+| Title size | `titleSize` | select | No | "" | Default (the card style's) (""), 96px (`96`), 48px (`48`), H1 (`h1`), H2 (`h2`), H3 (`h3`), H4 (`h4`), H5 (`h5`), H6 (`h6`) | The title's font size on every card style; H1 to H6 are the site's heading sizes (larger from the tablet up). The heading level stays as it is. | — |
 | Description | `text` | richtext | No | "" | — | — | — |
-| Label | `subtitle` | text | No | — | — | Statistic cards: the label above the description, e.g. Revenue. | — |
+| Label | `subtitle` | text | No | — | — | Statistic cards and panels: the label above the description, e.g. Revenue or Learning. | — |
 | Tags | `tags` | aem-tag (multiple) | No | — | — | — | — |
 | Date | `date` | date-time | No | — | — | Shown in the Date format of the block. | — |
 | Content type | `contentLabel` | text | No | — | — | e.g. Article or Report (report cards in the Mixed style). | — |
@@ -202,6 +203,14 @@ Model `card`; template name "Card" (the block class AEM renders).
 | Link text | `linkText` | text | No | — | — | The title when the card has none. Delivered with `link` (field collapse). | — |
 | Call to action label | `ctaLabel` | text | No | — | — | Shows a call to action (the card's one link); empty: the title is the link. | — |
 | Open in a new tab | `newTab` | select | No | "" | As the block (""), Yes (`true`), No (`false`) | — | — |
+| CTA 1 Link | `cta1` | aem-content | No | — | — | A button at the bottom of the card, e.g. Find out more; empty: no button. | — |
+| CTA 1 Title | `cta1Text` | text | No | — | — | Delivered with `cta1` (field collapse). | — |
+| CTA 1 Style | `cta1Style` | select | No | "" | Secondary Button (""), Secondary Button (no arrow) (`secondary-no-arrow`), Primary Button (`primary`), Primary Button (no arrow) (`primary-no-arrow`), Text link (`tertiary`) | — | — |
+| CTA 1 Open in a new tab | `cta1Target` | select | No | "" | Default (""), Open in New Window (`new-window`) | — | — |
+| CTA 2 Link | `cta2` | aem-content | No | — | — | A second button, below CTA 1, e.g. Our Partners; empty: no button. | — |
+| CTA 2 Title | `cta2Text` | text | No | — | — | Delivered with `cta2` (field collapse). | — |
+| CTA 2 Style | `cta2Style` | select | No | "" | Secondary Button (""), Secondary Button (no arrow) (`secondary-no-arrow`), Primary Button (`primary`), Primary Button (no arrow) (`primary-no-arrow`), Text link (`tertiary`) | — | — |
+| CTA 2 Open in a new tab | `cta2Target` | select | No | "" | Default (""), Open in New Window (`new-window`) | — | — |
 
 ##### Display tab — Card
 
@@ -452,6 +461,7 @@ D = Meta row
 - **Fields:** Title, Description; Eyebrow (or the first tag); Link. Image only with Card colour Image background (the image covers the card).
 - **Dialog:** Card style Panel; Card colour (default dark `#20293c`); Panel height Portrait (2:3), Compact (9:10) or Content.
 - **Rendering:** `list-card-panel` with kicker, title, description and the call to action "Explore" (placeholder `explore`) unless a label is set or Show call to action is off.
+- **Panel with CTA buttons (Figma "Ready for what comes next"):** a panel with CTA 1 or CTA 2 has the title at the top and, at the bottom (`div.list-card-bottom`), its Label (`p.list-card-subtitle`, 0.875rem semibold), the description and the buttons (`div.list-card-ctas`, stacked, 0.875rem, Secondary in the card's text colour). E.g. Card colour Light grey, Title size H2 (2.5rem from 900px), Desktop columns 3. Panels without CTA buttons are unchanged (their Label isn't shown). A statistic card with CTA buttons has them in its bottom group too, below its Label and description (2rem between Label and description, the buttons 1.5rem below, 0.75rem apart, Figma "Content Section"); statistic cards without buttons are unchanged.
 - **Responsive:** fixed shapes with `overflow: hidden` clip long texts; Panel height Content fits the text.
 - **Accessibility:** the focus ring is drawn inside the card edge; check contrast on Brand blue and Image background.
 - **Data layer:** `xdm:variant: panel`.
@@ -589,7 +599,7 @@ D = Divider
 
 #### Card colours
 
-Dark, Navy, Brand blue, Light blue, Light grey, Mid grey, Grey gradient and Image background (`theme-{value}` on the card), for panel, report and statistic cards, set on the block or per Card. Buttons on Dark, Navy and Brand blue cards are inverted on hover and focus.
+Dark, Navy, Brand blue, Light blue, Light grey, Mid grey, Grey gradient and Image background (`theme-{value}` on the card), for panel, report and statistic cards, set on the block or per Card. Buttons on Dark, Navy and Brand blue cards are inverted on hover and focus. The kicker of panel cards on the coloured fills (default, Dark, Navy, Brand blue) is #cdcdcd (`--slate-300`, Figma; `--list-card-kicker` in `styles/card-list.css`), apart from the description (70% white; 95% on Brand blue); the light colours and Image background keep their dark text. On Brand blue the kicker is 3.4:1, below WCAG AA: an approved exception to match Figma (decision log KB-D-070).
 
 ```text
 [Screenshot Placeholder]
@@ -632,7 +642,17 @@ C = Previous / Next
 
 #### Style options
 
-Compact statistic title (`stat-compact`), Dividers between rows (`dividers`) and Header centred (`header-center`), added as block classes.
+Compact statistic title (`stat-compact`), Dividers between rows (`dividers`), Header centred (`header-center`) and Impact cards (`impact-cards`), added as block classes.
+
+#### Impact cards (Style option Impact cards, 12 November 2026)
+
+- **Purpose / when to use:** a short row of outcomes ("Proven, Impact and Outcomes"): an image, a title and a short description per card, usually three.
+- **Fields:** the block's Title (the section heading, e.g. Proven, Impact and Outcomes); per Card: Image, Title, Description. Eyebrow, tags, date and call to action still show when authored.
+- **Dialog:** Card style Image (the default); Style options **Impact cards (proven impact and outcomes)**. Put the block in a section with Section Style Grey for the design's grey background.
+- **Rendering:** the image cards (`list-card-image`) of a `.card-list.impact-cards` block are white cards with 1rem (`--radius-l`) rounded corners: the image fills the card's top (rounded top corners, the Image ratio, 16:9 by default), then the title and the description, centred, with 1.5rem side and bottom padding. The cards of a row have the same height (Stretch cards, on by default). The heading is 3rem above the cards from 600px (the lists' 5rem otherwise). Panel, report and statistic cards in the same block keep their own look. On the Dark / Dark green section colours, the cards stay white with dark text.
+- **Responsive:** three cards per row from 600px, one per row below (`utils/card-list-config.js` `IMPACT_COLUMNS`; the Layout tab's Desktop / Tablet columns, when set, win); title 1.25rem, 1.5rem from 1200px; description 0.875rem.
+- **Compatibility:** only blocks with the option get the class; Cards and Lists without it render as before (their columns, styles and markup are unchanged). The option is in the shared Style options, so a List can use it too.
+- **Accessibility:** the title is the card heading (one level below the block's heading); linked cards keep the title link or the call to action as their one link.
 
 #### Legacy cards (compatibility)
 
@@ -728,4 +748,4 @@ Evidence to collect: page URL (preview / live), viewport width, the block's `.pl
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

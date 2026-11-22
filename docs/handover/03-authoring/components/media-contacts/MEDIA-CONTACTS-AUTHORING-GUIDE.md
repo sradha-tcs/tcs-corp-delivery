@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/media-contacts/README.md","blocks/media-contacts/_media-contacts.json"]
 relatedComponents: ["media-contacts"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/media-contacts/README.md, blocks/media-contacts/_media-contacts.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -84,11 +84,12 @@ Stored on a new component (definition template): `titleType` = `"h2"`.
 | ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
 | Title | `title` | text | No | — | — | The heading above the contacts, e.g. "TCS media contacts". Empty: "Media contacts" (placeholder mediaContacts). Add Media Contact items to author the contact details. | Media contacts |
 | Title Type | `titleType` | select | No | `h2` | H1 (`h1`), H2 (`h2`), H3 (`h3`), H4 (`h4`), H5 (`h5`), H6 (`h6`) | Heading level of the Title; each Media Contact label is one level below. Delivered with `title` (field collapse). | h2 |
-| Title color | `titleColor` | select | No | "" | Style default (""), Dark (`title-dark`), White (`title-white`), Light blue (`title-light-blue`) | Overrides the title color using the Teaser title-color variants. | — |
+| Title color | `titleColor` | select | No | "" | Style default (""), Black (`title-black`), Dark (`title-dark`), White (`title-white`), Light blue (`title-light-blue`) | Overrides the title color using the Teaser title-color variants. | — |
 | Columns on desktop | `columns` | select | No | `2` | 1 (`1`), 2 (`2`), 3 (`3`) | Choose the number of columns from desktop width. The entries stack into one column below 900px. | — |
-| Territory title color | `regionColor` | select | No | "" | Style default (""), Dark (`dark`), Brand blue (`brand`), Light blue (`light-blue`) | — | — |
-| Email color | `emailColor` | select | No | "" | Style default (""), Dark (`dark`), Brand blue (`brand`), Light blue (`light-blue`) | — | — |
-| Phone color | `phoneColor` | select | No | "" | Style default (""), Dark (`dark`), Brand blue (`brand`), Light blue (`light-blue`) | — | — |
+| Territory title color | `regionColor` | select | No | "" | Style default (""), Black (`black`), Dark (`dark`), Brand blue (`brand`), Light blue (`light-blue`) | — | — |
+| Email color | `emailColor` | select | No | "" | Style default (""), Black (`black`), Dark (`dark`), Brand blue (`brand`), Light blue (`light-blue`) | — | — |
+| Phone color | `phoneColor` | select | No | "" | Style default (""), Black (`black`), Dark (`dark`), Brand blue (`brand`), Light blue (`light-blue`) | — | — |
+| Hide email and phone icons | `classes_hideicons` | boolean | No | `false` | on / off | Turn on to remove the email and phone icons (also custom ones). Off: the icons show. Delivered as a block class. | — |
 | Email icon | `emailIcon` | reference | No | — | — | Optional custom icon. Leave empty to use the default mail icon. | — |
 | Phone icon | `phoneIcon` | reference | No | — | — | Optional custom icon. Leave empty to use the default phone icon. | — |
 
@@ -235,4 +236,4 @@ Pre-publish checklist: the sheet is published; the designations and regions are 
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

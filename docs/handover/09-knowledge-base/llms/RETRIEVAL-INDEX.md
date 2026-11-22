@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -43,7 +43,7 @@ primary: false
 - [Open items](#open-items)
 - [Change history](#change-history)
 
-Every document of the set with its ID, role and topic (generated 2026-11-08).
+Every document of the set with its ID, role and topic (generated 2026-11-22).
 
 | ID | Title | Role | Topic | Path |
 | --- | --- | --- | --- | --- |
@@ -96,6 +96,9 @@ Every document of the set with its ID, role and topic (generated 2026-11-08).
 | DEV-B-columns-container | Columns Container Block — Developer Guide | Development | block | [02-development/blocks/columns-container/COLUMNS-CONTAINER-DEVELOPER-GUIDE.md](../../02-development/blocks/columns-container/COLUMNS-CONTAINER-DEVELOPER-GUIDE.md) |
 | DEV-V-columns-container | Columns Container Block — Variations | Development | variations | [02-development/blocks/columns-container/COLUMNS-CONTAINER-VARIATIONS.md](../../02-development/blocks/columns-container/COLUMNS-CONTAINER-VARIATIONS.md) |
 | DEV-T-columns-container | Columns Container Block — Test Coverage | Development | tests | [02-development/blocks/columns-container/COLUMNS-CONTAINER-TEST-COVERAGE.md](../../02-development/blocks/columns-container/COLUMNS-CONTAINER-TEST-COVERAGE.md) |
+| DEV-B-conf-med-cont | Configurable Media Contacts Block — Developer Guide | Development | block | [02-development/blocks/conf-med-cont/CONF-MED-CONT-DEVELOPER-GUIDE.md](../../02-development/blocks/conf-med-cont/CONF-MED-CONT-DEVELOPER-GUIDE.md) |
+| DEV-V-conf-med-cont | Configurable Media Contacts Block — Variations | Development | variations | [02-development/blocks/conf-med-cont/CONF-MED-CONT-VARIATIONS.md](../../02-development/blocks/conf-med-cont/CONF-MED-CONT-VARIATIONS.md) |
+| DEV-T-conf-med-cont | Configurable Media Contacts Block — Test Coverage | Development | tests | [02-development/blocks/conf-med-cont/CONF-MED-CONT-TEST-COVERAGE.md](../../02-development/blocks/conf-med-cont/CONF-MED-CONT-TEST-COVERAGE.md) |
 | DEV-B-conversation-canvas | Conversation Canvas Block — Developer Guide | Development | block | [02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-DEVELOPER-GUIDE.md](../../02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-DEVELOPER-GUIDE.md) |
 | DEV-V-conversation-canvas | Conversation Canvas Block — Variations | Development | variations | [02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-VARIATIONS.md](../../02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-VARIATIONS.md) |
 | DEV-T-conversation-canvas | Conversation Canvas Block — Test Coverage | Development | tests | [02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-TEST-COVERAGE.md](../../02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-TEST-COVERAGE.md) |
@@ -123,6 +126,9 @@ Every document of the set with its ID, role and topic (generated 2026-11-08).
 | DEV-B-hero | Hero Block — Developer Guide | Development | block | [02-development/blocks/hero/HERO-DEVELOPER-GUIDE.md](../../02-development/blocks/hero/HERO-DEVELOPER-GUIDE.md) |
 | DEV-V-hero | Hero Block — Variations | Development | variations | [02-development/blocks/hero/HERO-VARIATIONS.md](../../02-development/blocks/hero/HERO-VARIATIONS.md) |
 | DEV-T-hero | Hero Block — Test Coverage | Development | tests | [02-development/blocks/hero/HERO-TEST-COVERAGE.md](../../02-development/blocks/hero/HERO-TEST-COVERAGE.md) |
+| DEV-B-history-timeline | History Timeline Block — Developer Guide | Development | block | [02-development/blocks/history-timeline/HISTORY-TIMELINE-DEVELOPER-GUIDE.md](../../02-development/blocks/history-timeline/HISTORY-TIMELINE-DEVELOPER-GUIDE.md) |
+| DEV-V-history-timeline | History Timeline Block — Variations | Development | variations | [02-development/blocks/history-timeline/HISTORY-TIMELINE-VARIATIONS.md](../../02-development/blocks/history-timeline/HISTORY-TIMELINE-VARIATIONS.md) |
+| DEV-T-history-timeline | History Timeline Block — Test Coverage | Development | tests | [02-development/blocks/history-timeline/HISTORY-TIMELINE-TEST-COVERAGE.md](../../02-development/blocks/history-timeline/HISTORY-TIMELINE-TEST-COVERAGE.md) |
 | DEV-B-image-collage | Image Collage Block — Developer Guide | Development | block | [02-development/blocks/image-collage/IMAGE-COLLAGE-DEVELOPER-GUIDE.md](../../02-development/blocks/image-collage/IMAGE-COLLAGE-DEVELOPER-GUIDE.md) |
 | DEV-V-image-collage | Image Collage Block — Variations | Development | variations | [02-development/blocks/image-collage/IMAGE-COLLAGE-VARIATIONS.md](../../02-development/blocks/image-collage/IMAGE-COLLAGE-VARIATIONS.md) |
 | DEV-T-image-collage | Image Collage Block — Test Coverage | Development | tests | [02-development/blocks/image-collage/IMAGE-COLLAGE-TEST-COVERAGE.md](../../02-development/blocks/image-collage/IMAGE-COLLAGE-TEST-COVERAGE.md) |
@@ -224,6 +230,7 @@ Every document of the set with its ID, role and topic (generated 2026-11-08).
 | AUT-C-column-break | Column Break — Authoring Guide | Authoring | component authoring | [03-authoring/components/column-break/COLUMN-BREAK-AUTHORING-GUIDE.md](../../03-authoring/components/column-break/COLUMN-BREAK-AUTHORING-GUIDE.md) |
 | AUT-C-columns | Columns — Authoring Guide | Authoring | component authoring | [03-authoring/components/columns/COLUMNS-AUTHORING-GUIDE.md](../../03-authoring/components/columns/COLUMNS-AUTHORING-GUIDE.md) |
 | AUT-C-columns-container | Columns Container — Authoring Guide | Authoring | component authoring | [03-authoring/components/columns-container/COLUMNS-CONTAINER-AUTHORING-GUIDE.md](../../03-authoring/components/columns-container/COLUMNS-CONTAINER-AUTHORING-GUIDE.md) |
+| AUT-C-conf-med-cont | Configurable Media Contacts — Authoring Guide | Authoring | component authoring | [03-authoring/components/conf-med-cont/CONF-MED-CONT-AUTHORING-GUIDE.md](../../03-authoring/components/conf-med-cont/CONF-MED-CONT-AUTHORING-GUIDE.md) |
 | AUT-C-conversation-canvas | Conversation Canvas — Authoring Guide | Authoring | component authoring | [03-authoring/components/conversation-canvas/CONVERSATION-CANVAS-AUTHORING-GUIDE.md](../../03-authoring/components/conversation-canvas/CONVERSATION-CANVAS-AUTHORING-GUIDE.md) |
 | AUT-C-embed | Embed — Authoring Guide | Authoring | component authoring | [03-authoring/components/embed/EMBED-AUTHORING-GUIDE.md](../../03-authoring/components/embed/EMBED-AUTHORING-GUIDE.md) |
 | AUT-C-filter-list | Filter List — Authoring Guide | Authoring | component authoring | [03-authoring/components/filter-list/FILTER-LIST-AUTHORING-GUIDE.md](../../03-authoring/components/filter-list/FILTER-LIST-AUTHORING-GUIDE.md) |
@@ -232,6 +239,7 @@ Every document of the set with its ID, role and topic (generated 2026-11-08).
 | AUT-C-fragment | Fragment — Authoring Guide | Authoring | component authoring | [03-authoring/components/fragment/FRAGMENT-AUTHORING-GUIDE.md](../../03-authoring/components/fragment/FRAGMENT-AUTHORING-GUIDE.md) |
 | AUT-C-gen-carousel | Gen Carousel — Authoring Guide | Authoring | component authoring | [03-authoring/components/gen-carousel/GEN-CAROUSEL-AUTHORING-GUIDE.md](../../03-authoring/components/gen-carousel/GEN-CAROUSEL-AUTHORING-GUIDE.md) |
 | AUT-C-hero | Hero — Authoring Guide | Authoring | component authoring | [03-authoring/components/hero/HERO-AUTHORING-GUIDE.md](../../03-authoring/components/hero/HERO-AUTHORING-GUIDE.md) |
+| AUT-C-history-timeline | History Timeline — Authoring Guide | Authoring | component authoring | [03-authoring/components/history-timeline/HISTORY-TIMELINE-AUTHORING-GUIDE.md](../../03-authoring/components/history-timeline/HISTORY-TIMELINE-AUTHORING-GUIDE.md) |
 | AUT-C-image-collage | Image Collage — Authoring Guide | Authoring | component authoring | [03-authoring/components/image-collage/IMAGE-COLLAGE-AUTHORING-GUIDE.md](../../03-authoring/components/image-collage/IMAGE-COLLAGE-AUTHORING-GUIDE.md) |
 | AUT-C-interactive-dashboard | Interactive Dashboard — Authoring Guide | Authoring | component authoring | [03-authoring/components/interactive-dashboard/INTERACTIVE-DASHBOARD-AUTHORING-GUIDE.md](../../03-authoring/components/interactive-dashboard/INTERACTIVE-DASHBOARD-AUTHORING-GUIDE.md) |
 | AUT-C-list | List — Authoring Guide | Authoring | component authoring | [03-authoring/components/list/LIST-AUTHORING-GUIDE.md](../../03-authoring/components/list/LIST-AUTHORING-GUIDE.md) |
@@ -260,6 +268,7 @@ Every document of the set with its ID, role and topic (generated 2026-11-08).
 | QA-TC-column-break | Column Break — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/column-break/COLUMN-BREAK-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/column-break/COLUMN-BREAK-TEST-CASES.md) |
 | QA-TC-columns | Columns — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/columns/COLUMNS-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/columns/COLUMNS-TEST-CASES.md) |
 | QA-TC-columns-container | Columns Container — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/columns-container/COLUMNS-CONTAINER-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/columns-container/COLUMNS-CONTAINER-TEST-CASES.md) |
+| QA-TC-conf-med-cont | Configurable Media Contacts — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/conf-med-cont/CONF-MED-CONT-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/conf-med-cont/CONF-MED-CONT-TEST-CASES.md) |
 | QA-TC-conversation-canvas | Conversation Canvas — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/conversation-canvas/CONVERSATION-CANVAS-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/conversation-canvas/CONVERSATION-CANVAS-TEST-CASES.md) |
 | QA-TC-embed | Embed — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/embed/EMBED-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/embed/EMBED-TEST-CASES.md) |
 | QA-TC-filter-list | Filter List — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/filter-list/FILTER-LIST-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/filter-list/FILTER-LIST-TEST-CASES.md) |
@@ -269,6 +278,7 @@ Every document of the set with its ID, role and topic (generated 2026-11-08).
 | QA-TC-gen-carousel | Gen Carousel — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/gen-carousel/GEN-CAROUSEL-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/gen-carousel/GEN-CAROUSEL-TEST-CASES.md) |
 | QA-TC-header | Header — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/header/HEADER-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/header/HEADER-TEST-CASES.md) |
 | QA-TC-hero | Hero — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/hero/HERO-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/hero/HERO-TEST-CASES.md) |
+| QA-TC-history-timeline | History Timeline — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/history-timeline/HISTORY-TIMELINE-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/history-timeline/HISTORY-TIMELINE-TEST-CASES.md) |
 | QA-TC-image-collage | Image Collage — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/image-collage/IMAGE-COLLAGE-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/image-collage/IMAGE-COLLAGE-TEST-CASES.md) |
 | QA-TC-interactive-dashboard | Interactive Dashboard — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/interactive-dashboard/INTERACTIVE-DASHBOARD-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/interactive-dashboard/INTERACTIVE-DASHBOARD-TEST-CASES.md) |
 | QA-TC-list | List — Test Cases | Quality assurance | test cases | [05-quality-assurance/test-cases/blocks/list/LIST-TEST-CASES.md](../../05-quality-assurance/test-cases/blocks/list/LIST-TEST-CASES.md) |
@@ -578,4 +588,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

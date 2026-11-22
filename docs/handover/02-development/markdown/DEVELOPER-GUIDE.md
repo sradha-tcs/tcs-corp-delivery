@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["AGENTS.md","package.json","scripts/scripts.js"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | AGENTS.md, package.json, scripts/scripts.js |
 | Related documents | — |
 | Related AEM paths | — |
@@ -40,7 +40,7 @@ primary: true
 
 - [Prerequisites](#prerequisites)
 - [Workflow in short](#workflow-in-short)
-- [Commands (results of 15 November 2026)](#commands-results-of-15-november-2026)
+- [Commands (results of 22 November 2026)](#commands-results-of-22-november-2026)
 - [Main loading sequence](#main-loading-sequence)
 - [Runtime architecture](#runtime-architecture)
 - [Guides](#guides)
@@ -63,16 +63,16 @@ primary: true
 5. Open a PR into `main` with a feature preview URL; checks green; a human merges.
 6. **Update this documentation set** (docs/handover in sradha-tcs/tcs-corp-delivery) in the same change (see the documentation governance).
 
-## Commands (results of 15 November 2026)
+## Commands (results of 22 November 2026)
 
 | Command | Purpose | Result in this program |
 | --- | --- | --- |
-| `npm run lint` | ESLint (Airbnb, json, xwalk model rules) and Stylelint | Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #218 and PR #224 |
-| `npm test` | Unit tests (Node test runner) | 399 of 402 passed, 3 failed: the 2 Form Variations motion tests (failing on main since the model change of 27 October) and page-header-cta renders the cells its block reads (failing on main) |
-| `npm run build:json` | Aggregate the Universal Editor models | Passed; no change to the committed files |
-| `npm run build:docs` | Generated sections of the block READMEs | Passed; no change to the committed files |
+| `npm run lint` | ESLint (Airbnb, json, xwalk model rules) and Stylelint | Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #264 (3996bfd) |
+| `npm test` | Unit tests (Node test runner) | 456 of 456 passed on main after PR #264 (3996bfd) |
+| `npm run build:json` | Aggregate the Universal Editor models | Passed; no change to the committed files (PR #264) |
+| `npm run build:docs` | Generated sections of the block READMEs | Passed; no change to the committed files (PR #264) |
 | `node docs/handover/knowledge-base/validate-knowledge-base.mjs` | Knowledge base structure and pointers | Passed (34 pages, nothing missing or failing) |
-| `node capture.mjs (documentation program)` | Automated checks and screenshots of 200 reference pages at 4 widths | 8 November 2026: Completed: 200 pages, 800 screenshots |
+| `node capture.mjs (documentation program)` | Automated checks and screenshots of 200 reference pages at 4 widths | 8 November 2026: Completed: 200 pages, 800 screenshots; 22 November 2026: the 2 Configurable Media Contacts block library pages of /language-master/en added (8 screenshots, no console errors, failed requests or overflow) |
 | `node analyze-links.mjs (documentation program)` | Links of the published pages of the roots | 8 November 2026: Completed for the three roots |
 | `perf.mjs (documentation program)` | Load timing and query index requests of a page | 8 November 2026: Before PR #203: index done after 18.4 s (24 requests, 1.37 MB); after: 2.9 s (9 parallel requests, 0.87 MB) on /language-masters/en, 1.1 s (1 request) on /design-block-master/en |
 
@@ -153,4 +153,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "QA Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -55,13 +55,12 @@ primary: true
 | DEF-008 | Minor | teaser | Failures specific to 1 block library page(s): /design-block-master/en/block-library/teaser/layouts (404 https://main--tcs-corp--sradha-tcs.aem.live/content/dam/tcs-corp/block-library/animations/lottie-sample.json; 404 https://main--tcs-corp--sradha-tcs.aem.live/content/dam/tcs-corp/block-library/animations/lottie-sample.json) | Code or content | evidence.json | Open |
 | DEF-009 | Major | testimonial | Horizontal overflow: /design-block-master/en/block-library/testimonial/testimonial-variations at 375/768/1024 px | Code | evidence.json, screenshots | Open |
 | DEF-010 | Minor | video | Failures specific to 1 block library page(s): /design-block-master/en/block-library/video/video (404 https://main--tcs-corp--sradha-tcs.aem.live/content/dam/tcs-corp/block-library/videos/sample-video.mp4; 404 https://main--tcs-corp--sradha-tcs.aem.live/content/dam/tcs-corp/block-library/videos/sample-video.mp4) | Code or content | evidence.json | Open |
-| DEF-011 | Major | test/motion/motion.test.mjs | Two Form Variations motion tests fail ("offers Content animation after Hide block", "offers Background animation only on blocks with an authored background"); known before this program; fix awaits approval | Code | npm test log | Open |
-| DEF-012 | Major | /design-block-master/en | Pages link to the testing root /language-master/en (1281 links) and to unmapped /content/tcs-corp/design-block-master/english paths (358 links) | Content | links-dbm.json | Open |
-| DEF-013 | Critical | /en locale | The /en locale content was unpublished and deleted from Edge Delivery on 8 November 2026 16:41–16:48 UTC by the AEM publishing technical account (author-side); /en/ answers 404 | Content | Admin API log | Open |
-| DEF-014 | Minor | Header over the first block | On block library pages that start with default content, the header logo overlaps the page title at 1440 px (e.g. accordion/accordion) | Code or content | screenshot block-library-accordion-accordion-1440.jpg | Open |
-| DEF-015 | Minor | List / Table List | "There are no items to show" on 17 reference page(s): /design-block-master/en/block-library/animation/repeated-items, /design-block-master/en/block-library/animation/skeleton-loading, /design-block-master/en/block-library/animation/speed-and-trigger, /design-block-master/en/block-library/foundations/section-colours-with-blocks, /design-block-master/en/block-library/list/card-style-from-pages | Content | evidence.json | Open |
-| DEF-016 | Minor | Publishing | Not published after 4 tries: /design-block-master/en/error-pages/404 (the root has no error pages) | Content | publishing state | Open |
-| DEF-017 | Minor | Publishing | Not published after 4 tries: 125 pages: see consolidated/reports/NOT-PUBLISHED-LANGUAGE-MASTERS-2026-11-08.csv on the delivery branch | Content | publishing state | Open |
+| DEF-011 | Major | /design-block-master/en | Pages link to the testing root /language-master/en (1281 links) and to unmapped /content/tcs-corp/design-block-master/english paths (358 links) | Content | links-dbm.json | Open |
+| DEF-012 | Critical | /en locale | The /en locale content was unpublished and deleted from Edge Delivery on 8 November 2026 16:41–16:48 UTC by the AEM publishing technical account (author-side); /en/ answers 404 | Content | Admin API log | Open |
+| DEF-013 | Minor | Header over the first block | On block library pages that start with default content, the header logo overlaps the page title at 1440 px (e.g. accordion/accordion) | Code or content | screenshot block-library-accordion-accordion-1440.jpg | Open |
+| DEF-014 | Minor | List / Table List | "There are no items to show" on 17 reference page(s): /design-block-master/en/block-library/animation/repeated-items, /design-block-master/en/block-library/animation/skeleton-loading, /design-block-master/en/block-library/animation/speed-and-trigger, /design-block-master/en/block-library/foundations/section-colours-with-blocks, /design-block-master/en/block-library/list/card-style-from-pages | Content | evidence.json | Open |
+| DEF-015 | Minor | Publishing | Not published after 4 tries: /design-block-master/en/error-pages/404 (the root has no error pages) | Content | publishing state | Open |
+| DEF-016 | Minor | Publishing | Not published after 4 tries: 125 pages: see consolidated/reports/NOT-PUBLISHED-LANGUAGE-MASTERS-2026-11-08.csv on the delivery branch | Content | publishing state | Open |
 
 ## Screenshots
 
@@ -79,4 +78,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

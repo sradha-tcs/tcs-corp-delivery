@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -84,99 +84,124 @@ primary: true
 | US-F-E01-05-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-MODAL-006 |
 | US-F-E01-05-02 | The block shows its English fallback or empty state and the page keeps working | TC-MODAL-007 |
 | US-F-E02-01-01 | The block appears with the authored content; no empty placeholder remains | TC-HERO-002 |
-| US-F-E02-01-01 | The block renders without empty wrappers or broken layout | TC-HERO-024 |
-| US-F-E02-01-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-HERO-025 |
+| US-F-E02-01-01 | The block renders without empty wrappers or broken layout | TC-HERO-025 |
+| US-F-E02-01-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-HERO-026 |
 | US-F-E02-01-02 | The page answers 200, every example renders, no console error, no failed request | TC-HERO-001 |
-| US-F-E02-01-02 | Every control is reachable and named; no heading level is skipped; images have alt text or are decorative | TC-HERO-026 |
-| US-F-E02-01-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-HERO-027 |
-| US-F-E02-01-02 | The block shows its English fallback or empty state and the page keeps working | TC-HERO-028 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute lottie) | TC-HERO-003 |
+| US-F-E02-01-02 | Every control is reachable and named; no heading level is skipped; images have alt text or are decorative | TC-HERO-027 |
+| US-F-E02-01-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-HERO-028 |
+| US-F-E02-01-02 | The block shows its English fallback or empty state and the page keeps working | TC-HERO-029 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute lottie, media-video) | TC-HERO-003 |
 | US-F-E02-01-03 | The rendering matches the variation (class or attribute media-contained) | TC-HERO-004 |
 | US-F-E02-01-03 | The rendering matches the variation (class or attribute h1, h2) | TC-HERO-005 |
 | US-F-E02-01-03 | The rendering matches the variation (class or attribute cta-text-black, cta-text-white) | TC-HERO-006 |
 | US-F-E02-01-03 | The rendering matches the variation (class or attribute same-window, new-window) | TC-HERO-007 |
 | US-F-E02-01-03 | The rendering matches the variation (class or attribute default, primary, secondary) | TC-HERO-008 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute primary-bg-default, primary-bg-azure) | TC-HERO-009 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute secondary-bg-default, secondary-bg-light-grey, secondary-bg-black-40) | TC-HERO-010 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute secondary-border-default, secondary-border-black, secondary-border-white) | TC-HERO-011 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute right, down) | TC-HERO-012 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute align-top, align-middle, align-bottom) | TC-HERO-013 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute align-left, align-center, align-right) | TC-HERO-014 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute text-left, text-center, text-right) | TC-HERO-015 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute bg-light, bg-dark, bg-dark-subtle, bg-black, bg-charcoal-80, bg-navy-60, ...) | TC-HERO-016 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute icon-black, icon-white, icon-blue, icon-pale-blue) | TC-HERO-017 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute eyebrow-royal-blue, eyebrow-sky-blue) | TC-HERO-018 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute title-black, title-white) | TC-HERO-019 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute description-black, description-white) | TC-HERO-020 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute new-window) | TC-HERO-021 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute primary, secondary) | TC-HERO-022 |
-| US-F-E02-01-03 | The rendering matches the variation (class or attribute right, down) | TC-HERO-023 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute primary-bg-default, primary-bg-azure, primary-bg-transparent, primary-bg-black-40) | TC-HERO-009 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute primary-border-default, primary-border-black, primary-border-white, primary-border-slate-100, primary-border-none) | TC-HERO-010 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute secondary-bg-default, secondary-bg-light-grey, secondary-bg-black-40) | TC-HERO-011 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute secondary-border-default, secondary-border-black, secondary-border-white, secondary-border-none) | TC-HERO-012 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute right, down) | TC-HERO-013 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute align-top, align-middle, align-bottom) | TC-HERO-014 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute align-left, align-center, align-right) | TC-HERO-015 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute text-left, text-center, text-right) | TC-HERO-016 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute bg-light, bg-dark, bg-dark-subtle, bg-black, bg-charcoal-80, bg-navy-60, ...) | TC-HERO-017 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute icon-black, icon-white, icon-blue, icon-pale-blue) | TC-HERO-018 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute eyebrow-royal-blue, eyebrow-sky-blue) | TC-HERO-019 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute title-black, title-white) | TC-HERO-020 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute description-black, description-white) | TC-HERO-021 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute new-window) | TC-HERO-022 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute primary, secondary) | TC-HERO-023 |
+| US-F-E02-01-03 | The rendering matches the variation (class or attribute right, down) | TC-HERO-024 |
 | US-F-E02-02-01 | The block appears with the authored content; no empty placeholder remains | TC-PAGE-HEADER-002 |
-| US-F-E02-02-01 | The block renders without empty wrappers or broken layout | TC-PAGE-HEADER-010 |
-| US-F-E02-02-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-PAGE-HEADER-011 |
+| US-F-E02-02-01 | The block renders without empty wrappers or broken layout | TC-PAGE-HEADER-018 |
+| US-F-E02-02-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-PAGE-HEADER-019 |
 | US-F-E02-02-02 | The page answers 200, every example renders, no console error, no failed request | TC-PAGE-HEADER-001 |
-| US-F-E02-02-02 | Every control is reachable and named; no heading level is skipped; images have alt text or are decorative | TC-PAGE-HEADER-012 |
-| US-F-E02-02-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-PAGE-HEADER-013 |
-| US-F-E02-02-02 | The block shows its English fallback or empty state and the page keeps working | TC-PAGE-HEADER-014 |
-| US-F-E02-02-03 | The rendering matches the variation (class or attribute landing, secondary, article, display) | TC-PAGE-HEADER-003 |
-| US-F-E02-02-03 | The rendering matches the variation (class or attribute new-window) | TC-PAGE-HEADER-004 |
-| US-F-E02-02-03 | The rendering matches the variation (class or attribute primary, secondary) | TC-PAGE-HEADER-005 |
-| US-F-E02-02-03 | The rendering matches the variation (class or attribute new-window) | TC-PAGE-HEADER-006 |
-| US-F-E02-02-03 | The rendering matches the variation (class or attribute tertiary, primary, secondary) | TC-PAGE-HEADER-007 |
-| US-F-E02-02-03 | The rendering matches the variation (class or attribute button-bg-blue) | TC-PAGE-HEADER-008 |
-| US-F-E02-02-03 | The rendering matches the variation (class or attribute button-round) | TC-PAGE-HEADER-009 |
+| US-F-E02-02-02 | Every control is reachable and named; no heading level is skipped; images have alt text or are decorative | TC-PAGE-HEADER-020 |
+| US-F-E02-02-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-PAGE-HEADER-021 |
+| US-F-E02-02-02 | The block shows its English fallback or empty state and the page keeps working | TC-PAGE-HEADER-022 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute landing, secondary, article, display, cta-alignment-left) | TC-PAGE-HEADER-003 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6) | TC-PAGE-HEADER-004 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6) | TC-PAGE-HEADER-005 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6) | TC-PAGE-HEADER-006 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute text-16px, text-18px, text-20px, text-24px, text-32px, text-40px, ...) | TC-PAGE-HEADER-007 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute new-window) | TC-PAGE-HEADER-008 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute primary, secondary) | TC-PAGE-HEADER-009 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute primary-text-white, primary-text-blue, primary-text-black) | TC-PAGE-HEADER-010 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute primary-bg-white, primary-bg-blue, primary-bg-translucent) | TC-PAGE-HEADER-011 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute secondary-text-white, secondary-text-blue, secondary-text-black) | TC-PAGE-HEADER-012 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute secondary-bg-white, secondary-bg-blue, secondary-bg-translucent) | TC-PAGE-HEADER-013 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute new-window) | TC-PAGE-HEADER-014 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute tertiary, primary, secondary) | TC-PAGE-HEADER-015 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute button-bg-blue) | TC-PAGE-HEADER-016 |
+| US-F-E02-02-03 | The rendering matches the variation (class or attribute button-round) | TC-PAGE-HEADER-017 |
 | US-F-E03-01-01 | The block appears with the authored content; no empty placeholder remains | TC-TEASER-002 |
-| US-F-E03-01-01 | The block renders without empty wrappers or broken layout | TC-TEASER-040 |
-| US-F-E03-01-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-TEASER-041 |
+| US-F-E03-01-01 | The block renders without empty wrappers or broken layout | TC-TEASER-056 |
+| US-F-E03-01-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-TEASER-057 |
 | US-F-E03-01-02 | The page answers 200, every example renders, no console error, no failed request | TC-TEASER-001 |
-| US-F-E03-01-02 | Every control is reachable and named; no heading level is skipped; images have alt text or are decorative | TC-TEASER-042 |
-| US-F-E03-01-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-TEASER-043 |
-| US-F-E03-01-02 | The block shows its English fallback or empty state and the page keeps working | TC-TEASER-044 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6) | TC-TEASER-003 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute dd-mm-yyyy, mm-dd-yyyy, mmm-d-yyyy, dd/mm/yy) | TC-TEASER-004 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute lottie) | TC-TEASER-005 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute left, right, top, bottom) | TC-TEASER-006 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute mobile-image-top, mobile-image-bottom) | TC-TEASER-007 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute ratio-8-9, ratio-1-1, ratio-original) | TC-TEASER-008 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute square) | TC-TEASER-009 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute new-window) | TC-TEASER-010 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute list, primary, primary-no-arrow, secondary, secondary-no-arrow) | TC-TEASER-011 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-bg-white, button-bg-blue, button-bg-translucent) | TC-TEASER-012 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-rectangle) | TC-TEASER-013 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute arrow-down-right, arrow-none) | TC-TEASER-014 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute new-window) | TC-TEASER-015 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute tertiary, list, primary, primary-no-arrow, secondary, secondary-no-arrow) | TC-TEASER-016 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-bg-white, button-bg-blue, button-bg-translucent) | TC-TEASER-017 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-rectangle) | TC-TEASER-018 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute new-window) | TC-TEASER-019 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute tertiary, list, primary, primary-no-arrow, secondary, secondary-no-arrow) | TC-TEASER-020 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-bg-white, button-bg-blue, button-bg-translucent) | TC-TEASER-021 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-rectangle) | TC-TEASER-022 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute no-image, background, card, image-collage) | TC-TEASER-023 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute grey, dark, dark-green, navy) | TC-TEASER-024 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute text-left, text-center, text-right, text-justify) | TC-TEASER-025 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute valign-top, valign-middle, valign-bottom) | TC-TEASER-026 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute title-regular, title-semibold) | TC-TEASER-027 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute title-dark, title-white, title-light-blue, title-royal-blue) | TC-TEASER-028 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute text-normal, text-regular, text-large) | TC-TEASER-029 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute description-black, description-white) | TC-TEASER-030 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute eyebrow-label, eyebrow-grey, eyebrow-white, eyebrow-rich-black) | TC-TEASER-031 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute spacing-header) | TC-TEASER-032 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute teaser-fixed-width) | TC-TEASER-033 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute right, left) | TC-TEASER-034 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute new-window) | TC-TEASER-035 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute list, primary, primary-no-arrow, secondary, secondary-no-arrow) | TC-TEASER-036 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-bg-white, button-bg-blue, button-bg-translucent) | TC-TEASER-037 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-rectangle) | TC-TEASER-038 |
-| US-F-E03-01-03 | The rendering matches the variation (class or attribute black-white, normal) | TC-TEASER-039 |
+| US-F-E03-01-02 | Every control is reachable and named; no heading level is skipped; images have alt text or are decorative | TC-TEASER-058 |
+| US-F-E03-01-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-TEASER-059 |
+| US-F-E03-01-02 | The block shows its English fallback or empty state and the page keeps working | TC-TEASER-060 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6, ...) | TC-TEASER-003 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6, ...) | TC-TEASER-004 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6, ...) | TC-TEASER-005 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute dd-mm-yyyy, mm-dd-yyyy, mmm-d-yyyy, dd/mm/yy) | TC-TEASER-006 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute lottie) | TC-TEASER-007 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute left, right, top, bottom) | TC-TEASER-008 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute mobile-image-top, mobile-image-bottom) | TC-TEASER-009 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute ratio-8-9, ratio-1-1, ratio-original) | TC-TEASER-010 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute square) | TC-TEASER-011 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute new-window) | TC-TEASER-012 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute list, primary, primary-no-arrow, secondary, secondary-no-arrow) | TC-TEASER-013 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-bg-white, button-bg-blue, button-bg-translucent) | TC-TEASER-014 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-rectangle) | TC-TEASER-015 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute arrow-down-right, arrow-none) | TC-TEASER-016 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute label-light-gray) | TC-TEASER-017 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute new-window) | TC-TEASER-018 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute tertiary, list, primary, primary-no-arrow, secondary, secondary-no-arrow) | TC-TEASER-019 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute font-14) | TC-TEASER-020 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute label-soft-gray) | TC-TEASER-021 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-bg-white, button-bg-blue, button-bg-translucent) | TC-TEASER-022 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-rectangle) | TC-TEASER-023 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute primary-button-shadow) | TC-TEASER-024 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute new-window) | TC-TEASER-025 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute font-14) | TC-TEASER-026 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute tertiary, list, primary, primary-no-arrow, secondary, secondary-no-arrow) | TC-TEASER-027 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute label-soft-gray) | TC-TEASER-028 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-bg-white, button-bg-blue, button-bg-translucent) | TC-TEASER-029 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-rectangle) | TC-TEASER-030 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute secondary-button-shadow) | TC-TEASER-031 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute no-image, background, card, image-collage) | TC-TEASER-032 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute grey, dark, dark-green, navy) | TC-TEASER-033 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute text-left, text-center, text-right, text-justify) | TC-TEASER-034 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute valign-top, valign-middle, valign-bottom) | TC-TEASER-035 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute title-light, title-regular, title-medium, title-semibold, title-bold) | TC-TEASER-036 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute title-dark, title-white, title-light-blue, title-royal-blue, title-soft-gray) | TC-TEASER-037 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute description-4rem, description-3rem, description-2.5rem, description-2rem, description-1.75rem, description-1.25rem, ...) | TC-TEASER-038 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute description-4rem, description-3rem, description-2.5rem, description-2rem, description-1.75rem, description-1.25rem, ...) | TC-TEASER-039 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute description-4rem, description-3rem, description-2.5rem, description-2rem, description-1.75rem, description-1.25rem, ...) | TC-TEASER-040 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute description-light, description-regular, description-medium, description-semibold, description-bold) | TC-TEASER-041 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute description-black, description-white) | TC-TEASER-042 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute eyebrow-label, eyebrow-grey, eyebrow-white, eyebrow-rich-black, eyebrow-medium-light-gray) | TC-TEASER-043 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute eyebrow-size-12, eyebrow-size-14) | TC-TEASER-044 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute eyebrow-size-12, eyebrow-size-14) | TC-TEASER-045 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute eyebrow-size-12, eyebrow-size-14) | TC-TEASER-046 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute spacing-header) | TC-TEASER-047 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute teaser-fixed-width) | TC-TEASER-048 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute right, left) | TC-TEASER-049 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute cg-24) | TC-TEASER-050 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute new-window) | TC-TEASER-051 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute list, primary, primary-no-arrow, secondary, secondary-no-arrow) | TC-TEASER-052 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-bg-white, button-bg-blue, button-bg-translucent) | TC-TEASER-053 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute button-rectangle) | TC-TEASER-054 |
+| US-F-E03-01-03 | The rendering matches the variation (class or attribute black-white, normal) | TC-TEASER-055 |
 | US-F-E03-02-01 | The block appears with the authored content; no empty placeholder remains | TC-CARDS-002 |
-| US-F-E03-02-01 | The block renders without empty wrappers or broken layout | TC-CARDS-022 |
-| US-F-E03-02-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-CARDS-023 |
+| US-F-E03-02-01 | The block renders without empty wrappers or broken layout | TC-CARDS-027 |
+| US-F-E03-02-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-CARDS-028 |
 | US-F-E03-02-02 | The page answers 200, every example renders, no console error, no failed request | TC-CARDS-001 |
-| US-F-E03-02-02 | Every control is reachable and named; no heading level is skipped; images have alt text or are decorative | TC-CARDS-024 |
-| US-F-E03-02-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-CARDS-025 |
-| US-F-E03-02-02 | The block shows its English fallback or empty state and the page keeps working | TC-CARDS-026 |
-| US-F-E03-02-03 | The rendering matches the variation (class or attribute h2, h3, h4, h5, h6) | TC-CARDS-003 |
+| US-F-E03-02-02 | Every control is reachable and named; no heading level is skipped; images have alt text or are decorative | TC-CARDS-029 |
+| US-F-E03-02-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-CARDS-030 |
+| US-F-E03-02-02 | The block shows its English fallback or empty state and the page keeps working | TC-CARDS-031 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6) | TC-CARDS-003 |
 | US-F-E03-02-03 | The rendering matches the variation (class or attribute primary, secondary) | TC-CARDS-004 |
 | US-F-E03-02-03 | The rendering matches the variation (class or attribute image, panel, report, stat, mixed) | TC-CARDS-005 |
 | US-F-E03-02-03 | The rendering matches the variation (class or attribute dark, navy, brand, brand-light, grey, mid-grey, ...) | TC-CARDS-006 |
@@ -184,17 +209,22 @@ primary: true
 | US-F-E03-02-03 | The rendering matches the variation (class or attribute portrait, compact, auto) | TC-CARDS-008 |
 | US-F-E03-02-03 | The rendering matches the variation (class or attribute dd-mmm-yy, dd-mm-yyyy, mm-dd-yyyy, mmm-d-yyyy, dd/mm/yy, do-mmmm-yyyy) | TC-CARDS-009 |
 | US-F-E03-02-03 | The rendering matches the variation (class or attribute lazy, eager) | TC-CARDS-010 |
-| US-F-E03-02-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll) | TC-CARDS-011 |
-| US-F-E03-02-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll) | TC-CARDS-012 |
-| US-F-E03-02-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll) | TC-CARDS-013 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll, carousel) | TC-CARDS-011 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll, carousel) | TC-CARDS-012 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll, carousel) | TC-CARDS-013 |
 | US-F-E03-02-03 | The rendering matches the variation (class or attribute start, center) | TC-CARDS-014 |
 | US-F-E03-02-03 | The rendering matches the variation (class or attribute one-card, viewport) | TC-CARDS-015 |
 | US-F-E03-02-03 | The rendering matches the variation (class or attribute bleed, none) | TC-CARDS-016 |
 | US-F-E03-02-03 | The rendering matches the variation (class or attribute hide, message) | TC-CARDS-017 |
-| US-F-E03-02-03 | The rendering matches the variation (class or attribute stat-compact, dividers, header-center) | TC-CARDS-018 |
-| US-F-E03-02-03 | The rendering matches the variation (class or attribute true, false) | TC-CARDS-019 |
-| US-F-E03-02-03 | The rendering matches the variation (class or attribute image, panel, report, stat) | TC-CARDS-020 |
-| US-F-E03-02-03 | The rendering matches the variation (class or attribute dark, navy, brand, brand-light, grey, mid-grey, ...) | TC-CARDS-021 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute stat-compact, dividers, header-center, impact-cards) | TC-CARDS-018 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute 96, 48, h1, h2, h3, h4, ...) | TC-CARDS-019 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute true, false) | TC-CARDS-020 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute secondary-no-arrow, primary, primary-no-arrow, tertiary) | TC-CARDS-021 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute new-window) | TC-CARDS-022 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute secondary-no-arrow, primary, primary-no-arrow, tertiary) | TC-CARDS-023 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute new-window) | TC-CARDS-024 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute image, panel, report, stat) | TC-CARDS-025 |
+| US-F-E03-02-03 | The rendering matches the variation (class or attribute dark, navy, brand, brand-light, grey, mid-grey, ...) | TC-CARDS-026 |
 | US-F-E03-03-01 | The block appears with the authored content; no empty placeholder remains | TC-COLUMNS-CONTAINER-002 |
 | US-F-E03-03-01 | The block renders without empty wrappers or broken layout | TC-COLUMNS-CONTAINER-021 |
 | US-F-E03-03-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-COLUMNS-CONTAINER-022 |
@@ -206,7 +236,7 @@ primary: true
 | US-F-E03-03-03 | The rendering matches the variation (class or attribute bg-grey, bg-dark, bg-dark-green, bg-navy) | TC-COLUMNS-CONTAINER-004 |
 | US-F-E03-03-03 | The rendering matches the variation (class or attribute full-width, fixed-width) | TC-COLUMNS-CONTAINER-005 |
 | US-F-E03-03-03 | The rendering matches the variation (class or attribute auto, 1, 2, 3, 4) | TC-COLUMNS-CONTAINER-006 |
-| US-F-E03-03-03 | The rendering matches the variation (class or attribute none, small, medium, large) | TC-COLUMNS-CONTAINER-007 |
+| US-F-E03-03-03 | The rendering matches the variation (class or attribute none, small, medium, large, xlarge) | TC-COLUMNS-CONTAINER-007 |
 | US-F-E03-03-03 | The rendering matches the variation (class or attribute top, middle, bottom, stretch) | TC-COLUMNS-CONTAINER-008 |
 | US-F-E03-03-03 | The rendering matches the variation (class or attribute tablet, desktop, large) | TC-COLUMNS-CONTAINER-009 |
 | US-F-E03-03-03 | The rendering matches the variation (class or attribute motion-fade-in, motion-fade-up, motion-fade-down, motion-fade-left, motion-fade-right, motion-slide-up, ...) | TC-COLUMNS-CONTAINER-010 |
@@ -446,14 +476,14 @@ primary: true
 | US-F-E05-01-03 | The rendering matches the variation (class or attribute portrait, compact, auto) | TC-LIST-012 |
 | US-F-E05-01-03 | The rendering matches the variation (class or attribute dd-mmm-yy, dd-mm-yyyy, mm-dd-yyyy, mmm-d-yyyy, dd/mm/yy, do-mmmm-yyyy) | TC-LIST-013 |
 | US-F-E05-01-03 | The rendering matches the variation (class or attribute lazy, eager) | TC-LIST-014 |
-| US-F-E05-01-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll) | TC-LIST-015 |
-| US-F-E05-01-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll) | TC-LIST-016 |
-| US-F-E05-01-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll) | TC-LIST-017 |
+| US-F-E05-01-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll, carousel) | TC-LIST-015 |
+| US-F-E05-01-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll, carousel) | TC-LIST-016 |
+| US-F-E05-01-03 | The rendering matches the variation (class or attribute grid, horizontal-scroll, carousel) | TC-LIST-017 |
 | US-F-E05-01-03 | The rendering matches the variation (class or attribute start, center) | TC-LIST-018 |
 | US-F-E05-01-03 | The rendering matches the variation (class or attribute one-card, viewport) | TC-LIST-019 |
 | US-F-E05-01-03 | The rendering matches the variation (class or attribute bleed, none) | TC-LIST-020 |
 | US-F-E05-01-03 | The rendering matches the variation (class or attribute hide, message, fallback) | TC-LIST-021 |
-| US-F-E05-01-03 | The rendering matches the variation (class or attribute stat-compact, dividers, header-center) | TC-LIST-022 |
+| US-F-E05-01-03 | The rendering matches the variation (class or attribute stat-compact, dividers, header-center, impact-cards) | TC-LIST-022 |
 | US-F-E05-01-03 | The rendering matches the variation (class or attribute true, false) | TC-LIST-023 |
 | US-F-E05-01-03 | The rendering matches the variation (class or attribute image, panel, report, stat) | TC-LIST-024 |
 | US-F-E05-01-03 | The rendering matches the variation (class or attribute dark, navy, brand, brand-light, grey, mid-grey, ...) | TC-LIST-025 |
@@ -482,8 +512,8 @@ primary: true
 | US-F-E05-03-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-TABLE-LIST-014 |
 | US-F-E05-03-02 | The block shows its English fallback or empty state and the page keeps working | TC-TABLE-LIST-015 |
 | US-F-E05-03-03 | The rendering matches the variation (class or attribute industries, solutions, products, segments, approach, platforms) | TC-TABLE-LIST-003 |
-| US-F-E05-03-03 | The rendering matches the variation (class or attribute white, black, dark-green, navy) | TC-TABLE-LIST-004 |
-| US-F-E05-03-03 | The rendering matches the variation (class or attribute h2, h3, h4) | TC-TABLE-LIST-005 |
+| US-F-E05-03-03 | The rendering matches the variation (class or attribute white, grey, black, dark-green, navy) | TC-TABLE-LIST-004 |
+| US-F-E05-03-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4) | TC-TABLE-LIST-005 |
 | US-F-E05-03-03 | The rendering matches the variation (class or attribute beside) | TC-TABLE-LIST-006 |
 | US-F-E05-03-03 | The rendering matches the variation (class or attribute primary, secondary, tertiary) | TC-TABLE-LIST-007 |
 | US-F-E05-03-03 | The rendering matches the variation (class or attribute show, mobile, hide) | TC-TABLE-LIST-008 |
@@ -497,20 +527,29 @@ primary: true
 | US-F-E05-04-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-MEDIA-CONTACTS-012 |
 | US-F-E05-04-02 | The block shows its English fallback or empty state and the page keeps working | TC-MEDIA-CONTACTS-013 |
 | US-F-E05-04-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6) | TC-MEDIA-CONTACTS-003 |
-| US-F-E05-04-03 | The rendering matches the variation (class or attribute title-dark, title-white, title-light-blue) | TC-MEDIA-CONTACTS-004 |
+| US-F-E05-04-03 | The rendering matches the variation (class or attribute title-black, title-dark, title-white, title-light-blue) | TC-MEDIA-CONTACTS-004 |
 | US-F-E05-04-03 | The rendering matches the variation (class or attribute 1, 2, 3) | TC-MEDIA-CONTACTS-005 |
-| US-F-E05-04-03 | The rendering matches the variation (class or attribute dark, brand, light-blue) | TC-MEDIA-CONTACTS-006 |
-| US-F-E05-04-03 | The rendering matches the variation (class or attribute dark, brand, light-blue) | TC-MEDIA-CONTACTS-007 |
-| US-F-E05-04-03 | The rendering matches the variation (class or attribute dark, brand, light-blue) | TC-MEDIA-CONTACTS-008 |
+| US-F-E05-04-03 | The rendering matches the variation (class or attribute black, dark, brand, light-blue) | TC-MEDIA-CONTACTS-006 |
+| US-F-E05-04-03 | The rendering matches the variation (class or attribute black, dark, brand, light-blue) | TC-MEDIA-CONTACTS-007 |
+| US-F-E05-04-03 | The rendering matches the variation (class or attribute black, dark, brand, light-blue) | TC-MEDIA-CONTACTS-008 |
 | US-F-E06-01-01 | The block appears with the authored content; no empty placeholder remains | TC-FORM-VARIATIONS-002 |
-| US-F-E06-01-01 | The block renders without empty wrappers or broken layout | TC-FORM-VARIATIONS-005 |
-| US-F-E06-01-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-FORM-VARIATIONS-006 |
+| US-F-E06-01-01 | The block renders without empty wrappers or broken layout | TC-FORM-VARIATIONS-014 |
+| US-F-E06-01-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-FORM-VARIATIONS-015 |
 | US-F-E06-01-02 | The page answers 200, every example renders, no console error, no failed request | TC-FORM-VARIATIONS-001 |
-| US-F-E06-01-02 | Every control is reachable and named; no heading level is skipped; images have alt text or are decorative | TC-FORM-VARIATIONS-007 |
-| US-F-E06-01-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-FORM-VARIATIONS-008 |
-| US-F-E06-01-02 | The block shows its English fallback or empty state and the page keeps working | TC-FORM-VARIATIONS-009 |
-| US-F-E06-01-03 | The rendering matches the variation (class or attribute dark) | TC-FORM-VARIATIONS-003 |
-| US-F-E06-01-03 | The rendering matches the variation (class or attribute text, email, tel) | TC-FORM-VARIATIONS-004 |
+| US-F-E06-01-02 | Every control is reachable and named; no heading level is skipped; images have alt text or are decorative | TC-FORM-VARIATIONS-016 |
+| US-F-E06-01-02 | No horizontal overflow; layout follows the responsive rules of the README | TC-FORM-VARIATIONS-017 |
+| US-F-E06-01-02 | The block shows its English fallback or empty state and the page keeps working | TC-FORM-VARIATIONS-018 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6, ...) | TC-FORM-VARIATIONS-003 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute default, dark) | TC-FORM-VARIATIONS-004 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute text, email, tel) | TC-FORM-VARIATIONS-005 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute full-width, half-width) | TC-FORM-VARIATIONS-006 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute full-width, half-width) | TC-FORM-VARIATIONS-007 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute full-width, half-width) | TC-FORM-VARIATIONS-008 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute full-width, half-width) | TC-FORM-VARIATIONS-009 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute full-width, half-width) | TC-FORM-VARIATIONS-010 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute full-width, half-width) | TC-FORM-VARIATIONS-011 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute full-width, half-width) | TC-FORM-VARIATIONS-012 |
+| US-F-E06-01-03 | The rendering matches the variation (class or attribute full-width, half-width) | TC-FORM-VARIATIONS-013 |
 | US-F-E07-01-01 | The block appears with the authored content; no empty placeholder remains | TC-CONVERSATION-CANVAS-002 |
 | US-F-E07-01-01 | The block renders without empty wrappers or broken layout | TC-CONVERSATION-CANVAS-013 |
 | US-F-E07-01-01 | Text wraps, no broken image icon, the link is flagged in the link check | TC-CONVERSATION-CANVAS-014 |
@@ -545,4 +584,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

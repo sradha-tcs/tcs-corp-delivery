@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/footer/README.md","blocks/footer/_footer.json"]
 relatedComponents: ["footer"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/footer/README.md, blocks/footer/_footer.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -73,6 +73,7 @@ primary: true
 7. **Publish** the footer page, the Conversation Canvas page and, after changes, the Social Links sheet.
 8. **Choose the footer for an area (optional):** Page Properties › **Footer** on the area's top page (inherited by child pages; empty: the parent's, else `references/footer`), or the metadata sheet's `footer` column.
 9. **Validate** on the published site: the year is current, links reach their pages, new-tab links open a new tab.
+10. **Leave the footer out of one page (optional):** Page Properties › **Hide Footer** on that page (this page only, not its child pages; or the metadata sheet's `hide-footer` column). The footer page isn't loaded on it. **Hide Conversation Canvas** hides only the footer's Canvas (and the page's other Canvases) and keeps the bar (KB-D-071).
 
 Minimum required: Copyright Text or at least one Footer Link. Recommended: 3–6 links, the Canvas page on the locale footer, a `platform` value on every social row. Optional: the Canvas, area footers.
 
@@ -460,4 +461,4 @@ Evidence to collect: page URL, the `footer` meta values, network status of the f
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

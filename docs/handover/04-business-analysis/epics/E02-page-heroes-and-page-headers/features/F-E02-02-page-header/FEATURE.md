@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/page-header"]
 relatedComponents: ["page-header"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/page-header |
 | Related documents | — |
 | Related AEM paths | — |
@@ -63,11 +63,11 @@ primary: true
 | SEO requirements | Semantic headings; metadata from the page |
 | Localization requirements | UI text from placeholders with an English fallback |
 | Security/privacy requirements | No personal data; announced new-tab links |
-| Dependencies | ../../scripts/scripts.js, ../../decorators/article-meta-decorator.js, ../../decorators/button-decorator.js, ../../decorators/editor-item-decorator.js, ../../decorators/link-decorator.js, ../../decorators/responsive-image-decorator.js, ../../decorators/tag-decorator.js, ../../utils/cells.js, ../../utils/data.js, ../../utils/links.js, ../../utils/metadata.js, ../../utils/placeholders.js, ../../utils/properties.js, ../../utils/taxonomy.js |
+| Dependencies | ../../scripts/aem.js, ../../scripts/scripts.js, ../../decorators/article-meta-decorator.js, ../../decorators/button-decorator.js, ../../decorators/editor-item-decorator.js, ../../decorators/heading-decorator.js, ../../decorators/link-decorator.js, ../../decorators/responsive-image-decorator.js, ../../decorators/tag-decorator.js, ../../utils/cells.js, ../../utils/data.js, ../../utils/links.js, ../../utils/metadata.js, ../../utils/placeholders.js, ../../utils/properties.js, ../../utils/taxonomy.js |
 | Acceptance criteria | See the user stories |
 | Related user stories | US-F-E02-02-01, US-F-E02-02-02, US-F-E02-02-03 |
 | Related components | page-header |
-| Related test cases | TC-PAGE-HEADER-001, TC-PAGE-HEADER-002, TC-PAGE-HEADER-003, TC-PAGE-HEADER-004, TC-PAGE-HEADER-005, TC-PAGE-HEADER-006, TC-PAGE-HEADER-007, TC-PAGE-HEADER-008, TC-PAGE-HEADER-009, TC-PAGE-HEADER-010, TC-PAGE-HEADER-011, TC-PAGE-HEADER-012, TC-PAGE-HEADER-013, TC-PAGE-HEADER-014 |
+| Related test cases | TC-PAGE-HEADER-001, TC-PAGE-HEADER-002, TC-PAGE-HEADER-003, TC-PAGE-HEADER-004, TC-PAGE-HEADER-005, TC-PAGE-HEADER-006, TC-PAGE-HEADER-007, TC-PAGE-HEADER-008, TC-PAGE-HEADER-009, TC-PAGE-HEADER-010, TC-PAGE-HEADER-011, TC-PAGE-HEADER-012, TC-PAGE-HEADER-013, TC-PAGE-HEADER-014, TC-PAGE-HEADER-015, TC-PAGE-HEADER-016, TC-PAGE-HEADER-017, TC-PAGE-HEADER-018, TC-PAGE-HEADER-019, TC-PAGE-HEADER-020, TC-PAGE-HEADER-021, TC-PAGE-HEADER-022 |
 | Definition of Ready | [DEFINITION-OF-READY](../../../../markdown/DEFINITION-OF-READY.md) |
 | Definition of Done | [DEFINITION-OF-DONE](../../../../markdown/DEFINITION-OF-DONE.md) |
 
@@ -89,4 +89,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

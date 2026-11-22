@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/conversation-canvas/README.md","blocks/conversation-canvas/_conversation-canvas.json","blocks/conversation-canvas/canvas-controller.js","blocks/conversation-canvas/canvas-journey.js","blocks/conversation-canvas/conversation-canvas.css","blocks/conversation-canvas/conversation-canvas.js"]
 relatedComponents: ["conversation-canvas","conversation-canvas-button"]
 relatedPages: ["/design-block-master/en/block-library/conversation-canvas","/design-block-master/en/block-library/conversation-canvas/conversation-canvas","/design-block-master/en/block-library/conversation-canvas/docked","/design-block-master/en/block-library/conversation-canvas/floating","/design-block-master/en/block-library/conversation-canvas/footer-canvas","/design-block-master/en/block-library/conversation-canvas/journey-and-actions","/design-block-master/en/curated-design-pages/home","/design-block-master/en/curated-design-pages/what-we-do"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 2026-11-15 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/conversation-canvas/README.md, blocks/conversation-canvas/_conversation-canvas.json, blocks/conversation-canvas/canvas-controller.js, blocks/conversation-canvas/canvas-journey.js, blocks/conversation-canvas/conversation-canvas.css, blocks/conversation-canvas/conversation-canvas.js |
 | Related documents | [Variations](./CONVERSATION-CANVAS-VARIATIONS.md), [Test coverage](./CONVERSATION-CANVAS-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/conversation-canvas/CONVERSATION-CANVAS-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/conversation-canvas, /content/tcs-corp/design-block-master/en/block-library/conversation-canvas/conversation-canvas, /content/tcs-corp/design-block-master/en/block-library/conversation-canvas/docked |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | Search prompt with quick actions; one floating journey across header, page and footer |
 | Variations (summary) | Primary (sticky dock), Secondary, journey options, action styles |
 | Children | conversation-canvas-button (Conversation Canvas Button) |
-| Code size | 3316 lines of JS and CSS |
+| Code size | 3385 lines of JS and CSS |
 
 ## Overview
 
@@ -175,6 +175,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | `../../utils/properties.js` |
 | `../../utils/urls.js` |
 | `../../utils/ids.js` |
+| `../../utils/page-visibility.js` |
 | `../../utils/placeholders.js` |
 | `./canvas-controller.js` |
 | `../../decorators/skeleton-decorator.js` |
@@ -210,6 +211,7 @@ blocks/conversation-canvas/
 | [`utils/properties.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/properties.js) | `readProperties`, `textOf`, `isOn`, `isOnByDefault` (a toggle that defaults to on), `optionOf`, `normalizeKey`, `textSource` (key-value block properties) | `conversation-canvas.js`: { normalizeKey as normalize, textOf } |
 | [`utils/urls.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/urls.js) | `toSitePath` (AEM content paths to published paths, e.g. `/content/tcs-corp/de/de-de/x.html` → `/de-de/x`) | `conversation-canvas.js`: { toSitePath } |
 | [`utils/ids.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/ids.js) | `nextInstance`, `uniqueId`, `createIdFactory` (unique ids per block instance), `availableId` (an authored id kept, suffixed -2, -3, ... only when taken) | `conversation-canvas.js`: { uniqueId } |
+| [`utils/page-visibility.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/page-visibility.js) | `pageHides`, `hiddenParts`, `markHiddenParts`, `isOn`, `PAGE_PARTS` (the page properties Hide Header, Hide Footer and Hide Conversation Canvas, or the metadata sheet's `hide-header`, `hide-footer`, `hide-canvas` columns: | `conversation-canvas.js`: { pageHides } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `conversation-canvas.js`: { fillPlaceholder, getPlaceholders } |
 | [`decorators/skeleton-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/skeleton-decorator.js) | `renderWhenLoaded` (a block from data that may take time: directly within 150ms, else after a skeleton so its section is shown; removed on success and failure), `skeletonWhile` (a skeleton in a part that fills in by itse | `conversation-canvas.js`: { bone, skeletonElement, skeletonWhile } |
 | [`decorators/editor-item-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/editor-item-decorator.js) | `buildEditorItems`, `editorItemHint` (in Universal Editor, an item the block doesn't render yet, e.g. a CTA just added, as a dashed placeholder the author can select; styles in `styles/lazy-styles.css`; the hint loaded o | `conversation-canvas.js`: { buildEditorItems, editorItemHint } |
@@ -466,6 +468,7 @@ Evidence to collect (without secrets): the page URL on aem.page, `document.docum
 | Not recorded | Floating journey options Floats and docks / Stays in place (Decorative merged, not for Primary); one row in use while a row floats (the others inert); hidden Canvases (also header, footer, Primary) aren't active; editor placeholders for Buttons without a link | KB-D-053 (Proposed) | 22 October 2026 |
 | Not recorded | Site menu pills as Figma 1124:27046, arrows only for pages with child pages, grey fade, blue menu icon; the menu closes on scroll (from 1f40578); typing in the search field restored (1f40578's Escape handler moved the focus on every key) | fix/block-issues | 22 October 2026 |
 | Not recorded | Site menu: an arrow on every panel row again (Figma 1124:26250); closing resets it to the first level (a pinned third-level panel stayed open after a click outside and hid the search row) | fix/block-issues | 22 October 2026 |
+| KB-D-071 (Approved), PR #228 | Page property Hide Conversation Canvas: every Canvas of the page gets Hide block; README corrected: Hide block hides header and footer Canvases too. `canvas-controller.js`: a footer that isn't rendered (Hide Footer, or while the sections load) counts as no footer, so the floating row isn't lifted off the screen | branch feature/header-footer-canvas-toggle | 16 November 2026 |
 
 ## Reference pages
 
@@ -618,4 +621,4 @@ Evidence to collect (without secrets): the page URL on aem.page, `document.docum
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

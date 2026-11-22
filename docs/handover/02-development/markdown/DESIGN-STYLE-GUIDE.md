@@ -8,8 +8,8 @@ owner: "UX/UI Lead plus Technical Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["styles/styles.css","styles/lazy-styles.css","styles/fonts.css","styles/motion.css","styles/card-list.css","docs/handover/knowledge-base/design-system.md"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | styles/styles.css, styles/lazy-styles.css, styles/fonts.css, styles/motion.css, styles/card-list.css, docs/handover/knowledge-base/design-system.md |
 | Related documents | — |
 | Related AEM paths | — |
@@ -249,6 +249,7 @@ The Additional tab's Padding / Margin fields (`classes_padding*` / `classes_marg
 | `--section-padding-inline` (gutter of Fixed Width sections) | `--spacing-s` (1.5rem); `--spacing-m` (2.5rem) from 600px; `--spacing-l` (5rem) from 1200px; `0rem` in Full Width sections |
 | `--section-spacing` (between sections) | `--spacing-m` (2.5rem); `--spacing-l` (5rem) from 900px; `--space-3000` (7.5rem) from 1200px |
 | Section Width Type | Full Width (default, edge to edge, no gutter) or Fixed Width (`fixed-width`, centred at `--content-max-width`) |
+| Section Text width | Per device (mobile below 600px, tablet 600 to 1199px, desktop from 1200px): Full (default), 75%, 66.6667%, 50% or 33.3333% of the row for the section's default content, left-aligned (`text-width-{device}-{value}`, `--section-text-width-{device}` in `styles/styles.css`); blocks keep their own width |
 | Rounded edge | `rounded`: `--radius-l` corners |
 
 There is no global column grid token. Grids are per block:
@@ -388,7 +389,7 @@ Mapping checklist for a new Figma variation (practice from AGENTS.md "Blocks" an
 
 ## Token inventory (read from the CSS)
 
-353 custom properties, each with its file, line and selector.
+409 custom properties, each with its file, line and selector.
 
 | Token | Value | Source | Selector |
 | --- | --- | --- | --- |
@@ -595,47 +596,47 @@ Mapping checklist for a new Figma variation (practice from AGENTS.md "Blocks" an
 | `--body-font-size-s` | `1rem` | styles/styles.css:327 | :root (@media (width >= 900px)) |
 | `--body-font-size-xs` | `0.875rem` | styles/styles.css:328 | :root (@media (width >= 900px)) |
 | `--section-spacing` | `var(--spacing-l)` | styles/styles.css:331 | :root (@media (width >= 900px)) |
-| `--nav-height` | `7.75rem` | styles/styles.css:338 | :root (@media (width >= 600px)) |
-| `--section-padding-inline` | `var(--spacing-l)` | styles/styles.css:344 | :root (@media (width >= 1200px)) |
-| `--section-spacing` | `var(--space-3000)` | styles/styles.css:345 | :root (@media (width >= 1200px)) |
-| `--nav-height` | `7.75rem` | styles/styles.css:348 | :root (@media (width >= 1200px)) |
-| `--header-overlay-space` | `var(--header-height, var(--header-reserved))` | styles/styles.css:394 | html[data-header-overlay='always'] body |
-| `--header-overlay-space` | `var(--header-height, var(--header-reserved))` | styles/styles.css:398 | html:not([data-header-overlay='never']) body:has(main > .section:first-child .hero:not(.bg-dark, .bg-dark-subtle, .bg-black, .bg-charcoal-80, .bg-navy-60, .bg-charcoal-40)) |
-| `--tag-color` | `var(--color-text-neutral)` | styles/styles.css:838 | .tag |
-| `--tag-bg` | `var(--color-bg-default)` | styles/styles.css:839 | .tag |
-| `--tag-border` | `var(--color-border-default)` | styles/styles.css:840 | .tag |
-| `--tag-hover-color` | `var(--color-text-on-brand)` | styles/styles.css:841 | .tag |
-| `--tag-hover-bg` | `var(--color-bg-brand)` | styles/styles.css:842 | .tag |
-| `--tag-hover-border` | `var(--color-border-brand)` | styles/styles.css:843 | .tag |
-| `--tag-color` | `var(--color-text-default)` | styles/styles.css:875 | .tag-filter |
-| `--tag-color` | `var(--color-text-on-brand)` | styles/styles.css:886 | .tag-filter[aria-current] |
-| `--tag-bg` | `var(--color-bg-brand)` | styles/styles.css:887 | .tag-filter[aria-current] |
-| `--tag-border` | `var(--color-border-brand)` | styles/styles.css:888 | .tag-filter[aria-current] |
-| `--tag-bg` | `transparent` | styles/styles.css:893 | .tag-industry |
-| `--tag-border` | `transparent` | styles/styles.css:894 | .tag-industry |
-| `--tag-hover-color` | `var(--color-text-brand)` | styles/styles.css:895 | .tag-industry |
-| `--tag-hover-bg` | `transparent` | styles/styles.css:896 | .tag-industry |
-| `--tag-hover-border` | `transparent` | styles/styles.css:897 | .tag-industry |
-| `--tag-color` | `var(--color-text-secondary)` | styles/styles.css:906 | .tag-card |
-| `--tag-color` | `var(--color-text-default)` | styles/styles.css:914 | .tag-industry |
-| `--avatar-size` | `2.5rem` | styles/styles.css:926 | .avatar |
-| `--avatar-size` | `2rem` | styles/styles.css:964 | .avatar.medium |
-| `--avatar-size` | `1.5rem` | styles/styles.css:972 | .avatar.small |
-| `--section-max-width` | `none` | styles/styles.css:1031 | main > .section |
-| `--section-padding-inline` | `0rem` | styles/styles.css:1038 | main > .section:not(.fixed-width) |
-| `--section-max-width` | `var(--content-max-width)` | styles/styles.css:1042 | main > .section.fixed-width |
-| `--color-text-default` | `var(--color-text-on-neutral)` | styles/styles.css:1115 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--color-text-secondary` | `rgb(255 255 255 / 70%)` | styles/styles.css:1116 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--color-text-brand` | `var(--brand-300)` | styles/styles.css:1117 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--color-border-brand` | `var(--brand-300); /* the focus ring */` | styles/styles.css:1118 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--link-color` | `var(--brand-300)` | styles/styles.css:1119 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--link-hover-color` | `var(--color-text-on-neutral)` | styles/styles.css:1120 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--color-text-default` | `var(--black-1000)` | styles/styles.css:1126 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
-| `--color-text-secondary` | `var(--slate-700)` | styles/styles.css:1127 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
-| `--color-text-brand` | `var(--brand-400)` | styles/styles.css:1128 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
-| `--color-border-brand` | `var(--brand-500)` | styles/styles.css:1129 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
-| `--link-color` | `var(--brand-400)` | styles/styles.css:1130 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
-| `--link-hover-color` | `var(--brand-600)` | styles/styles.css:1131 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--section-padding-inline` | `var(--spacing-l)` | styles/styles.css:337 | :root (@media (width >= 1200px)) |
+| `--section-spacing` | `var(--space-3000)` | styles/styles.css:338 | :root (@media (width >= 1200px)) |
+| `--nav-height` | `7.75rem` | styles/styles.css:341 | :root (@media (width >= 1200px)) |
+| `--nav-height` | `0rem` | styles/styles.css:381 | html[data-hide-header] |
+| `--header-overlay-space` | `var(--header-height, var(--header-reserved))` | styles/styles.css:402 | html[data-header-overlay='always'] body |
+| `--header-overlay-space` | `var(--header-height, var(--header-reserved))` | styles/styles.css:406 | html:not([data-header-overlay='never']) body:has(main > .section:first-child .hero:not(.bg-dark, .bg-dark-subtle, .bg-black, .bg-charcoal-80, .bg-navy-60, .bg-charcoal-40)) |
+| `--tag-color` | `var(--color-text-neutral)` | styles/styles.css:846 | .tag |
+| `--tag-bg` | `var(--color-bg-default)` | styles/styles.css:847 | .tag |
+| `--tag-border` | `var(--color-border-default)` | styles/styles.css:848 | .tag |
+| `--tag-hover-color` | `var(--color-text-on-brand)` | styles/styles.css:849 | .tag |
+| `--tag-hover-bg` | `var(--color-bg-brand)` | styles/styles.css:850 | .tag |
+| `--tag-hover-border` | `var(--color-border-brand)` | styles/styles.css:851 | .tag |
+| `--tag-color` | `var(--color-text-default)` | styles/styles.css:883 | .tag-filter |
+| `--tag-color` | `var(--color-text-on-brand)` | styles/styles.css:894 | .tag-filter[aria-current] |
+| `--tag-bg` | `var(--color-bg-brand)` | styles/styles.css:895 | .tag-filter[aria-current] |
+| `--tag-border` | `var(--color-border-brand)` | styles/styles.css:896 | .tag-filter[aria-current] |
+| `--tag-bg` | `transparent` | styles/styles.css:901 | .tag-industry |
+| `--tag-border` | `transparent` | styles/styles.css:902 | .tag-industry |
+| `--tag-hover-color` | `var(--color-text-brand)` | styles/styles.css:903 | .tag-industry |
+| `--tag-hover-bg` | `transparent` | styles/styles.css:904 | .tag-industry |
+| `--tag-hover-border` | `transparent` | styles/styles.css:905 | .tag-industry |
+| `--tag-color` | `var(--color-text-secondary)` | styles/styles.css:914 | .tag-card |
+| `--tag-color` | `var(--color-text-default)` | styles/styles.css:922 | .tag-industry |
+| `--avatar-size` | `2.5rem` | styles/styles.css:934 | .avatar |
+| `--avatar-size` | `2rem` | styles/styles.css:972 | .avatar.medium |
+| `--avatar-size` | `1.5rem` | styles/styles.css:980 | .avatar.small |
+| `--section-max-width` | `none` | styles/styles.css:1039 | main > .section |
+| `--section-padding-inline` | `0rem` | styles/styles.css:1046 | main > .section:not(.fixed-width) |
+| `--section-max-width` | `var(--content-max-width)` | styles/styles.css:1050 | main > .section.fixed-width |
+| `--color-text-default` | `var(--color-text-on-neutral)` | styles/styles.css:1158 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--color-text-secondary` | `rgb(255 255 255 / 70%)` | styles/styles.css:1159 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--color-text-brand` | `var(--brand-300)` | styles/styles.css:1160 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--color-border-brand` | `var(--brand-300); /* the focus ring */` | styles/styles.css:1161 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--link-color` | `var(--brand-300)` | styles/styles.css:1162 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--link-hover-color` | `var(--color-text-on-neutral)` | styles/styles.css:1163 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--color-text-default` | `var(--black-1000)` | styles/styles.css:1169 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--color-text-secondary` | `var(--slate-700)` | styles/styles.css:1170 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--color-text-brand` | `var(--brand-400)` | styles/styles.css:1171 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--color-border-brand` | `var(--brand-500)` | styles/styles.css:1172 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--link-color` | `var(--brand-400)` | styles/styles.css:1173 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--link-hover-color` | `var(--brand-600)` | styles/styles.css:1174 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
 | `--motion-duration` | `600ms` | styles/motion.css:12 | :root |
 | `--motion-duration-background` | `900ms` | styles/motion.css:13 | :root |
 | `--motion-stagger` | `120ms` | styles/motion.css:14 | :root |
@@ -658,112 +659,169 @@ Mapping checklist for a new Figma variation (practice from AGENTS.md "Blocks" an
 | `--list-track` | `var(--grey-200)` | styles/card-list.css:16 | .card-list |
 | `--list-thumb` | `var(--slate-600)` | styles/card-list.css:17 | .card-list |
 | `--list-bleed` | `0rem` | styles/card-list.css:18 | .card-list |
-| `--list-columns` | `var(--list-columns-mobile, 1)` | styles/card-list.css:21 | .card-list |
-| `--list-gap` | `var(--list-gap-mobile, 1rem)` | styles/card-list.css:22 | .card-list |
-| `--list-visible` | `var(--list-visible-mobile, 1.2)` | styles/card-list.css:23 | .card-list |
-| `--list-card-width` | `var(--list-card-width-mobile)` | styles/card-list.css:24 | .card-list |
-| `--list-item-size` | `var(--list-card-width, calc((100cqi - var(--list-bleed) - (var(--list-visible) - 1) * var(--list-gap)) / var(--list-visible)))` | styles/card-list.css:25 | .card-list |
-| `--list-card-title-size` | `1.125rem` | styles/card-list.css:28 | .card-list |
-| `--list-card-title-line` | `1.39` | styles/card-list.css:29 | .card-list |
-| `--list-panel-title-size` | `1.75rem` | styles/card-list.css:30 | .card-list |
-| `--list-panel-text-size` | `0.75rem` | styles/card-list.css:31 | .card-list |
-| `--list-stat-number-size` | `5rem` | styles/card-list.css:32 | .card-list |
-| `--list-stat-text-size` | `1rem` | styles/card-list.css:33 | .card-list |
-| `--list-kicker-size` | `0.75rem` | styles/card-list.css:34 | .card-list |
-| `--list-meta-size` | `0.75rem` | styles/card-list.css:35 | .card-list |
-| `--list-row-title-size` | `1.75rem` | styles/card-list.css:36 | .card-list |
-| `--list-feature-title-size` | `2rem` | styles/card-list.css:37 | .card-list |
-| `--list-card-padding` | `var(--space-400)` | styles/card-list.css:38 | .card-list |
-| `--list-hover-duration` | `300ms` | styles/card-list.css:41 | .card-list |
-| `--list-hover-easing` | `ease-out` | styles/card-list.css:42 | .card-list |
-| `--list-bleed` | `var(--section-padding-inline)` | styles/card-list.css:206 | .card-list.edge-bleed.mobile-scroll |
-| `--list-card-bg` | `var(--list-dark)` | styles/card-list.css:417 | .card-list :is(.list-card-panel, .list-card-report, .list-card-stat) |
-| `--list-card-fg` | `var(--slate-100)` | styles/card-list.css:418 | .card-list :is(.list-card-panel, .list-card-report, .list-card-stat) |
-| `--list-card-muted` | `var(--white-500)` | styles/card-list.css:419 | .card-list :is(.list-card-panel, .list-card-report, .list-card-stat) |
-| `--list-card-bg` | `var(--list-gradient)` | styles/card-list.css:456 | .card-list .list-card-report |
-| `--list-card-fg` | `var(--color-text-neutral)` | styles/card-list.css:457 | .card-list .list-card-report |
-| `--list-card-muted` | `var(--black-500)` | styles/card-list.css:458 | .card-list .list-card-report |
-| `--list-card-bg` | `var(--color-bg-tertiary)` | styles/card-list.css:462 | .card-list .list-card-stat |
-| `--list-card-fg` | `var(--black-1000)` | styles/card-list.css:463 | .card-list .list-card-stat |
-| `--list-card-muted` | `var(--black-500)` | styles/card-list.css:464 | .card-list .list-card-stat |
-| `--list-stat-size` | `min(var(--list-stat-number-size), 26cqi)` | styles/card-list.css:491 | .card-list .list-card-stat .list-card-title |
-| `--list-stat-size` | `calc(var(--list-stat-number-size) * 0.42)` | styles/card-list.css:500 | .card-list.stat-compact .list-card-stat .list-card-title |
-| `--list-card-bg` | `var(--list-dark)` | styles/card-list.css:590 | .card-list .list-card.theme-dark |
-| `--list-card-fg` | `var(--slate-100)` | styles/card-list.css:591 | .card-list .list-card.theme-dark |
-| `--list-card-muted` | `var(--white-500)` | styles/card-list.css:592 | .card-list .list-card.theme-dark |
-| `--list-card-strong` | `var(--slate-100)` | styles/card-list.css:593 | .card-list .list-card.theme-dark |
-| `--list-card-bg` | `var(--brand-600)` | styles/card-list.css:597 | .card-list .list-card.theme-navy |
-| `--list-card-fg` | `var(--slate-100)` | styles/card-list.css:598 | .card-list .list-card.theme-navy |
-| `--list-card-muted` | `var(--white-500)` | styles/card-list.css:599 | .card-list .list-card.theme-navy |
-| `--list-card-strong` | `var(--slate-100)` | styles/card-list.css:600 | .card-list .list-card.theme-navy |
-| `--list-card-bg` | `var(--color-bg-brand)` | styles/card-list.css:604 | .card-list .list-card.theme-brand |
-| `--list-card-fg` | `var(--white-1000)` | styles/card-list.css:605 | .card-list .list-card.theme-brand |
-| `--list-card-muted` | `var(--white-900); /* 80% white gave 4.0:1 on the brand fill */` | styles/card-list.css:606 | .card-list .list-card.theme-brand |
-| `--list-card-strong` | `var(--slate-100)` | styles/card-list.css:607 | .card-list .list-card.theme-brand |
-| `--list-card-bg` | `var(--brand-300)` | styles/card-list.css:616 | .card-list .list-card.theme-brand-light |
-| `--list-card-fg` | `var(--black-1000)` | styles/card-list.css:617 | .card-list .list-card.theme-brand-light |
-| `--list-card-muted` | `var(--black-500)` | styles/card-list.css:618 | .card-list .list-card.theme-brand-light |
-| `--list-card-bg` | `var(--color-bg-tertiary)` | styles/card-list.css:622 | .card-list .list-card.theme-grey |
-| `--list-card-fg` | `var(--black-1000)` | styles/card-list.css:623 | .card-list .list-card.theme-grey |
-| `--list-card-muted` | `var(--black-500)` | styles/card-list.css:624 | .card-list .list-card.theme-grey |
-| `--list-card-bg` | `var(--grey-400)` | styles/card-list.css:628 | .card-list .list-card.theme-mid-grey |
-| `--list-card-fg` | `var(--black-1000)` | styles/card-list.css:629 | .card-list .list-card.theme-mid-grey |
-| `--list-card-muted` | `var(--black-600)` | styles/card-list.css:630 | .card-list .list-card.theme-mid-grey |
-| `--list-card-bg` | `var(--list-gradient)` | styles/card-list.css:634 | .card-list .list-card.theme-gradient |
-| `--list-card-fg` | `var(--color-text-neutral)` | styles/card-list.css:635 | .card-list .list-card.theme-gradient |
-| `--list-card-muted` | `var(--black-500)` | styles/card-list.css:636 | .card-list .list-card.theme-gradient |
-| `--list-card-bg` | `var(--color-bg-secondary)` | styles/card-list.css:644 | .card-list .list-card.theme-image |
-| `--list-card-fg` | `var(--color-text-neutral)` | styles/card-list.css:645 | .card-list .list-card.theme-image |
-| `--list-card-muted` | `var(--color-text-secondary)` | styles/card-list.css:646 | .card-list .list-card.theme-image |
-| `--list-columns` | `var(--list-columns-tablet, 4)` | styles/card-list.css:801 | .card-list (@media (width >= 600px)) |
-| `--list-gap` | `var(--list-gap-tablet, 1.5rem)` | styles/card-list.css:802 | .card-list (@media (width >= 600px)) |
-| `--list-visible` | `var(--list-visible-tablet, 3.3)` | styles/card-list.css:803 | .card-list (@media (width >= 600px)) |
-| `--list-card-width` | `var(--list-card-width-tablet)` | styles/card-list.css:804 | .card-list (@media (width >= 600px)) |
-| `--list-card-title-size` | `1.25rem` | styles/card-list.css:805 | .card-list (@media (width >= 600px)) |
-| `--list-card-title-line` | `1.4` | styles/card-list.css:806 | .card-list (@media (width >= 600px)) |
-| `--list-panel-title-size` | `1.5rem` | styles/card-list.css:807 | .card-list (@media (width >= 600px)) |
-| `--list-panel-text-size` | `0.875rem` | styles/card-list.css:808 | .card-list (@media (width >= 600px)) |
-| `--list-stat-number-size` | `4rem` | styles/card-list.css:809 | .card-list (@media (width >= 600px)) |
-| `--list-kicker-size` | `0.875rem` | styles/card-list.css:810 | .card-list (@media (width >= 600px)) |
-| `--list-meta-size` | `0.875rem` | styles/card-list.css:811 | .card-list (@media (width >= 600px)) |
-| `--list-row-title-size` | `2rem` | styles/card-list.css:812 | .card-list (@media (width >= 600px)) |
-| `--list-feature-title-size` | `2.5rem` | styles/card-list.css:813 | .card-list (@media (width >= 600px)) |
-| `--list-bleed` | `var(--section-padding-inline)` | styles/card-list.css:870 | .card-list.edge-bleed.tablet-scroll (@media (width >= 600px)) |
-| `--list-bleed` | `0rem` | styles/card-list.css:882 | .card-list.edge-bleed.tablet-grid (@media (width >= 600px)) |
-| `--list-card-padding` | `var(--space-600)` | styles/card-list.css:914 | .card-list (@media (width >= 900px)) |
-| `--list-columns` | `var(--list-columns-desktop, 4)` | styles/card-list.css:921 | .card-list (@media (width >= 1200px)) |
-| `--list-gap` | `var(--list-gap-desktop, 1.5rem)` | styles/card-list.css:922 | .card-list (@media (width >= 1200px)) |
-| `--list-visible` | `var(--list-visible-desktop, 4.2)` | styles/card-list.css:923 | .card-list (@media (width >= 1200px)) |
-| `--list-card-width` | `var(--list-card-width-desktop)` | styles/card-list.css:924 | .card-list (@media (width >= 1200px)) |
-| `--list-card-title-size` | `1.5rem` | styles/card-list.css:925 | .card-list (@media (width >= 1200px)) |
-| `--list-card-title-line` | `1.42` | styles/card-list.css:926 | .card-list (@media (width >= 1200px)) |
-| `--list-panel-title-size` | `1.75rem` | styles/card-list.css:927 | .card-list (@media (width >= 1200px)) |
-| `--list-panel-text-size` | `1rem` | styles/card-list.css:928 | .card-list (@media (width >= 1200px)) |
-| `--list-stat-number-size` | `6rem` | styles/card-list.css:929 | .card-list (@media (width >= 1200px)) |
-| `--list-stat-text-size` | `1.125rem` | styles/card-list.css:930 | .card-list (@media (width >= 1200px)) |
-| `--list-meta-size` | `1rem` | styles/card-list.css:931 | .card-list (@media (width >= 1200px)) |
-| `--list-row-title-size` | `2.5rem` | styles/card-list.css:932 | .card-list (@media (width >= 1200px)) |
-| `--list-bleed` | `var(--section-padding-inline)` | styles/card-list.css:974 | .card-list.edge-bleed.desktop-scroll (@media (width >= 1200px)) |
-| `--list-bleed` | `0rem` | styles/card-list.css:986 | .card-list.edge-bleed.desktop-grid (@media (width >= 1200px)) |
+| `--list-ratio` | `calc(16 / 9)` | styles/card-list.css:21 | .card-list |
+| `--list-carousel-top` | `50%` | styles/card-list.css:22 | .card-list |
+| `--list-carousel-disabled` | `var(--grey-200)` | styles/card-list.css:23 | .card-list |
+| `--list-columns` | `var(--list-columns-mobile, 1)` | styles/card-list.css:26 | .card-list |
+| `--list-gap` | `var(--list-gap-mobile, 1rem)` | styles/card-list.css:27 | .card-list |
+| `--list-visible` | `var(--list-visible-mobile, 1.2)` | styles/card-list.css:28 | .card-list |
+| `--list-card-width` | `var(--list-card-width-mobile)` | styles/card-list.css:29 | .card-list |
+| `--list-item-size` | `var(--list-card-width, calc((100cqi - var(--list-bleed) - (var(--list-visible) - 1) * var(--list-gap)) / var(--list-visible)))` | styles/card-list.css:30 | .card-list |
+| `--list-card-title-size` | `1.125rem` | styles/card-list.css:33 | .card-list |
+| `--list-card-title-line` | `1.39` | styles/card-list.css:34 | .card-list |
+| `--list-panel-title-size` | `1.75rem` | styles/card-list.css:35 | .card-list |
+| `--list-panel-text-size` | `0.75rem` | styles/card-list.css:36 | .card-list |
+| `--list-stat-number-size` | `5rem` | styles/card-list.css:37 | .card-list |
+| `--list-stat-text-size` | `1rem` | styles/card-list.css:38 | .card-list |
+| `--list-kicker-size` | `0.75rem` | styles/card-list.css:39 | .card-list |
+| `--list-meta-size` | `0.75rem` | styles/card-list.css:40 | .card-list |
+| `--list-row-title-size` | `1.75rem` | styles/card-list.css:41 | .card-list |
+| `--list-feature-title-size` | `2rem` | styles/card-list.css:42 | .card-list |
+| `--list-card-padding` | `var(--space-400)` | styles/card-list.css:43 | .card-list |
+| `--list-hover-duration` | `300ms` | styles/card-list.css:46 | .card-list |
+| `--list-hover-easing` | `ease-out` | styles/card-list.css:47 | .card-list |
+| `--button-font-size` | `var(--label-font-size)` | styles/card-list.css:100 | .card-list .list-cta-slot .button.tertiary |
+| `--list-bleed` | `var(--section-padding-inline)` | styles/card-list.css:222 | .card-list.edge-bleed.mobile-scroll |
+| `--list-card-bg` | `var(--list-dark)` | styles/card-list.css:438 | .card-list :is(.list-card-panel, .list-card-report, .list-card-stat) |
+| `--list-card-fg` | `var(--slate-100)` | styles/card-list.css:439 | .card-list :is(.list-card-panel, .list-card-report, .list-card-stat) |
+| `--list-card-muted` | `var(--white-500)` | styles/card-list.css:440 | .card-list :is(.list-card-panel, .list-card-report, .list-card-stat) |
+| `--list-card-kicker` | `var(--slate-300)` | styles/card-list.css:470 | .card-list .list-card-panel |
+| `--list-kicker-size` | `0.875rem` | styles/card-list.css:480 | .card-list .list-card-panel (@media (width < 600px)) |
+| `--list-meta-size` | `0.875rem` | styles/card-list.css:481 | .card-list .list-card-panel (@media (width < 600px)) |
+| `--list-card-bg` | `var(--list-gradient)` | styles/card-list.css:498 | .card-list .list-card-report |
+| `--list-card-fg` | `var(--color-text-neutral)` | styles/card-list.css:499 | .card-list .list-card-report |
+| `--list-card-muted` | `var(--black-500)` | styles/card-list.css:500 | .card-list .list-card-report |
+| `--list-report-title-size` | `2rem` | styles/card-list.css:501 | .card-list .list-card-report |
+| `--list-report-text-size` | `0.875rem` | styles/card-list.css:502 | .card-list .list-card-report |
+| `--list-kicker-size` | `0.875rem` | styles/card-list.css:503 | .card-list .list-card-report |
+| `--button-font-size` | `0.875rem` | styles/card-list.css:526 | .card-list .list-card-report .list-card-action |
+| `--list-report-text-size` | `1rem` | styles/card-list.css:531 | .card-list .list-card-report (@media (width >= 600px)) |
+| `--list-card-bg` | `var(--color-bg-tertiary)` | styles/card-list.css:536 | .card-list .list-card-stat |
+| `--list-card-fg` | `var(--black-1000)` | styles/card-list.css:537 | .card-list .list-card-stat |
+| `--list-card-muted` | `var(--black-500)` | styles/card-list.css:538 | .card-list .list-card-stat |
+| `--list-stat-size` | `min(var(--list-stat-number-size), 26cqi)` | styles/card-list.css:565 | .card-list .list-card-stat .list-card-title |
+| `--list-stat-size` | `calc(var(--list-stat-number-size) * 0.42)` | styles/card-list.css:574 | .card-list.stat-compact .list-card-stat .list-card-title |
+| `--list-card-bg` | `var(--list-dark)` | styles/card-list.css:670 | .card-list .list-card.theme-dark |
+| `--list-card-fg` | `var(--slate-100)` | styles/card-list.css:671 | .card-list .list-card.theme-dark |
+| `--list-card-muted` | `var(--white-500)` | styles/card-list.css:672 | .card-list .list-card.theme-dark |
+| `--list-card-strong` | `var(--slate-100)` | styles/card-list.css:673 | .card-list .list-card.theme-dark |
+| `--list-card-bg` | `var(--brand-600)` | styles/card-list.css:677 | .card-list .list-card.theme-navy |
+| `--list-card-fg` | `var(--slate-100)` | styles/card-list.css:678 | .card-list .list-card.theme-navy |
+| `--list-card-muted` | `var(--white-500)` | styles/card-list.css:679 | .card-list .list-card.theme-navy |
+| `--list-card-strong` | `var(--slate-100)` | styles/card-list.css:680 | .card-list .list-card.theme-navy |
+| `--list-card-bg` | `var(--color-bg-brand)` | styles/card-list.css:684 | .card-list .list-card.theme-brand |
+| `--list-card-fg` | `var(--white-1000)` | styles/card-list.css:685 | .card-list .list-card.theme-brand |
+| `--list-card-muted` | `var(--white-900); /* 80% white gave 4.0:1 on the brand fill */` | styles/card-list.css:686 | .card-list .list-card.theme-brand |
+| `--list-card-strong` | `var(--slate-100)` | styles/card-list.css:687 | .card-list .list-card.theme-brand |
+| `--list-card-bg` | `var(--brand-300)` | styles/card-list.css:696 | .card-list .list-card.theme-brand-light |
+| `--list-card-fg` | `var(--black-1000)` | styles/card-list.css:697 | .card-list .list-card.theme-brand-light |
+| `--list-card-muted` | `var(--black-500)` | styles/card-list.css:698 | .card-list .list-card.theme-brand-light |
+| `--list-card-kicker` | `var(--list-card-muted)` | styles/card-list.css:699 | .card-list .list-card.theme-brand-light |
+| `--list-card-bg` | `var(--color-bg-tertiary)` | styles/card-list.css:703 | .card-list .list-card.theme-grey |
+| `--list-card-fg` | `var(--black-1000)` | styles/card-list.css:704 | .card-list .list-card.theme-grey |
+| `--list-card-muted` | `var(--black-500)` | styles/card-list.css:705 | .card-list .list-card.theme-grey |
+| `--list-card-kicker` | `var(--list-card-muted)` | styles/card-list.css:706 | .card-list .list-card.theme-grey |
+| `--list-card-bg` | `var(--grey-400)` | styles/card-list.css:710 | .card-list .list-card.theme-mid-grey |
+| `--list-card-fg` | `var(--black-1000)` | styles/card-list.css:711 | .card-list .list-card.theme-mid-grey |
+| `--list-card-muted` | `var(--black-600)` | styles/card-list.css:712 | .card-list .list-card.theme-mid-grey |
+| `--list-card-kicker` | `var(--list-card-muted)` | styles/card-list.css:713 | .card-list .list-card.theme-mid-grey |
+| `--list-card-bg` | `var(--list-gradient)` | styles/card-list.css:717 | .card-list .list-card.theme-gradient |
+| `--list-card-fg` | `var(--color-text-neutral)` | styles/card-list.css:718 | .card-list .list-card.theme-gradient |
+| `--list-card-muted` | `var(--black-500)` | styles/card-list.css:719 | .card-list .list-card.theme-gradient |
+| `--list-card-kicker` | `var(--list-card-muted)` | styles/card-list.css:720 | .card-list .list-card.theme-gradient |
+| `--list-card-bg` | `var(--color-bg-secondary)` | styles/card-list.css:728 | .card-list .list-card.theme-image |
+| `--list-card-fg` | `var(--color-text-neutral)` | styles/card-list.css:729 | .card-list .list-card.theme-image |
+| `--list-card-muted` | `var(--color-text-secondary)` | styles/card-list.css:730 | .card-list .list-card.theme-image |
+| `--list-card-kicker` | `var(--list-card-muted)` | styles/card-list.css:731 | .card-list .list-card.theme-image |
+| `--list-title-size` | `6rem` | styles/card-list.css:841 | .card-list .list-card.title-size-96 |
+| `--list-title-line` | `1` | styles/card-list.css:842 | .card-list .list-card.title-size-96 |
+| `--list-title-size` | `3rem` | styles/card-list.css:846 | .card-list .list-card.title-size-48 |
+| `--list-title-line` | `1.1` | styles/card-list.css:847 | .card-list .list-card.title-size-48 |
+| `--list-title-size` | `var(--heading-font-size-xxl)` | styles/card-list.css:851 | .card-list .list-card.title-size-h1 |
+| `--list-title-line` | `1.2` | styles/card-list.css:852 | .card-list .list-card.title-size-h1 |
+| `--list-title-size` | `var(--heading-font-size-xl)` | styles/card-list.css:856 | .card-list .list-card.title-size-h2 |
+| `--list-title-line` | `1.3` | styles/card-list.css:857 | .card-list .list-card.title-size-h2 |
+| `--list-title-size` | `var(--heading-font-size-l)` | styles/card-list.css:861 | .card-list .list-card.title-size-h3 |
+| `--list-title-line` | `1.3` | styles/card-list.css:862 | .card-list .list-card.title-size-h3 |
+| `--list-title-size` | `var(--heading-font-size-m)` | styles/card-list.css:866 | .card-list .list-card.title-size-h4 |
+| `--list-title-line` | `1.3` | styles/card-list.css:867 | .card-list .list-card.title-size-h4 |
+| `--list-title-size` | `var(--heading-font-size-s)` | styles/card-list.css:871 | .card-list .list-card.title-size-h5 |
+| `--list-title-line` | `1.4` | styles/card-list.css:872 | .card-list .list-card.title-size-h5 |
+| `--list-title-size` | `var(--heading-font-size-xs)` | styles/card-list.css:876 | .card-list .list-card.title-size-h6 |
+| `--list-title-line` | `1.4` | styles/card-list.css:877 | .card-list .list-card.title-size-h6 |
+| `--list-columns` | `var(--list-columns-tablet, 4)` | styles/card-list.css:938 | .card-list (@media (width >= 600px)) |
+| `--list-gap` | `var(--list-gap-tablet, 1.5rem)` | styles/card-list.css:939 | .card-list (@media (width >= 600px)) |
+| `--list-visible` | `var(--list-visible-tablet, 3.3)` | styles/card-list.css:940 | .card-list (@media (width >= 600px)) |
+| `--list-card-width` | `var(--list-card-width-tablet)` | styles/card-list.css:941 | .card-list (@media (width >= 600px)) |
+| `--list-card-title-size` | `1.25rem` | styles/card-list.css:942 | .card-list (@media (width >= 600px)) |
+| `--list-card-title-line` | `1.4` | styles/card-list.css:943 | .card-list (@media (width >= 600px)) |
+| `--list-panel-title-size` | `1.5rem` | styles/card-list.css:944 | .card-list (@media (width >= 600px)) |
+| `--list-panel-text-size` | `0.875rem` | styles/card-list.css:945 | .card-list (@media (width >= 600px)) |
+| `--list-stat-number-size` | `4rem` | styles/card-list.css:946 | .card-list (@media (width >= 600px)) |
+| `--list-kicker-size` | `0.875rem` | styles/card-list.css:947 | .card-list (@media (width >= 600px)) |
+| `--list-meta-size` | `0.875rem` | styles/card-list.css:948 | .card-list (@media (width >= 600px)) |
+| `--list-row-title-size` | `2rem` | styles/card-list.css:949 | .card-list (@media (width >= 600px)) |
+| `--list-feature-title-size` | `2.5rem` | styles/card-list.css:950 | .card-list (@media (width >= 600px)) |
+| `--list-bleed` | `var(--section-padding-inline)` | styles/card-list.css:1007 | .card-list.edge-bleed.tablet-scroll (@media (width >= 600px)) |
+| `--list-bleed` | `0rem` | styles/card-list.css:1019 | .card-list.edge-bleed.tablet-grid (@media (width >= 600px)) |
+| `--list-card-padding` | `var(--space-600)` | styles/card-list.css:1051 | .card-list (@media (width >= 900px)) |
+| `--list-columns` | `var(--list-columns-desktop, 4)` | styles/card-list.css:1058 | .card-list (@media (width >= 1200px)) |
+| `--list-gap` | `var(--list-gap-desktop, 1.5rem)` | styles/card-list.css:1059 | .card-list (@media (width >= 1200px)) |
+| `--list-visible` | `var(--list-visible-desktop, 4.2)` | styles/card-list.css:1060 | .card-list (@media (width >= 1200px)) |
+| `--list-card-width` | `var(--list-card-width-desktop)` | styles/card-list.css:1061 | .card-list (@media (width >= 1200px)) |
+| `--list-card-title-size` | `1.5rem` | styles/card-list.css:1062 | .card-list (@media (width >= 1200px)) |
+| `--list-card-title-line` | `1.42` | styles/card-list.css:1063 | .card-list (@media (width >= 1200px)) |
+| `--list-panel-title-size` | `1.75rem` | styles/card-list.css:1064 | .card-list (@media (width >= 1200px)) |
+| `--list-panel-text-size` | `1rem` | styles/card-list.css:1065 | .card-list (@media (width >= 1200px)) |
+| `--list-stat-number-size` | `6rem` | styles/card-list.css:1066 | .card-list (@media (width >= 1200px)) |
+| `--list-stat-text-size` | `1.125rem` | styles/card-list.css:1067 | .card-list (@media (width >= 1200px)) |
+| `--list-meta-size` | `1rem` | styles/card-list.css:1068 | .card-list (@media (width >= 1200px)) |
+| `--list-row-title-size` | `2.5rem` | styles/card-list.css:1069 | .card-list (@media (width >= 1200px)) |
+| `--list-bleed` | `var(--section-padding-inline)` | styles/card-list.css:1111 | .card-list.edge-bleed.desktop-scroll (@media (width >= 1200px)) |
+| `--list-bleed` | `0rem` | styles/card-list.css:1123 | .card-list.edge-bleed.desktop-grid (@media (width >= 1200px)) |
+| `--list-ratio` | `1` | styles/card-list.css:1160 | .card-list.ratio-1-1 |
+| `--list-ratio` | `calc(4 / 3)` | styles/card-list.css:1164 | .card-list.ratio-4-3 |
+| `--list-ratio` | `calc(3 / 2)` | styles/card-list.css:1168 | .card-list.ratio-3-2 |
+| `--list-carousel-top` | `calc(var(--list-item-size) / var(--list-ratio) / 2)` | styles/card-list.css:1172 | .card-list.style-image:has(.list-stage .list-card-media) |
+| `--icon-button-size` | `2.5rem` | styles/card-list.css:1203 | .card-list.mobile-carousel .list-controls .button.icon-button (@media (width < 600px)) |
+| `--list-bleed` | `0rem` | styles/card-list.css:1231 | .card-list.edge-bleed.mobile-carousel (@media (width < 600px)) |
+| `--icon-button-size` | `2.5rem` | styles/card-list.css:1266 | .card-list.tablet-carousel .list-controls .button.icon-button (@media (600px <= width < 1200px)) |
+| `--list-bleed` | `0rem` | styles/card-list.css:1294 | .card-list.edge-bleed.tablet-carousel (@media (600px <= width < 1200px)) |
+| `--icon-button-size` | `2.5rem` | styles/card-list.css:1329 | .card-list.desktop-carousel .list-controls .button.icon-button (@media (width >= 1200px)) |
+| `--list-bleed` | `0rem` | styles/card-list.css:1357 | .card-list.edge-bleed.desktop-carousel (@media (width >= 1200px)) |
+| `--list-card-title-size` | `1.25rem` | styles/card-list.css:1381 | .card-list.impact-cards |
+| `--list-card-title-line` | `1.4` | styles/card-list.css:1382 | .card-list.impact-cards |
+| `--color-text-default` | `var(--black-1000)` | styles/card-list.css:1387 | .card-list.impact-cards .list-card-image |
+| `--color-text-secondary` | `var(--slate-700)` | styles/card-list.css:1388 | .card-list.impact-cards .list-card-image |
+| `--color-text-brand` | `var(--brand-400)` | styles/card-list.css:1389 | .card-list.impact-cards .list-card-image |
+| `--color-border-brand` | `var(--brand-500)` | styles/card-list.css:1390 | .card-list.impact-cards .list-card-image |
+| `--link-color` | `var(--brand-400)` | styles/card-list.css:1391 | .card-list.impact-cards .list-card-image |
+| `--link-hover-color` | `var(--brand-600)` | styles/card-list.css:1392 | .card-list.impact-cards .list-card-image |
+| `--button-font-size` | `0.875rem` | styles/card-list.css:1434 | .card-list .list-card-ctas |
+| `--list-card-title-size` | `1.5rem` | styles/card-list.css:1535 | .card-list.impact-cards (@media (width >= 1200px)) |
+| `--list-card-title-line` | `1.3` | styles/card-list.css:1536 | .card-list.impact-cards (@media (width >= 1200px)) |
+| `--list-card-title-size` | `1.25rem` | styles/card-list.css:1547 | .card-list.feature-first .list-card-image (@media (width >= 1200px)) |
+| `--list-card-title-line` | `1.4` | styles/card-list.css:1548 | .card-list.feature-first .list-card-image (@media (width >= 1200px)) |
 
 ## Media queries in use
 
 | Media query | Occurrences |
 | --- | --- |
-| `(width >= 1200px)` | 18 |
-| `(width >= 900px)` | 16 |
-| `(prefers-reduced-motion: reduce)` | 12 |
-| `(width >= 600px)` | 12 |
-| `(width < 600px)` | 9 |
-| `(600px <= width < 1200px)` | 5 |
+| `(width >= 1200px)` | 28 |
+| `(width >= 900px)` | 18 |
+| `(width < 600px)` | 16 |
+| `(width >= 600px)` | 16 |
+| `(prefers-reduced-motion: reduce)` | 13 |
+| `(600px <= width < 1200px)` | 11 |
 | `(width >= 600px) and (width < 1200px)` | 4 |
+| `(width >= 768px)` | 3 |
 | `(width < 1200px)` | 2 |
 | `(forced-colors: active)` | 2 |
 | `(width >=1200px)` | 2 |
 | `screen and (prefers-reduced-motion: no-preference)` | 1 |
 | `(prefers-reduced-motion: no-preference)` | 1 |
 | `(width >= 600px) and (width < 900px)` | 1 |
-| `only screen and (width <= 1199px)` | 1 |
+| `(width >= 992px)` | 1 |
 | `(width >=600px) and (width < 1200px)` | 1 |
 | `(width >=768px) and (width < 1024px)` | 1 |
 | `(width >=1024px) and (width < 1200px)` | 1 |
@@ -785,4 +843,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

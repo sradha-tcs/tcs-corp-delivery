@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,24 +30,24 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
 
 ## Contents
 
-- [Pages reviewed (179, automated, 15 November 2026)](#pages-reviewed-179-automated-15-november-2026)
+- [Pages reviewed (181, automated, 22 November 2026)](#pages-reviewed-181-automated-22-november-2026)
 - [Blocks without a block library page](#blocks-without-a-block-library-page)
-- [Supported class options not shown in the block library (10)](#supported-class-options-not-shown-in-the-block-library-10)
+- [Supported class options not shown in the block library (17)](#supported-class-options-not-shown-in-the-block-library-17)
 - [Not reviewed](#not-reviewed)
 - [Screenshots](#screenshots)
 - [Known limitations](#known-limitations)
 - [Open items](#open-items)
 - [Change history](#change-history)
 
-## Pages reviewed (179, automated, 15 November 2026)
+## Pages reviewed (181, automated, 22 November 2026)
 
 | Page | Blocks | Block instances | Console errors | Failed requests | Overflow at |
 | --- | --- | --- | --- | --- | --- |
@@ -230,20 +230,27 @@ primary: true
 | video | list | 1 | 12 | 12 | none |
 | video/video | anchor-list, video | 27 | 20 | 20 | none |
 | video/video-pop-up | video | 1 | 4 | 4 | none |
+| /language-master/en/block-library/conf-med-cont | list | 1 | 0 | 0 | none |
+| /language-master/en/block-library/conf-med-cont/conf-med-cont-variations | conf-med-cont | 5 | 0 | 0 | none |
 
 ## Blocks without a block library page
 
 - `button-block`
 - `column-break`
+- `history-timeline`
 - `image-collage`
 - `media-contacts`
 - `tab`
 - `tcs-header`
 
-## Supported class options not shown in the block library (10)
+## Supported class options not shown in the block library (17)
 
 | Block | Component | Field | Option | Value |
 | --- | --- | --- | --- | --- |
+| cards | cards | Style options | Impact cards (proven impact and outcomes) | `impact-cards` |
+| form-variations | form-variations | Theme | Default / Light | `default` |
+| hero | hero | Hero Image type | Video | `media-video` |
+| hero | hero | BG Color | Brand blue (#216AC3) | `bg-brand` |
 | hero | hero | Icon color | Black | `icon-black` |
 | hero | hero | Icon color | White | `icon-white` |
 | hero | hero | Eyebrow color | Royal blue | `eyebrow-royal-blue` |
@@ -251,9 +258,12 @@ primary: true
 | hero | hero | Title color | White | `title-white` |
 | hero | hero | Description color | Black | `description-black` |
 | hero | hero | Description color | White | `description-white` |
+| list | list | Style options | Impact cards (proven impact and outcomes) | `impact-cards` |
+| page-header | page-header | Layout | Default (Only CTA Alignment Left) | `cta-alignment-left` |
 | tab | tab | Columns per row | 1 | `per-row-1` |
 | tab | tab | Columns per row | 3 | `per-row-3` |
 | tab | tab | Columns per row | 4 | `per-row-4` |
+| teaser | teaser | Column gap | 1.5rem (24px) | `cg-24` |
 
 ## Not reviewed
 
@@ -483,4 +493,4 @@ The pages of the block folders are shown in each block's test coverage document;
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

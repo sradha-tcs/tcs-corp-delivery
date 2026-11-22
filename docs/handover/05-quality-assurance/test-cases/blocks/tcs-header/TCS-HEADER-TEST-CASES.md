@@ -8,8 +8,8 @@ owner: "QA Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/tcs-header/_tcs-header.json"]
 relatedComponents: ["tcs-header"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/tcs-header/_tcs-header.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -52,7 +52,7 @@ Requirement / story: see the [traceability](../../../markdown/REQUIREMENT-TEST-T
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TC-TCS-HEADER-001 | Functional (smoke) | — | TCS Header renders on its block library page | 1. Open the block library page of the block on the live site 2. Wait for the page to load | The page answers 200, every example renders, no console error, no failed request | Blocked | No block library page for this block | — | — | — | — | — |
 | TC-TCS-HEADER-002 | Authoring | — | An author adds the TCS Header and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the TCS Header from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
-| TC-TCS-HEADER-003 | Component variation | Header over the first block | TCS Header: each choice of "Header over the first block" gives its presentation | 1. Select the TCS Header 2. Set "Header over the first block" to each of: Auto (over a light Hero), Always (over the first block), Never (the page starts below the header) 3. Preview after each change | The rendering matches the variation (class or attribute always, never) | Not Run | — | — | — | — | — | — |
+| TC-TCS-HEADER-003 | Component variation | Header over the first block | TCS Header: each choice of "Header over the first block" gives its presentation | 1. Select the TCS Header 2. Set "Header over the first block" to each of: Auto (based on first block), Always (over the first block), Never (the page starts below the header) 3. Preview after each change | The rendering matches the variation (class or attribute always, never) | Not Run | — | — | — | — | — | — |
 | TC-TCS-HEADER-004 | Component variation | Desktop behavior | TCS Header: each choice of "Desktop behavior" gives its presentation | 1. Select the TCS Header 2. Set "Desktop behavior" to each of: Float (scrolls with the page), Sticky (stays at the top) 3. Preview after each change | The rendering matches the variation (class or attribute float, sticky) | Not Run | — | — | — | — | — | — |
 | TC-TCS-HEADER-005 | Component variation | Tablet behavior | TCS Header: each choice of "Tablet behavior" gives its presentation | 1. Select the TCS Header 2. Set "Tablet behavior" to each of: Sticky (stays at the top), Float (scrolls with the page) 3. Preview after each change | The rendering matches the variation (class or attribute sticky, float) | Not Run | — | — | — | — | — | — |
 | TC-TCS-HEADER-006 | Component variation | Mobile behavior | TCS Header: each choice of "Mobile behavior" gives its presentation | 1. Select the TCS Header 2. Set "Mobile behavior" to each of: Sticky (stays at the top), Float (scrolls with the page) 3. Preview after each change | The rendering matches the variation (class or attribute sticky, float) | Not Run | — | — | — | — | — | — |
@@ -78,4 +78,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

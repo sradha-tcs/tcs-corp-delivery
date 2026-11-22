@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/teaser"]
 relatedComponents: ["teaser"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/teaser |
 | Related documents | — |
 | Related AEM paths | — |
@@ -67,7 +67,7 @@ primary: true
 | Acceptance criteria | See the user stories |
 | Related user stories | US-F-E03-01-01, US-F-E03-01-02, US-F-E03-01-03 |
 | Related components | teaser |
-| Related test cases | TC-TEASER-001, TC-TEASER-002, TC-TEASER-003, TC-TEASER-004, TC-TEASER-005, TC-TEASER-006, TC-TEASER-007, TC-TEASER-008, TC-TEASER-009, TC-TEASER-010, TC-TEASER-011, TC-TEASER-012, TC-TEASER-013, TC-TEASER-014, TC-TEASER-015, TC-TEASER-016, TC-TEASER-017, TC-TEASER-018, TC-TEASER-019, TC-TEASER-020, TC-TEASER-021, TC-TEASER-022, TC-TEASER-023, TC-TEASER-024, TC-TEASER-025, TC-TEASER-026, TC-TEASER-027, TC-TEASER-028, TC-TEASER-029, TC-TEASER-030, TC-TEASER-031, TC-TEASER-032, TC-TEASER-033, TC-TEASER-034, TC-TEASER-035, TC-TEASER-036, TC-TEASER-037, TC-TEASER-038, TC-TEASER-039, TC-TEASER-040, TC-TEASER-041, TC-TEASER-042, TC-TEASER-043, TC-TEASER-044 |
+| Related test cases | TC-TEASER-001, TC-TEASER-002, TC-TEASER-003, TC-TEASER-004, TC-TEASER-005, TC-TEASER-006, TC-TEASER-007, TC-TEASER-008, TC-TEASER-009, TC-TEASER-010, TC-TEASER-011, TC-TEASER-012, TC-TEASER-013, TC-TEASER-014, TC-TEASER-015, TC-TEASER-016, TC-TEASER-017, TC-TEASER-018, TC-TEASER-019, TC-TEASER-020, TC-TEASER-021, TC-TEASER-022, TC-TEASER-023, TC-TEASER-024, TC-TEASER-025, TC-TEASER-026, TC-TEASER-027, TC-TEASER-028, TC-TEASER-029, TC-TEASER-030, TC-TEASER-031, TC-TEASER-032, TC-TEASER-033, TC-TEASER-034, TC-TEASER-035, TC-TEASER-036, TC-TEASER-037, TC-TEASER-038, TC-TEASER-039, TC-TEASER-040, TC-TEASER-041, TC-TEASER-042, TC-TEASER-043, TC-TEASER-044, TC-TEASER-045, TC-TEASER-046, TC-TEASER-047, TC-TEASER-048, TC-TEASER-049, TC-TEASER-050, TC-TEASER-051, TC-TEASER-052, TC-TEASER-053, TC-TEASER-054, TC-TEASER-055, TC-TEASER-056, TC-TEASER-057, TC-TEASER-058, TC-TEASER-059, TC-TEASER-060 |
 | Definition of Ready | [DEFINITION-OF-READY](../../../../markdown/DEFINITION-OF-READY.md) |
 | Definition of Done | [DEFINITION-OF-DONE](../../../../markdown/DEFINITION-OF-DONE.md) |
 
@@ -89,4 +89,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

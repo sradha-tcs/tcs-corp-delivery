@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/cards/README.md","blocks/cards/_cards.json","blocks/cards/cards-data.js","blocks/cards/cards.css","blocks/cards/cards.js"]
 relatedComponents: ["cards","card"]
 relatedPages: ["/design-block-master/en/block-library/cards","/design-block-master/en/block-library/cards/card-colours","/design-block-master/en/block-library/cards/card-styles","/design-block-master/en/block-library/cards/grid-and-horizontal-scroll","/design-block-master/en/block-library/cards/heights-links-legacy","/design-block-master/en/block-library/cards/images-panels-style-options","/design-block-master/en/block-library/cards/per-card-styles-and-colours","/design-block-master/en/curated-design-pages/industry-landing-page","/design-block-master/en/curated-design-pages/product","/design-block-master/en/curated-design-pages/services","/design-block-master/en/curated-design-pages/who-we-are"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/cards/README.md, blocks/cards/_cards.json, blocks/cards/cards-data.js, blocks/cards/cards.css, blocks/cards/cards.js |
 | Related documents | [Variations](./CARDS-VARIATIONS.md), [Test coverage](./CARDS-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/cards/CARDS-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/cards, /content/tcs-corp/design-block-master/en/block-library/cards/card-colours, /content/tcs-corp/design-block-master/en/block-library/cards/card-styles |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | Manually authored cards with the List's presentation (grid or horizontal scroll) |
 | Variations (summary) | Card style (image, panel, report, statistic, mixed), Card colour, layout per breakpoint |
 | Children | card (Card) |
-| Code size | 282 lines of JS and CSS |
+| Code size | 367 lines of JS and CSS |
 
 ## Overview
 
@@ -122,7 +122,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Tab | Label | Property | Type | Required in model | Default | Options | Visibility |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Content | Title | `title` | text | No | — | — | — |
-| Content | Heading type | `titleType` | select | No | `h2` | 5 options | — |
+| Content | Heading type | `titleType` | select | No | `h2` | 6 options | — |
 | Content | Description | `description` | richtext | No | — | — | — |
 | Content | CTA link | `link` | aem-content | No | — | — | — |
 | Content | CTA text | `linkText` | text | No | — | — | — |
@@ -144,21 +144,21 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Display | Date format | `dateFormat` | select | No | `dd-mmm-yy` | 6 options | Conditional |
 | Display | Show call to action | `showCta` | boolean | No | `true` | — | — |
 | Display | Image loading | `imageLoading` | select | No | `lazy` | 2 options | — |
-| Display | Desktop display | `desktopMode` | select | No | `grid` | 2 options | — |
+| Display | Desktop display | `desktopMode` | select | No | `grid` | 3 options | — |
 | Display | Desktop columns | `desktopColumns` | number | No | `4` | — | Conditional |
 | Display | Desktop gap (px) | `desktopGap` | number | No | `24` | — | — |
 | Display | Desktop items visible | `desktopVisible` | number | No | `4.2` | — | Conditional |
 | Display | Desktop card width (px) | `desktopCardWidth` | number | No | `0` | — | Conditional |
 | Display | Previous / next buttons on desktop | `desktopControls` | boolean | No | `false` | — | Conditional |
 | Display | Scroll indicator on desktop | `desktopIndicator` | boolean | No | `false` | — | Conditional |
-| Display | Tablet display | `tabletMode` | select | No | `grid` | 2 options | — |
+| Display | Tablet display | `tabletMode` | select | No | `grid` | 3 options | — |
 | Display | Tablet columns | `tabletColumns` | number | No | `4` | — | Conditional |
 | Display | Tablet gap (px) | `tabletGap` | number | No | `24` | — | — |
 | Display | Tablet items visible | `tabletVisible` | number | No | `3.3` | — | Conditional |
 | Display | Tablet card width (px) | `tabletCardWidth` | number | No | `0` | — | Conditional |
 | Display | Previous / next buttons on tablet | `tabletControls` | boolean | No | `false` | — | Conditional |
 | Display | Scroll indicator on tablet | `tabletIndicator` | boolean | No | `false` | — | Conditional |
-| Display | Mobile display | `mobileMode` | select | No | `grid` | 2 options | — |
+| Display | Mobile display | `mobileMode` | select | No | `grid` | 3 options | — |
 | Display | Mobile columns | `mobileColumns` | number | No | `1` | — | Conditional |
 | Display | Mobile gap (px) | `mobileGap` | number | No | `16` | — | — |
 | Display | Mobile items visible | `mobileVisible` | number | No | `1.2` | — | Conditional |
@@ -179,7 +179,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Display | When there are no cards | `emptyBehavior` | select | No | `hide` | 2 options | — |
 | Display | Empty message | `emptyMessage` | text | No | — | — | Conditional |
 | Display | Analytics | `analyticsEnabled` | boolean | No | `true` | — | — |
-| Display | Style options | `classes` | multiselect | No | — | 3 options | — |
+| Display | Style options | `classes` | multiselect | No | — | 4 options | — |
 
 ### Card (`card`)
 
@@ -189,6 +189,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Content | Image alt text | `imageAlt` | text | No | — | — | — |
 | Content | Eyebrow | `eyebrow` | text | No | — | — | — |
 | Content | Title | `title` | text | No | — | — | — |
+| Content | Title size | `titleSize` | select | No | `""` | 9 options | — |
 | Content | Description | `text` | richtext | No | `""` | — | — |
 | Content | Label | `subtitle` | text | No | — | — | — |
 | Content | Tags | `tags` | aem-tag | No | — | — | — |
@@ -199,6 +200,14 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Link | Link text | `linkText` | text | No | — | — | — |
 | Link | Call to action label | `ctaLabel` | text | No | — | — | — |
 | Link | Open in a new tab | `newTab` | select | No | `""` | 3 options | — |
+| Link | CTA 1 Link | `cta1` | aem-content | No | — | — | — |
+| Link | CTA 1 Title | `cta1Text` | text | No | — | — | — |
+| Link | CTA 1 Style | `cta1Style` | select | No | `""` | 5 options | — |
+| Link | CTA 1 Open in a new tab | `cta1Target` | select | No | `""` | 2 options | — |
+| Link | CTA 2 Link | `cta2` | aem-content | No | — | — | — |
+| Link | CTA 2 Title | `cta2Text` | text | No | — | — | — |
+| Link | CTA 2 Style | `cta2Style` | select | No | `""` | 5 options | — |
+| Link | CTA 2 Open in a new tab | `cta2Target` | select | No | `""` | 2 options | — |
 | Display | Card style | `kind` | select | No | `""` | 5 options | — |
 | Display | Card colour | `theme` | select | No | `""` | 9 options | — |
 | Display | Analytics label | `analyticsLabel` | text | No | — | — | — |
@@ -250,14 +259,15 @@ blocks/cards/
 <!-- END GENERATED: files -->
 
 - **JavaScript (`cards.js`):** reads the block (`readBlock`), normalizes the settings (`normalizePresentation` with `idPrefix: 'cards'`, plus `emptyBehavior`), builds the header (`buildCardListHeader`), the cards (`buildManualCards`), resolves tag labels (`resolveTags`), applies the layout classes (`applyCardListLayout`, plus `source-manual`), renders (`renderCardList` or `renderCardListEmpty`), adds editor placeholders (`renderEditorItems`) and the data layer state (`trackCardList`).
-- **Data (`cards-data.js`, no DOM):** `CARD_LAYOUT` (the Card cells in model order with `null` for the three dialog tab cells), `itemToCard` (one card; `null` for no content or an unsafe link), `buildManualCards` (authored order, ids renumbered after dropped cards).
+- **Data (`cards-data.js`, no DOM):** `CARD_LAYOUT` (the Card cells in model order with `null` for the three dialog tab cells), `CARD_LAYOUT_BEFORE_CTAS` (the 19 cells of Cards rendered before CTA 1 / CTA 2 and Title size), `ctasOf` (CTA 1 / CTA 2: safe links, label, `CTA_STYLES` style, new tab), `TITLE_SIZES`, `itemToCard` (one card; `null` for no content or an unsafe link), `buildManualCards` (authored order, ids renumbered after dropped cards).
 - **CSS (`cards.css`):** only imports `styles/card-list.css` (the List's presentation).
-- **Input DOM:** key-value rows (`key | value`, keys compared by `normalizeKey` against `PRESENTATION_PROPERTIES`); Card rows (in the editor `data-aue-model="card"`; on the page any row that isn't a setting row). A Card row with more than two cells is matched to the 16 fields with `withoutTabCells` and `matchCells` (by order and content: an image, a `YYYY-MM-DD` date, a link, `true` / `false`, a known style or colour, single-line text), so fields AEM leaves out don't shift the others; a row with two cells or fewer is a legacy card (image + rich text, `readLegacyText`).
+- **Input DOM:** key-value rows (`key | value`, keys compared by `normalizeKey` against `PRESENTATION_PROPERTIES`); Card rows (in the editor `data-aue-model="card"`; on the page any row that isn't a setting row). A Card row with more than two cells is matched to the 23 fields (the 16 fields before CTA 1 / CTA 2 and Title size for a row of 19 cells) with `withoutTabCells` and `matchCells` (by order and content: an image, a `YYYY-MM-DD` date, a link, `true` / `false`, a known style or colour, single-line text), so fields AEM leaves out don't shift the others; a row with two cells or fewer is a legacy card (image + rich text, `readLegacyText`).
 - **Rendered DOM:** block classes `card-list`, `{bp}-{grid,scroll}`, `{bp}-controls`, `{bp}-indicator`, `snap`, `snap-{start,center}`, `hide-scrollbar`, `no-swipe`, `edge-bleed`, `equal-height`, `stretch`, `feature-first`, `display-teaser` or `links`, `style-{cardStyle}`, `ratio-{ratio}`, `panel-{height}`, style options, `source-manual`; custom properties `--list-{columns,gap,visible,card-width}-{bp}`; children `div.list-header`, optional `article.list-feature`, `div.list-scroller[role=region]` > `ul.list-items` > `li.list-item[data-card-id][data-cmp-id][data-cmp-position]` > `article.list-card.list-card-{kind}` (or `article.list-row`), `div.list-nav` (indicator, previous / next). Data attributes: `data-cards-decorated`, `data-analytics` (`custom` / `off`), `data-overflow` on the scroller.
 - **Decoration flow:** guarded by `data-cards-decorated` (a second call does nothing); awaits the placeholders and, when cards have tags, the taxonomy.
 - **Events and async:** the scroller (`createScroller`) listens to scroll, resize, keydown and pointer events; no custom events are dispatched.
 - **Error handling:** invalid settings fall back to defaults; cards without content or with unsafe links are dropped; no cards: hidden (empty and `hidden` on the block and its wrapper) or the empty message; in the editor always the hint.
-- **Exports:** `cards.js` default `decorate`; `cards-data.js` `CARD_LAYOUT`, `itemToCard`, `buildManualCards`.
+- **Exports:** `cards.js` default `decorate`; `cards-data.js` `CARD_LAYOUT`, `CARD_LAYOUT_BEFORE_CTAS`, `CTA_STYLES`, `TITLE_SIZES`, `ctasOf`, `itemToCard`, `buildManualCards`.
+- **CTA buttons and Title size (rendered DOM):** `article.list-card.title-size-{96,48,h1…h6}`; `div.list-card-ctas` > `a.list-card-cta.button.{secondary,primary,tertiary}` (`list-card-cta-no-arrow` without the arrow, `data-cmp-interaction="cta"`, `target="_blank"` with the new-tab hint), each its own link above the card's link (`z-index: 1`).
 - **Parent / child contracts:** Card rows keep their instrumentation on the rendered `li` (`moveInstrumentation`) and the rich text on its body; rows not rendered as cards become editor placeholders.
 - **Data-layer hooks:** `data-cmp-id`, `data-cmp-position`, `data-cmp-interaction`, `data-analytics-label` on card links and articles.
 
@@ -417,6 +427,8 @@ Evidence to collect: page URL (preview / live), viewport width, the block's `.pl
 | Handover 2.18 | Additional tab Content animation (repeated items staggered) | docs/handover revision history | 18 October 2026 |
 | Handover 2.27 | Block ecosystem audit: header CTA style applied, focus ring inside panel / report / statistic cards, Card colour only on those cards, previous / next keep the focus, Component ID and Reduced motion support removed from the dialog | docs/handover revision history | 19 October 2026 |
 | Handover 2.34 | Theme contract: List / Cards image cards light on dark backgrounds | docs/handover revision history | 20 October 2026 |
+| Not recorded | Heading type H1 (Cards only, its own `titleType` field; the List keeps H2 to H6): 3rem (48px) desktop, 2.5rem (40px) tablet, 1.75rem (28px) mobile, `blocks/cards/cards.css`; the shared header fields split into `headerTitle`, `headerType`, `headerDetails` (`models/_card-list.json`) | Branch feature/cards-heading-h1 | 20 November 2026 |
+| Not recorded | Card CTA 1 and CTA 2 (Link, Title, Style, Open in a new tab, as the Teaser's Link) and Title size (96px, 48px, H1 to H6); panels with CTA buttons show the Label, description and buttons at the bottom (fixed CTA fields instead of a multifield, KB-D-015) | Branch feature/card-link-ctas | 20 November 2026 |
 
 ## Reference pages
 
@@ -684,4 +696,4 @@ Evidence to collect: page URL (preview / live), viewport width, the block's `.pl
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

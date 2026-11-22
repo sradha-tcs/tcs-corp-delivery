@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,29 +30,29 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
 
 ## Contents
 
-- [Summary (200 pages at 1440 px)](#summary-200-pages-at-1440-px)
+- [Summary (202 pages at 1440 px)](#summary-202-pages-at-1440-px)
 - [Pages with findings](#pages-with-findings)
 - [Screenshots](#screenshots)
 - [Known limitations](#known-limitations)
 - [Open items](#open-items)
 - [Change history](#change-history)
 
-## Summary (200 pages at 1440 px)
+## Summary (202 pages at 1440 px)
 
 | Check | Total |
 | --- | --- |
 | Images without an alt attribute | 0 |
 | Buttons without an accessible name | 0 |
 | Links without a name | 0 |
-| Heading level skips | 45 |
+| Heading level skips | 46 |
 | Pages with duplicate ids | 0 |
 | Pages without exactly one H1 | 43 |
 | Pages without html lang | 0 |
@@ -146,6 +146,7 @@ primary: true
 | curated-design-pages/product | 0 | 0 | 0 | 0 | — | 0 |
 | curated-design-pages/services | 0 | 0 | 0 | 0 | — | 2 |
 | curated-design-pages/who-we-are | 0 | 0 | 0 | 0 | — | 3 |
+| /language-master/en/block-library/conf-med-cont | 0 | 0 | 0 | 1 | — | 1 |
 
 Keyboard, focus order, contrast and screen reader checks: Not Run (AB-05). Block library pages show several examples of the same block, so some findings (duplicate ids, several H1) are expected on them.
 
@@ -165,4 +166,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

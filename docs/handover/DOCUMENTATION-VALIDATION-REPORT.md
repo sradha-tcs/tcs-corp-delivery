@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -48,27 +48,27 @@ primary: false
 
 ## Result
 
-**Passed** (20 passed, 0 failed, 1 not validated; run on 15 November 2026 with `node validate.mjs`).
+**Passed** (20 passed, 0 failed, 1 not validated; run on 22 November 2026 with `node validate.mjs`).
 
 ## Checks
 
 | Check | Status | Blocking | Detail |
 | --- | --- | --- | --- |
-| Required metadata (front matter) present | Passed | Yes | 516 documents with metadata; 0 incomplete |
+| Required metadata (front matter) present | Passed | Yes | 526 documents with metadata; 0 incomplete |
 | Required sections (contents, screenshots, limitations, open items, change history) | Passed | Yes | 0 documents miss a section |
-| Unique document IDs | Passed | Yes | 516 IDs |
-| Index files without metadata (README indexes) | Passed | No | 100 README / index files (navigation only) |
-| Internal links resolve | Passed | Yes | 11931 links (2066 external, not fetched); 0 broken |
+| Unique document IDs | Passed | Yes | 526 IDs |
+| Index files without metadata (README indexes) | Passed | No | 104 README / index files (navigation only) |
+| Internal links resolve | Passed | Yes | 12165 links (2106 external, not fetched); 0 broken |
 | Relative images resolve | Passed | Yes | 0 missing |
 | Heading anchors of internal links exist | Passed | No | 0 missing anchors |
-| No orphan screenshots | Passed | Yes | 1387 images; 0 not embedded |
+| No orphan screenshots | Passed | Yes | 1397 images; 0 not embedded |
 | Every screenshot in the screenshot register | Passed | Yes | 0 not registered |
-| Screenshot placeholders are visible where a screenshot could not be captured | Passed | No | 61 placeholders (Universal Editor / author screens: access blocker AB-01) |
-| PDFs generated | Passed | Yes | 265 PDFs; 0 failed; 0 missing |
+| Screenshot placeholders are visible where a screenshot could not be captured | Passed | No | 64 placeholders (Universal Editor / author screens: access blocker AB-01) |
+| PDFs generated | Passed | Yes | 269 PDFs; 0 failed; 0 missing |
 | No missing images in the PDFs | Passed | Yes | 0 images not loaded while rendering |
-| Every primary document is in a PDF | Passed | Yes | 387 primary documents; 0 not in a PDF (root registers are Markdown only) |
+| Every primary document is in a PDF | Passed | Yes | 391 primary documents; 0 not in a PDF (root registers are Markdown only) |
 | JSON files are valid | Passed | Yes | 20 JSON files; 0 invalid |
-| Every block has developer, variation, test coverage and test case documents | Passed | Yes | 32 blocks; 0 documents missing |
+| Every block has developer, variation, test coverage and test case documents | Passed | Yes | 34 blocks; 0 documents missing |
 | Source file references exist in the repository | Passed | Yes | 0 stale |
 | No unresolved TODO / TBD / FIXME markers | Passed | Yes | 0 markers; open items are written as "To be confirmed" with an owner |
 | Markdown: exactly one H1 per document | Passed | No | 0 documents |
@@ -80,10 +80,10 @@ primary: false
 
 | Measure | Value |
 | --- | --- |
-| Markdown files | 616 |
-| Documents with metadata | 516 |
-| PDF files | 265 |
-| Images | 1387 |
+| Markdown files | 630 |
+| Documents with metadata | 526 |
+| PDF files | 269 |
+| Images | 1397 |
 | JSON files | 20 |
 
 ## Screenshots
@@ -102,4 +102,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

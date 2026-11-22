@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/testimonial/README.md","blocks/testimonial/_testimonial.json","blocks/testimonial/testimonial.css","blocks/testimonial/testimonial.js"]
 relatedComponents: ["testimonial","testimonial-stat"]
 relatedPages: ["/design-block-master/en/block-library/testimonial","/design-block-master/en/block-library/testimonial/testimonial-variations","/design-block-master/en/curated-design-pages/case-study","/design-block-master/en/curated-design-pages/industry-landing-page","/design-block-master/en/curated-design-pages/insights","/design-block-master/en/curated-design-pages/product","/design-block-master/en/curated-design-pages/services","/design-block-master/en/curated-design-pages/story","/design-block-master/en/curated-design-pages/who-we-are"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/testimonial/README.md, blocks/testimonial/_testimonial.json, blocks/testimonial/testimonial.css, blocks/testimonial/testimonial.js |
 | Related documents | [Variations](./TESTIMONIAL-VARIATIONS.md), [Test coverage](./TESTIMONIAL-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/testimonial/TESTIMONIAL-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/testimonial, /content/tcs-corp/design-block-master/en/block-library/testimonial/testimonial-variations |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | A client testimonial with author, image and stats |
 | Variations (summary) | BG Color, show / hide options |
 | Children | testimonial-stat (Stat) |
-| Code size | 357 lines of JS and CSS |
+| Code size | 364 lines of JS and CSS |
 
 ## Overview
 
@@ -448,4 +448,4 @@ Evidence to collect: the page URL, viewport, browser, a screenshot, and the bloc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

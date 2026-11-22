@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/list/README.md","blocks/list/_list.json"]
 relatedComponents: ["list"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/list/README.md, blocks/list/_list.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -81,7 +81,7 @@ primary: true
    Fields that don't apply to the chosen source or option are hidden.
 5. **Order and limit (Content):** **Order by** (Manual, Title, Last modified), **Sort order**, **Maximum items** (0: all).
 6. **Choose the presentation (Display):** Display as teaser (cards) or rows of links, Card style, Card colour, Image ratio, Panel height, First card as feature (then Show author on feature card), the Show options, Date format, Image loading (Eager only for a list on the first screen).
-7. **Set the layout per breakpoint (Display):** Desktop, Tablet and Mobile display (Grid or Horizontal scroll), columns or items visible, gap, previous / next buttons and scroll indicator; then the scroll options and **When there are no items**.
+7. **Set the layout per breakpoint (Display):** Desktop, Tablet and Mobile display (Grid, Horizontal scroll or Carousel: whole cards with previous / next on the cards), columns or items visible, gap, previous / next buttons and scroll indicator; then the scroll options and **When there are no items**.
 8. **Change one card (List Item):** fill only the fields to override (Title, Description, Image, Eyebrow, Tags, Label, Call to action label) and, in its Display tab, Card style, Card colour and the Display toggles.
 9. **Preview:** switch Universal Editor to Preview, or open the page preview. Child pages and Tagged pages lists show their pages only on the published page (AEM author has no query index).
 10. **Publish:** publish the page. Listed pages must be published (and indexed) themselves to appear.
@@ -151,22 +151,22 @@ Stored on a new component (definition template): `titleType` = `"h2"`, `source` 
 | Show content type | `showContentLabel` | boolean | No | `true` | on / off | Image cards: the content type of the card's page (e.g. Case Study): its content type tag below the image and its content-type label next to the date. Off: image cards without either (the other tags and the date stay); the page metadata and the other card styles don't change. Shown when `displayAsTeaser` is `true` and `cardStyle` is `image` or `cardStyle` is `mixed`. | — |
 | Show call to action | `showCta` | boolean | No | `true` | on / off | Child pages with Card style Panel: the Explore call to action on every card. Not shown for other sources or card styles (their cards keep their call to action; Fixed list: each List Item's Show Action Label). Shown when `source` is `parent` and `displayAsTeaser` is `true` and `cardStyle` is `panel`. | false |
 | Image loading | `imageLoading` | select | No | `lazy` | Lazy (`lazy`), Eager (first screen) (`eager`) | — | — |
-| Desktop display | `desktopMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`) | Grid or horizontal scroll on desktop (1200px and wider), independently of the other breakpoints. | horizontal-scroll |
-| Desktop columns | `desktopColumns` | number | No | `4` | — | Shown when `desktopMode` is `grid`. | 3 |
+| Desktop display | `desktopMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`), Carousel (buttons on the cards) (`carousel`) | Grid, horizontal scroll or carousel on desktop (1200px and wider), independently of the other breakpoints. Carousel: Columns whole cards per view, with previous / next on the cards (on the image of image cards), grey at the first and last card. | horizontal-scroll |
+| Desktop columns | `desktopColumns` | number | No | `4` | — | Shown when `desktopMode` is `grid` or `desktopMode` is `carousel`. | 3 |
 | Desktop gap (px) | `desktopGap` | number | No | `24` | — | Space between the cards. | — |
 | Desktop items visible | `desktopVisible` | number | No | `4.2` | — | Cards in view, e.g. 4.2 shows 4 and a part of the next one. Shown when `desktopMode` is `horizontal-scroll`. | 4.2 |
 | Desktop card width (px) | `desktopCardWidth` | number | No | `0` | — | A fixed card width (120 or more); 0 uses Items visible. Shown when `desktopMode` is `horizontal-scroll`. | 320 |
 | Previous / next buttons on desktop | `desktopControls` | boolean | No | `false` | on / off | Shown when `desktopMode` is `horizontal-scroll`. | true |
 | Scroll indicator on desktop | `desktopIndicator` | boolean | No | `false` | on / off | Shown when `desktopMode` is `horizontal-scroll`. | true |
-| Tablet display | `tabletMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`) | Grid or horizontal scroll on tablet (600 to 1199px), independently of the other breakpoints. | horizontal-scroll |
-| Tablet columns | `tabletColumns` | number | No | `4` | — | Shown when `tabletMode` is `grid`. | 3 |
+| Tablet display | `tabletMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`), Carousel (buttons on the cards) (`carousel`) | Grid, horizontal scroll or carousel on tablet (600 to 1199px), independently of the other breakpoints. Carousel: Columns whole cards per view, with previous / next on the cards (on the image of image cards), grey at the first and last card. | horizontal-scroll |
+| Tablet columns | `tabletColumns` | number | No | `4` | — | Shown when `tabletMode` is `grid` or `tabletMode` is `carousel`. | 3 |
 | Tablet gap (px) | `tabletGap` | number | No | `24` | — | Space between the cards. | — |
 | Tablet items visible | `tabletVisible` | number | No | `3.3` | — | Cards in view, e.g. 4.2 shows 4 and a part of the next one. Shown when `tabletMode` is `horizontal-scroll`. | 2.3 |
 | Tablet card width (px) | `tabletCardWidth` | number | No | `0` | — | A fixed card width (120 or more); 0 uses Items visible. Shown when `tabletMode` is `horizontal-scroll`. | — |
 | Previous / next buttons on tablet | `tabletControls` | boolean | No | `false` | on / off | Shown when `tabletMode` is `horizontal-scroll`. | — |
 | Scroll indicator on tablet | `tabletIndicator` | boolean | No | `false` | on / off | Shown when `tabletMode` is `horizontal-scroll`. | — |
-| Mobile display | `mobileMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`) | Grid or horizontal scroll on mobile (up to 599px), independently of the other breakpoints. | horizontal-scroll |
-| Mobile columns | `mobileColumns` | number | No | `1` | — | Shown when `mobileMode` is `grid`. | 1 |
+| Mobile display | `mobileMode` | select | No | `grid` | Grid (`grid`), Horizontal scroll (`horizontal-scroll`), Carousel (buttons on the cards) (`carousel`) | Grid, horizontal scroll or carousel on mobile (up to 599px), independently of the other breakpoints. Carousel: Columns whole cards per view, with previous / next on the cards (on the image of image cards), grey at the first and last card. | horizontal-scroll |
+| Mobile columns | `mobileColumns` | number | No | `1` | — | Shown when `mobileMode` is `grid` or `mobileMode` is `carousel`. | 1 |
 | Mobile gap (px) | `mobileGap` | number | No | `16` | — | Space between the cards. | — |
 | Mobile items visible | `mobileVisible` | number | No | `1.2` | — | Cards in view, e.g. 4.2 shows 4 and a part of the next one. Shown when `mobileMode` is `horizontal-scroll`. | 1.2 |
 | Mobile card width (px) | `mobileCardWidth` | number | No | `0` | — | A fixed card width (120 or more); 0 uses Items visible. Shown when `mobileMode` is `horizontal-scroll`. | — |
@@ -174,19 +174,19 @@ Stored on a new component (definition template): `titleType` = `"h2"`, `source` 
 | Scroll indicator on mobile | `mobileIndicator` | boolean | No | `true` | on / off | Shown when `mobileMode` is `horizontal-scroll`. | true |
 | Equal card height | `equalHeight` | boolean | No | `false` | on / off | All rows as tall as the tallest card. | true |
 | Stretch cards to row height | `stretchCards` | boolean | No | `true` | on / off | — | false |
-| Scroll snap | `scrollSnap` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | — |
-| Snap alignment | `snapAlign` | select | No | `start` | Start (`start`), Center (`center`) | Shown when `scrollSnap` is `true` and `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | center |
-| Hide native scrollbar | `hideScrollbar` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | — |
-| Allow mouse drag | `mouseDrag` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | — |
-| Keyboard scrolling | `keyboardScrolling` | boolean | No | `true` | on / off | Arrow keys, Home and End when the list has focus. Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | — |
-| Scroll step | `scrollStep` | select | No | `one-card` | One card (`one-card`), Viewport (`viewport`) | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | viewport |
-| Loop | `loop` | boolean | No | `false` | on / off | Next at the end goes back to the start. Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | true |
-| Initial item index | `initialIndex` | number | No | `0` | — | The card shown first (0: the first). Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | 2 |
+| Scroll snap | `scrollSnap` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | — |
+| Snap alignment | `snapAlign` | select | No | `start` | Start (`start`), Center (`center`) | Shown when `scrollSnap` is `true` and `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | center |
+| Hide native scrollbar | `hideScrollbar` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | — |
+| Allow mouse drag | `mouseDrag` | boolean | No | `true` | on / off | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | — |
+| Keyboard scrolling | `keyboardScrolling` | boolean | No | `true` | on / off | Arrow keys, Home and End when the list has focus. Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | — |
+| Scroll step | `scrollStep` | select | No | `one-card` | One card (`one-card`), Viewport (`viewport`) | Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | viewport |
+| Loop | `loop` | boolean | No | `false` | on / off | Next at the end goes back to the start. Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | true |
+| Initial item index | `initialIndex` | number | No | `0` | — | The card shown first (0: the first). Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll` or `desktopMode` is `carousel` or `tabletMode` is `carousel` or `mobileMode` is `carousel`. | 2 |
 | Edge | `edgePadding` | select | No | `bleed` | Cards run to the edge (`bleed`), Inside the content width (`none`) | Fixed-width sections only: the cards run into the section gutter. In full-width sections both look the same. Shown when `desktopMode` is `horizontal-scroll` or `tabletMode` is `horizontal-scroll` or `mobileMode` is `horizontal-scroll`. | none |
 | When there are no items | `emptyBehavior` | select | No | `message` | Hide the list (`hide`), Show a message (`message`), Show the fallback items (`fallback`) | Fallback: the List Items of the block (for Child pages and Tagged pages). | fallback |
 | Empty message | `emptyMessage` | text | No | — | — | Shown when `emptyBehavior` is `message`. | — |
 | Analytics | `analyticsEnabled` | boolean | No | `true` | on / off | Card clicks and scrolling in the Adobe Data Layer. | — |
-| Style options | `classes` | multiselect | No | — | Compact statistic title (`stat-compact`), Dividers between rows (`dividers`), Header centred (`header-center`) | — | — |
+| Style options | `classes` | multiselect | No | — | Compact statistic title (`stat-compact`), Dividers between rows (`dividers`), Header centred (`header-center`), Impact cards (proven impact and outcomes) (`impact-cards`) | — | — |
 
 ##### Additional tab — List
 
@@ -476,6 +476,8 @@ The first card becomes a full-width spotlight above the others (`feature-first` 
 
 **Show author on feature card** (`featureShowAuthor`, on by default; shown in the dialog only while Display as teaser and First card as feature are on) decides whether the feature card shows that lockup. Off: the feature card has no author (a clean hero layout) and the Authors sheet isn't loaded; the page's `author-id` and the other cards don't change (they never show an author), nor does the author elsewhere (Page Header, other Lists). Lists authored before have no value and show the author, as before. The Cards block has no authors, so it has no such option.
 
+**Feature card kicker and type (18 November 2026, Figma "Insights & Opinions", node 5673-18712).** The line above the feature card's title is its **Eyebrow** (List Item or page `eyebrow`, with Show eyebrow and the item's own toggle) in place of its tags, as on image cards; without an eyebrow it shows the tags; the reading time follows (Show tags). The author lockup needs the linked page's `author-id` and a row in the Authors sheet; its photo comes from the sheet's `image` column (without one the lockup has no photo). The author name and role are 1rem / 22px at every width (40px avatar). From 1200px the image cards of a List with a feature card (`feature-first`) keep the tablet type, title 1.25rem / 28px and description 0.875rem / 20px, as in that Figma frame; other Lists keep 1.5rem and 1rem.
+
 ```text
 [Screenshot Placeholder]
 
@@ -513,6 +515,10 @@ A = Partly visible next card
 B = Previous / Next buttons
 C = Scroll indicator
 ```
+
+#### Carousel per breakpoint (Figma "Press releases")
+
+Desktop, Tablet or Mobile display **Carousel**: `{bp}Columns` whole cards per view (no partly visible card; Items visible, Card width, the buttons switch and the indicator don't apply), scrolled one card at a time (or a viewport, Scroll step) with previous / next always shown on the cards: on the image of image cards (vertically centred from the card width and Image ratio), else centred on the cards; the buttons (2.5rem, 1.25rem in from the edges) are brand blue (`--color-bg-brand`, white chevron) and grey at the first and last card (`--list-carousel-disabled` `--grey-200` at 70% with a grey chevron, Figma; `aria-disabled`, still focusable); they stay shown when all the cards fit (both grey). A fixed list drops items linking to the same page (deduplicated), so give each List Item its own link. Test page: `/drafts/list-carousel` on the branch preview. Edge padding doesn't apply (whole cards). E.g. Mobile display Carousel with Mobile columns 1, Desktop display Carousel with Desktop columns 4. Rendering: block classes `{bp}-scroll {bp}-carousel {bp}-controls`; the scroller and the buttons share `div.list-stage` (only when a breakpoint is a carousel). Lists without a carousel are unchanged.
 
 #### Style options and fallback items
 
@@ -624,4 +630,4 @@ Evidence to collect: the page URL, the block's settings (screenshots of the dial
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/media-contacts/_media-contacts.json"]
 relatedComponents: ["media-contacts"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/media-contacts/_media-contacts.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -51,11 +51,11 @@ primary: false
 | Component | Field | Tab | Multiple | Options (label = value) | Default |
 | --- | --- | --- | --- | --- | --- |
 | `media-contacts` | Title Type (`titleType`) | Content | No | H1 = `h1`; H2 = `h2`; H3 = `h3`; H4 = `h4`; H5 = `h5`; H6 = `h6` | `h2` |
-| `media-contacts` | Title color (`titleColor`) | Content | No | Style default = `""`; Dark = `title-dark`; White = `title-white`; Light blue = `title-light-blue` | `` |
+| `media-contacts` | Title color (`titleColor`) | Content | No | Style default = `""`; Black = `title-black`; Dark = `title-dark`; White = `title-white`; Light blue = `title-light-blue` | `` |
 | `media-contacts` | Columns on desktop (`columns`) | Content | No | 1 = `1`; 2 = `2`; 3 = `3` | `2` |
-| `media-contacts` | Territory title color (`regionColor`) | Content | No | Style default = `""`; Dark = `dark`; Brand blue = `brand`; Light blue = `light-blue` | `` |
-| `media-contacts` | Email color (`emailColor`) | Content | No | Style default = `""`; Dark = `dark`; Brand blue = `brand`; Light blue = `light-blue` | `` |
-| `media-contacts` | Phone color (`phoneColor`) | Content | No | Style default = `""`; Dark = `dark`; Brand blue = `brand`; Light blue = `light-blue` | `` |
+| `media-contacts` | Territory title color (`regionColor`) | Content | No | Style default = `""`; Black = `black`; Dark = `dark`; Brand blue = `brand`; Light blue = `light-blue` | `` |
+| `media-contacts` | Email color (`emailColor`) | Content | No | Style default = `""`; Black = `black`; Dark = `dark`; Brand blue = `brand`; Light blue = `light-blue` | `` |
+| `media-contacts` | Phone color (`phoneColor`) | Content | No | Style default = `""`; Black = `black`; Dark = `dark`; Brand blue = `brand`; Light blue = `light-blue` | `` |
 
 ## Matrix
 
@@ -70,6 +70,7 @@ Status: every option is supported by the model and the code that reads it. "In t
 | media-contacts | Title Type | H5 | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Title Type | H6 | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Title color | Style default | `""` | Supported (in the model) | n/a (default) |
+| media-contacts | Title color | Black | `title-black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Title color | Dark | `title-dark` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Title color | White | `title-white` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Title color | Light blue | `title-light-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -77,14 +78,17 @@ Status: every option is supported by the model and the code that reads it. "In t
 | media-contacts | Columns on desktop | 2 | `2` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Columns on desktop | 3 | `3` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Territory title color | Style default | `""` | Supported (in the model) | n/a (default) |
+| media-contacts | Territory title color | Black | `black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Territory title color | Dark | `dark` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Territory title color | Brand blue | `brand` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Territory title color | Light blue | `light-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Email color | Style default | `""` | Supported (in the model) | n/a (default) |
+| media-contacts | Email color | Black | `black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Email color | Dark | `dark` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Email color | Brand blue | `brand` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Email color | Light blue | `light-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Phone color | Style default | `""` | Supported (in the model) | n/a (default) |
+| media-contacts | Phone color | Black | `black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Phone color | Dark | `dark` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Phone color | Brand blue | `brand` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | Phone color | Light blue | `light-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -119,4 +123,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/tcs-header/_tcs-header.json"]
 relatedComponents: ["tcs-header"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/tcs-header/_tcs-header.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -50,7 +50,7 @@ primary: false
 
 | Component | Field | Tab | Multiple | Options (label = value) | Default |
 | --- | --- | --- | --- | --- | --- |
-| `tcs-header` | Header over the first block (`headerOverlay`) | Display | No | Auto (over a light Hero) = `""`; Always (over the first block) = `always`; Never (the page starts below the header) = `never` | `` |
+| `tcs-header` | Header over the first block (`headerOverlay`) | Display | No | Auto (based on first block) = `""`; Always (over the first block) = `always`; Never (the page starts below the header) = `never` | `` |
 | `tcs-header` | Desktop behavior (`headerDesktopPosition`) | Display | No | Float (scrolls with the page) = `float`; Sticky (stays at the top) = `sticky` | `float` |
 | `tcs-header` | Tablet behavior (`headerTabletPosition`) | Display | No | Sticky (stays at the top) = `sticky`; Float (scrolls with the page) = `float` | `sticky` |
 | `tcs-header` | Mobile behavior (`headerMobilePosition`) | Display | No | Sticky (stays at the top) = `sticky`; Float (scrolls with the page) = `float` | `sticky` |
@@ -61,7 +61,7 @@ Status: every option is supported by the model and the code that reads it. "In t
 
 | Component | Field | Option | Value | Status | In the block library |
 | --- | --- | --- | --- | --- | --- |
-| tcs-header | Header over the first block | Auto (over a light Hero) | `""` | Supported (in the model) | n/a (default) |
+| tcs-header | Header over the first block | Auto (based on first block) | `""` | Supported (in the model) | n/a (default) |
 | tcs-header | Header over the first block | Always (over the first block) | `always` | Supported (in the model) | Not checkable (data attribute / field value) |
 | tcs-header | Header over the first block | Never (the page starts below the header) | `never` | Supported (in the model) | Not checkable (data attribute / field value) |
 | tcs-header | Desktop behavior | Float (scrolls with the page) | `float` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -138,4 +138,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

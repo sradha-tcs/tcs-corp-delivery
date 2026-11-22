@@ -8,8 +8,8 @@ owner: "QA Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -52,6 +52,7 @@ primary: false
 | TC-COLUMN-BREAK-002 | Authoring | — | An author adds the Column Break and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Column Break from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
 | TC-COLUMNS-002 | Authoring | — | An author adds the Columns and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Columns from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
 | TC-COLUMNS-CONTAINER-002 | Authoring | — | An author adds the Columns Container and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Columns Container from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
+| TC-CONF-MED-CONT-002 | Authoring | — | An author adds the Configurable Media Contacts and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Configurable Media Contacts from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
 | TC-CONVERSATION-CANVAS-002 | Authoring | — | An author adds the Conversation Canvas and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Conversation Canvas from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
 | TC-EMBED-002 | Authoring | — | An author adds the Embed and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Embed from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
 | TC-FILTER-LIST-002 | Authoring | — | An author adds the Filter List and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Filter List from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
@@ -60,6 +61,7 @@ primary: false
 | TC-FRAGMENT-002 | Authoring | — | An author adds the Fragment and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Fragment from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
 | TC-GEN-CAROUSEL-002 | Authoring | — | An author adds the Gen Carousel and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Gen Carousel from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
 | TC-HERO-002 | Authoring | — | An author adds the Hero and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Hero from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
+| TC-HISTORY-TIMELINE-002 | Authoring | — | An author adds the History Timeline and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the History Timeline from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
 | TC-IMAGE-COLLAGE-002 | Authoring | — | An author adds the Image Collage and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Image Collage from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
 | TC-INTERACTIVE-DASHBOARD-002 | Authoring | — | An author adds the Interactive Dashboard and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the Interactive Dashboard from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
 | TC-LIST-002 | Authoring | — | An author adds the List and fills in its required fields | 1. Open a test page in Universal Editor 2. Add the List from the component palette 3. Fill in the fields of each tab 4. Preview | The block appears with the authored content; no empty placeholder remains | Not Run | — | — | — | — | — | — |
@@ -93,4 +95,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

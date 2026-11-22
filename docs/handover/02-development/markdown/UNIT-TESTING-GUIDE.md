@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["test/","package.json"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | test/, package.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -40,7 +40,7 @@ primary: true
 
 - [Unit Tests](#unit-tests)
 - [Lint](#lint)
-- [Test inventory (21 files, 268 test cases)](#test-inventory-21-files-268-test-cases)
+- [Test inventory (25 files, 318 test cases)](#test-inventory-25-files-318-test-cases)
 - [Result in this program](#result-in-this-program)
 - [Screenshots](#screenshots)
 - [Known limitations](#known-limitations)
@@ -83,13 +83,15 @@ Not unit tested (no DOM test environment): block decoration, the data layer deco
 
 Ignored: `*.min.js`, `dompurify.min.js`, `docs/audit/tools` ([.eslintignore](https://github.com/sradha-tcs/tcs-corp/blob/main/.eslintignore)). Not linted: `templates/*/*.css`. `npm run lint:fix` fixes what it can.
 
-## Test inventory (21 files, 268 test cases)
+## Test inventory (25 files, 318 test cases)
 
 | File | Suites | Tests |
 | --- | --- | --- |
-| `test/cards/cards-data.test.mjs` | card items; shared card list settings; content type labels and long dates; cards call to action | 16 |
-| `test/conversation-canvas/canvas-journey.test.mjs` | roles from placement; the journey down the page; transitions; HIDDEN; page variations; the header Canvas at the bottom of the window; a row in place that holds focus (focused) | 36 |
+| `test/cards/cards-data.test.mjs` | card items; shared card list settings; content type labels and long dates; cards call to action; card CTA buttons and Title size | 23 |
+| `test/conf-med-cont/conf-med-cont-data.test.mjs` | findConfig; actionOf; regionColumns; regionGroups | 11 |
+| `test/conversation-canvas/canvas-journey.test.mjs` | roles from placement; the journey down the page; transitions; HIDDEN; page variations; the header Canvas at the bottom of the window; a row in place that holds focus (focused) | 37 |
 | `test/docs/block-docs.test.mjs` | block documentation (npm run build:docs); block documentation helpers | 5 |
+| `test/form-variations/properties.test.mjs` | form variations properties (Universal Editor); form variations properties (published pages); form variations heading level | 14 |
 | `test/items/item-rows.test.mjs` | item models; itemRows | 6 |
 | `test/list/display-precedence.test.mjs` | Card style of List Items (manual); Card style of source cards (child pages, tags); Card colour; List Item content from the linked page (field by field) | 16 |
 | `test/list/list-data.test.mjs` | configuration; feature card author (Show author on feature card); content type on image cards (Show content type); parent / child pages; page metadata; fixed list; fixed list: Pages and List Items; tag-based pages; deduplicate, sort and limit; card kinds; list item cells; list item display; list call to action | 69 |
@@ -105,14 +107,16 @@ Ignored: `*.min.js`, `dompurify.min.js`, `docs/audit/tools` ([.eslintignore](htt
 | `test/site/index-root.test.mjs` | indexRoot; localeSheetPath; localePagePath; on AEM author; pageLink; the language master root page; getParentPages (inherited Navigation, Footer, 404 Page) | 23 |
 | `test/site/keywords.test.mjs` | keywordActionOf; keywordsOf; resolveKeywords | 7 |
 | `test/site/page-tree.test.mjs` | pageTree | 5 |
+| `test/site/page-visibility.test.mjs` | isOn; PAGE_PARTS; hiddenParts; pageHides | 9 |
 | `test/site/paths.test.mjs` | paths.json | 5 |
 | `test/site/query-index-url.test.mjs` | indexUrlOf; remainingOffsets | 3 |
 | `test/site/sheet-metadata.test.mjs` | sheetOverrides; query index | 4 |
+| `test/tcs-header/header-theme.test.mjs` | header theme colours; header theme of an element; header theme | 8 |
 
 ## Result in this program
 
-- `npm run lint`: Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #218 and PR #224
-- `npm test`: 399 of 402 passed, 3 failed: the 2 Form Variations motion tests (failing on main since the model change of 27 October) and page-header-cta renders the cells its block reads (failing on main)
+- `npm run lint`: Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #264 (3996bfd)
+- `npm test`: 456 of 456 passed on main after PR #264 (3996bfd)
 
 ## Screenshots
 
@@ -130,4 +134,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

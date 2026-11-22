@@ -13,7 +13,7 @@
    "/design-block-master/en/block-library"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -36,7 +36,7 @@
    "/design-block-master/en/block-library/accordion"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -59,7 +59,7 @@
    "/design-block-master/en/block-library/accordion/accordion"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -81,7 +81,7 @@
    "/design-block-master/en/block-library/anchor-list"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -103,7 +103,7 @@
    "/design-block-master/en/block-library/anchor-list/anchor-list"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -125,7 +125,7 @@
    "/design-block-master/en/block-library/anchor-list/anchor-list-sticky"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -147,7 +147,7 @@
    "/design-block-master/en/block-library/animation"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -169,7 +169,7 @@
    "/design-block-master/en/block-library/animation/background-animation"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -196,7 +196,7 @@
    "/design-block-master/en/block-library/animation/background-by-block"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -219,7 +219,7 @@
    "/design-block-master/en/block-library/animation/content-animation"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -247,7 +247,7 @@
    "/design-block-master/en/block-library/animation/repeated-items"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -271,7 +271,7 @@
    "/design-block-master/en/block-library/animation/skeleton-loading"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -297,7 +297,7 @@
    "/design-block-master/en/block-library/animation/speed-and-trigger"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -319,7 +319,7 @@
    "/design-block-master/en/block-library/cards"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -342,7 +342,7 @@
    "/design-block-master/en/block-library/cards/card-colours"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -365,7 +365,7 @@
    "/design-block-master/en/block-library/cards/heights-links-legacy"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -388,7 +388,7 @@
    "/design-block-master/en/block-library/cards/card-styles"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -411,7 +411,7 @@
    "/design-block-master/en/block-library/cards/grid-and-horizontal-scroll"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -434,7 +434,7 @@
    "/design-block-master/en/block-library/cards/per-card-styles-and-colours"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -457,7 +457,7 @@
    "/design-block-master/en/block-library/cards/images-panels-style-options"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -479,7 +479,7 @@
    "/design-block-master/en/block-library/columns"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -501,7 +501,7 @@
    "/design-block-master/en/block-library/columns-container"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -526,7 +526,7 @@
    "/design-block-master/en/block-library/columns-container/alignment-gap-and-breakpoints"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -550,7 +550,7 @@
    "/design-block-master/en/block-library/columns-container/columns-per-row"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -582,7 +582,7 @@
    "/design-block-master/en/block-library/columns-container/columns-of-blocks"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -605,7 +605,7 @@
    "/design-block-master/en/block-library/columns/columns-mobile-inset"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -627,7 +627,7 @@
    "/design-block-master/en/block-library/conversation-canvas"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -652,7 +652,7 @@
    "/design-block-master/en/block-library/columns/columns-variations"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -674,7 +674,7 @@
    "/design-block-master/en/block-library/conversation-canvas/docked"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -696,7 +696,7 @@
    "/design-block-master/en/block-library/conversation-canvas/floating"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -719,7 +719,7 @@
    "/design-block-master/en/block-library/conversation-canvas/conversation-canvas"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -739,7 +739,7 @@
    "/design-block-master/en/block-library/conversation-canvas/footer-canvas"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -761,7 +761,7 @@
    "/design-block-master/en/block-library/embed"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -784,7 +784,7 @@
    "/design-block-master/en/block-library/conversation-canvas/journey-and-actions"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -807,7 +807,7 @@
    "/design-block-master/en/block-library/embed/embed"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -829,7 +829,7 @@
    "/design-block-master/en/block-library/filter-list"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -852,7 +852,7 @@
    "/design-block-master/en/block-library/filter-list/content-types"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -875,7 +875,7 @@
    "/design-block-master/en/block-library/filter-list/filter-list"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -898,7 +898,7 @@
    "/design-block-master/en/block-library/filter-list/insights-listing"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -921,7 +921,7 @@
    "/design-block-master/en/block-library/filter-list/filters"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -944,7 +944,7 @@
    "/design-block-master/en/block-library/filter-list/layouts-and-card-styles"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -966,7 +966,7 @@
    "/design-block-master/en/block-library/footer"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -989,7 +989,7 @@
    "/design-block-master/en/block-library/filter-list/rules"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1009,7 +1009,7 @@
    "/design-block-master/en/block-library/footer/campaign-page"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1029,7 +1029,7 @@
    "/design-block-master/en/block-library/footer/default-footer-page"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1052,7 +1052,7 @@
    "/design-block-master/en/block-library/footer/footer-campaign"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1074,7 +1074,7 @@
    "/design-block-master/en/block-library/footer/footer-conversation-canvas"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1096,7 +1096,7 @@
    "/design-block-master/en/block-library/footer/footer-default"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1118,7 +1118,7 @@
    "/design-block-master/en/block-library/footer/footer-investors"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1138,7 +1138,7 @@
    "/design-block-master/en/block-library/footer/investors-page"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1160,7 +1160,7 @@
    "/design-block-master/en/block-library/form-variations"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1182,7 +1182,7 @@
    "/design-block-master/en/block-library/form-variations/field-types"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1204,7 +1204,7 @@
    "/design-block-master/en/block-library/foundations"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1226,7 +1226,7 @@
    "/design-block-master/en/block-library/form-variations/form-variations"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1248,7 +1248,7 @@
    "/design-block-master/en/block-library/foundations/button"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1270,7 +1270,7 @@
    "/design-block-master/en/block-library/foundations/button-icons-and-alignment"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1290,7 +1290,7 @@
    "/design-block-master/en/block-library/foundations/image"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1312,7 +1312,7 @@
    "/design-block-master/en/block-library/foundations/section-anchors"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1335,7 +1335,7 @@
    "/design-block-master/en/block-library/foundations/section-variations"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1357,7 +1357,7 @@
    "/design-block-master/en/block-library/foundations/section-views"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1385,7 +1385,7 @@
    "/design-block-master/en/block-library/foundations/section-colours-with-blocks"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1407,7 +1407,7 @@
    "/design-block-master/en/block-library/foundations/section-widths"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1427,7 +1427,7 @@
    "/design-block-master/en/block-library/foundations/text"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1447,7 +1447,7 @@
    "/design-block-master/en/block-library/foundations/title"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1469,7 +1469,7 @@
    "/design-block-master/en/block-library/fragment"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1492,7 +1492,7 @@
    "/design-block-master/en/block-library/fragment/fragment-block"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1514,7 +1514,7 @@
    "/design-block-master/en/block-library/fragment/fragments"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1538,7 +1538,7 @@
    "/design-block-master/en/block-library/fragment/fragments/cta-banner"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1560,7 +1560,7 @@
    "/design-block-master/en/block-library/gen-carousel"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1583,7 +1583,7 @@
    "/design-block-master/en/block-library/gen-carousel/auto"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1606,7 +1606,7 @@
    "/design-block-master/en/block-library/gen-carousel/hero-slides"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1629,7 +1629,7 @@
    "/design-block-master/en/block-library/gen-carousel/manual-and-auto"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1652,7 +1652,7 @@
    "/design-block-master/en/block-library/gen-carousel/single-slide"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1675,7 +1675,7 @@
    "/design-block-master/en/block-library/gen-carousel/teaser-slides"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1697,7 +1697,7 @@
    "/design-block-master/en/block-library/header"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1717,7 +1717,7 @@
    "/design-block-master/en/block-library/header/header-careers"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1737,7 +1737,7 @@
    "/design-block-master/en/block-library/header/header-default"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1759,7 +1759,7 @@
    "/design-block-master/en/block-library/header/nav-careers"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1781,7 +1781,7 @@
    "/design-block-master/en/block-library/header/nav-default"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1803,7 +1803,7 @@
    "/design-block-master/en/block-library/hero"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1826,7 +1826,7 @@
    "/design-block-master/en/block-library/hero/hero-ctas"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1849,7 +1849,7 @@
    "/design-block-master/en/block-library/hero/hero-motion"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1872,7 +1872,7 @@
    "/design-block-master/en/block-library/hero/hero-overview"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1894,7 +1894,7 @@
    "/design-block-master/en/block-library/interactive-dashboard"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1917,7 +1917,7 @@
    "/design-block-master/en/block-library/hero/hero-styles"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1939,7 +1939,7 @@
    "/design-block-master/en/block-library/interactive-dashboard/interactive-dashboard"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1961,7 +1961,7 @@
    "/design-block-master/en/block-library/list"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -1984,7 +1984,7 @@
    "/design-block-master/en/block-library/list/card-colours-and-overrides"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2007,7 +2007,7 @@
    "/design-block-master/en/block-library/list/card-style-from-pages"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2027,7 +2027,7 @@
    "/design-block-master/en/block-library/list/card-style-from-pages/automatic"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2047,7 +2047,7 @@
    "/design-block-master/en/block-library/list/card-style-from-pages/image-light-blue"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2067,7 +2067,7 @@
    "/design-block-master/en/block-library/list/card-style-from-pages/panel-grey"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2087,7 +2087,7 @@
    "/design-block-master/en/block-library/list/card-style-from-pages/report-navy"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2107,7 +2107,7 @@
    "/design-block-master/en/block-library/list/card-style-from-pages/statistic"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2130,7 +2130,7 @@
    "/design-block-master/en/block-library/list/empty-state"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2153,7 +2153,7 @@
    "/design-block-master/en/block-library/list/cards"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2176,7 +2176,7 @@
    "/design-block-master/en/block-library/list/figma-variations"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2199,7 +2199,7 @@
    "/design-block-master/en/block-library/list/layout-and-scrolling"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2222,7 +2222,7 @@
    "/design-block-master/en/block-library/list/list-item-display"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2245,7 +2245,7 @@
    "/design-block-master/en/block-library/list/lists-made-before"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2267,7 +2267,7 @@
    "/design-block-master/en/block-library/modal"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2290,7 +2290,7 @@
    "/design-block-master/en/block-library/list/sources"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2310,7 +2310,7 @@
    "/design-block-master/en/block-library/modal/auto-linked-modal"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2332,7 +2332,7 @@
    "/design-block-master/en/block-library/modal/fragments"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2354,7 +2354,7 @@
    "/design-block-master/en/block-library/modal/fragments/contact-form"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2374,7 +2374,7 @@
    "/design-block-master/en/block-library/modal/fragments/privacy-notice"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2396,7 +2396,7 @@
    "/design-block-master/en/block-library/modal/fragments/recognition"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2418,7 +2418,7 @@
    "/design-block-master/en/block-library/modal/modal-block"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2438,7 +2438,7 @@
    "/design-block-master/en/block-library/modal/fragments/terms"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2460,7 +2460,7 @@
    "/design-block-master/en/block-library/modal/modal-long-content"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2482,7 +2482,7 @@
    "/design-block-master/en/block-library/modal/modal-with-a-form"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2504,7 +2504,7 @@
    "/design-block-master/en/block-library/page-header"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2527,7 +2527,7 @@
    "/design-block-master/en/block-library/page-header/article"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2550,7 +2550,7 @@
    "/design-block-master/en/block-library/page-header/article-default"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2573,7 +2573,7 @@
    "/design-block-master/en/block-library/page-header/cta-primary"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2596,7 +2596,7 @@
    "/design-block-master/en/block-library/page-header/cta-secondary"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2619,7 +2619,7 @@
    "/design-block-master/en/block-library/page-header/cta-text-link"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2642,7 +2642,7 @@
    "/design-block-master/en/block-library/page-header/default-by-page-type"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2665,7 +2665,7 @@
    "/design-block-master/en/block-library/page-header/display"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2688,7 +2688,7 @@
    "/design-block-master/en/block-library/page-header/guest-author"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2711,7 +2711,7 @@
    "/design-block-master/en/block-library/page-header/landing"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2734,7 +2734,7 @@
    "/design-block-master/en/block-library/page-header/landing-default"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2757,7 +2757,7 @@
    "/design-block-master/en/block-library/page-header/landing-featured-image"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2780,7 +2780,7 @@
    "/design-block-master/en/block-library/page-header/landing-text-only"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2803,7 +2803,7 @@
    "/design-block-master/en/block-library/page-header/press-release"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2826,7 +2826,7 @@
    "/design-block-master/en/block-library/page-header/secondary"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2849,7 +2849,7 @@
    "/design-block-master/en/block-library/page-header/tablet-widths"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2874,7 +2874,7 @@
    "/design-block-master/en/block-library/page-header/tags-and-content-type"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2897,7 +2897,7 @@
    "/design-block-master/en/block-library/quote"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2920,7 +2920,7 @@
    "/design-block-master/en/block-library/quote/quote-variations"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2943,7 +2943,7 @@
    "/design-block-master/en/block-library/separator"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2966,7 +2966,7 @@
    "/design-block-master/en/block-library/separator/option-reference"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -2989,7 +2989,7 @@
    "/design-block-master/en/block-library/separator/theme-auto"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3011,7 +3011,7 @@
    "/design-block-master/en/block-library/table"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3034,7 +3034,7 @@
    "/design-block-master/en/block-library/separator/separator-variations"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3056,7 +3056,7 @@
    "/design-block-master/en/block-library/table-list"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3079,7 +3079,7 @@
    "/design-block-master/en/block-library/table-list/item-actions"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3101,7 +3101,7 @@
    "/design-block-master/en/block-library/table-list/numbers"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3124,7 +3124,7 @@
    "/design-block-master/en/block-library/table-list/motion"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3146,7 +3146,7 @@
    "/design-block-master/en/block-library/table-list/numbers-on-mobile"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3169,7 +3169,7 @@
    "/design-block-master/en/block-library/table/table"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3192,7 +3192,7 @@
    "/design-block-master/en/block-library/table-list/table-list"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3214,7 +3214,7 @@
    "/design-block-master/en/block-library/tabs"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3236,7 +3236,7 @@
    "/design-block-master/en/block-library/tabs/fragments"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3258,7 +3258,7 @@
    "/design-block-master/en/block-library/tabs/fragments/cloud-overview"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3280,7 +3280,7 @@
    "/design-block-master/en/block-library/tabs/fragments/consulting-overview"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3302,7 +3302,7 @@
    "/design-block-master/en/block-library/tabs/fragments/security-overview"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3326,7 +3326,7 @@
    "/design-block-master/en/block-library/tabs/fragments/tab-industries"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3346,7 +3346,7 @@
    "/design-block-master/en/block-library/tabs/fragments/tab-overview"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3373,7 +3373,7 @@
    "/design-block-master/en/block-library/tabs/tab"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3399,7 +3399,7 @@
    "/design-block-master/en/block-library/tabs/tab-deep-link"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3422,7 +3422,7 @@
    "/design-block-master/en/block-library/tabs/tabs-block"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3445,7 +3445,7 @@
    "/design-block-master/en/block-library/tabs/tabs-block-styles"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3468,7 +3468,7 @@
    "/design-block-master/en/block-library/tabs/tabs-block-with-fragments"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3494,7 +3494,7 @@
    "/design-block-master/en/block-library/tabs/tabs-fixed-width"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3516,7 +3516,7 @@
    "/design-block-master/en/block-library/teaser"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3543,7 +3543,7 @@
    "/design-block-master/en/block-library/tabs/tabs-section"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3566,7 +3566,7 @@
    "/design-block-master/en/block-library/teaser/alignment"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3589,7 +3589,7 @@
    "/design-block-master/en/block-library/teaser/article-meta"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3612,7 +3612,7 @@
    "/design-block-master/en/block-library/teaser/cta-styles"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3635,7 +3635,7 @@
    "/design-block-master/en/block-library/teaser/description-eyebrow-spacing"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3658,7 +3658,7 @@
    "/design-block-master/en/block-library/teaser/image-options-and-colours"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3682,7 +3682,7 @@
    "/design-block-master/en/block-library/teaser/image-positions"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3705,7 +3705,7 @@
    "/design-block-master/en/block-library/teaser/layouts"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3728,7 +3728,7 @@
    "/design-block-master/en/block-library/teaser/mobile-image-position"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3751,7 +3751,7 @@
    "/design-block-master/en/block-library/teaser/links-and-stats"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3774,7 +3774,7 @@
    "/design-block-master/en/block-library/teaser/title-sizes-and-weights"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3796,7 +3796,7 @@
    "/design-block-master/en/block-library/templates/article-template"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3818,7 +3818,7 @@
    "/design-block-master/en/block-library/templates"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3840,7 +3840,7 @@
    "/design-block-master/en/block-library/testimonial"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3862,7 +3862,7 @@
    "/design-block-master/en/block-library/video/video-pop-up"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3885,7 +3885,7 @@
    "/design-block-master/en/block-library/video/video"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3907,7 +3907,7 @@
    "/design-block-master/en/curated-design-pages/forms/ar-landing"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3929,7 +3929,7 @@
    "/design-block-master/en/curated-design-pages/forms/csr"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3951,7 +3951,7 @@
    "/design-block-master/en/curated-design-pages/forms/csr-form"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3973,7 +3973,7 @@
    "/design-block-master/en/curated-design-pages/forms/global-contact-us"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -3995,7 +3995,7 @@
    "/design-block-master/en/curated-design-pages/forms/inquizitive"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4018,7 +4018,7 @@
    "/design-block-master/en/curated-design-pages/forms/media-form"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4040,7 +4040,7 @@
    "/design-block-master/en/curated-design-pages/forms/talk-to-an-expert-retail"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4062,7 +4062,7 @@
    "/design-block-master/en/curated-design-pages/forms/website-feedback-form"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4088,7 +4088,7 @@
    "/design-block-master/en/curated-design-pages/home"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4117,7 +4117,7 @@
    "/design-block-master/en/curated-design-pages/industry-landing-page"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4142,7 +4142,7 @@
    "/design-block-master/en/curated-design-pages/insights"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4167,7 +4167,7 @@
    "/design-block-master/en/curated-design-pages/media-and-investor"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4192,7 +4192,7 @@
    "/design-block-master/en/curated-design-pages/news-and-events"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4218,7 +4218,7 @@
    "/design-block-master/en/curated-design-pages/product"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4245,7 +4245,7 @@
    "/design-block-master/en/curated-design-pages/services"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4276,7 +4276,7 @@
    "/design-block-master/en/curated-design-pages/story"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4304,7 +4304,7 @@
    "/design-block-master/en/curated-design-pages/what-we-do"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4332,7 +4332,7 @@
    "/design-block-master/en/curated-design-pages/who-we-are"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4354,7 +4354,7 @@
    "/design-block-master/en/block-library/templates/blog-template"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4376,7 +4376,7 @@
    "/design-block-master/en/block-library/templates/error-page-404"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4398,7 +4398,7 @@
    "/design-block-master/en/block-library/templates/error-page-404-careers"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4422,7 +4422,7 @@
    "/design-block-master/en/block-library/templates/home-template"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4444,7 +4444,7 @@
    "/design-block-master/en/block-library/templates/press-release-template"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4467,7 +4467,7 @@
    "/design-block-master/en/block-library/testimonial/testimonial-variations"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4489,7 +4489,7 @@
    "/design-block-master/en/block-library/video"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4511,7 +4511,7 @@
    "/design-block-master/en/curated-design-pages"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4539,7 +4539,7 @@
    "/design-block-master/en/curated-design-pages/case-study"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4565,7 +4565,7 @@
    "/design-block-master/en/curated-design-pages/collection"
   ],
   "status": "Published",
-  "lastValidatedDate": "2026-11-08",
+  "lastValidatedDate": "2026-11-22",
   "version": "1.0",
   "owner": "Documentation Owner (proposed)",
   "confidence": "High",
@@ -4573,5 +4573,49 @@
   "url": "https://main--tcs-corp--sradha-tcs.aem.live/design-block-master/en/curated-design-pages/collection",
   "consoleErrors": 4,
   "failedRequests": 4
+ },
+ {
+  "id": "page:/language-master/en/block-library/conf-med-cont",
+  "title": "Configurable Media Contacts",
+  "role": "Authoring",
+  "subject": "block library page",
+  "sourceFiles": [],
+  "relatedComponents": [
+   "list"
+  ],
+  "relatedPages": [
+   "/language-master/en/block-library/conf-med-cont"
+  ],
+  "status": "Published",
+  "lastValidatedDate": "2026-11-22",
+  "version": "1.0",
+  "owner": "Documentation Owner (proposed)",
+  "confidence": "High",
+  "openQuestions": [],
+  "url": "https://main--tcs-corp--sradha-tcs.aem.live/language-master/en/block-library/conf-med-cont",
+  "consoleErrors": 0,
+  "failedRequests": 0
+ },
+ {
+  "id": "page:/language-master/en/block-library/conf-med-cont/conf-med-cont-variations",
+  "title": "Configurable Media Contacts variations",
+  "role": "Authoring",
+  "subject": "block library page",
+  "sourceFiles": [],
+  "relatedComponents": [
+   "conf-med-cont"
+  ],
+  "relatedPages": [
+   "/language-master/en/block-library/conf-med-cont/conf-med-cont-variations"
+  ],
+  "status": "Published",
+  "lastValidatedDate": "2026-11-22",
+  "version": "1.0",
+  "owner": "Documentation Owner (proposed)",
+  "confidence": "High",
+  "openQuestions": [],
+  "url": "https://main--tcs-corp--sradha-tcs.aem.live/language-master/en/block-library/conf-med-cont/conf-med-cont-variations",
+  "consoleErrors": 0,
+  "failedRequests": 0
  }
 ]

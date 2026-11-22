@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/media-contacts"]
 relatedComponents: ["media-contacts"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/media-contacts |
 | Related documents | — |
 | Related AEM paths | — |
@@ -88,7 +88,7 @@ Scenario: Media Contacts: each choice of "Title Type" gives its presentation
 Scenario: Media Contacts: each choice of "Title color" gives its presentation
   Given a published page with the block
   When preview after each change
-  Then the rendering matches the variation (class or attribute title-dark, title-white, title-light-blue)
+  Then the rendering matches the variation (class or attribute title-black, title-dark, title-white, title-light-blue)
 
 Scenario: Media Contacts: each choice of "Columns on desktop" gives its presentation
   Given a published page with the block
@@ -98,7 +98,7 @@ Scenario: Media Contacts: each choice of "Columns on desktop" gives its presenta
 Scenario: Media Contacts: each choice of "Territory title color" gives its presentation
   Given a published page with the block
   When preview after each change
-  Then the rendering matches the variation (class or attribute dark, brand, light-blue)
+  Then the rendering matches the variation (class or attribute black, dark, brand, light-blue)
 ```
 
 ## Screenshots
@@ -117,4 +117,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

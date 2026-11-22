@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["models/_page.json","docs/handover/knowledge-base/content-architecture.md"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | models/_page.json, docs/handover/knowledge-base/content-architecture.md |
 | Related documents | — |
 | Related AEM paths | — |
@@ -56,6 +56,9 @@ primary: true
 | Navigation | `nav` | aem-content | The header (nav) page of this page and, unless they set their own, its child pages. Empty: the nearest parent page's Navigation (or the metadata sheet's nav column), else the locale's references/nav. |
 | Footer | `footer` | aem-content | The footer page of this page and, unless they set their own, its child pages. Empty: the nearest parent page's Footer (or the metadata sheet's footer column), else the locale's references/footer. |
 | 404 Page | `error-page` | aem-content | The page shown when a page below this one isn't found. Empty: the nearest parent page's 404 Page (or the metadata sheet's error-page column), else the locale's error-pages/404. |
+| Hide Header | `hide-header` | boolean | Shows this page without the header (logo bar, menu and header Conversation Canvas); the page starts at the top. This page only, not its child pages (metadata sheet column hide-header). |
+| Hide Footer | `hide-footer` | boolean | Shows this page without the footer (footer Conversation Canvas, copyright, links and social links). This page only, not its child pages (metadata sheet column hide-footer). |
+| Hide Conversation Canvas | `hide-canvas` | boolean | Hides every Conversation Canvas on this page: the header's, the footer's and the page's own (faded in the editor, as with Hide block). This page only, not its child pages (metadata sheet column hide-canvas). |
 
 Navigation, Footer and 404 Page are inherited by child pages from the nearest parent that sets them, up to the root page; else the root's references/nav, references/footer and error-pages/404 are used.
 
@@ -67,7 +70,7 @@ Navigation, Footer and 404 Page are inherited by child pages from the nearest pa
 
 | Source | Where authored | Published as |
 | --- | --- | --- |
-| Page properties (`models/_page.json`) | Universal Editor page properties | `<title>`, `description`, `keywords`, `page-type`, `nav`, `footer`, `error-page` metas |
+| Page properties (`models/_page.json`) | Universal Editor page properties | `<title>`, `description`, `keywords`, `page-type`, `nav`, `footer`, `error-page`, `hide-header`, `hide-footer`, `hide-canvas` metas |
 | Standard AEM page properties | Sites console (e.g. Tags `cq:tags`) | `cq-tags` (one comma-separated meta) |
 | Bulk metadata sheet | `/content/tcs-corp/{country}/{language}/metadata` | `/{locale}/metadata.json`; each column becomes `<meta name="{column}">` on pages matching the row's `url` pattern |
 
@@ -124,4 +127,4 @@ url                   | sheet-page-type | hide-in-nav
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

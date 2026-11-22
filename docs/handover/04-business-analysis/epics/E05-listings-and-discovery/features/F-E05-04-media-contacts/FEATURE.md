@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/media-contacts"]
 relatedComponents: ["media-contacts"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/media-contacts |
 | Related documents | — |
 | Related AEM paths | — |
@@ -63,7 +63,7 @@ primary: true
 | SEO requirements | Semantic headings; metadata from the page |
 | Localization requirements | UI text from placeholders with an English fallback |
 | Security/privacy requirements | No personal data; announced new-tab links |
-| Dependencies | ../../decorators/contact-list-decorator.js, ../../decorators/editor-item-decorator.js, ../../decorators/heading-decorator.js, ../../utils/cells.js, ../../utils/environment.js, ../../utils/placeholders.js, ../../utils/properties.js, ./media-contacts-data.js |
+| Dependencies | ../../utils/links.js, ../../decorators/contact-list-decorator.js, ../../decorators/editor-item-decorator.js, ../../decorators/heading-decorator.js, ../../utils/cells.js, ../../utils/environment.js, ../../utils/placeholders.js, ../../utils/properties.js, ./media-contacts-data.js |
 | Acceptance criteria | See the user stories |
 | Related user stories | US-F-E05-04-01, US-F-E05-04-02, US-F-E05-04-03 |
 | Related components | media-contacts |
@@ -89,4 +89,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

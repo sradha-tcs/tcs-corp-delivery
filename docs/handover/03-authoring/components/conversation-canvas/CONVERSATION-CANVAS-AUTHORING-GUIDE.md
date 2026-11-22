@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/conversation-canvas/README.md","blocks/conversation-canvas/_conversation-canvas.json"]
 relatedComponents: ["conversation-canvas"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/conversation-canvas/README.md, blocks/conversation-canvas/_conversation-canvas.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -163,7 +163,7 @@ Notes the tables can't show:
 - **Quick actions** (Conversation Canvas Button items): Views and Type come from the item (`buttonView`, `buttonVariant`), else from the link formatting, defaults Button / Primary; Title is dropped when equal to the text.
 - **Data layer impact:** filter tags supplied by script carry `data-cmp-interaction="filter"` and `data-cmp-value`; see Data Layer and Analytics.
 - **Legacy mapping:** button items authored with the former shared `button` model are read from their link and option cells (any cell value that is a known view or type; an unknown value is the icon). If no row has a known key, single-cell rows are read as properties in model order (Canvas Style and the collapsed alt texts excluded).
-- **Additional tab:** Anchor ID, Hide block, the animations and spacing behave as described in AGENTS.md ("Additional tab", "Animation and skeletons"); Hide block and spacing apply only in `main`, not to header or footer Canvases. The content animation moves `.conversation-canvas-content` (intro, search row, buttons); the Background animation reveals the base colour, the brand glows (`::before`: Default blue left / yellow right, Secondary the reverse) or the BG Background Image, read from the block, never redefined (`decorators/motion-decorator.js`, `docs/animation/README.md`).
+- **Additional tab:** Anchor ID, Hide block, the animations and spacing behave as described in AGENTS.md ("Additional tab", "Animation and skeletons"); Hide block hides the Canvas in `main`, the header and the footer (`conversation-canvas.css` for the header and footer; this README said before that it applied only in `main`, which the code doesn't do); spacing applies only in `main`. The page property **Hide Conversation Canvas** (`hide-canvas`, `utils/page-visibility.js`, KB-D-071) gives every Canvas of that page Hide block: hidden on the page and in the header and footer, faded in edit mode, out of the floating journey. The content animation moves `.conversation-canvas-content` (intro, search row, buttons); the Background animation reveals the base colour, the brand glows (`::before`: Default blue left / yellow right, Secondary the reverse) or the BG Background Image, read from the block, never redefined (`decorators/motion-decorator.js`, `docs/animation/README.md`).
 
 ## Screenshot-Based Authoring Steps
 
@@ -474,4 +474,4 @@ Evidence to collect (without secrets): the page URL on aem.page, `document.docum
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

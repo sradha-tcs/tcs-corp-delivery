@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["models/"]
 relatedComponents: ["section"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | models/ |
 | Related documents | — |
 | Related AEM paths | — |
@@ -52,6 +52,9 @@ primary: true
 | Section Name | `name` | text | The label shown for this section in the Content Tree |
 | Style | `style` | select | The background colour of the section, as the Teaser's BG Color: only the colour (the section keeps its own spacing, inside the colour); text, links and buttons turn light on Dark and Dark Green. |
 | Width Type | `sectionWidth` | select | — |
+| Text width (mobile) | `textWidthMobile` | select | Below 600px: the share of the row the section's text (text, headings, buttons) takes, left-aligned. Blocks keep their own width. |
+| Text width (tablet) | `textWidthTablet` | select | From 600px to 1199px: the share of the row the section's text (text, headings, buttons) takes, left-aligned. Blocks keep their own width. |
+| Text width (desktop) | `textWidthDesktop` | select | From 1200px: the share of the row the section's text (text, headings, buttons) takes, left-aligned. Blocks keep their own width. |
 | Rounded edge | `roundedEdge` | boolean | — |
 | Background Image | `backgroundImage` | reference | — |
 | Image alt text | `backgroundImageAlt` | text | Describe the image for screen readers. Leave empty if the image is decorative. |
@@ -84,4 +87,4 @@ The built-in Section component (`core/franklin/components/section/v1/section`) d
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

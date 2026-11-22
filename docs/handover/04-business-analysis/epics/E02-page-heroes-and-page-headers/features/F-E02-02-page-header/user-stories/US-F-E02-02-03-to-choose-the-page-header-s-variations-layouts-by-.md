@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/page-header"]
 relatedComponents: ["page-header"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/page-header |
 | Related documents | — |
 | Related AEM paths | — |
@@ -72,7 +72,7 @@ primary: true
 | Related code | blocks/page-header/ |
 | Related block-library example | https://main--tcs-corp--sradha-tcs.aem.live/design-block-master/en/block-library/page-header |
 | Related curated page | /design-block-master/en/curated-design-pages/case-study, /design-block-master/en/curated-design-pages/collection, /design-block-master/en/curated-design-pages/story |
-| Related test cases | TC-PAGE-HEADER-003, TC-PAGE-HEADER-004, TC-PAGE-HEADER-005, TC-PAGE-HEADER-006, TC-PAGE-HEADER-007, TC-PAGE-HEADER-008, TC-PAGE-HEADER-009 |
+| Related test cases | TC-PAGE-HEADER-003, TC-PAGE-HEADER-004, TC-PAGE-HEADER-005, TC-PAGE-HEADER-006, TC-PAGE-HEADER-007, TC-PAGE-HEADER-008, TC-PAGE-HEADER-009, TC-PAGE-HEADER-010, TC-PAGE-HEADER-011, TC-PAGE-HEADER-012, TC-PAGE-HEADER-013, TC-PAGE-HEADER-014, TC-PAGE-HEADER-015, TC-PAGE-HEADER-016, TC-PAGE-HEADER-017 |
 | Definition of Ready / Done | See the BA package |
 
 ## Gherkin acceptance criteria
@@ -83,22 +83,22 @@ Feature: Page Header
 Scenario: Page Header: each choice of "Layout" gives its presentation
   Given a published page with the block
   When preview after each change
-  Then the rendering matches the variation (class or attribute landing, secondary, article, display)
+  Then the rendering matches the variation (class or attribute landing, secondary, article, display, cta-alignment-left)
 
-Scenario: Page Header: each choice of "CTA List › CTA Link Type" gives its presentation
+Scenario: Page Header: each choice of "Title Font (Desktop)" gives its presentation
   Given a published page with the block
   When preview after each change
-  Then the rendering matches the variation (class or attribute new-window)
+  Then the rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6)
 
-Scenario: Page Header: each choice of "CTA List › CTA Link Style" gives its presentation
+Scenario: Page Header: each choice of "Title Font (Tablet)" gives its presentation
   Given a published page with the block
   When preview after each change
-  Then the rendering matches the variation (class or attribute primary, secondary)
+  Then the rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6)
 
-Scenario: CTA: each choice of "CTA Link Type" gives its presentation
+Scenario: Page Header: each choice of "Title Font (Mobile)" gives its presentation
   Given a published page with the block
   When preview after each change
-  Then the rendering matches the variation (class or attribute new-window)
+  Then the rendering matches the variation (class or attribute h1, h2, h3, h4, h5, h6)
 ```
 
 ## Screenshots
@@ -117,4 +117,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

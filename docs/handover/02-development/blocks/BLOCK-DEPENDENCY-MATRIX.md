@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/*/*.js"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/*/*.js |
 | Related documents | — |
 | Related AEM paths | — |
@@ -55,21 +55,23 @@ primary: false
 | `column-break` | utils/placeholders.js, utils/properties.js |
 | `columns` | — |
 | `columns-container` | utils/placeholders.js, ../column-break/column-break.js |
-| `conversation-canvas` | scripts/aem.js, scripts/scripts.js, decorators/responsive-image-decorator.js, utils/metadata.js, utils/query-index.js, utils/site.js, utils/taxonomy.js, decorators/a11y-decorator.js, decorators/button-decorator.js, decorators/icon-button-decorator.js, utils/buttons.js, utils/properties.js, utils/urls.js, utils/ids.js, utils/placeholders.js, decorators/skeleton-decorator.js, decorators/editor-item-decorator.js |
+| `conf-med-cont` | utils/links.js, decorators/contact-list-decorator.js, decorators/heading-decorator.js, scripts/scripts.js, utils/data.js, utils/environment.js, utils/placeholders.js, utils/properties.js |
+| `conversation-canvas` | scripts/aem.js, scripts/scripts.js, decorators/responsive-image-decorator.js, utils/metadata.js, utils/query-index.js, utils/site.js, utils/taxonomy.js, decorators/a11y-decorator.js, decorators/button-decorator.js, decorators/icon-button-decorator.js, utils/buttons.js, utils/properties.js, utils/urls.js, utils/ids.js, utils/page-visibility.js, utils/placeholders.js, decorators/skeleton-decorator.js, decorators/editor-item-decorator.js |
 | `embed` | scripts/aem.js, decorators/icon-button-decorator.js, decorators/media-decorator.js, utils/media.js, utils/viewport.js, utils/placeholders.js |
 | `filter-list` | decorators/article-meta-decorator.js, decorators/button-decorator.js, decorators/date-decorator.js, decorators/editor-item-decorator.js, decorators/icon-button-decorator.js, decorators/masonry-decorator.js, decorators/skeleton-decorator.js, decorators/responsive-image-decorator.js, scripts/aem.js, utils/cells.js, utils/data.js, utils/environment.js, utils/ids.js, utils/multifield.js, utils/placeholders.js, utils/properties.js, utils/query-index.js, utils/site.js, utils/card-list-config.js, utils/tags.js, utils/taxonomy.js, utils/viewport.js |
 | `footer` | ../fragment/fragment.js, decorators/motion-decorator.js, scripts/scripts.js, decorators/button-decorator.js, decorators/content-decorator.js, decorators/editor-item-decorator.js, decorators/link-decorator.js, decorators/social-links-decorator.js, utils/cells.js, utils/data.js, utils/inherited-metadata.js, utils/links.js, utils/placeholders.js, utils/site.js |
-| `form-variations` | scripts/scripts.js, decorators/button-decorator.js, decorators/content-decorator.js, decorators/heading-decorator.js, utils/environment.js, utils/links.js, utils/properties.js, utils/ids.js, utils/placeholders.js |
+| `form-variations` | scripts/scripts.js, decorators/content-decorator.js, decorators/heading-decorator.js, decorators/image-decorator.js, utils/environment.js, utils/links.js, utils/properties.js, utils/ids.js, utils/placeholders.js |
 | `fragment` | scripts/scripts.js, scripts/aem.js, decorators/motion-decorator.js, utils/environment.js, utils/placeholders.js |
 | `gen-carousel` | decorators/button-decorator.js, decorators/icon-button-decorator.js, utils/analytics.js, utils/environment.js, utils/viewport.js, utils/ids.js, utils/placeholders.js |
 | `header` | ../fragment/fragment.js, decorators/motion-decorator.js, decorators/button-decorator.js, utils/placeholders.js, utils/header-space.js, utils/inherited-metadata.js, utils/site.js |
-| `hero` | scripts/scripts.js, decorators/animation-decorator.js, decorators/button-decorator.js, decorators/editor-item-decorator.js, utils/buttons.js, utils/cells.js, utils/links.js, utils/motion.js, utils/media.js, utils/placeholders.js |
+| `hero` | scripts/scripts.js, decorators/animation-decorator.js, decorators/button-decorator.js, decorators/editor-item-decorator.js, decorators/media-decorator.js, utils/buttons.js, utils/cells.js, utils/links.js, utils/motion.js, utils/media.js, utils/placeholders.js |
+| `history-timeline` | scripts/scripts.js, decorators/button-decorator.js, decorators/content-decorator.js, decorators/editor-item-decorator.js, decorators/heading-decorator.js, decorators/icon-button-decorator.js, decorators/image-decorator.js, decorators/scroller-decorator.js, utils/cells.js, utils/ids.js, utils/links.js, utils/placeholders.js, utils/properties.js |
 | `image-collage` | scripts/aem.js, scripts/scripts.js, decorators/a11y-decorator.js, decorators/button-decorator.js, decorators/content-decorator.js, decorators/editor-item-decorator.js, decorators/heading-decorator.js, decorators/image-decorator.js, utils/cells.js, utils/links.js, utils/placeholders.js, utils/properties.js |
 | `interactive-dashboard` | — |
 | `list` | utils/card-list-config.js, utils/dates.js, utils/query-index.js, decorators/card-list-decorator.js, decorators/skeleton-decorator.js, utils/cells.js, utils/data.js, utils/environment.js, utils/placeholders.js, utils/links.js, utils/properties.js, utils/redirects.js, utils/site.js, utils/tags.js, utils/taxonomy.js |
-| `media-contacts` | decorators/contact-list-decorator.js, decorators/editor-item-decorator.js, decorators/heading-decorator.js, utils/cells.js, utils/environment.js, utils/placeholders.js, utils/properties.js |
+| `media-contacts` | utils/links.js, decorators/contact-list-decorator.js, decorators/editor-item-decorator.js, decorators/heading-decorator.js, utils/cells.js, utils/environment.js, utils/placeholders.js, utils/properties.js |
 | `modal` | ../fragment/fragment.js, scripts/aem.js, scripts/scripts.js, decorators/button-decorator.js, decorators/icon-button-decorator.js, decorators/data-layer-decorator.js, utils/analytics.js, utils/environment.js, utils/ids.js, utils/placeholders.js |
-| `page-header` | scripts/scripts.js, decorators/article-meta-decorator.js, decorators/button-decorator.js, decorators/editor-item-decorator.js, decorators/link-decorator.js, decorators/responsive-image-decorator.js, decorators/tag-decorator.js, utils/cells.js, utils/data.js, utils/links.js, utils/metadata.js, utils/placeholders.js, utils/properties.js, utils/taxonomy.js |
+| `page-header` | scripts/aem.js, scripts/scripts.js, decorators/article-meta-decorator.js, decorators/button-decorator.js, decorators/editor-item-decorator.js, decorators/heading-decorator.js, decorators/link-decorator.js, decorators/responsive-image-decorator.js, decorators/tag-decorator.js, utils/cells.js, utils/data.js, utils/links.js, utils/metadata.js, utils/placeholders.js, utils/properties.js, utils/taxonomy.js |
 | `quote` | decorators/content-decorator.js, decorators/heading-decorator.js, decorators/image-decorator.js, utils/properties.js |
 | `separator` | utils/analytics.js, utils/environment.js, utils/ids.js, utils/placeholders.js, utils/properties.js |
 | `tab` | scripts/aem.js, utils/properties.js |
@@ -97,4 +99,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

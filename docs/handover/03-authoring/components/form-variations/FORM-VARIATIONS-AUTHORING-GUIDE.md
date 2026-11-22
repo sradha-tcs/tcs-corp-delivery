@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/form-variations/README.md","blocks/form-variations/_form-variations.json"]
 relatedComponents: ["form-variations"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/form-variations/README.md, blocks/form-variations/_form-variations.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -61,7 +61,7 @@ primary: true
 
 1. **Add the block.** In Universal Editor select a Section (or a Columns Container column, or a Tabs Container) and choose Add > Form Variations.
 2. **Open its properties.** Select the block; the dialog has the tabs Content and Additional.
-3. **Enter the content.** Form Title / Heading (rendered as an H2), Form Description (rich text), Submit action (the endpoint the data is sent to; ask the development team for it) and Theme (Default or Dark).
+3. **Enter the content.** Form Title / Heading (rendered as an H2; **Heading level** H1 to H6 changes its level and size), Form Description (rich text), Submit action (the endpoint the data is sent to; ask the development team for it) and Theme (Default or Dark).
 4. **Add the items.** In the content tree, select the block and use Add to insert items in the order visitors should fill them: Text Input Field, Dropdown / Select Field, Textarea Field, Consent Checkbox Field, Contact Card Output, Submit Button. Reorder them by dragging in the content tree.
 5. **Fill each item.** Give every field a unique Field Name / ID (the submitted key, e.g. `firstName`), a label, and set Mandatory Field (*) where needed. For a conditional item, copy the exact dropdown option text into "Show only if dropdown value equals" (or "Show when dropdown value equals" for a contact card).
 6. **Preview.** In Universal Editor every conditional item stays visible with an italic condition note; switch to the preview (aem.page) to test the real behaviour.
@@ -75,16 +75,39 @@ primary: true
 
 #### Form Variations (`form-variations`)
 
-Model `form-variations`; template name "Form Variations" (the block class AEM renders); children: `field-text`, `field-select`, `field-combined`, `field-textarea`, `field-checkbox`, `contact-card`, `field-submit`.
+Model `form-variations`; template name "Form Variations" (the block class AEM renders); children: `field-text`, `field-select`, `field-combined`, `field-textarea`, `field-checkbox`, `field-richtext`, `contact-card`, `field-submit`.
 
 ##### Content tab — Form Variations
 
 | Field label | Property | Type | Required | Default | Allowed values | Author guidance | Example |
 | ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
+| Eyebrow / Category Title | `formEyebrow` | text | No | — | — | e.g. CORPORATE SOCIAL RESPONSIBILITY - TCS EMPOWERS | — |
+| Eyebrow Icon Asset (Optional) | `formEyebrowIcon` | aem-content | No | — | — | — | — |
 | Form Title / Heading | `formHeading` | text | No | — | — | — | Contact us |
+| Heading level | `formHeadingLevel` | select | No | — | Default (H2) (""), H1 (`h1`), H2 (`h2`), H3 (`h3`), H4 (`h4`), H5 (`h5`), H6 (`h6`) | The title's heading level (H1 to H6) and its size. Default: H2 at the form's own size. | — |
 | Form Description | `formDescription` | richtext | No | "" | — | — | — |
-| Submit action | `formAction` | aem-content | No | — | — | Where the form data is sent (POST, JSON): e.g. an AEM Forms or spreadsheet submission endpoint. Without it, nothing is sent and visitors are told so. | — |
-| Theme | `classes` | select | No | "" | Default (""), Dark (`dark`) | — | dark |
+| Background Image | `bgImage` | aem-content | No | — | — | The image beside the form from 992px (the section's background). Empty: uses ambient gradient glow. | — |
+| Submit action | `formAction` | aem-content | No | — | — | Where the form data is sent (POST, JSON). | — |
+| Theme | `classes` | select | No | `default` | Default / Light (`default`), Dark (`dark`) | The form theme style. | dark |
+
+##### Additional tab — Form Variations
+
+| Field label | Property | Type | Required | Default | Allowed values | Author guidance | Example |
+| ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
+| Anchor ID | `classes_anchor` | text | No | — | regExp: ^anchor-[a-z0-9][a-z0-9-]*$; customErrorMsg: Start with anchor-, then lower-case letters, digits and hyphens. | A unique ID of the block on the page, starting with anchor-, e.g. anchor-our-services; link to it with #anchor-our-services. Delivered as a block class. | — |
+| Hide block | `classes_hideblock` | boolean | No | `false` | on / off | Hides the whole block on the page until it is turned off (shown faded in the editor). Delivered as a block class. | — |
+| Animation Type | `classes_animation` | select | No | "" | None (""), Fade in (`motion-fade-in`), Fade up (`motion-fade-up`), Fade down (`motion-fade-down`), Fade left (`motion-fade-left`), Fade right (`motion-fade-right`), Slide up (`motion-slide-up`), Slide down (`motion-slide-down`), Slide left (`motion-slide-left`), Slide right (`motion-slide-right`), Scale in (`motion-scale-in`) | How the block's content appears; repeated items appear one after another. None: shown as is. Delivered as a block class. | motion-fade-up |
+| Motion Speed | `classes_animationspeed` | select | No | "" | Medium (""), Fast (`motion-fast`), Slow (`motion-slow`) | How fast the block's animations run. Shown when (`classes_animation` is set and `classes_animation` is not empty) or (`classes_bganimation` is set and `classes_bganimation` is not empty). Delivered as a block class. | — |
+| Animation Trigger | `classes_animationtrigger` | select | No | "" | On Scroll / Viewport Entry (""), On Page Load (`motion-on-load`) | When the block's animations run. Shown when (`classes_animation` is set and `classes_animation` is not empty) or (`classes_bganimation` is set and `classes_bganimation` is not empty). Delivered as a block class. | — |
+| Background animation | `classes_bganimation` | select | No | "" | None (""), Fade in (`bg-motion-fade-in`), Reveal from the centre (`bg-motion-reveal`), Wipe left to right (`bg-motion-wipe-right`), Wipe right to left (`bg-motion-wipe-left`), Wipe bottom to top (`bg-motion-wipe-up`), Scale reveal (`bg-motion-scale`) | How the block's background appears. Delivered as a block class. | bg-motion-wipe-right |
+| Padding left | `classes_paddingleft` | select | No | "" | Default (""), 0 (none) (`pl-0`), 0.25rem (space-100) (`pl-100`), 0.5rem (space-200) (`pl-200`), 0.75rem (space-300) (`pl-300`), 1rem (space-400) (`pl-400`), 1.25rem (space-500) (`pl-500`), 1.5rem (space-600) (`pl-600`), 2rem (space-800) (`pl-800`), 2.5rem (space-1000) (`pl-1000`), 3rem (space-1200) (`pl-1200`), 4rem (space-1600) (`pl-1600`), 5rem (space-2000) (`pl-2000`), 6rem (space-2400) (`pl-2400`), 7.5rem (space-3000) (`pl-3000`) | Delivered as a block class. | — |
+| Padding right | `classes_paddingright` | select | No | "" | Default (""), 0 (none) (`pr-0`), 0.25rem (space-100) (`pr-100`), 0.5rem (space-200) (`pr-200`), 0.75rem (space-300) (`pr-300`), 1rem (space-400) (`pr-400`), 1.25rem (space-500) (`pr-500`), 1.5rem (space-600) (`pr-600`), 2rem (space-800) (`pr-800`), 2.5rem (space-1000) (`pr-1000`), 3rem (space-1200) (`pr-1200`), 4rem (space-1600) (`pr-1600`), 5rem (space-2000) (`pr-2000`), 6rem (space-2400) (`pr-2400`), 7.5rem (space-3000) (`pr-3000`) | Delivered as a block class. | — |
+| Padding top | `classes_paddingtop` | select | No | "" | Default (""), 0 (none) (`pt-0`), 0.25rem (space-100) (`pt-100`), 0.5rem (space-200) (`pt-200`), 0.75rem (space-300) (`pt-300`), 1rem (space-400) (`pt-400`), 1.25rem (space-500) (`pt-500`), 1.5rem (space-600) (`pt-600`), 2rem (space-800) (`pt-800`), 2.5rem (space-1000) (`pt-1000`), 3rem (space-1200) (`pt-1200`), 4rem (space-1600) (`pt-1600`), 5rem (space-2000) (`pt-2000`), 6rem (space-2400) (`pt-2400`), 7.5rem (space-3000) (`pt-3000`) | Delivered as a block class. | — |
+| Padding bottom | `classes_paddingbottom` | select | No | "" | Default (""), 0 (none) (`pb-0`), 0.25rem (space-100) (`pb-100`), 0.5rem (space-200) (`pb-200`), 0.75rem (space-300) (`pb-300`), 1rem (space-400) (`pb-400`), 1.25rem (space-500) (`pb-500`), 1.5rem (space-600) (`pb-600`), 2rem (space-800) (`pb-800`), 2.5rem (space-1000) (`pb-1000`), 3rem (space-1200) (`pb-1200`), 4rem (space-1600) (`pb-1600`), 5rem (space-2000) (`pb-2000`), 6rem (space-2400) (`pb-2400`), 7.5rem (space-3000) (`pb-3000`) | Delivered as a block class. | — |
+| Margin left | `classes_marginleft` | select | No | "" | Default (""), 0 (none) (`ml-0`), 0.25rem (space-100) (`ml-100`), 0.5rem (space-200) (`ml-200`), 0.75rem (space-300) (`ml-300`), 1rem (space-400) (`ml-400`), 1.25rem (space-500) (`ml-500`), 1.5rem (space-600) (`ml-600`), 2rem (space-800) (`ml-800`), 2.5rem (space-1000) (`ml-1000`), 3rem (space-1200) (`ml-1200`), 4rem (space-1600) (`ml-1600`), 5rem (space-2000) (`ml-2000`), 6rem (space-2400) (`ml-2400`), 7.5rem (space-3000) (`ml-3000`) | Delivered as a block class. | — |
+| Margin right | `classes_marginright` | select | No | "" | Default (""), 0 (none) (`mr-0`), 0.25rem (space-100) (`mr-100`), 0.5rem (space-200) (`mr-200`), 0.75rem (space-300) (`mr-300`), 1rem (space-400) (`mr-400`), 1.25rem (space-500) (`mr-500`), 1.5rem (space-600) (`mr-600`), 2rem (space-800) (`mr-800`), 2.5rem (space-1000) (`mr-1000`), 3rem (space-1200) (`mr-1200`), 4rem (space-1600) (`mr-1600`), 5rem (space-2000) (`mr-2000`), 6rem (space-2400) (`mr-2400`), 7.5rem (space-3000) (`mr-3000`) | Delivered as a block class. | — |
+| Margin top | `classes_margintop` | select | No | "" | Default (""), 0 (none) (`mt-0`), 0.25rem (space-100) (`mt-100`), 0.5rem (space-200) (`mt-200`), 0.75rem (space-300) (`mt-300`), 1rem (space-400) (`mt-400`), 1.25rem (space-500) (`mt-500`), 1.5rem (space-600) (`mt-600`), 2rem (space-800) (`mt-800`), 2.5rem (space-1000) (`mt-1000`), 3rem (space-1200) (`mt-1200`), 4rem (space-1600) (`mt-1600`), 5rem (space-2000) (`mt-2000`), 6rem (space-2400) (`mt-2400`), 7.5rem (space-3000) (`mt-3000`) | Delivered as a block class. | — |
+| Margin bottom | `classes_marginbottom` | select | No | "" | Default (""), 0 (none) (`mb-0`), 0.25rem (space-100) (`mb-100`), 0.5rem (space-200) (`mb-200`), 0.75rem (space-300) (`mb-300`), 1rem (space-400) (`mb-400`), 1.25rem (space-500) (`mb-500`), 1.5rem (space-600) (`mb-600`), 2rem (space-800) (`mb-800`), 2.5rem (space-1000) (`mb-1000`), 3rem (space-1200) (`mb-1200`), 4rem (space-1600) (`mb-1600`), 5rem (space-2000) (`mb-2000`), 6rem (space-2400) (`mb-2400`), 7.5rem (space-3000) (`mb-3000`) | Delivered as a block class. | — |
 
 #### Text Input Field (`field-text`)
 
@@ -97,9 +120,10 @@ Stored on a new component (definition template): `classes` = `"field-text"`, `in
 | Field label | Property | Type | Required | Default | Allowed values | Author guidance | Example |
 | ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
 | Field type | `classes` | text | No | `field-text` | — | Read only. | — |
-| Field Name / ID | `fieldName` | text | Yes | — | — | Submitted as the field key, e.g. firstName. | firstName |
-| Field Label | `label` | text | Yes | — | — | e.g. First name | First name |
+| Field Name / ID | `fieldName` | text | Yes | — | — | — | firstName |
+| Field Label | `label` | text | Yes | — | — | — | First name |
 | Input Type | `inputKind` | select | No | `text` | Text (`text`), Email (`email`), Tel (`tel`) | — | text |
+| Field Width | `fieldWidth` | select | No | "" | Auto / Name-based (""), Full width (100%) (`full-width`), Half width (50%) (`half-width`) | — | — |
 | Mandatory Field (*) | `required` | boolean | No | `false` | on / off | — | true |
 | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — | Other |
 
@@ -116,6 +140,7 @@ Stored on a new component (definition template): `classes` = `"field-select"`.
 | Field type | `classes` | text | No | `field-select` | — | Read only. | — |
 | Dropdown Name / ID | `fieldName` | text | Yes | — | — | — | region |
 | Dropdown Label | `label` | text | Yes | — | — | — | Region |
+| Field Width | `fieldWidth` | select | No | `full-width` | Full width (100%) (`full-width`), Half width (50%) (`half-width`) | — | — |
 | Mandatory Field (*) | `required` | boolean | No | `false` | on / off | — | true |
 | Options | `options` | text | No | — | — | — | Asia Pacific, Europe, India, North America |
 | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — | — |
@@ -131,7 +156,10 @@ Stored on a new component (definition template): `classes` = `"field-combined"`.
 | Field label | Property | Type | Required | Default | Allowed values | Author guidance | Example |
 | ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
 | Field type | `classes` | text | No | `field-combined` | — | Read only. | — |
-| Field Name / ID | `fieldName` | text | Yes | — | — | Submitted as the field key, e.g. score | — |
+| Field Name / ID | `fieldName` | text | Yes | — | — | — | — |
+| Field Label | `label` | text | Yes | — | — | — | — |
+| Dropdown Options | `options` | text | No | — | — | The units, separated by commas (e.g. CGPA, Percentage). Empty: CGPA and Percentage. | — |
+| Field Width | `fieldWidth` | select | No | `full-width` | Full width (100%) (`full-width`), Half width (50%) (`half-width`) | — | — |
 | Mandatory Field (*) | `required` | boolean | No | `false` | on / off | — | — |
 | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — | — |
 
@@ -149,6 +177,7 @@ Stored on a new component (definition template): `classes` = `"field-textarea"`,
 | Field Name / ID | `fieldName` | text | Yes | — | — | — | message |
 | Field Label | `label` | text | Yes | — | — | — | How can we help you? |
 | Max Character Limit | `maxLength` | number | No | `1500` | — | — | 1500 |
+| Field Width | `fieldWidth` | select | No | `full-width` | Full width (100%) (`full-width`), Half width (50%) (`half-width`) | — | — |
 | Mandatory Field (*) | `required` | boolean | No | `false` | on / off | — | false |
 | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — | — |
 
@@ -165,7 +194,24 @@ Stored on a new component (definition template): `classes` = `"field-checkbox"`,
 | Field type | `classes` | text | No | `field-checkbox` | — | Read only. | — |
 | Checkbox Name / ID | `fieldName` | text | Yes | — | — | — | consent |
 | Consent Text / Disclaimer | `label` | richtext | Yes | — | — | — | — |
+| Field Width | `fieldWidth` | select | No | `full-width` | Full width (100%) (`full-width`), Half width (50%) (`half-width`) | — | — |
 | Mandatory Field (*) | `required` | boolean | No | `true` | on / off | — | true |
+| Show only if dropdown value equals | `dependsOn` | text | No | — | — | — | — |
+
+#### Rich Text Field (`field-richtext`)
+
+Model `field-richtext`; template name "Rich Text Field" (the block class AEM renders).
+
+Stored on a new component (definition template): `classes` = `"field-richtext"`.
+
+##### Fields — Rich Text Field
+
+| Field label | Property | Type | Required | Default | Allowed values | Author guidance | Example |
+| ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
+| Field type | `classes` | text | No | `field-richtext` | — | Read only. | — |
+| Element ID / Name | `fieldName` | text | Yes | — | — | — | — |
+| Rich Text Content | `label` | richtext | Yes | — | — | — | — |
+| Field Width | `fieldWidth` | select | No | `full-width` | Full width (100%) (`full-width`), Half width (50%) (`half-width`) | — | — |
 | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — | — |
 
 #### Contact Card Output (`contact-card`)
@@ -179,10 +225,13 @@ Stored on a new component (definition template): `classes` = `"contact-card"`.
 | Field label | Property | Type | Required | Default | Allowed values | Author guidance | Example |
 | ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
 | Field type | `classes` | text | No | `contact-card` | — | Read only. | — |
-| Show when dropdown value equals | `region` | text | Yes | — | — | — | India |
+| Show when dropdown value equals | `region` | text | No | — | — | — | India |
 | Contact Name | `contactName` | text | Yes | — | — | — | India media relations |
 | Emails | `emails` | text | No | — | — | — | media.india@example.com, press.india@example.com |
 | Phones | `phones` | text | No | — | — | — | +91 00 0000 0000 |
+| Email Icon Asset (Optional) | `emailIcon` | aem-content | No | — | — | — | — |
+| Phone Icon Asset (Optional) | `phoneIcon` | aem-content | No | — | — | — | — |
+| Field Width | `fieldWidth` | select | No | `full-width` | Full width (100%) (`full-width`), Half width (50%) (`half-width`) | — | — |
 
 #### Submit Button (`field-submit`)
 
@@ -196,15 +245,16 @@ Stored on a new component (definition template): `classes` = `"field-submit"`, `
 | ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
 | Field type | `classes` | text | No | `field-submit` | — | Read only. | — |
 | Button Label | `label` | text | No | `Send` | — | — | Send |
+| Field Width | `fieldWidth` | select | No | `full-width` | Full width (100%) (`full-width`), Half width (50%) (`half-width`) | — | — |
 | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — | — |
 
 <!-- END GENERATED: fields -->
 
 Notes the tables can't show:
 
-- **Form Title / Heading** renders as `h2.form-variations-title` and labels the form (`aria-labelledby`); it is also the `dc:title` of `cmp:submit` in the data layer. Without it the form has no accessible name and `cmp:submit` uses the block name.
+- **Form Title / Heading** renders as `h2.form-variations-title` (or the **Heading level** chosen, H1 to H6, with the site's heading size of that level: `form-variations-title-h1` … `-h6`; Default keeps H2 at the form's own size) and labels the form (`aria-labelledby`); it is also the `dc:title` of `cmp:submit` in the data layer. Without it the form has no accessible name and `cmp:submit` uses the block name.
 - **Submit action** is read from the cell's link (`href`), else its text. It receives a `POST` with `Content-Type: application/json` and the body `{ "data": { ... } }`. Without it (and without an integration) nothing is sent; in the editor a note says so.
-- **Theme** Dark adds the block class `dark`: a full-width dark panel (`--color-bg-neutral`) with rounded corners, light labels and an inverted primary button.
+- **Theme** Dark adds the block class `dark`: the containing section uses a full-width `#01000e` background and matching image fade, with light labels. The background variables are defined on the section, not just on its child block, so both the solid color and image layers resolve there.
 - **Field Name / ID** (`fieldName`) is the submitted key, sent as written. The dialog marks it required but doesn't validate its characters. A Text Input Field whose name contains "name" (any case) is half width from 900px (`half-width`); every other item is full width. The name also sets `autocomplete` (e.g. `firstName` gives `given-name`, `company` gives `organization`); Input Type Email / Tel set `email` / `tel`.
 - **Mandatory Field (*)**: only the value `true` makes a field required; the asterisk is hidden from screen readers and explained once by "* Required fields".
 - **Options**: comma separated; a disabled, pre-selected "Select an option" prompt comes first.
@@ -504,4 +554,4 @@ Evidence to collect (without secrets): page URL on aem.page, the item rows of `{
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/form-variations"]
 relatedComponents: ["form-variations"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/form-variations |
 | Related documents | — |
 | Related AEM paths | — |
@@ -63,11 +63,11 @@ primary: true
 | SEO requirements | Semantic headings; metadata from the page |
 | Localization requirements | UI text from placeholders with an English fallback |
 | Security/privacy requirements | No personal data; announced new-tab links |
-| Dependencies | ../../scripts/scripts.js, ../../decorators/button-decorator.js, ../../decorators/content-decorator.js, ../../decorators/heading-decorator.js, ../../utils/environment.js, ../../utils/links.js, ../../utils/properties.js, ../../utils/ids.js, ../../utils/placeholders.js |
+| Dependencies | ../../scripts/scripts.js, ../../decorators/content-decorator.js, ../../decorators/heading-decorator.js, ../../decorators/image-decorator.js, ../../utils/environment.js, ../../utils/links.js, ../../utils/properties.js, ../../utils/ids.js, ../../utils/placeholders.js, ./form-variations-properties.js |
 | Acceptance criteria | See the user stories |
 | Related user stories | US-F-E06-01-01, US-F-E06-01-02, US-F-E06-01-03 |
 | Related components | form-variations |
-| Related test cases | TC-FORM-VARIATIONS-001, TC-FORM-VARIATIONS-002, TC-FORM-VARIATIONS-003, TC-FORM-VARIATIONS-004, TC-FORM-VARIATIONS-005, TC-FORM-VARIATIONS-006, TC-FORM-VARIATIONS-007, TC-FORM-VARIATIONS-008, TC-FORM-VARIATIONS-009 |
+| Related test cases | TC-FORM-VARIATIONS-001, TC-FORM-VARIATIONS-002, TC-FORM-VARIATIONS-003, TC-FORM-VARIATIONS-004, TC-FORM-VARIATIONS-005, TC-FORM-VARIATIONS-006, TC-FORM-VARIATIONS-007, TC-FORM-VARIATIONS-008, TC-FORM-VARIATIONS-009, TC-FORM-VARIATIONS-010, TC-FORM-VARIATIONS-011, TC-FORM-VARIATIONS-012, TC-FORM-VARIATIONS-013, TC-FORM-VARIATIONS-014, TC-FORM-VARIATIONS-015, TC-FORM-VARIATIONS-016, TC-FORM-VARIATIONS-017, TC-FORM-VARIATIONS-018 |
 | Definition of Ready | [DEFINITION-OF-READY](../../../../markdown/DEFINITION-OF-READY.md) |
 | Definition of Done | [DEFINITION-OF-DONE](../../../../markdown/DEFINITION-OF-DONE.md) |
 
@@ -89,4 +89,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

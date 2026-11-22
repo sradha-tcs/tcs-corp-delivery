@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/cards/_cards.json"]
 relatedComponents: ["cards"]
 relatedPages: ["/design-block-master/en/block-library/cards","/design-block-master/en/block-library/cards/card-colours","/design-block-master/en/block-library/cards/card-styles","/design-block-master/en/block-library/cards/grid-and-horizontal-scroll","/design-block-master/en/block-library/cards/heights-links-legacy","/design-block-master/en/block-library/cards/images-panels-style-options","/design-block-master/en/block-library/cards/per-card-styles-and-colours"]
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/cards/_cards.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -50,7 +50,7 @@ primary: false
 
 | Component | Field | Tab | Multiple | Options (label = value) | Default |
 | --- | --- | --- | --- | --- | --- |
-| `cards` | Heading type (`titleType`) | Content | No | H2 = `h2`; H3 = `h3`; H4 = `h4`; H5 = `h5`; H6 = `h6` | `h2` |
+| `cards` | Heading type (`titleType`) | Content | No | H1 = `h1`; H2 = `h2`; H3 = `h3`; H4 = `h4`; H5 = `h5`; H6 = `h6` | `h2` |
 | `cards` | CTA style (`linkType`) | Content | No | Text link = `""`; Primary button = `primary`; Secondary button = `secondary` | `` |
 | `cards` | Card style (`cardStyle`) | Display | No | Image card = `image`; Panel = `panel`; Report = `report`; Statistic = `stat`; Mixed = `mixed` | `image` |
 | `cards` | Card colour (`cardTheme`) | Display | No | Default for the style = `""`; Dark = `dark`; Navy = `navy`; Brand blue = `brand`; Light blue = `brand-light`; Light grey = `grey`; Mid grey = `mid-grey`; Grey gradient = `gradient`; Image background = `image` | `` |
@@ -58,15 +58,20 @@ primary: false
 | `cards` | Panel height (`panelHeight`) | Display | No | Portrait (2:3) = `portrait`; Compact = `compact`; Content = `auto` | `portrait` |
 | `cards` | Date format (`dateFormat`) | Display | No | 04 Sep 26 = `dd-mmm-yy`; 04-09-2026 = `dd-mm-yyyy`; 09-04-2026 = `mm-dd-yyyy`; Sep 4, 2026 = `mmm-d-yyyy`; 04/09/26 = `dd/mm/yy`; 4th September 2026 = `do-mmmm-yyyy` | `dd-mmm-yy` |
 | `cards` | Image loading (`imageLoading`) | Display | No | Lazy = `lazy`; Eager (first screen) = `eager` | `lazy` |
-| `cards` | Desktop display (`desktopMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll` | `grid` |
-| `cards` | Tablet display (`tabletMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll` | `grid` |
-| `cards` | Mobile display (`mobileMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll` | `grid` |
+| `cards` | Desktop display (`desktopMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll`; Carousel (buttons on the cards) = `carousel` | `grid` |
+| `cards` | Tablet display (`tabletMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll`; Carousel (buttons on the cards) = `carousel` | `grid` |
+| `cards` | Mobile display (`mobileMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll`; Carousel (buttons on the cards) = `carousel` | `grid` |
 | `cards` | Snap alignment (`snapAlign`) | Display | No | Start = `start`; Center = `center` | `start` |
 | `cards` | Scroll step (`scrollStep`) | Display | No | One card = `one-card`; Viewport = `viewport` | `one-card` |
 | `cards` | Edge (`edgePadding`) | Display | No | Cards run to the edge = `bleed`; Inside the content width = `none` | `bleed` |
 | `cards` | When there are no cards (`emptyBehavior`) | Display | No | Hide the block = `hide`; Show a message = `message` | `hide` |
-| `cards` | Style options (`classes`) | Display | Yes | Compact statistic title = `stat-compact`; Dividers between rows = `dividers`; Header centred = `header-center` | — |
+| `cards` | Style options (`classes`) | Display | Yes | Compact statistic title = `stat-compact`; Dividers between rows = `dividers`; Header centred = `header-center`; Impact cards (proven impact and outcomes) = `impact-cards` | — |
+| `card` | Title size (`titleSize`) | Content | No | Default (the card style's) = `""`; 96px = `96`; 48px = `48`; H1 = `h1`; H2 = `h2`; H3 = `h3`; H4 = `h4`; H5 = `h5`; H6 = `h6` | `` |
 | `card` | Open in a new tab (`newTab`) | Link | No | As the block = `""`; Yes = `true`; No = `false` | `` |
+| `card` | CTA 1 Style (`cta1Style`) | Link | No | Secondary Button = `""`; Secondary Button (no arrow) = `secondary-no-arrow`; Primary Button = `primary`; Primary Button (no arrow) = `primary-no-arrow`; Text link = `tertiary` | `` |
+| `card` | CTA 1 Open in a new tab (`cta1Target`) | Link | No | Default = `""`; Open in New Window = `new-window` | `` |
+| `card` | CTA 2 Style (`cta2Style`) | Link | No | Secondary Button = `""`; Secondary Button (no arrow) = `secondary-no-arrow`; Primary Button = `primary`; Primary Button (no arrow) = `primary-no-arrow`; Text link = `tertiary` | `` |
+| `card` | CTA 2 Open in a new tab (`cta2Target`) | Link | No | Default = `""`; Open in New Window = `new-window` | `` |
 | `card` | Card style (`kind`) | Display | No | As the block = `""`; Image card = `image`; Panel = `panel`; Report = `report`; Statistic = `stat` | `` |
 | `card` | Card colour (`theme`) | Display | No | As the block = `""`; Dark = `dark`; Navy = `navy`; Brand blue = `brand`; Light blue = `brand-light`; Light grey = `grey`; Mid grey = `mid-grey`; Grey gradient = `gradient`; Image background = `image` | `` |
 
@@ -76,6 +81,7 @@ Status: every option is supported by the model and the code that reads it. "In t
 
 | Component | Field | Option | Value | Status | In the block library |
 | --- | --- | --- | --- | --- | --- |
+| cards | Heading type | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Heading type | H2 | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Heading type | H3 | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Heading type | H4 | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -115,10 +121,13 @@ Status: every option is supported by the model and the code that reads it. "In t
 | cards | Image loading | Eager (first screen) | `eager` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Desktop display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Desktop display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | Desktop display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Tablet display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Tablet display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | Tablet display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Mobile display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Mobile display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | Mobile display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Snap alignment | Start | `start` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Snap alignment | Center | `center` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | Scroll step | One card | `one-card` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -130,9 +139,33 @@ Status: every option is supported by the model and the code that reads it. "In t
 | cards | Style options | Compact statistic title | `stat-compact` | Supported (in the model) | Yes |
 | cards | Style options | Dividers between rows | `dividers` | Supported (in the model) | Yes |
 | cards | Style options | Header centred | `header-center` | Supported (in the model) | Yes |
+| cards | Style options | Impact cards (proven impact and outcomes) | `impact-cards` | Supported (in the model) | No |
+| card | Title size | Default (the card style's) | `""` | Supported (in the model) | n/a (default) |
+| card | Title size | 96px | `96` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | Title size | 48px | `48` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | Title size | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | Title size | H2 | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | Title size | H3 | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | Title size | H4 | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | Title size | H5 | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | Title size | H6 | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
 | card | Open in a new tab | As the block | `""` | Supported (in the model) | n/a (default) |
 | card | Open in a new tab | Yes | `true` | Supported (in the model) | Not checkable (data attribute / field value) |
 | card | Open in a new tab | No | `false` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | CTA 1 Style | Secondary Button | `""` | Supported (in the model) | n/a (default) |
+| card | CTA 1 Style | Secondary Button (no arrow) | `secondary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | CTA 1 Style | Primary Button | `primary` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | CTA 1 Style | Primary Button (no arrow) | `primary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | CTA 1 Style | Text link | `tertiary` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | CTA 1 Open in a new tab | Default | `""` | Supported (in the model) | n/a (default) |
+| card | CTA 1 Open in a new tab | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | CTA 2 Style | Secondary Button | `""` | Supported (in the model) | n/a (default) |
+| card | CTA 2 Style | Secondary Button (no arrow) | `secondary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | CTA 2 Style | Primary Button | `primary` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | CTA 2 Style | Primary Button (no arrow) | `primary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | CTA 2 Style | Text link | `tertiary` | Supported (in the model) | Not checkable (data attribute / field value) |
+| card | CTA 2 Open in a new tab | Default | `""` | Supported (in the model) | n/a (default) |
+| card | CTA 2 Open in a new tab | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
 | card | Card style | As the block | `""` | Supported (in the model) | n/a (default) |
 | card | Card style | Image card | `image` | Supported (in the model) | Not checkable (data attribute / field value) |
 | card | Card style | Panel | `panel` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -184,6 +217,7 @@ D = Meta row
 - **Fields:** Title, Description; Eyebrow (or the first tag); Link. Image only with Card colour Image background (the image covers the card).
 - **Dialog:** Card style Panel; Card colour (default dark `#20293c`); Panel height Portrait (2:3), Compact (9:10) or Content.
 - **Rendering:** `list-card-panel` with kicker, title, description and the call to action "Explore" (placeholder `explore`) unless a label is set or Show call to action is off.
+- **Panel with CTA buttons (Figma "Ready for what comes next"):** a panel with CTA 1 or CTA 2 has the title at the top and, at the bottom (`div.list-card-bottom`), its Label (`p.list-card-subtitle`, 0.875rem semibold), the description and the buttons (`div.list-card-ctas`, stacked, 0.875rem, Secondary in the card's text colour). E.g. Card colour Light grey, Title size H2 (2.5rem from 900px), Desktop columns 3. Panels without CTA buttons are unchanged (their Label isn't shown). A statistic card with CTA buttons has them in its bottom group too, below its Label and description (2rem between Label and description, the buttons 1.5rem below, 0.75rem apart, Figma "Content Section"); statistic cards without buttons are unchanged.
 - **Responsive:** fixed shapes with `overflow: hidden` clip long texts; Panel height Content fits the text.
 - **Accessibility:** the focus ring is drawn inside the card edge; check contrast on Brand blue and Image background.
 - **Data layer:** `xdm:variant: panel`.
@@ -321,7 +355,7 @@ D = Divider
 
 #### Card colours
 
-Dark, Navy, Brand blue, Light blue, Light grey, Mid grey, Grey gradient and Image background (`theme-{value}` on the card), for panel, report and statistic cards, set on the block or per Card. Buttons on Dark, Navy and Brand blue cards are inverted on hover and focus.
+Dark, Navy, Brand blue, Light blue, Light grey, Mid grey, Grey gradient and Image background (`theme-{value}` on the card), for panel, report and statistic cards, set on the block or per Card. Buttons on Dark, Navy and Brand blue cards are inverted on hover and focus. The kicker of panel cards on the coloured fills (default, Dark, Navy, Brand blue) is #cdcdcd (`--slate-300`, Figma; `--list-card-kicker` in `styles/card-list.css`), apart from the description (70% white; 95% on Brand blue); the light colours and Image background keep their dark text. On Brand blue the kicker is 3.4:1, below WCAG AA: an approved exception to match Figma (decision log KB-D-070).
 
 ```text
 [Screenshot Placeholder]
@@ -364,7 +398,17 @@ C = Previous / Next
 
 #### Style options
 
-Compact statistic title (`stat-compact`), Dividers between rows (`dividers`) and Header centred (`header-center`), added as block classes.
+Compact statistic title (`stat-compact`), Dividers between rows (`dividers`), Header centred (`header-center`) and Impact cards (`impact-cards`), added as block classes.
+
+#### Impact cards (Style option Impact cards, 12 November 2026)
+
+- **Purpose / when to use:** a short row of outcomes ("Proven, Impact and Outcomes"): an image, a title and a short description per card, usually three.
+- **Fields:** the block's Title (the section heading, e.g. Proven, Impact and Outcomes); per Card: Image, Title, Description. Eyebrow, tags, date and call to action still show when authored.
+- **Dialog:** Card style Image (the default); Style options **Impact cards (proven impact and outcomes)**. Put the block in a section with Section Style Grey for the design's grey background.
+- **Rendering:** the image cards (`list-card-image`) of a `.card-list.impact-cards` block are white cards with 1rem (`--radius-l`) rounded corners: the image fills the card's top (rounded top corners, the Image ratio, 16:9 by default), then the title and the description, centred, with 1.5rem side and bottom padding. The cards of a row have the same height (Stretch cards, on by default). The heading is 3rem above the cards from 600px (the lists' 5rem otherwise). Panel, report and statistic cards in the same block keep their own look. On the Dark / Dark green section colours, the cards stay white with dark text.
+- **Responsive:** three cards per row from 600px, one per row below (`utils/card-list-config.js` `IMPACT_COLUMNS`; the Layout tab's Desktop / Tablet columns, when set, win); title 1.25rem, 1.5rem from 1200px; description 0.875rem.
+- **Compatibility:** only blocks with the option get the class; Cards and Lists without it render as before (their columns, styles and markup are unchanged). The option is in the shared Style options, so a List can use it too.
+- **Accessibility:** the title is the card heading (one level below the block's heading); linked cards keep the title link or the call to action as their one link.
 
 #### Legacy cards (compatibility)
 
@@ -386,4 +430,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

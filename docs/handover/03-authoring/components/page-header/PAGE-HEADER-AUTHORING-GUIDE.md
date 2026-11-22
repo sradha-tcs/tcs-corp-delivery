@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/page-header/README.md","blocks/page-header/_page-header.json"]
 relatedComponents: ["page-header"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/page-header/README.md, blocks/page-header/_page-header.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -97,7 +97,11 @@ Model `page-header`; template name "Page Header" (the block class AEM renders); 
 
 | Field label | Property | Type | Required | Default | Allowed values | Author guidance | Example |
 | ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
-| Layout | `classes` | select | No | "" | Default (from the Page Type) (""), Landing (with the featured image) (`landing`), Secondary (title left, text right) (`secondary`), Article (meta row, author) (`article`), Display (large title) (`display`) | The content comes from the page's metadata (title, description, tags, content type, publish date, reading time, author, featured image, listen link). Default: Landing for the landing and listing page types, else Article. | article |
+| Layout | `classes` | select | No | "" | Default (from the Page Type) (""), Landing (with the featured image) (`landing`), Secondary (title left, text right) (`secondary`), Article (meta row, author) (`article`), Display (large title) (`display`), Default (Only CTA Alignment Left) (`cta-alignment-left`) | The content comes from the page's metadata (title, description, tags, content type, publish date, reading time, author, featured image, listen link). Default: Landing for the landing and listing page types, else Article. | article |
+| Title Font (Desktop) | `pageHeaderTitleFont` | select | No | `h2` | H1 (64px) (`h1`), H2 (48px) (`h2`), H3 (40px) (`h3`), H4 (28px) (`h4`), H5 (24px) (`h5`), H6 (20px) (`h6`) | The heading level of the title, which will sets desktop sizes accordingly. Use one H1 per page. | — |
+| Title Font (Tablet) | `pageHeaderTitleFontTablet` | select | No | `h2` | H1 (40px) (`h1`), H2 (32px) (`h2`), H3 (28px) (`h3`), H4 (24px) (`h4`), H5 (18px) (`h5`), H6 (16px) (`h6`) | The heading level of the title, which will sets tablet sizes accordingly. Use one H1 per page. | — |
+| Title Font (Mobile) | `pageHeaderTitleFontMobile` | select | No | `h2` | H1 (40px) (`h1`), H2 (32px) (`h2`), H3 (28px) (`h3`), H4 (24px) (`h4`), H5 (18px) (`h5`), H6 (16px) (`h6`) | The heading level of the title, which will sets mobile sizes accordingly. Use one H1 per page. | — |
+| Description Font | `pageHeaderDescriptionFont` | select | No | "" | Default Font (""), 1rem (16px) (`text-16px`), 1.125rem (18px) (`text-18px`), 1.25rem (20px) (`text-20px`), 1.5rem (24px) (`text-24px`), 2rem (32px) (`text-32px`), 2.5rem (40px) (`text-40px`) | — | — |
 
 ##### CTAs tab — Page Header
 
@@ -108,6 +112,10 @@ Model `page-header`; template name "Page Header" (the block class AEM renders); 
 | CTA List › CTA Link | `cta` | aem-content | No | — | — | — | — |
 | CTA List › CTA Link Type | `ctaTarget` | select | No | "" | Default (""), Open in New Window (`new-window`) | — | — |
 | CTA List › CTA Link Style | `ctaStyle` | select | No | `primary` | Text link (""), Primary Button (`primary`), Secondary Button (`secondary`) | — | — |
+| CTA List › Primary CTA Text Color (Primary only) | `pageHeaderPrimaryCtaTextColor` | select | No | "" | Style default (""), White (`primary-text-white`), Blue (`primary-text-blue`), Black (`primary-text-black`) | Sets the Primary CTA Text Color. | — |
+| CTA List › Primary CTA Background (Primary only) | `pageHeaderPrimaryCtaBackground` | select | No | "" | Style default (""), White (`primary-bg-white`), Blue (`primary-bg-blue`), Translucent white (`primary-bg-translucent`) | Sets the Primary CTA button background. | — |
+| CTA List › Secondary CTA Text Color (Secondary only) | `pageHeaderSecondaryCtaTextColor` | select | No | "" | Style default (""), White (`secondary-text-white`), Blue (`secondary-text-blue`), Black (`secondary-text-black`) | Sets the Secondary CTA Text Color. | — |
+| CTA List › Secondary CTA Background (Secondary only) | `pageHeaderSecondaryCtaBackground` | select | No | "" | Style default (""), White (`secondary-bg-white`), Blue (`secondary-bg-blue`), Translucent white (`secondary-bg-translucent`) | Sets the Secondary CTA button background. | — |
 
 ##### Additional tab — Page Header
 
@@ -425,4 +433,4 @@ Evidence to collect (no secrets): URL, viewport, the page's `<meta>` tags, the r
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

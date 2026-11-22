@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/teaser/_teaser.json"]
 relatedComponents: ["teaser"]
 relatedPages: ["/design-block-master/en/block-library/teaser","/design-block-master/en/block-library/teaser/alignment","/design-block-master/en/block-library/teaser/article-meta","/design-block-master/en/block-library/teaser/cta-styles","/design-block-master/en/block-library/teaser/description-eyebrow-spacing","/design-block-master/en/block-library/teaser/image-options-and-colours","/design-block-master/en/block-library/teaser/image-positions","/design-block-master/en/block-library/teaser/layouts","/design-block-master/en/block-library/teaser/links-and-stats","/design-block-master/en/block-library/teaser/mobile-image-position","/design-block-master/en/block-library/teaser/title-sizes-and-weights"]
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/teaser/_teaser.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -50,7 +50,9 @@ primary: false
 
 | Component | Field | Tab | Multiple | Options (label = value) | Default |
 | --- | --- | --- | --- | --- | --- |
-| `teaser` | Title Type (`titleType`) | Content | No | H1 (64px) = `h1`; H2 (48px) = `h2`; H3 (40px) = `h3`; H4 (28px) = `h4`; H5 (24px) = `h5`; H6 (20px) = `h6` | `h2` |
+| `teaser` | Title Type (Desktop) (`titleType`) | Content | No | H1 (64px) = `h1`; H2 (48px) = `h2`; H3 (40px) = `h3`; H4 (28px) = `h4`; H5 (24px) = `h5`; H6 (20px) = `h6`; 2.25rem (36px) = `title-2.25rem` | `h2` |
+| `teaser` | Title Type (Tablet) (`titleTypeTablet`) | Content | No | H1 (40px) = `h1`; H2 (32px) = `h2`; H3 (28px) = `h3`; H4 (24px) = `h4`; H5 (18px) = `h5`; H6 (16px) = `h6`; 2.25rem (36px) = `title-2.25rem` | `h2` |
+| `teaser` | Title Type (Mobile) (`titleTypeMobile`) | Content | No | H1 (40px) = `h1`; H2 (32px) = `h2`; H3 (28px) = `h3`; H4 (24px) = `h4`; H5 (18px) = `h5`; H6 (16px) = `h6`; 2.25rem (36px) = `title-2.25rem` | `h2` |
 | `teaser` | Date Format (`dateFormat`) | Content | No | DD-MM-YYYY = `dd-mm-yyyy`; MM-DD-YYYY = `mm-dd-yyyy`; MMM d, yyyy = `mmm-d-yyyy`; DD/MM/YY = `dd/mm/yy` | `dd-mm-yyyy` |
 | `teaser` | Image type (`imageFormat`) | Content | No | Default = `""`; Lottie = `lottie` | `` |
 | `teaser` | Image position (`imagePosition`) | Content | No | Left = `left`; Right = `right`; Top = `top`; Bottom = `bottom` | `left` |
@@ -62,26 +64,40 @@ primary: false
 | `teaser` | Links (authored before Link items) › CTA Background (`ctaBackground`) | Content | No | Style default = `""`; White = `button-bg-white`; Blue = `button-bg-blue`; Translucent white = `button-bg-translucent` | `` |
 | `teaser` | Links (authored before Link items) › CTA Shape (`ctaShape`) | Content | No | Style default = `""`; Rectangle = `button-rectangle` | `` |
 | `teaser` | List arrow (`linkArrow`) | Content | No | Right = `""`; Down right = `arrow-down-right`; None = `arrow-none` | `` |
+| `teaser` | Link Arrow Color (`linkArrowColor`) | Content | No | Default Color = `""`; Light Gray = `label-light-gray` | `` |
 | `teaser` | Primary CTA Link Type (`primaryCtaTarget`) | Content | No | Default = `""`; Open in New Window = `new-window` | `` |
 | `teaser` | Primary CTA Link Style (`primaryCtaStyle`) | Content | No | Text link = `tertiary`; List = `list`; Primary Button = `primary`; Primary Button (no arrow) = `primary-no-arrow`; Secondary Button = `secondary`; Secondary Button (no arrow) = `secondary-no-arrow` | `primary` |
+| `teaser` | Primary CTA Label Font (`primaryCtaLabelFont`) | Content | No | Default = `""`; 0.875 rem (14px) = `font-14` | `` |
+| `teaser` | Primary CTA Label Color (`primaryCtaLabelColor`) | Content | No | Default Color = `""`; Soft Gray = `label-soft-gray` | `` |
 | `teaser` | Primary CTA Background (`primaryCtaBackground`) | Content | No | Style default = `""`; White = `button-bg-white`; Blue = `button-bg-blue`; Translucent white = `button-bg-translucent` | `` |
 | `teaser` | Primary CTA Shape (`primaryCtaShape`) | Content | No | Style default = `""`; Rectangle = `button-rectangle` | `` |
+| `teaser` | CTA Shadow (Primary Only) (`primaryCtaShadow`) | Content | No | Default = `""`; Shadow = `primary-button-shadow` | `` |
 | `teaser` | Secondary CTA Link Type (`secondaryCtaTarget`) | Content | No | Default = `""`; Open in New Window = `new-window` | `` |
+| `teaser` | Secondary CTA Label Font (`secondaryCtaLabelFont`) | Content | No | Default = `""`; 0.875 rem (14px) = `font-14` | `` |
 | `teaser` | Secondary CTA Link Style (`secondaryCtaStyle`) | Content | No | Text link = `tertiary`; List = `list`; Primary Button = `primary`; Primary Button (no arrow) = `primary-no-arrow`; Secondary Button = `secondary`; Secondary Button (no arrow) = `secondary-no-arrow` | `secondary` |
+| `teaser` | Secondary CTA Label Color (`secondaryCtaLabelColor`) | Content | No | Default Color = `""`; Soft Gray = `label-soft-gray` | `` |
 | `teaser` | Secondary CTA Background (`secondaryCtaBackground`) | Content | No | Style default = `""`; White = `button-bg-white`; Blue = `button-bg-blue`; Translucent white = `button-bg-translucent` | `` |
 | `teaser` | Secondary CTA Shape (`secondaryCtaShape`) | Content | No | Style default = `""`; Rectangle = `button-rectangle` | `` |
+| `teaser` | CTA Shadow (Secondary Only) (`secondaryCtaShadow`) | Content | No | Default = `""`; Shadow = `secondary-button-shadow` | `` |
 | `teaser` | Layout (`classes`) | Style | No | Image & Text = `""`; Text split (title left, text right) = `no-image`; Background image = `background`; Card = `card`; Image collage = `image-collage` | `` |
 | `teaser` | BG Color (`bgColor`) | Style | No | Default = `""`; Grey = `grey`; Dark = `dark`; Dark green = `dark-green`; Navy = `navy` | `` |
 | `teaser` | Text alignment (`textAlignment`) | Style | No | Layout default = `""`; Left = `text-left`; Center = `text-center`; Right = `text-right`; Justify = `text-justify` | `` |
 | `teaser` | Vertical alignment (`verticalAlignment`) | Style | No | Layout default = `""`; Top = `valign-top`; Center = `valign-middle`; Bottom = `valign-bottom` | `` |
-| `teaser` | Title weight (`titleWeight`) | Style | No | Layout default = `""`; Regular = `title-regular`; Semibold = `title-semibold` | `` |
-| `teaser` | Title color (`titleColor`) | Style | No | Style default = `""`; Dark = `title-dark`; White = `title-white`; Light blue = `title-light-blue`; Royal blue = `title-royal-blue` | `` |
-| `teaser` | Description size (`descriptionSize`) | Style | No | Layout default = `""`; 1rem (16px) = `text-normal`; Regular (18px) = `text-regular`; Large (24px) = `text-large` | `` |
+| `teaser` | Title weight (`titleWeight`) | Style | No | Layout default = `""`; Light (300) = `title-light`; Regular (400) = `title-regular`; Medium (500) = `title-medium`; Semibold (600) = `title-semibold`; Bold (700) = `title-bold` | `` |
+| `teaser` | Title color (`titleColor`) | Style | No | Style default = `""`; Dark = `title-dark`; White = `title-white`; Light blue = `title-light-blue`; Royal blue = `title-royal-blue`; Soft Gray = `title-soft-gray` | `` |
+| `teaser` | Description size (Desktop) (`descriptionSize`) | Style | No | Layout default = `""`; 4rem (64px) = `description-4rem`; 3rem (48px) = `description-3rem`; 2.5rem (40px) = `description-2.5rem`; 2rem (32px) = `description-2rem`; 1.75rem (28px) = `description-1.75rem`; 1.25rem (20px) = `description-1.25rem`; 1rem (16px) = `text-normal`; Regular (18px) = `text-regular`; Large (24px) = `text-large`; 2.25rem (36px) = `description-2.25rem` | `` |
+| `teaser` | Description size (Tablet) (`descriptionSizeTablet`) | Style | No | Same as Desktop = `""`; 4rem (64px) = `description-4rem`; 3rem (48px) = `description-3rem`; 2.5rem (40px) = `description-2.5rem`; 2rem (32px) = `description-2rem`; 1.75rem (28px) = `description-1.75rem`; 1.25rem (20px) = `description-1.25rem`; 1rem (16px) = `text-normal`; Regular (18px) = `text-regular`; Large (24px) = `text-large`; 2.25rem (36px) = `description-2.25rem` | `` |
+| `teaser` | Description size (Mobile) (`descriptionSizeMobile`) | Style | No | Same as Desktop = `""`; 4rem (64px) = `description-4rem`; 3rem (48px) = `description-3rem`; 2.5rem (40px) = `description-2.5rem`; 2rem (32px) = `description-2rem`; 1.75rem (28px) = `description-1.75rem`; 1.25rem (20px) = `description-1.25rem`; 1rem (16px) = `text-normal`; Regular (18px) = `text-regular`; Large (24px) = `text-large`; 2.25rem (36px) = `description-2.25rem` | `` |
+| `teaser` | Description weight (`descriptionWeight`) | Style | No | Layout default = `""`; Light (300) = `description-light`; Regular (400) = `description-regular`; Medium (500) = `description-medium`; Semibold (600) = `description-semibold`; Bold (700) = `description-bold` | `` |
 | `teaser` | Description Color (`descriptionColor`) | Style | No | Default = `""`; Black = `description-black`; White = `description-white` | `` |
-| `teaser` | Eyebrow Style (`eyebrowStyle`) | Style | No | Brand = `""`; Label (uppercase, grey) = `eyebrow-label`; Grey = `eyebrow-grey`; White = `eyebrow-white`; Rich Black = `eyebrow-rich-black` | `` |
+| `teaser` | Eyebrow Style (`eyebrowStyle`) | Style | No | Brand = `""`; Label (uppercase, grey) = `eyebrow-label`; Grey = `eyebrow-grey`; White = `eyebrow-white`; Rich Black = `eyebrow-rich-black`; Medium Light Gray = `eyebrow-medium-light-gray` | `` |
+| `teaser` | Eyebrow Font size (Desktop) (`eyebrowFontSize`) | Style | No | Default = `""`; 0.75rem (12px) = `eyebrow-size-12`; 0.875rem (14px) = `eyebrow-size-14` | `` |
+| `teaser` | Eyebrow Font size (Tablet) (`eyebrowFontSizeTablet`) | Style | No | Same as Desktop = `""`; 0.75rem (12px) = `eyebrow-size-12`; 0.875rem (14px) = `eyebrow-size-14` | `` |
+| `teaser` | Eyebrow Font size (Mobile) (`eyebrowFontSizeMobile`) | Style | No | Same as Desktop = `""`; 0.75rem (12px) = `eyebrow-size-12`; 0.875rem (14px) = `eyebrow-size-14` | `` |
 | `teaser` | Top spacing (`topSpacing`) | Style | No | Default = `""`; Page header (extra space above) = `spacing-header` | `` |
 | `teaser` | Teaser Content Fixed Width (`teaserFixedWidth`) | Style | No | Default = `""`; Fixed Width (824px) = `teaser-fixed-width` | `` |
 | `teaser` | Link CTA Alignment (`linkCtaAlignment`) | Style | No | Default = `right`; Left = `left` | `right` |
+| `teaser` | Column gap (`classes_columngap`) | Additional | No | Default = `""`; 1.5rem (24px) = `cg-24` | `` |
 | `teaser-link` | CTA Link Type (`linkTarget`) | — | No | Default = `""`; Open in New Window = `new-window` | `` |
 | `teaser-link` | CTA Link Style (`linkStyle`) | — | No | Text link = `""`; List = `list`; Primary Button = `primary`; Primary Button (no arrow) = `primary-no-arrow`; Secondary Button = `secondary`; Secondary Button (no arrow) = `secondary-no-arrow` | `` |
 | `teaser-link` | Button background (`buttonBackground`) | — | No | Style default = `""`; White = `button-bg-white`; Blue = `button-bg-blue`; Translucent white = `button-bg-translucent` | `` |
@@ -94,12 +110,27 @@ Status: every option is supported by the model and the code that reads it. "In t
 
 | Component | Field | Option | Value | Status | In the block library |
 | --- | --- | --- | --- | --- | --- |
-| teaser | Title Type | H1 (64px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | Title Type | H2 (48px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | Title Type | H3 (40px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | Title Type | H4 (28px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | Title Type | H5 (24px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | Title Type | H6 (20px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Desktop) | H1 (64px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Desktop) | H2 (48px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Desktop) | H3 (40px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Desktop) | H4 (28px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Desktop) | H5 (24px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Desktop) | H6 (20px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Desktop) | 2.25rem (36px) | `title-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Tablet) | H1 (40px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Tablet) | H2 (32px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Tablet) | H3 (28px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Tablet) | H4 (24px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Tablet) | H5 (18px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Tablet) | H6 (16px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Tablet) | 2.25rem (36px) | `title-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Mobile) | H1 (40px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Mobile) | H2 (32px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Mobile) | H3 (28px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Mobile) | H4 (24px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Mobile) | H5 (18px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Mobile) | H6 (16px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title Type (Mobile) | 2.25rem (36px) | `title-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Date Format | DD-MM-YYYY | `dd-mm-yyyy` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Date Format | MM-DD-YYYY | `mm-dd-yyyy` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Date Format | MMM d, yyyy | `mmm-d-yyyy` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -136,6 +167,8 @@ Status: every option is supported by the model and the code that reads it. "In t
 | teaser | List arrow | Right | `""` | Supported (in the model) | n/a (default) |
 | teaser | List arrow | Down right | `arrow-down-right` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | List arrow | None | `arrow-none` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Link Arrow Color | Default Color | `""` | Supported (in the model) | n/a (default) |
+| teaser | Link Arrow Color | Light Gray | `label-light-gray` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Primary CTA Link Type | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | Primary CTA Link Type | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Primary CTA Link Style | Text link | `tertiary` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -144,26 +177,38 @@ Status: every option is supported by the model and the code that reads it. "In t
 | teaser | Primary CTA Link Style | Primary Button (no arrow) | `primary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Primary CTA Link Style | Secondary Button | `secondary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Primary CTA Link Style | Secondary Button (no arrow) | `secondary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Primary CTA Label Font | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | Primary CTA Label Font | 0.875 rem (14px) | `font-14` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Primary CTA Label Color | Default Color | `""` | Supported (in the model) | n/a (default) |
+| teaser | Primary CTA Label Color | Soft Gray | `label-soft-gray` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Primary CTA Background | Style default | `""` | Supported (in the model) | n/a (default) |
 | teaser | Primary CTA Background | White | `button-bg-white` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Primary CTA Background | Blue | `button-bg-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Primary CTA Background | Translucent white | `button-bg-translucent` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Primary CTA Shape | Style default | `""` | Supported (in the model) | n/a (default) |
 | teaser | Primary CTA Shape | Rectangle | `button-rectangle` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | CTA Shadow (Primary Only) | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | CTA Shadow (Primary Only) | Shadow | `primary-button-shadow` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Link Type | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | Secondary CTA Link Type | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Secondary CTA Label Font | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | Secondary CTA Label Font | 0.875 rem (14px) | `font-14` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Link Style | Text link | `tertiary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Link Style | List | `list` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Link Style | Primary Button | `primary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Link Style | Primary Button (no arrow) | `primary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Link Style | Secondary Button | `secondary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Link Style | Secondary Button (no arrow) | `secondary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Secondary CTA Label Color | Default Color | `""` | Supported (in the model) | n/a (default) |
+| teaser | Secondary CTA Label Color | Soft Gray | `label-soft-gray` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Background | Style default | `""` | Supported (in the model) | n/a (default) |
 | teaser | Secondary CTA Background | White | `button-bg-white` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Background | Blue | `button-bg-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Background | Translucent white | `button-bg-translucent` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Secondary CTA Shape | Style default | `""` | Supported (in the model) | n/a (default) |
 | teaser | Secondary CTA Shape | Rectangle | `button-rectangle` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | CTA Shadow (Secondary Only) | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | CTA Shadow (Secondary Only) | Shadow | `secondary-button-shadow` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Layout | Image & Text | `""` | Supported (in the model) | n/a (default) |
 | teaser | Layout | Text split (title left, text right) | `no-image` | Supported (in the model) | Yes |
 | teaser | Layout | Background image | `background` | Supported (in the model) | Yes |
@@ -184,17 +229,56 @@ Status: every option is supported by the model and the code that reads it. "In t
 | teaser | Vertical alignment | Center | `valign-middle` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Vertical alignment | Bottom | `valign-bottom` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Title weight | Layout default | `""` | Supported (in the model) | n/a (default) |
-| teaser | Title weight | Regular | `title-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | Title weight | Semibold | `title-semibold` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title weight | Light (300) | `title-light` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title weight | Regular (400) | `title-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title weight | Medium (500) | `title-medium` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title weight | Semibold (600) | `title-semibold` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title weight | Bold (700) | `title-bold` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Title color | Style default | `""` | Supported (in the model) | n/a (default) |
 | teaser | Title color | Dark | `title-dark` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Title color | White | `title-white` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Title color | Light blue | `title-light-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Title color | Royal blue | `title-royal-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | Description size | Layout default | `""` | Supported (in the model) | n/a (default) |
-| teaser | Description size | 1rem (16px) | `text-normal` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | Description size | Regular (18px) | `text-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | Description size | Large (24px) | `text-large` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Title color | Soft Gray | `title-soft-gray` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Desktop) | Layout default | `""` | Supported (in the model) | n/a (default) |
+| teaser | Description size (Desktop) | 4rem (64px) | `description-4rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Desktop) | 3rem (48px) | `description-3rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Desktop) | 2.5rem (40px) | `description-2.5rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Desktop) | 2rem (32px) | `description-2rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Desktop) | 1.75rem (28px) | `description-1.75rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Desktop) | 1.25rem (20px) | `description-1.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Desktop) | 1rem (16px) | `text-normal` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Desktop) | Regular (18px) | `text-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Desktop) | Large (24px) | `text-large` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Desktop) | 2.25rem (36px) | `description-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Tablet) | Same as Desktop | `""` | Supported (in the model) | n/a (default) |
+| teaser | Description size (Tablet) | 4rem (64px) | `description-4rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Tablet) | 3rem (48px) | `description-3rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Tablet) | 2.5rem (40px) | `description-2.5rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Tablet) | 2rem (32px) | `description-2rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Tablet) | 1.75rem (28px) | `description-1.75rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Tablet) | 1.25rem (20px) | `description-1.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Tablet) | 1rem (16px) | `text-normal` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Tablet) | Regular (18px) | `text-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Tablet) | Large (24px) | `text-large` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Tablet) | 2.25rem (36px) | `description-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Mobile) | Same as Desktop | `""` | Supported (in the model) | n/a (default) |
+| teaser | Description size (Mobile) | 4rem (64px) | `description-4rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Mobile) | 3rem (48px) | `description-3rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Mobile) | 2.5rem (40px) | `description-2.5rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Mobile) | 2rem (32px) | `description-2rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Mobile) | 1.75rem (28px) | `description-1.75rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Mobile) | 1.25rem (20px) | `description-1.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Mobile) | 1rem (16px) | `text-normal` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Mobile) | Regular (18px) | `text-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Mobile) | Large (24px) | `text-large` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description size (Mobile) | 2.25rem (36px) | `description-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description weight | Layout default | `""` | Supported (in the model) | n/a (default) |
+| teaser | Description weight | Light (300) | `description-light` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description weight | Regular (400) | `description-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description weight | Medium (500) | `description-medium` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description weight | Semibold (600) | `description-semibold` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Description weight | Bold (700) | `description-bold` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Description Color | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | Description Color | Black | `description-black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Description Color | White | `description-white` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -203,12 +287,24 @@ Status: every option is supported by the model and the code that reads it. "In t
 | teaser | Eyebrow Style | Grey | `eyebrow-grey` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Eyebrow Style | White | `eyebrow-white` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Eyebrow Style | Rich Black | `eyebrow-rich-black` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Eyebrow Style | Medium Light Gray | `eyebrow-medium-light-gray` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Eyebrow Font size (Desktop) | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | Eyebrow Font size (Desktop) | 0.75rem (12px) | `eyebrow-size-12` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Eyebrow Font size (Desktop) | 0.875rem (14px) | `eyebrow-size-14` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Eyebrow Font size (Tablet) | Same as Desktop | `""` | Supported (in the model) | n/a (default) |
+| teaser | Eyebrow Font size (Tablet) | 0.75rem (12px) | `eyebrow-size-12` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Eyebrow Font size (Tablet) | 0.875rem (14px) | `eyebrow-size-14` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Eyebrow Font size (Mobile) | Same as Desktop | `""` | Supported (in the model) | n/a (default) |
+| teaser | Eyebrow Font size (Mobile) | 0.75rem (12px) | `eyebrow-size-12` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Eyebrow Font size (Mobile) | 0.875rem (14px) | `eyebrow-size-14` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Top spacing | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | Top spacing | Page header (extra space above) | `spacing-header` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Teaser Content Fixed Width | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | Teaser Content Fixed Width | Fixed Width (824px) | `teaser-fixed-width` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Link CTA Alignment | Default | `right` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | Link CTA Alignment | Left | `left` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | Column gap | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | Column gap | 1.5rem (24px) | `cg-24` | Supported (in the model) | No |
 | teaser-link | CTA Link Type | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser-link | CTA Link Type | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser-link | CTA Link Style | Text link | `""` | Supported (in the model) | n/a (default) |
@@ -463,4 +559,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

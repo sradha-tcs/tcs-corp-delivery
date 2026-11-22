@@ -125,6 +125,14 @@
   "missingImages": []
  },
  {
+  "pdf": "02-development/blocks/conf-med-cont/CONF-MED-CONT-DEVELOPER-GUIDE.pdf",
+  "members": [
+   "02-development/blocks/conf-med-cont/CONF-MED-CONT-DEVELOPER-GUIDE.md"
+  ],
+  "status": "generated",
+  "missingImages": []
+ },
+ {
   "pdf": "02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-DEVELOPER-GUIDE.pdf",
   "members": [
    "02-development/blocks/conversation-canvas/CONVERSATION-CANVAS-DEVELOPER-GUIDE.md"
@@ -192,6 +200,14 @@
   "pdf": "02-development/blocks/hero/HERO-DEVELOPER-GUIDE.pdf",
   "members": [
    "02-development/blocks/hero/HERO-DEVELOPER-GUIDE.md"
+  ],
+  "status": "generated",
+  "missingImages": []
+ },
+ {
+  "pdf": "02-development/blocks/history-timeline/HISTORY-TIMELINE-DEVELOPER-GUIDE.pdf",
+  "members": [
+   "02-development/blocks/history-timeline/HISTORY-TIMELINE-DEVELOPER-GUIDE.md"
   ],
   "status": "generated",
   "missingImages": []
@@ -582,6 +598,14 @@
   "missingImages": []
  },
  {
+  "pdf": "03-authoring/components/conf-med-cont/CONF-MED-CONT-AUTHORING-GUIDE.pdf",
+  "members": [
+   "03-authoring/components/conf-med-cont/CONF-MED-CONT-AUTHORING-GUIDE.md"
+  ],
+  "status": "generated",
+  "missingImages": []
+ },
+ {
   "pdf": "03-authoring/components/conversation-canvas/CONVERSATION-CANVAS-AUTHORING-GUIDE.pdf",
   "members": [
    "03-authoring/components/conversation-canvas/CONVERSATION-CANVAS-AUTHORING-GUIDE.md"
@@ -641,6 +665,14 @@
   "pdf": "03-authoring/components/hero/HERO-AUTHORING-GUIDE.pdf",
   "members": [
    "03-authoring/components/hero/HERO-AUTHORING-GUIDE.md"
+  ],
+  "status": "generated",
+  "missingImages": []
+ },
+ {
+  "pdf": "03-authoring/components/history-timeline/HISTORY-TIMELINE-AUTHORING-GUIDE.pdf",
+  "members": [
+   "03-authoring/components/history-timeline/HISTORY-TIMELINE-AUTHORING-GUIDE.md"
   ],
   "status": "generated",
   "missingImages": []

@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/tcs-header/README.md","blocks/tcs-header/_tcs-header.json"]
 relatedComponents: ["tcs-header"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/tcs-header/README.md, blocks/tcs-header/_tcs-header.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -65,6 +65,7 @@ No block library page.
 6. **Preview** the nav page and a content page using it (desktop, tablet, mobile).
 7. **Publish** the Navigation page and the logo assets.
 8. **Validate** on the published site: both logos show, link to the right pages and are announced by their alt texts.
+9. **Leave the header out of one page (optional):** Page Properties › **Hide Header** on that page (this page only, not its child pages; or the metadata sheet's `hide-header` column). The Navigation page isn't loaded on it, so the logo bar, the menu and the header Canvas are left out and the page starts at the top (KB-D-071). The Additional tab's Hide block still has no effect in the site header.
 
 Minimum required: one logo image or one link. Recommended: both images (transparent SVG), both alt texts and both links. Optional: the Additional tab.
 
@@ -94,7 +95,7 @@ Model `tcs-header`; template name "TCS Header" (the block class AEM renders); ke
 
 | Field label | Property | Type | Required | Default | Allowed values | Author guidance | Example |
 | ----------- | -------- | ---- | -------- | ------- | -------------- | --------------- | ------- |
-| Header over the first block | `headerOverlay` | select | No | "" | Auto (over a light Hero) (""), Always (over the first block) (`always`), Never (the page starts below the header) (`never`) | At every width: whether the logo bar lies transparent over the page's first block. Auto: over an opening light Hero. | — |
+| Header over the first block | `headerOverlay` | select | No | "" | Auto (based on first block) (""), Always (over the first block) (`always`), Never (the page starts below the header) (`never`) | At every width: whether the logo bar lies transparent over the page's first block. Auto: detects dark/light background. | — |
 | Desktop behavior | `headerDesktopPosition` | select | No | `float` | Float (scrolls with the page) (`float`), Sticky (stays at the top) (`sticky`) | From 1200px. Float scrolls away with the page; Sticky stays at the top. | — |
 | Tablet behavior | `headerTabletPosition` | select | No | `sticky` | Sticky (stays at the top) (`sticky`), Float (scrolls with the page) (`float`) | From 600px to 1199px. Sticky stays at the top; Float scrolls away with the page. | — |
 | Mobile behavior | `headerMobilePosition` | select | No | `sticky` | Sticky (stays at the top) (`sticky`), Float (scrolls with the page) (`float`) | Below 600px. Sticky stays at the top; Float scrolls away with the page. | — |
@@ -355,4 +356,4 @@ Evidence to collect: the nav page path, the rendered `a.tcs-header-*` markup, th
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

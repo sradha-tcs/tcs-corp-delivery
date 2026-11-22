@@ -8,10 +8,10 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
-sourceFiles: ["blocks/form-variations/README.md","blocks/form-variations/_form-variations.json","blocks/form-variations/form-variations.css","blocks/form-variations/form-variations.js"]
-relatedComponents: ["form-variations","field-text","field-select","field-combined","field-textarea","field-checkbox","contact-card","field-submit"]
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
+sourceFiles: ["blocks/form-variations/README.md","blocks/form-variations/_form-variations.json","blocks/form-variations/form-variations-properties.js","blocks/form-variations/form-variations.css","blocks/form-variations/form-variations.js"]
+relatedComponents: ["form-variations","field-text","field-select","field-combined","field-textarea","field-checkbox","field-richtext","contact-card","field-submit"]
 relatedPages: ["/design-block-master/en/block-library/form-variations","/design-block-master/en/block-library/form-variations/field-types","/design-block-master/en/block-library/form-variations/form-variations","/design-block-master/en/curated-design-pages/forms/ar-landing","/design-block-master/en/curated-design-pages/forms/csr","/design-block-master/en/curated-design-pages/forms/csr-form","/design-block-master/en/curated-design-pages/forms/global-contact-us","/design-block-master/en/curated-design-pages/forms/inquizitive","/design-block-master/en/curated-design-pages/forms/media-form","/design-block-master/en/curated-design-pages/forms/talk-to-an-expert-retail","/design-block-master/en/curated-design-pages/forms/website-feedback-form"]
 confidence: "Medium"
 primary: true
@@ -24,15 +24,15 @@ primary: true
 | Document ID | DEV-B-form-variations |
 | Audience | Developers, technical leads, block owners, AI coding agents |
 | Purpose | How the Form Variations block is built: files, model, structure, behaviour, variations, tests and limitations |
-| Scope | blocks/form-variations/ and its components form-variations, field-text, field-select, field-combined, field-textarea, field-checkbox, contact-card, field-submit |
+| Scope | blocks/form-variations/ and its components form-variations, field-text, field-select, field-combined, field-textarea, field-checkbox, field-richtext, contact-card, field-submit |
 | Prerequisites | — |
 | Owner | Technical Lead / Block Owner (proposed) |
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
-| Source files | blocks/form-variations/README.md, blocks/form-variations/_form-variations.json, blocks/form-variations/form-variations.css, blocks/form-variations/form-variations.js |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
+| Source files | blocks/form-variations/README.md, blocks/form-variations/_form-variations.json, blocks/form-variations/form-variations-properties.js, blocks/form-variations/form-variations.css, blocks/form-variations/form-variations.js |
 | Related documents | [Variations](./FORM-VARIATIONS-VARIATIONS.md), [Test coverage](./FORM-VARIATIONS-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/form-variations/FORM-VARIATIONS-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/form-variations, /content/tcs-corp/design-block-master/en/block-library/form-variations/field-types, /content/tcs-corp/design-block-master/en/block-library/form-variations/form-variations |
 
@@ -74,17 +74,25 @@ primary: true
 | Purpose | Forms (contact, download, subscribe) built from field items |
 | Variations (summary) | Form variations and field items |
 | Children | field-text, field-select, field-textarea, field-checkbox, contact-card, field-submit |
-| Code size | 740 lines of JS and CSS |
+| Code size | 1429 lines of JS and CSS |
 
 ## Overview
 
 **Business purpose.** Authors create contact, enquiry, call-back and feedback forms without developer work, with consistent TCS styling, accessible labels and errors, and conditional content (for example a Region dropdown that reveals the matching regional contact card).
 
-**User experience.** The visitor sees an optional H2 title and description, a "* Required fields" note when any field is mandatory, the fields in authored order (fields whose Field Name / ID contains "name" side by side on desktop), and a primary submit button. Errors are validated on submit and shown under each invalid field; a status message below the form reports the outcome.
+**User experience.** The visitor sees an optional H2 title and description, the fields in authored order (fields whose Field Name / ID contains "name" side by side on desktop), and a grey submit button. When any field is mandatory, the block generates "*Mandatory fields" immediately above the first submit action (or at the end if there is no submit item), using placeholder `formMandatoryFields`. Do not author this note as rich text; an existing rich-text item containing only the same note is replaced by the generated note. Consent text wraps beside its checkbox. Errors are validated on submit and shown under each invalid field; a status message below the form reports the outcome.
 
 **Templates and page types.** Any page: the block is in the Section, Columns Container and Tabs Container filters. No template adds it automatically. It can be reused through a Fragment, or shown in a pop-up through a Modal (the block library has a `block-library/modal/fragments/contact-form` page).
 
 **Data source.** Authored content only. The block reads no query index, metadata, tags or data sheets; UI texts come from the locale's placeholders sheet.
+
+**Background rendering.** The containing section owns the theme background and image fade variables, alongside the image URL set by the block. Dark uses `#01000e` with light labels; Default / Light uses white with dark labels. The authored Background Image appears from 992px; narrower viewports, including a narrow Universal Editor canvas, show the solid theme background. The model's 900px image hint predates this CSS breakpoint. The fade protects the form text while revealing the image on the right.
+
+Portrait backgrounds retain their aspect ratio, fit the viewport height and align right. Their theme fade is sized to the image's rendered width and becomes transparent at 40% of that width, blending only the left edge into the solid background. Landscape backgrounds keep `cover`; the dark theme fade becomes transparent at 85% of the section width, leaving the right edge untinted. Through 991px the form fills the available width; from 992px it narrows only when a background is available. The 992px image/form split is a reference-specific exception to the standard site breakpoints.
+
+**Reference form layout.** From 992px, when a background is available, the content column is five-twelfths of the block's available width (capped at 35rem), inset by one-twelfth. Otherwise it uses the available width without a width cap. From 900px it has 6.75rem top padding and a separate Back action. Descriptions use 1.5rem text with a 1.5 line height from 600px and 1rem paragraph margins. Text input and textarea labels remain associated but visually hidden; the authored label appears as a placeholder with the required marker. Placeholders use 1.125rem text, 1.5 line height and 0.0313rem tracking; inputs are 2.75rem high, with 0.0625rem top and 1rem bottom padding. Text-input labels reserve 1.5rem vertically, and the form uses a 2rem row gap, giving a 6.25rem input-row rhythm. The textarea is 2.8125rem high with 0.125rem top and 1rem bottom padding; it remains vertically resizable with a right-aligned counter. Consent follows the row gap without an additional top margin. The desktop background image is viewport-fixed rather than stretched to the full form height, with a darker fade in the Dark theme. The site keeps Inter and its fallback faces; the reference site's Basis font and Bootstrap are not imported.
+
+**Reference typography.** The character counter uses 0.875rem text with a 1.5 line height. Submit text is 0.875rem on mobile, 1rem from 600px and 1.125rem from 900px. Back uses a 1.5 line height; the mandatory note uses a 1.5rem line height. These values follow the live feedback form's rem sizes without adopting its viewport-scaled root font size.
 
 **Related blocks.** Conversation Canvas ([README](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/conversation-canvas/README.md)) for search / question entry points (not data capture); Columns Container ([README](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/columns-container/README.md)) to place a form next to other content; Modal and Fragment for reuse.
 
@@ -107,6 +115,7 @@ primary: true
 | --- | --- |
 | `README.md` | [GitHub](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/form-variations/README.md) |
 | `_form-variations.json` | [GitHub](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/form-variations/_form-variations.json) |
+| `form-variations-properties.js` | [GitHub](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/form-variations/form-variations-properties.js) |
 | `form-variations.css` | [GitHub](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/form-variations/form-variations.css) |
 | `form-variations.js` | [GitHub](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/form-variations/form-variations.js) |
 
@@ -114,12 +123,13 @@ primary: true
 
 | Component | Title | Resource type | Template name | Model | Children allowed |
 | --- | --- | --- | --- | --- | --- |
-| `form-variations` | Form Variations | `core/franklin/components/block/v1/block` | Form Variations | `form-variations` | field-text, field-select, field-combined, field-textarea, field-checkbox, contact-card, field-submit |
+| `form-variations` | Form Variations | `core/franklin/components/block/v1/block` | Form Variations | `form-variations` | field-text, field-select, field-combined, field-textarea, field-checkbox, field-richtext, contact-card, field-submit |
 | `field-text` | Text Input Field | `core/franklin/components/block/v1/block/item` | Text Input Field | `field-text` | — |
 | `field-select` | Dropdown / Select Field | `core/franklin/components/block/v1/block/item` | Dropdown / Select Field | `field-select` | — |
 | `field-combined` | Combined Input Field | `core/franklin/components/block/v1/block/item` | Combined Input Field | `field-combined` | — |
 | `field-textarea` | Textarea Field | `core/franklin/components/block/v1/block/item` | Textarea Field | `field-textarea` | — |
 | `field-checkbox` | Consent Checkbox Field | `core/franklin/components/block/v1/block/item` | Consent Checkbox Field | `field-checkbox` | — |
+| `field-richtext` | Rich Text Field | `core/franklin/components/block/v1/block/item` | Rich Text Field | `field-richtext` | — |
 | `contact-card` | Contact Card Output | `core/franklin/components/block/v1/block/item` | Contact Card Output | `contact-card` | — |
 | `field-submit` | Submit Button | `core/franklin/components/block/v1/block/item` | Submit Button | `field-submit` | — |
 
@@ -131,10 +141,14 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 
 | Tab | Label | Property | Type | Required in model | Default | Options | Visibility |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| Content | Eyebrow / Category Title | `formEyebrow` | text | No | — | — | — |
+| Content | Eyebrow Icon Asset (Optional) | `formEyebrowIcon` | aem-content | No | — | — | — |
 | Content | Form Title / Heading | `formHeading` | text | No | — | — | — |
+| Content | Heading level | `formHeadingLevel` | select | No | — | 7 options | — |
 | Content | Form Description | `formDescription` | richtext | No | `""` | — | — |
+| Content | Background Image | `bgImage` | aem-content | No | — | — | — |
 | Content | Submit action | `formAction` | aem-content | No | — | — | — |
-| Content | Theme | `classes` | select | No | `""` | 2 options | — |
+| Content | Theme | `classes` | select | No | `default` | 2 options | — |
 
 ### Text Input Field (`field-text`)
 
@@ -144,6 +158,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | — | Field Name / ID | `fieldName` | text | Yes | — | — | — |
 | — | Field Label | `label` | text | Yes | — | — | — |
 | — | Input Type | `inputKind` | select | No | `text` | 3 options | — |
+| — | Field Width | `fieldWidth` | select | No | `""` | 3 options | — |
 | — | Mandatory Field (*) | `required` | boolean | No | `false` | — | — |
 | — | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — |
 
@@ -154,6 +169,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | — | Field type | `classes` | text | No | `field-select` | — | — |
 | — | Dropdown Name / ID | `fieldName` | text | Yes | — | — | — |
 | — | Dropdown Label | `label` | text | Yes | — | — | — |
+| — | Field Width | `fieldWidth` | select | No | `full-width` | 2 options | — |
 | — | Mandatory Field (*) | `required` | boolean | No | `false` | — | — |
 | — | Options | `options` | text | No | — | — | — |
 | — | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — |
@@ -164,6 +180,9 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | — | Field type | `classes` | text | No | `field-combined` | — | — |
 | — | Field Name / ID | `fieldName` | text | Yes | — | — | — |
+| — | Field Label | `label` | text | Yes | — | — | — |
+| — | Dropdown Options | `options` | text | No | — | — | — |
+| — | Field Width | `fieldWidth` | select | No | `full-width` | 2 options | — |
 | — | Mandatory Field (*) | `required` | boolean | No | `false` | — | — |
 | — | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — |
 
@@ -175,6 +194,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | — | Field Name / ID | `fieldName` | text | Yes | — | — | — |
 | — | Field Label | `label` | text | Yes | — | — | — |
 | — | Max Character Limit | `maxLength` | number | No | `1500` | — | — |
+| — | Field Width | `fieldWidth` | select | No | `full-width` | 2 options | — |
 | — | Mandatory Field (*) | `required` | boolean | No | `false` | — | — |
 | — | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — |
 
@@ -185,7 +205,18 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | — | Field type | `classes` | text | No | `field-checkbox` | — | — |
 | — | Checkbox Name / ID | `fieldName` | text | Yes | — | — | — |
 | — | Consent Text / Disclaimer | `label` | richtext | Yes | — | — | — |
+| — | Field Width | `fieldWidth` | select | No | `full-width` | 2 options | — |
 | — | Mandatory Field (*) | `required` | boolean | No | `true` | — | — |
+| — | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — |
+
+### Rich Text Field (`field-richtext`)
+
+| Tab | Label | Property | Type | Required in model | Default | Options | Visibility |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| — | Field type | `classes` | text | No | `field-richtext` | — | — |
+| — | Element ID / Name | `fieldName` | text | Yes | — | — | — |
+| — | Rich Text Content | `label` | richtext | Yes | — | — | — |
+| — | Field Width | `fieldWidth` | select | No | `full-width` | 2 options | — |
 | — | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — |
 
 ### Contact Card Output (`contact-card`)
@@ -193,10 +224,13 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Tab | Label | Property | Type | Required in model | Default | Options | Visibility |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | — | Field type | `classes` | text | No | `contact-card` | — | — |
-| — | Show when dropdown value equals | `region` | text | Yes | — | — | — |
+| — | Show when dropdown value equals | `region` | text | No | — | — | — |
 | — | Contact Name | `contactName` | text | Yes | — | — | — |
 | — | Emails | `emails` | text | No | — | — | — |
 | — | Phones | `phones` | text | No | — | — | — |
+| — | Email Icon Asset (Optional) | `emailIcon` | aem-content | No | — | — | — |
+| — | Phone Icon Asset (Optional) | `phoneIcon` | aem-content | No | — | — | — |
+| — | Field Width | `fieldWidth` | select | No | `full-width` | 2 options | — |
 
 ### Submit Button (`field-submit`)
 
@@ -204,6 +238,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | — | Field type | `classes` | text | No | `field-submit` | — | — |
 | — | Button Label | `label` | text | No | `Send` | — | — |
+| — | Field Width | `fieldWidth` | select | No | `full-width` | 2 options | — |
 | — | Show only if dropdown value equals | `dependsOn` | text | No | — | — | — |
 
 "Required in model" is the model's `required` flag; whether a field is required in practice is stated in the authoring guide where it is known.
@@ -213,14 +248,15 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Import |
 | --- |
 | `../../scripts/scripts.js` |
-| `../../decorators/button-decorator.js` |
 | `../../decorators/content-decorator.js` |
 | `../../decorators/heading-decorator.js` |
+| `../../decorators/image-decorator.js` |
 | `../../utils/environment.js` |
 | `../../utils/links.js` |
 | `../../utils/properties.js` |
 | `../../utils/ids.js` |
 | `../../utils/placeholders.js` |
+| `./form-variations-properties.js` |
 
 ## For Developers
 
@@ -230,6 +266,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 blocks/form-variations/
 ├── README.md
 ├── _form-variations.json
+├── form-variations-properties.js
 ├── form-variations.css
 └── form-variations.js
 ```
@@ -239,6 +276,7 @@ blocks/form-variations/
 | [`scripts/scripts.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/scripts.js) | Page decoration (moveInstrumentation and shared page helpers) | `form-variations.js`: { moveInstrumentation } |
 | [`decorators/content-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/content-decorator.js) | `fromCell` (property content into an element, keeping editor instrumentation) | `form-variations.js`: { fromCell } |
 | [`decorators/heading-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/heading-decorator.js) | `buildHeading` (Title + Title Type), `HEADINGS` | `form-variations.js`: { buildHeading } |
+| [`decorators/image-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/image-decorator.js) | `pictureOf` (image with its alt text field) | `form-variations.js`: { pictureOf } |
 | [`utils/environment.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/environment.js) | `prefersReducedMotion`, `scrollBehavior`, `isEditing`, `isInEditor`, `isAuthor` (the page is rendered by AEM author, which has no query index) | `form-variations.js`: { isInEditor } |
 | [`utils/links.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/links.js) | `NEW_WINDOW`, `linkOf`, `linkPathsOf` (the paths of a page property, one or many), `readLinkItems` (CTA lists with Link Type and the items' other select values), `readLinkRows` (the same from link item rows, e.g. Hero CT | `form-variations.js`: { linkOf } |
 | [`utils/properties.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/properties.js) | `readProperties`, `textOf`, `isOn`, `isOnByDefault` (a toggle that defaults to on), `optionOf`, `normalizeKey`, `textSource` (key-value block properties) | `form-variations.js`: { textOf } |
@@ -249,7 +287,7 @@ blocks/form-variations/
 
 **Responsibilities.** `form-variations.js` reads the rows, builds the form, validates, handles conditional visibility and the submission. `form-variations.css` styles both themes, the grid, errors, counter, contact cards and the editor notes.
 
-**Input DOM (what AEM delivers).** Not a key-value block: the first rows are the block properties, with an empty row for each dialog tab (Content first, Additional last) around Form Title / Heading, Form Description and Submit action; Theme and the Additional tab arrive as block classes. Then one row per item: the first cell is `<node name>, <classes>` (e.g. `email, field-text`), followed by one cell per field in model order. `readProperties` uses `data-aue-prop` in the editor, else skips the leading empty tab row; `readItem` takes the type from the first cell (or `data-aue-model` in the editor), uses the `fieldName` cell when the row has all cells of the current model (`FIELD_COUNT`) and otherwise the legacy key from the node name. Item cells are read by position (handover open question O-18).
+**Input DOM (what AEM delivers).** Not a key-value block: the first rows are the block properties, with an empty row for each dialog tab (Content first, Additional last) around Form Title / Heading, Form Description and Submit action; Theme and the Additional tab arrive as block classes. Then one row per item: the first cell is `<node name>, <classes>` (e.g. `email, field-text`), followed by one cell per field in model order. `readProperties` uses `data-aue-prop` in the editor. On published pages the property rows aren't at fixed positions: some pages have an empty row per dialog tab, others none; optional fields left empty leave empty rows; and pages saved with an earlier model keep its layout (e.g. `heading | ∅ | ∅ | description | ∅ | ∅`, `∅ | heading | description | ∅ | ∅`, `heading | description | ∅`). So `mapProperties` (`form-variations-properties.js`, unit tested) skips the empty rows and tells the values apart by kind and order: `h1`–`h6` is the Heading level (the text before it the heading), an image is the eyebrow icon when a text follows it (the text before it the eyebrow) else the background image, a link or path that isn't an image the Submit action, and the texts in order the eyebrow, heading and description (two texts: heading and description; one: heading). `propertyCell(row)` takes a row's cell with `data-aue-prop`, else its first cell with a value. Limitation: an eyebrow and a heading without a description, an icon or a heading level read as heading and description; `readItem` takes the type from the first cell (or `data-aue-model` in the editor), uses the `fieldName` cell when the row has all cells of the current model (`FIELD_COUNT`) and otherwise the legacy key from the node name. Item cells are read by position (handover open question O-18).
 
 **Rendered DOM contract.**
 
@@ -288,7 +326,7 @@ document.addEventListener('form-variations:submit', (e) => {
 });
 ```
 
-**Exported functions.** `default decorate(block)`, `readItem(row)` (`{ type, cells }`), `readProperties(cells)` (`{ titleCell, descriptionCell, actionCell }`).
+**Exported functions.** `default decorate(block)`, `readItem(row)` (`{ type, cells }`), `readProperties(cells)` (`{ eyebrowCell, eyebrowIconCell, titleCell, headingLevel, descriptionCell, actionCell, bgImageCell }`), `propertyCell(row)`; `form-variations-properties.js`: `mapProperties(values)`, `headingLevelOf(value)`, `PROPERTY_NAMES`, `HEADING_LEVELS`.
 
 **Parent / child contracts.** The filter `form-variations` allows the six item components; each item definition stores its type in the read-only `classes` field (template value), which is how the published row is recognised.
 
@@ -301,7 +339,7 @@ document.addEventListener('form-variations:submit', (e) => {
 3. **Delivery rules:** avoid field names ending in Text, Title, Type, Alt or MimeType (field collapse); don't rely on the item `name` for case-sensitive values (use `fieldName`); expect the empty tab rows; keep `classes_*` for the Additional tab.
 4. **Rendering, responsive and accessibility:** keep labels, `aria-describedby` errors and the status live region; UI texts through `t(key, fallback)` with a new placeholder key.
 5. **Data layer:** don't push events from the block; `cmp:submit` is captured centrally.
-6. **Tests:** there is no unit test of this block in `test/` yet; `readItem` and `readProperties` are exported and pure enough to test with fixtures of the delivered rows.
+6. **Tests:** `test/form-variations/properties.test.mjs` covers `mapProperties` with the row layouts delivered on aem.page / aem.live (tab rows, empty optional fields, earlier model layouts) and the Universal Editor field names; `readItem` has no unit test yet.
 7. **Block library and docs:** add an example to `block-library/form-variations`, update this README; `npm run build:docs` regenerates the generated sections; run `npm run build:modules` after changing imports.
 
 ## Responsive Behavior
@@ -565,4 +603,4 @@ Evidence to collect (without secrets): page URL on aem.page, the item rows of `{
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

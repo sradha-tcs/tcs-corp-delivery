@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -55,13 +55,12 @@ primary: true
 | REM-008 | Failures specific to 1 block library page(s): /design-block-master/en/block-library/teaser/layouts (404 https://main--tcs-corp--sradha-tcs.aem.live/content/dam/tcs-corp/block-library/animations/lottie-sample.json; 404 https://main--tcs-corp--sradha-tcs.aem.live/content/dam/tcs-corp/block-library/animations/lottie-sample.json) | Minor | Developer | teaser | Implementation | Fix with tests, PR into main | Technical Lead | — | To be confirmed | Open | evidence.json | Update the affected documents | Yes | None | Retest the related cases |
 | REM-009 | Horizontal overflow: /design-block-master/en/block-library/testimonial/testimonial-variations at 375/768/1024 px | Major | Developer | testimonial | Implementation | Fix with tests, PR into main | Technical Lead | — | To be confirmed | Open | evidence.json, screenshots | Update the affected documents | Yes | None | Retest the related cases |
 | REM-010 | Failures specific to 1 block library page(s): /design-block-master/en/block-library/video/video (404 https://main--tcs-corp--sradha-tcs.aem.live/content/dam/tcs-corp/block-library/videos/sample-video.mp4; 404 https://main--tcs-corp--sradha-tcs.aem.live/content/dam/tcs-corp/block-library/videos/sample-video.mp4) | Minor | Developer | video | Implementation | Fix with tests, PR into main | Technical Lead | — | To be confirmed | Open | evidence.json | Update the affected documents | Yes | None | Retest the related cases |
-| REM-011 | Two Form Variations motion tests fail ("offers Content animation after Hide block", "offers Background animation only on blocks with an authored background"); known before this program; fix awaits approval | Major | Developer | test/motion/motion.test.mjs | Implementation | Fix with tests, PR into main | Technical Lead | — | To be confirmed | Open | npm test log | Update the affected documents | Yes | None | Retest the related cases |
-| REM-012 | Pages link to the testing root /language-master/en (1281 links) and to unmapped /content/tcs-corp/design-block-master/english paths (358 links) | Major | Author | /design-block-master/en | Content copied or changed on the author | Correct on the author, republish | Content Lead | — | To be confirmed | Open | links-dbm.json | Update the affected documents | None | Yes | Retest the related cases |
-| REM-013 | The /en locale content was unpublished and deleted from Edge Delivery on 8 November 2026 16:41–16:48 UTC by the AEM publishing technical account (author-side); /en/ answers 404 | Critical | Author | /en locale | Content copied or changed on the author | Correct on the author, republish | Content Lead | — | To be confirmed | Open | Admin API log | Update the affected documents | None | Yes | Retest the related cases |
-| REM-014 | On block library pages that start with default content, the header logo overlaps the page title at 1440 px (e.g. accordion/accordion) | Minor | Developer | Header over the first block | Implementation | Fix with tests, PR into main | Technical Lead | — | To be confirmed | Open | screenshot block-library-accordion-accordion-1440.jpg | Update the affected documents | Yes | None | Retest the related cases |
-| REM-015 | "There are no items to show" on 17 reference page(s): /design-block-master/en/block-library/animation/repeated-items, /design-block-master/en/block-library/animation/skeleton-loading, /design-block-master/en/block-library/animation/speed-and-trigger, /design-block-master/en/block-library/foundations/section-colours-with-blocks, /design-block-master/en/block-library/list/card-style-from-pages | Minor | Author | List / Table List | Content copied or changed on the author | Correct on the author, republish | Content Lead | — | To be confirmed | Open | evidence.json | Update the affected documents | None | Yes | Retest the related cases |
-| REM-016 | Not published after 4 tries: /design-block-master/en/error-pages/404 (the root has no error pages) | Minor | Author | Publishing | Content copied or changed on the author | Correct on the author, republish | Content Lead | — | To be confirmed | Open | publishing state | Update the affected documents | None | Yes | Retest the related cases |
-| REM-017 | Not published after 4 tries: 125 pages: see consolidated/reports/NOT-PUBLISHED-LANGUAGE-MASTERS-2026-11-08.csv on the delivery branch | Minor | Author | Publishing | Content copied or changed on the author | Correct on the author, republish | Content Lead | — | To be confirmed | Open | publishing state | Update the affected documents | None | Yes | Retest the related cases |
+| REM-011 | Pages link to the testing root /language-master/en (1281 links) and to unmapped /content/tcs-corp/design-block-master/english paths (358 links) | Major | Author | /design-block-master/en | Content copied or changed on the author | Correct on the author, republish | Content Lead | — | To be confirmed | Open | links-dbm.json | Update the affected documents | None | Yes | Retest the related cases |
+| REM-012 | The /en locale content was unpublished and deleted from Edge Delivery on 8 November 2026 16:41–16:48 UTC by the AEM publishing technical account (author-side); /en/ answers 404 | Critical | Author | /en locale | Content copied or changed on the author | Correct on the author, republish | Content Lead | — | To be confirmed | Open | Admin API log | Update the affected documents | None | Yes | Retest the related cases |
+| REM-013 | On block library pages that start with default content, the header logo overlaps the page title at 1440 px (e.g. accordion/accordion) | Minor | Developer | Header over the first block | Implementation | Fix with tests, PR into main | Technical Lead | — | To be confirmed | Open | screenshot block-library-accordion-accordion-1440.jpg | Update the affected documents | Yes | None | Retest the related cases |
+| REM-014 | "There are no items to show" on 17 reference page(s): /design-block-master/en/block-library/animation/repeated-items, /design-block-master/en/block-library/animation/skeleton-loading, /design-block-master/en/block-library/animation/speed-and-trigger, /design-block-master/en/block-library/foundations/section-colours-with-blocks, /design-block-master/en/block-library/list/card-style-from-pages | Minor | Author | List / Table List | Content copied or changed on the author | Correct on the author, republish | Content Lead | — | To be confirmed | Open | evidence.json | Update the affected documents | None | Yes | Retest the related cases |
+| REM-015 | Not published after 4 tries: /design-block-master/en/error-pages/404 (the root has no error pages) | Minor | Author | Publishing | Content copied or changed on the author | Correct on the author, republish | Content Lead | — | To be confirmed | Open | publishing state | Update the affected documents | None | Yes | Retest the related cases |
+| REM-016 | Not published after 4 tries: 125 pages: see consolidated/reports/NOT-PUBLISHED-LANGUAGE-MASTERS-2026-11-08.csv on the delivery branch | Minor | Author | Publishing | Content copied or changed on the author | Correct on the author, republish | Content Lead | — | To be confirmed | Open | publishing state | Update the affected documents | None | Yes | Retest the related cases |
 
 ## Screenshots
 
@@ -79,4 +78,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

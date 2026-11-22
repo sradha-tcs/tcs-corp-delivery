@@ -8,8 +8,8 @@ owner: "Solution Architect"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["docs/handover/knowledge-base/content-architecture.md","utils/site.js","paths.json","helix-query.yaml"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | docs/handover/knowledge-base/content-architecture.md, utils/site.js, paths.json, helix-query.yaml |
 | Related documents | — |
 | Related AEM paths | /content/tcs-corp/language-master/en, /content/tcs-corp/language-masters/en, /content/tcs-corp/design-block-master/en |
@@ -139,6 +139,9 @@ The Home URL ends with `/` (`/language-masters/en` without it is a 404, as `/en`
 | Navigation | `nav` | Header page, inherited by child pages |
 | Footer | `footer` | Footer page, inherited by child pages |
 | 404 Page | `error-page` | 404 page of the subtree, inherited |
+| Hide Header | `hide-header` | Boolean, this page only (not inherited): the header isn't loaded and keeps no space; the page starts at the top (`<html data-hide-header>`, `--nav-height: 0rem`) |
+| Hide Footer | `hide-footer` | Boolean, this page only: the footer (its Canvas, bar and social links) isn't loaded (`<html data-hide-footer>`) |
+| Hide Conversation Canvas | `hide-canvas` | Boolean, this page only: every Conversation Canvas of the page (header, footer, content) gets Hide block: hidden, out of the floating journey, faded in edit mode (KB-D-071) |
 
 Page tags are not a field of this model; they come from the standard AEM page properties (`cq:tags`, published as `cq-tags`) or a `tags` column of the bulk metadata sheet (handover Part 7.1.1).
 
@@ -149,6 +152,7 @@ Page tags are not a field of this model; they come from the standard AEM page pr
 | Section Name | `name` | — | Not one of the section options read by `scripts.js` |
 | Style | `style` | section classes | Default, Grey `bg-grey`, Dark `bg-dark`, Dark Green `bg-dark-green` (colour only; dark ones apply the theme contract in `styles/styles.css`) |
 | Width Type | `sectionWidth` | `data-sectionwidth` | `fixed-width` class (full width is the default) |
+| Text width (mobile / tablet / desktop) | `textWidthMobile`, `textWidthTablet`, `textWidthDesktop` | `data-textwidthmobile`, `data-textwidthtablet`, `data-textwidthdesktop` | `text-width-{device}-{75,66,50,33}` classes: the section's default content takes that share of the row, left-aligned (empty: full width) |
 | Rounded edge | `roundedEdge` | `data-roundededge` | `rounded` class |
 | Background Image / Image alt text | `backgroundImage`, `backgroundImageAlt` | data attributes | `.section-background` with a responsive picture, `has-background` |
 | Anchor name | `anchorName` | `data-anchorname` | section `id` (suffixed `-2`, `-3` when taken) |
@@ -188,7 +192,7 @@ Source: [templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/t
 
 | Source | Where authored | Published as |
 | --- | --- | --- |
-| Page properties (`models/_page.json`) | Universal Editor page properties | `<title>`, `description`, `keywords`, `page-type`, `nav`, `footer`, `error-page` metas |
+| Page properties (`models/_page.json`) | Universal Editor page properties | `<title>`, `description`, `keywords`, `page-type`, `nav`, `footer`, `error-page`, `hide-header`, `hide-footer`, `hide-canvas` metas |
 | Standard AEM page properties | Sites console (e.g. Tags `cq:tags`) | `cq-tags` (one comma-separated meta) |
 | Bulk metadata sheet | `/content/tcs-corp/{country}/{language}/metadata` | `/{locale}/metadata.json`; each column becomes `<meta name="{column}">` on pages matching the row's `url` pattern |
 
@@ -413,4 +417,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

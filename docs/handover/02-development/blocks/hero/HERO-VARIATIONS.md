@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-13"
-lastValidated: "2026-11-13"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/hero/_hero.json"]
 relatedComponents: ["hero"]
 relatedPages: ["/design-block-master/en/block-library/hero","/design-block-master/en/block-library/hero/hero-ctas","/design-block-master/en/block-library/hero/hero-motion","/design-block-master/en/block-library/hero/hero-overview","/design-block-master/en/block-library/hero/hero-styles"]
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 13 November 2026 |
-| Last validated | 13 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/hero/_hero.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -50,22 +50,23 @@ primary: false
 
 | Component | Field | Tab | Multiple | Options (label = value) | Default |
 | --- | --- | --- | --- | --- | --- |
-| `hero` | Hero Image type (`classes_media`) | Content | No | Default = `""`; Lotto = `lottie` | `` |
+| `hero` | Hero Image type (`classes_media`) | Content | No | Default = `""`; Lotto = `lottie`; Video = `media-video` | `` |
 | `hero` | Hero View (`classes`) | Content | No | Default = `""`; Contained image = `media-contained` | `` |
 | `hero` | Title heading level (`content_titleType`) | Content | No | H1 = `h1`; H2 = `h2` | `h1` |
 | `hero` | CTA List › CTA Text color (`ctaTextColor`) | Content | No | Default (Black) = `cta-text-black`; White = `cta-text-white` | `cta-text-black` |
 | `hero` | CTA List › CTA Link Type (`ctaTarget`) | Content | No | Default = `same-window`; Open in New Window = `new-window` | `same-window` |
 | `hero` | CTA List › CTA view (`ctaType`) | Content | No | Default = `default`; Primary = `primary`; Secondary = `secondary` | `default` |
-| `hero` | CTA List › Primary CTA BG Color (Primary only) (`ctaPrimaryBackground`) | Content | No | Default = `primary-bg-default`; Blue-cyan (azure) = `primary-bg-azure` | `primary-bg-default` |
+| `hero` | CTA List › Primary CTA BG Color (Primary only) (`ctaPrimaryBackground`) | Content | No | Default = `primary-bg-default`; Blue-cyan (azure) = `primary-bg-azure`; Transparent = `primary-bg-transparent`; Black 40% = `primary-bg-black-40` | `primary-bg-default` |
+| `hero` | CTA List › Primary CTA Border color (Primary only) (`ctaPrimaryBorder`) | Content | No | Default (as the BG Color) = `primary-border-default`; Black = `primary-border-black`; White = `primary-border-white`; Slate = `primary-border-slate-100`; No border = `primary-border-none` | `primary-border-default` |
 | `hero` | CTA List › Secondary CTA BG Color (Secondary only) (`ctaBackground`) | Content | No | Default (transparent) = `secondary-bg-default`; Light grey = `secondary-bg-light-grey`; Black 40% = `secondary-bg-black-40` | `secondary-bg-default` |
-| `hero` | CTA List › Secondary CTA Border color (Secondary only) (`ctaBorder`) | Content | No | Default (as the BG Color) = `secondary-border-default`; Black = `secondary-border-black`; White = `secondary-border-white` | `secondary-border-default` |
+| `hero` | CTA List › Secondary CTA Border color (Secondary only) (`ctaBorder`) | Content | No | Default (as the BG Color) = `secondary-border-default`; Black = `secondary-border-black`; White = `secondary-border-white`; No border = `secondary-border-none` | `secondary-border-default` |
 | `hero` | CTA List › CTA Arrow (`ctaArrow`) | Content | No | Right = `right`; Down = `down` | `right` |
 | `hero` | Vertical Alignment (`classes_alignment`) | Style | No | Top = `align-top`; Middle = `align-middle`; Bottom = `align-bottom` | `align-middle` |
 | `hero` | Horizontal Alignment (`classes_horizontal`) | Style | No | Left = `align-left`; Center = `align-center`; Right = `align-right` | `align-center` |
 | `hero` | Text Alignment (`classes_textAlignment`) | Style | No | Left align = `text-left`; Center align = `text-center`; Right align = `text-right` | `text-center` |
-| `hero` | BG Color (`classes_background`) | Style | No | Default = `""`; Light, no overlay = `bg-light`; Dark blue = `bg-dark`; Dark blue (subtle) = `bg-dark-subtle`; Black = `bg-black`; Charcoal Black 80 (cool charcoal) = `bg-charcoal-80`; Midnight Navy 60 = `bg-navy-60`; Charcoal Black 40 (deep charcoal) = `bg-charcoal-40` | `` |
+| `hero` | BG Color (`classes_background`) | Style | No | Default = `""`; Light, no overlay = `bg-light`; Dark blue = `bg-dark`; Dark blue (subtle) = `bg-dark-subtle`; Black = `bg-black`; Charcoal Black 80 (cool charcoal) = `bg-charcoal-80`; Midnight Navy 60 = `bg-navy-60`; Charcoal Black 40 (deep charcoal) = `bg-charcoal-40`; Brand blue (#216AC3) = `bg-brand` | `` |
 | `hero` | Icon color (`classes_iconcolor`) | Style | No | Default (as authored) = `""`; Black = `icon-black`; White = `icon-white`; Blue = `icon-blue`; Pale blue = `icon-pale-blue` | `` |
-| `hero` | Eyebrow color (`classes_eyebrowcolor`) | Style | No | Default (royal blue) = `""`; Royal blue = `eyebrow-royal-blue`; Soft sky blue = `eyebrow-sky-blue` | `` |
+| `hero` | Eyebrow color (`classes_eyebrowcolor`) | Style | No | Default (white) = `""`; Royal blue = `eyebrow-royal-blue`; Soft sky blue = `eyebrow-sky-blue` | `` |
 | `hero` | Title color (`classes_titlecolor`) | Style | No | Default = `""`; Black = `title-black`; White = `title-white` | `` |
 | `hero` | Description color (`classes_descriptioncolor`) | Style | No | Default = `""`; Black = `description-black`; White = `description-white` | `` |
 | `hero-cta` | CTA Link Type (`linkTarget`) | — | No | Default = `""`; Open in New Window = `new-window` | `` |
@@ -80,6 +81,7 @@ Status: every option is supported by the model and the code that reads it. "In t
 | --- | --- | --- | --- | --- | --- |
 | hero | Hero Image type | Default | `""` | Supported (in the model) | n/a (default) |
 | hero | Hero Image type | Lotto | `lottie` | Supported (in the model) | Yes |
+| hero | Hero Image type | Video | `media-video` | Supported (in the model) | No |
 | hero | Hero View | Default | `""` | Supported (in the model) | n/a (default) |
 | hero | Hero View | Contained image | `media-contained` | Supported (in the model) | Yes |
 | hero | Title heading level | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -93,12 +95,20 @@ Status: every option is supported by the model and the code that reads it. "In t
 | hero | CTA List › CTA view | Secondary | `secondary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | CTA List › Primary CTA BG Color (Primary only) | Default | `primary-bg-default` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | CTA List › Primary CTA BG Color (Primary only) | Blue-cyan (azure) | `primary-bg-azure` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | CTA List › Primary CTA BG Color (Primary only) | Transparent | `primary-bg-transparent` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | CTA List › Primary CTA BG Color (Primary only) | Black 40% | `primary-bg-black-40` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | CTA List › Primary CTA Border color (Primary only) | Default (as the BG Color) | `primary-border-default` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | CTA List › Primary CTA Border color (Primary only) | Black | `primary-border-black` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | CTA List › Primary CTA Border color (Primary only) | White | `primary-border-white` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | CTA List › Primary CTA Border color (Primary only) | Slate | `primary-border-slate-100` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | CTA List › Primary CTA Border color (Primary only) | No border | `primary-border-none` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | CTA List › Secondary CTA BG Color (Secondary only) | Default (transparent) | `secondary-bg-default` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | CTA List › Secondary CTA BG Color (Secondary only) | Light grey | `secondary-bg-light-grey` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | CTA List › Secondary CTA BG Color (Secondary only) | Black 40% | `secondary-bg-black-40` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | CTA List › Secondary CTA Border color (Secondary only) | Default (as the BG Color) | `secondary-border-default` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | CTA List › Secondary CTA Border color (Secondary only) | Black | `secondary-border-black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | CTA List › Secondary CTA Border color (Secondary only) | White | `secondary-border-white` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | CTA List › Secondary CTA Border color (Secondary only) | No border | `secondary-border-none` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | CTA List › CTA Arrow | Right | `right` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | CTA List › CTA Arrow | Down | `down` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | Vertical Alignment | Top | `align-top` | Supported (in the model) | Yes |
@@ -118,12 +128,13 @@ Status: every option is supported by the model and the code that reads it. "In t
 | hero | BG Color | Charcoal Black 80 (cool charcoal) | `bg-charcoal-80` | Supported (in the model) | Yes |
 | hero | BG Color | Midnight Navy 60 | `bg-navy-60` | Supported (in the model) | Yes |
 | hero | BG Color | Charcoal Black 40 (deep charcoal) | `bg-charcoal-40` | Supported (in the model) | Yes |
+| hero | BG Color | Brand blue (#216AC3) | `bg-brand` | Supported (in the model) | No |
 | hero | Icon color | Default (as authored) | `""` | Supported (in the model) | n/a (default) |
 | hero | Icon color | Black | `icon-black` | Supported (in the model) | No |
 | hero | Icon color | White | `icon-white` | Supported (in the model) | No |
 | hero | Icon color | Blue | `icon-blue` | Supported (in the model) | Yes |
 | hero | Icon color | Pale blue | `icon-pale-blue` | Supported (in the model) | Yes |
-| hero | Eyebrow color | Default (royal blue) | `""` | Supported (in the model) | n/a (default) |
+| hero | Eyebrow color | Default (white) | `""` | Supported (in the model) | n/a (default) |
 | hero | Eyebrow color | Royal blue | `eyebrow-royal-blue` | Supported (in the model) | No |
 | hero | Eyebrow color | Soft sky blue | `eyebrow-sky-blue` | Supported (in the model) | Yes |
 | hero | Title color | Default | `""` | Supported (in the model) | n/a (default) |
@@ -147,7 +158,7 @@ The variations are the select values of the model (`blocks/hero/_hero.json`), de
 
 #### Default image (Hero Image type Default, Hero View Default)
 
-Purpose: a photograph covering the whole banner. Use for most heroes; not for illustrations that must not be cropped. Required: Hero Image Path, alt text (or decorative). Rendering: `div.hero-media > picture` absolutely positioned behind the content, `object-fit: cover`, under the BG Color overlay; the block gets `hero-has-media`. Desktop / tablet / mobile: the image is cropped around its centre into the banner's height. Accessibility: the `alt` names the image. Data layer: no change. Personalization and fallback: no personalization; without an image the hero renders without media.
+Purpose: a photograph covering the whole banner. Use for most heroes; not for illustrations that must not be cropped. Required: Hero Media Path, alt text (or decorative). Rendering: `div.hero-media > picture` absolutely positioned behind the content, `object-fit: cover`, under the BG Color overlay; the block gets `hero-has-media`. Desktop / tablet / mobile: the image is cropped around its centre into the banner's height. Accessibility: the `alt` names the image. Data layer: no change. Personalization and fallback: no personalization; without an image the hero renders without media.
 
 ```text
 [Screenshot Placeholder]
@@ -165,7 +176,7 @@ B = Content block
 
 #### Lotto (`lottie`)
 
-Purpose: a looping Lottie animation as the background. Use for campaign pages with an approved Lottie JSON; not when the animation carries information the text doesn't. Required: Hero Image type Lotto, Hero Image Path a `.json` file; optional alt text. Rendering: `div.hero-media > div.hero-animation` (SVG renderer, `xMidYMid meet`, looping) and a pause / play `button.animation-toggle` appended to the block, 1rem (`--space-400`) from the bottom-right corner. The player loads when the hero is within 200px of the viewport, in idle time; the animation pauses off screen and starts paused on its first frame for reduced motion. If the file fails, the animation and its button are hidden. Accessibility: WCAG 2.2.2 pause control with localised labels (`pauseAnimation`, `playAnimation`). Data layer: a click on the button is a `cmp:click` with `interaction: animation`. Fallback: with Lotto and an image, the image is shown.
+Purpose: a looping Lottie animation as the background. Use for campaign pages with an approved Lottie JSON; not when the animation carries information the text doesn't. Required: Hero Image type Lotto, Hero Media Path a `.json` file; optional alt text. Rendering: `div.hero-media > div.hero-animation` (SVG renderer, `xMidYMid meet`, looping) and a pause / play `button.animation-toggle` appended to the block, 1rem (`--space-400`) from the bottom-right corner. The player loads when the hero is within 200px of the viewport, in idle time; the animation pauses off screen and starts paused on its first frame for reduced motion. If the file fails, the animation and its button are hidden. Accessibility: WCAG 2.2.2 pause control with localised labels (`pauseAnimation`, `playAnimation`). Data layer: a click on the button is a `cmp:click` with `interaction: animation`. Fallback: with Lotto and an image, the image is shown.
 
 ```text
 [Screenshot Placeholder]
@@ -180,6 +191,10 @@ Annotations:
 A = Lottie animation
 B = Pause / play button
 ```
+
+#### Video (`media-video`)
+
+Purpose: a short, silent, looping video as the background. Use for brand or campaign moods; not when the video carries information the text doesn't (it has no sound, controls or captions: use the Video block for that). Required: Hero Image type Video, Hero Media Path a video file (MP4 or WebM) from the DAM; optional alt text (Hero Image alt text; empty for a decorative video, which is then `aria-hidden`). Rendering: `div.hero-media > video.hero-video` (muted, looping, inline, without controls, `object-fit: cover`; `contain` with Contained image) under the BG Color overlay, without a pause / play button for now (KB-D-072, Proposed; `decorators/media-decorator.js` `createBackgroundVideo` with `controls: false`). Nothing is fetched until the hero is within 200px of the viewport and the browser is idle (the page's LCP is the title, not the video); the video pauses off screen and, for reduced motion, doesn't start (its first frame shows). If the file fails (e.g. the DAM video isn't published), the video is hidden; the overlay and the content remain. Accessibility: without the button the Hero doesn't meet WCAG 2.2.2 (Pause, Stop, Hide) for a video longer than 5 seconds; use a short video, or turn the button on (`controls: true`, labels `pauseVideo`, `playVideo`). Data layer: the background video's own play / pause aren't `cmp:media` events. Fallback: with Video and an image, the image is shown.
 
 #### Contained image (`media-contained`)
 
@@ -258,4 +273,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 13 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

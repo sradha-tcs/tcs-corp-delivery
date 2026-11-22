@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/list/_list.json"]
 relatedComponents: ["list"]
 relatedPages: ["/design-block-master/en/block-library/list","/design-block-master/en/block-library/list/card-colours-and-overrides","/design-block-master/en/block-library/list/card-style-from-pages","/design-block-master/en/block-library/list/card-style-from-pages/automatic","/design-block-master/en/block-library/list/card-style-from-pages/image-light-blue","/design-block-master/en/block-library/list/card-style-from-pages/panel-grey","/design-block-master/en/block-library/list/card-style-from-pages/report-navy","/design-block-master/en/block-library/list/card-style-from-pages/statistic","/design-block-master/en/block-library/list/cards","/design-block-master/en/block-library/list/empty-state","/design-block-master/en/block-library/list/figma-variations","/design-block-master/en/block-library/list/layout-and-scrolling","/design-block-master/en/block-library/list/list-item-display","/design-block-master/en/block-library/list/lists-made-before","/design-block-master/en/block-library/list/sources"]
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/list/_list.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -62,14 +62,14 @@ primary: false
 | `list` | Panel height (`panelHeight`) | Display | No | Portrait (2:3) = `portrait`; Compact = `compact`; Content = `auto` | `portrait` |
 | `list` | Date format (`dateFormat`) | Display | No | 04 Sep 26 = `dd-mmm-yy`; 04-09-2026 = `dd-mm-yyyy`; 09-04-2026 = `mm-dd-yyyy`; Sep 4, 2026 = `mmm-d-yyyy`; 04/09/26 = `dd/mm/yy`; 4th September 2026 = `do-mmmm-yyyy` | `dd-mmm-yy` |
 | `list` | Image loading (`imageLoading`) | Display | No | Lazy = `lazy`; Eager (first screen) = `eager` | `lazy` |
-| `list` | Desktop display (`desktopMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll` | `grid` |
-| `list` | Tablet display (`tabletMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll` | `grid` |
-| `list` | Mobile display (`mobileMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll` | `grid` |
+| `list` | Desktop display (`desktopMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll`; Carousel (buttons on the cards) = `carousel` | `grid` |
+| `list` | Tablet display (`tabletMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll`; Carousel (buttons on the cards) = `carousel` | `grid` |
+| `list` | Mobile display (`mobileMode`) | Display | No | Grid = `grid`; Horizontal scroll = `horizontal-scroll`; Carousel (buttons on the cards) = `carousel` | `grid` |
 | `list` | Snap alignment (`snapAlign`) | Display | No | Start = `start`; Center = `center` | `start` |
 | `list` | Scroll step (`scrollStep`) | Display | No | One card = `one-card`; Viewport = `viewport` | `one-card` |
 | `list` | Edge (`edgePadding`) | Display | No | Cards run to the edge = `bleed`; Inside the content width = `none` | `bleed` |
 | `list` | When there are no items (`emptyBehavior`) | Display | No | Hide the list = `hide`; Show a message = `message`; Show the fallback items = `fallback` | `message` |
-| `list` | Style options (`classes`) | Display | Yes | Compact statistic title = `stat-compact`; Dividers between rows = `dividers`; Header centred = `header-center` | — |
+| `list` | Style options (`classes`) | Display | Yes | Compact statistic title = `stat-compact`; Dividers between rows = `dividers`; Header centred = `header-center`; Impact cards (proven impact and outcomes) = `impact-cards` | — |
 | `list-item` | Open in a new tab (`newTab`) | Link | No | As the list = `""`; Yes = `true`; No = `false` | `` |
 | `list-item` | Card style (`kind`) | Display | No | As the list = `""`; Image card = `image`; Panel = `panel`; Report = `report`; Statistic = `stat` | `` |
 | `list-item` | Card colour (`theme`) | Display | No | As the list = `""`; Dark = `dark`; Navy = `navy`; Brand blue = `brand`; Light blue = `brand-light`; Light grey = `grey`; Mid grey = `mid-grey`; Grey gradient = `gradient`; Image background = `image` | `` |
@@ -129,10 +129,13 @@ Status: every option is supported by the model and the code that reads it. "In t
 | list | Image loading | Eager (first screen) | `eager` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | Desktop display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | Desktop display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| list | Desktop display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | Tablet display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | Tablet display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| list | Tablet display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | Mobile display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | Mobile display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| list | Mobile display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | Snap alignment | Start | `start` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | Snap alignment | Center | `center` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | Scroll step | One card | `one-card` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -145,6 +148,7 @@ Status: every option is supported by the model and the code that reads it. "In t
 | list | Style options | Compact statistic title | `stat-compact` | Supported (in the model) | Yes |
 | list | Style options | Dividers between rows | `dividers` | Supported (in the model) | Yes |
 | list | Style options | Header centred | `header-center` | Supported (in the model) | Yes |
+| list | Style options | Impact cards (proven impact and outcomes) | `impact-cards` | Supported (in the model) | No |
 | list-item | Open in a new tab | As the list | `""` | Supported (in the model) | n/a (default) |
 | list-item | Open in a new tab | Yes | `true` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list-item | Open in a new tab | No | `false` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -220,6 +224,8 @@ The first card becomes a full-width spotlight above the others (`feature-first` 
 
 **Show author on feature card** (`featureShowAuthor`, on by default; shown in the dialog only while Display as teaser and First card as feature are on) decides whether the feature card shows that lockup. Off: the feature card has no author (a clean hero layout) and the Authors sheet isn't loaded; the page's `author-id` and the other cards don't change (they never show an author), nor does the author elsewhere (Page Header, other Lists). Lists authored before have no value and show the author, as before. The Cards block has no authors, so it has no such option.
 
+**Feature card kicker and type (18 November 2026, Figma "Insights & Opinions", node 5673-18712).** The line above the feature card's title is its **Eyebrow** (List Item or page `eyebrow`, with Show eyebrow and the item's own toggle) in place of its tags, as on image cards; without an eyebrow it shows the tags; the reading time follows (Show tags). The author lockup needs the linked page's `author-id` and a row in the Authors sheet; its photo comes from the sheet's `image` column (without one the lockup has no photo). The author name and role are 1rem / 22px at every width (40px avatar). From 1200px the image cards of a List with a feature card (`feature-first`) keep the tablet type, title 1.25rem / 28px and description 0.875rem / 20px, as in that Figma frame; other Lists keep 1.5rem and 1rem.
+
 ```text
 [Screenshot Placeholder]
 
@@ -257,6 +263,10 @@ A = Partly visible next card
 B = Previous / Next buttons
 C = Scroll indicator
 ```
+
+#### Carousel per breakpoint (Figma "Press releases")
+
+Desktop, Tablet or Mobile display **Carousel**: `{bp}Columns` whole cards per view (no partly visible card; Items visible, Card width, the buttons switch and the indicator don't apply), scrolled one card at a time (or a viewport, Scroll step) with previous / next always shown on the cards: on the image of image cards (vertically centred from the card width and Image ratio), else centred on the cards; the buttons (2.5rem, 1.25rem in from the edges) are brand blue (`--color-bg-brand`, white chevron) and grey at the first and last card (`--list-carousel-disabled` `--grey-200` at 70% with a grey chevron, Figma; `aria-disabled`, still focusable); they stay shown when all the cards fit (both grey). A fixed list drops items linking to the same page (deduplicated), so give each List Item its own link. Test page: `/drafts/list-carousel` on the branch preview. Edge padding doesn't apply (whole cards). E.g. Mobile display Carousel with Mobile columns 1, Desktop display Carousel with Desktop columns 4. Rendering: block classes `{bp}-scroll {bp}-carousel {bp}-controls`; the scroller and the buttons share `div.list-stage` (only when a breakpoint is a carousel). Lists without a carousel are unchanged.
 
 #### Style options and fallback items
 
@@ -299,4 +309,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

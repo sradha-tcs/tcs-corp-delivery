@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/table-list/README.md","blocks/table-list/_table-list.json","blocks/table-list/table-list.css","blocks/table-list/table-list.js"]
 relatedComponents: ["table-list","table-list-card"]
 relatedPages: ["/design-block-master/en/block-library/table-list","/design-block-master/en/block-library/table-list/item-actions","/design-block-master/en/block-library/table-list/motion","/design-block-master/en/block-library/table-list/numbers","/design-block-master/en/block-library/table-list/numbers-on-mobile","/design-block-master/en/block-library/table-list/table-list","/design-block-master/en/curated-design-pages/case-study","/design-block-master/en/curated-design-pages/collection","/design-block-master/en/curated-design-pages/home","/design-block-master/en/curated-design-pages/industry-landing-page","/design-block-master/en/curated-design-pages/product","/design-block-master/en/curated-design-pages/what-we-do"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/table-list/README.md, blocks/table-list/_table-list.json, blocks/table-list/table-list.css, blocks/table-list/table-list.js |
 | Related documents | [Variations](./TABLE-LIST-VARIATIONS.md), [Test coverage](./TABLE-LIST-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/table-list/TABLE-LIST-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/table-list, /content/tcs-corp/design-block-master/en/block-library/table-list/item-actions, /content/tcs-corp/design-block-master/en/block-library/table-list/motion |
@@ -74,12 +74,12 @@ primary: true
 | Purpose | A numbered list of linked items (industries, services) |
 | Variations (summary) | Variations, item actions, numbers |
 | Children | table-list-card (Table List Item) |
-| Code size | 1190 lines of JS and CSS |
+| Code size | 1196 lines of JS and CSS |
 
 ## Overview
 
 - **Business purpose:** presents a short, scannable list of offerings (industries served, transformation solutions, products and platforms) with a strong typographic style and a clear path to each detail page, without images.
-- **User experience:** a heading with a call to action (filled button, outline button or text link) on the right (below it when they don't fit), then rows separated by dividers. Variation 1: title, description and an arrow; Variation 2: description, a large title and an outline button; Variation 3: description, a number with a very large title and a diagonal arrow; Variation 4: a wide title, a narrow grey description and an arrow, the row highlighted on hover and keyboard focus. With an arrow the whole row is clickable.
+- **User experience:** a heading with a call to action (filled button, outline button or text link) on the right (below it when they don't fit), then rows separated by dividers. Variation 1: title, description and an arrow; Variation 2: description, a large title and an outline button; Variation 3: description, a number with a very large title and a diagonal arrow. With an arrow the whole row is clickable.
 - **Templates / page types:** any page (allowed in every section); typically the home page and landing pages (the curated design pages `home`, `what-we-do`, `product`, `industry-landing-page`, `case-study`, `collection` use it).
 - **Data source:** authored fields only; UI text (View all, Explore, accessible names) from the locale's placeholders. No page metadata, tags, query index or images.
 - **Related blocks:** [Cards](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/cards/README.md) and [List](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/list/README.md) (image cards), [Filter List](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/filter-list/README.md) (metadata-driven lists), [Table](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/table/README.md) (tabular data), [Accordion](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/accordion/README.md), [Anchor List](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/anchor-list/README.md).
@@ -112,9 +112,9 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | Tab | Label | Property | Type | Required in model | Default | Options | Visibility |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Content | Variation | `variations` | select | No | `industries` | 6 options | — |
-| Content | Background color | `backgroundColor` | select | No | `white` | 4 options | — |
+| Content | Background color | `backgroundColor` | select | No | `white` | 5 options | — |
 | Content | Heading | `listHeading` | text | No | `""` | — | — |
-| Content | Heading Type | `listHeadingType` | select | No | `h2` | 3 options | — |
+| Content | Heading Type | `listHeadingType` | select | No | `h2` | 4 options | — |
 | Content | Eyebrow | `listEyebrow` | text | No | `""` | — | — |
 | Content | Heading position | `headerPosition` | select | No | `""` | 2 options | — |
 | Content | Maximum items | `maxCards` | number | No | `4` | — | — |
@@ -205,10 +205,9 @@ blocks/table-list/
 
 | Viewport | Layout | Image behavior | Interaction behavior |
 | -------- | ------ | -------------- | -------------------- |
-| Mobile (below 600px) | Heading 2rem (Variation 4: 1.75rem); call to action wraps below the heading when it doesn't fit (Variation 4: always below); Variation 1: number and title above the description, arrow on the right; Variation 2: description, title and button stacked; Variation 3: description above number and title, arrow on the right; Variation 4: title, description and arrow stacked | No images; SVG arrow masks | Numbers shown with Show and Show on mobile only |
-| Tablet (600–1199px) | Heading 2.5rem; rows side by side: `main description action` (Variations 1 and 4) or `description main action` (Variations 2 and 3, title right-aligned); Variation 4 description column at most 21.15rem from 900px | — | Show on mobile only hides the numbers |
-| Desktop (1200px and wider) | Heading 3rem (Variation 4: 2.5rem); Variation 1 inset by `--space-2000` with emphasised titles; Variation 2 title 4rem; Variation 3 title 5.625rem in 476 : 695 : auto columns; Variation 4 `1fr : 21.15rem : auto` | — | Hover on a row (any width) moves its arrow and turns it brand coloured; Variation 4: the row turns light grey and the arrow dark (also on keyboard focus), the arrow doesn't move |
-| By list width (Variations 4 and 5) | Rows switch on the width of the list, not the screen (container query `table-list-items`): Variation 4 stacked below 25.5rem, title above description with the arrow beside from 25.5rem, three columns from 44.5rem; Variation 5 label above description below 44rem, beside it from 44rem. Variations 4–6 keep the Figma gutter (1 / 2.5 / 5rem); Heading position Beside: two columns from 900px | — | Variation 6: 24px arrow centred on the title |
+| Mobile (below 600px) | Heading 2rem; call to action wraps below the heading when it doesn't fit; Variation 1: number and title above the description, arrow on the right; Variation 2: description, title and button stacked; Variation 3: description above number and title, arrow on the right | No images; SVG arrow masks | Numbers shown with Show and Show on mobile only |
+| Tablet (600–1199px) | Heading 2.5rem; rows side by side: `main description action` (Variation 1) or `description main action` (Variations 2 and 3, title right-aligned) | — | Show on mobile only hides the numbers |
+| Desktop (1200px and wider) | Heading 3rem; Variation 1 inset by `--space-2000` with emphasised titles; Variation 2 title 4rem; Variation 3 title 5.625rem in 476 : 695 : auto columns | — | Hover on a row (any width) moves its arrow and turns it brand coloured |
 
 ## Accessibility
 
@@ -263,7 +262,7 @@ blocks/table-list/
 
 ## For Architects
 
-- **Role:** a text-led, curated list with six Figma layouts.
+- **Role:** a text-led, curated list with three Figma layouts.
 - **Content model:** key-value container (`table-list`) with item children (`table-list-card`).
 - **Rendering and data source:** client-side decoration of authored HTML; only the placeholders sheet is fetched.
 - **Dependencies:** `decorators/button-decorator.js`, `utils/buttons.js`, `utils/cells.js`, `utils/properties.js`, `utils/urls.js`, `utils/environment.js`, `utils/placeholders.js`, `utils/motion.js`, `scripts/scripts.js` (`moveInstrumentation`).
@@ -325,8 +324,6 @@ Evidence to collect: page URL (preview / live), viewport width, the block's `.pl
 | Handover 2.18 | Additional tab Content animation; Table List Motion Type kept, replaced by the new fields when set | docs/handover revision history | 18 October 2026 |
 | Handover 2.27 | Block ecosystem audit: Table List Motion Type removed from the dialog (it duplicated Animation Type); library content migrated | docs/handover revision history | 19 October 2026 |
 | Handover 2.31 | Verified on aem.live: Table List items without sample text | docs/handover revision history | 20 October 2026 |
-| Handover 2.43 | Variation 5 - Approach (`approach`) and Variation 6 - Platforms (`platforms`); Eyebrow (`listEyebrow`), Heading position (`headerPosition`), Background color Navy and Item link Circled arrow (`icons/arrow-right-circle.svg`), for the prototypes Figma Case Study, Product and What we do sections; Variation 4 rows follow the list width, keep the Figma gutter and the Figma dark colours; Variations 1–3 unchanged (computed styles compared at 375, 1024 and 1440px) | docs/handover revision history | 23 October 2026 |
-| Handover 2.42 | Variation 4 - Segments (`segments`) from the TCS Designs - Prototypes Figma "List Item - Industry"; Variations 1–3, fields and stored values unchanged (computed styles compared before / after at 375, 1024 and 1440px) | docs/handover revision history | 23 October 2026 |
 
 ## Reference pages
 
@@ -479,4 +476,4 @@ Evidence to collect: page URL (preview / live), viewport width, the block's `.pl
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

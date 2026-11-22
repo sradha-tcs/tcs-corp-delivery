@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["component-models.json"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | component-models.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -49,10 +49,10 @@ primary: false
 
 | Measure | Value |
 | --- | --- |
-| Options (excluding the common Additional tab) | 1243 |
+| Options (excluding the common Additional tab) | 1451 |
 | Class options shown in the block library | 43 |
-| Class options not shown in the block library | 10 |
-| Options not checkable from classes | 1064 |
+| Class options not shown in the block library | 17 |
+| Options not checkable from classes | 1240 |
 
 Categories of the master prompt: every option listed is **Supported** (in the model and read by the code). Duplicate, deprecated, legacy and invalid options: none identified from the models (legacy *properties* are listed in the Universal Editor model guide). "Represented in the block library but not supported by code": not determinable from classes alone (Not recorded).
 
@@ -78,6 +78,7 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | button-block | button-block | Text Decoration | line-Through | `line-through` | Supported (in the model) | Not checkable (data attribute / field value) |
 | button-block | button-block | Text Decoration | Underline | `underline` | Supported (in the model) | Not checkable (data attribute / field value) |
 | button-block | button-block | Text Decoration | underline overline | `underline overline` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | cards | Heading type | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Heading type | H2 | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Heading type | H3 | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Heading type | H4 | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -117,10 +118,13 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | cards | cards | Image loading | Eager (first screen) | `eager` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Desktop display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Desktop display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | cards | Desktop display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Tablet display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Tablet display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | cards | Tablet display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Mobile display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Mobile display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | cards | Mobile display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Snap alignment | Start | `start` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Snap alignment | Center | `center` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | cards | Scroll step | One card | `one-card` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -132,9 +136,33 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | cards | cards | Style options | Compact statistic title | `stat-compact` | Supported (in the model) | Yes |
 | cards | cards | Style options | Dividers between rows | `dividers` | Supported (in the model) | Yes |
 | cards | cards | Style options | Header centred | `header-center` | Supported (in the model) | Yes |
+| cards | cards | Style options | Impact cards (proven impact and outcomes) | `impact-cards` | Supported (in the model) | No |
+| cards | card | Title size | Default (the card style's) | `""` | Supported (in the model) | n/a (default) |
+| cards | card | Title size | 96px | `96` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | Title size | 48px | `48` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | Title size | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | Title size | H2 | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | Title size | H3 | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | Title size | H4 | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | Title size | H5 | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | Title size | H6 | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | card | Open in a new tab | As the block | `""` | Supported (in the model) | n/a (default) |
 | cards | card | Open in a new tab | Yes | `true` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | card | Open in a new tab | No | `false` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | CTA 1 Style | Secondary Button | `""` | Supported (in the model) | n/a (default) |
+| cards | card | CTA 1 Style | Secondary Button (no arrow) | `secondary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | CTA 1 Style | Primary Button | `primary` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | CTA 1 Style | Primary Button (no arrow) | `primary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | CTA 1 Style | Text link | `tertiary` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | CTA 1 Open in a new tab | Default | `""` | Supported (in the model) | n/a (default) |
+| cards | card | CTA 1 Open in a new tab | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | CTA 2 Style | Secondary Button | `""` | Supported (in the model) | n/a (default) |
+| cards | card | CTA 2 Style | Secondary Button (no arrow) | `secondary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | CTA 2 Style | Primary Button | `primary` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | CTA 2 Style | Primary Button (no arrow) | `primary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | CTA 2 Style | Text link | `tertiary` | Supported (in the model) | Not checkable (data attribute / field value) |
+| cards | card | CTA 2 Open in a new tab | Default | `""` | Supported (in the model) | n/a (default) |
+| cards | card | CTA 2 Open in a new tab | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | card | Card style | As the block | `""` | Supported (in the model) | n/a (default) |
 | cards | card | Card style | Image card | `image` | Supported (in the model) | Not checkable (data attribute / field value) |
 | cards | card | Card style | Panel | `panel` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -167,6 +195,7 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | columns-container | columns-container | Gap | Small | `small` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | columns-container | Gap | Medium | `medium` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | columns-container | Gap | Large | `large` | Supported (in the model) | Not checkable (data attribute / field value) |
+| columns-container | columns-container | Gap | Extra Large | `xlarge` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | columns-container | Vertical alignment | Top | `top` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | columns-container | Vertical alignment | Middle | `middle` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | columns-container | Vertical alignment | Bottom | `bottom` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -310,6 +339,14 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | columns-container | columns-container | Margin bottom | 5rem (space-2000) | `mb-2000` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | columns-container | Margin bottom | 6rem (space-2400) | `mb-2400` | Supported (in the model) | Not checkable (data attribute / field value) |
 | columns-container | columns-container | Margin bottom | 7.5rem (space-3000) | `mb-3000` | Supported (in the model) | Not checkable (data attribute / field value) |
+| conf-med-cont | conf-med-cont | Media contacts title type | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| conf-med-cont | conf-med-cont | Media contacts title type | H2 | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| conf-med-cont | conf-med-cont | Media contacts title type | H3 | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| conf-med-cont | conf-med-cont | Media contacts title type | H4 | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| conf-med-cont | conf-med-cont | Media contacts title type | H5 | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| conf-med-cont | conf-med-cont | Media contacts title type | H6 | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| conf-med-cont | conf-med-cont | Media contacts title type | Media contacts big title | `media-contacts-big-title` | Supported (in the model) | Not checkable (data attribute / field value) |
+| conf-med-cont | conf-med-cont | Media contacts title type | Media contacts small title | `media-contacts-small-title` | Supported (in the model) | Not checkable (data attribute / field value) |
 | conversation-canvas | conversation-canvas | Canvas Style | Default | `""` | Supported (in the model) | n/a (default) |
 | conversation-canvas | conversation-canvas | Canvas Style | Primary (sticky) | `primary` | Supported (in the model) | Yes |
 | conversation-canvas | conversation-canvas | Canvas Style | Secondary | `secondary` | Supported (in the model) | Yes |
@@ -377,11 +414,35 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | footer | footer | Link List › Link Type | Open in new window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
 | footer | footer-link | Open in | Same tab | `""` | Supported (in the model) | n/a (default) |
 | footer | footer-link | Open in | New tab | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
-| form-variations | form-variations | Theme | Default | `""` | Supported (in the model) | n/a (default) |
+| form-variations | form-variations | Heading level | Default (H2) | `""` | Supported (in the model) | n/a (default) |
+| form-variations | form-variations | Heading level | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | form-variations | Heading level | H2 | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | form-variations | Heading level | H3 | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | form-variations | Heading level | H4 | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | form-variations | Heading level | H5 | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | form-variations | Heading level | H6 | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | form-variations | Theme | Default / Light | `default` | Supported (in the model) | No |
 | form-variations | form-variations | Theme | Dark | `dark` | Supported (in the model) | Yes |
 | form-variations | field-text | Input Type | Text | `text` | Supported (in the model) | Not checkable (data attribute / field value) |
 | form-variations | field-text | Input Type | Email | `email` | Supported (in the model) | Not checkable (data attribute / field value) |
 | form-variations | field-text | Input Type | Tel | `tel` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-text | Field Width | Auto / Name-based | `""` | Supported (in the model) | n/a (default) |
+| form-variations | field-text | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-text | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-select | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-select | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-combined | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-combined | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-textarea | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-textarea | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-checkbox | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-checkbox | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-richtext | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-richtext | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | contact-card | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | contact-card | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-submit | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | field-submit | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
 | gen-carousel | gen-carousel | Style | Default | `gen-carousel-section` | Supported (in the model) | Not checkable (data attribute / field value) |
 | gen-carousel | gen-carousel | Navigation | Manual | `manual` | Supported (in the model) | Not checkable (data attribute / field value) |
 | gen-carousel | gen-carousel | Navigation | Auto | `auto` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -524,6 +585,7 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | gen-carousel | gen-carousel | Margin bottom | 7.5rem (space-3000) | `mb-3000` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | Hero Image type | Default | `""` | Supported (in the model) | n/a (default) |
 | hero | hero | Hero Image type | Lotto | `lottie` | Supported (in the model) | Yes |
+| hero | hero | Hero Image type | Video | `media-video` | Supported (in the model) | No |
 | hero | hero | Hero View | Default | `""` | Supported (in the model) | n/a (default) |
 | hero | hero | Hero View | Contained image | `media-contained` | Supported (in the model) | Yes |
 | hero | hero | Title heading level | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -537,12 +599,20 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | hero | hero | CTA List › CTA view | Secondary | `secondary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | CTA List › Primary CTA BG Color (Primary only) | Default | `primary-bg-default` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | CTA List › Primary CTA BG Color (Primary only) | Blue-cyan (azure) | `primary-bg-azure` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | hero | CTA List › Primary CTA BG Color (Primary only) | Transparent | `primary-bg-transparent` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | hero | CTA List › Primary CTA BG Color (Primary only) | Black 40% | `primary-bg-black-40` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | hero | CTA List › Primary CTA Border color (Primary only) | Default (as the BG Color) | `primary-border-default` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | hero | CTA List › Primary CTA Border color (Primary only) | Black | `primary-border-black` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | hero | CTA List › Primary CTA Border color (Primary only) | White | `primary-border-white` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | hero | CTA List › Primary CTA Border color (Primary only) | Slate | `primary-border-slate-100` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | hero | CTA List › Primary CTA Border color (Primary only) | No border | `primary-border-none` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | CTA List › Secondary CTA BG Color (Secondary only) | Default (transparent) | `secondary-bg-default` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | CTA List › Secondary CTA BG Color (Secondary only) | Light grey | `secondary-bg-light-grey` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | CTA List › Secondary CTA BG Color (Secondary only) | Black 40% | `secondary-bg-black-40` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | CTA List › Secondary CTA Border color (Secondary only) | Default (as the BG Color) | `secondary-border-default` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | CTA List › Secondary CTA Border color (Secondary only) | Black | `secondary-border-black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | CTA List › Secondary CTA Border color (Secondary only) | White | `secondary-border-white` | Supported (in the model) | Not checkable (data attribute / field value) |
+| hero | hero | CTA List › Secondary CTA Border color (Secondary only) | No border | `secondary-border-none` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | CTA List › CTA Arrow | Right | `right` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | CTA List › CTA Arrow | Down | `down` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero | Vertical Alignment | Top | `align-top` | Supported (in the model) | Yes |
@@ -562,12 +632,13 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | hero | hero | BG Color | Charcoal Black 80 (cool charcoal) | `bg-charcoal-80` | Supported (in the model) | Yes |
 | hero | hero | BG Color | Midnight Navy 60 | `bg-navy-60` | Supported (in the model) | Yes |
 | hero | hero | BG Color | Charcoal Black 40 (deep charcoal) | `bg-charcoal-40` | Supported (in the model) | Yes |
+| hero | hero | BG Color | Brand blue (#216AC3) | `bg-brand` | Supported (in the model) | No |
 | hero | hero | Icon color | Default (as authored) | `""` | Supported (in the model) | n/a (default) |
 | hero | hero | Icon color | Black | `icon-black` | Supported (in the model) | No |
 | hero | hero | Icon color | White | `icon-white` | Supported (in the model) | No |
 | hero | hero | Icon color | Blue | `icon-blue` | Supported (in the model) | Yes |
 | hero | hero | Icon color | Pale blue | `icon-pale-blue` | Supported (in the model) | Yes |
-| hero | hero | Eyebrow color | Default (royal blue) | `""` | Supported (in the model) | n/a (default) |
+| hero | hero | Eyebrow color | Default (white) | `""` | Supported (in the model) | n/a (default) |
 | hero | hero | Eyebrow color | Royal blue | `eyebrow-royal-blue` | Supported (in the model) | No |
 | hero | hero | Eyebrow color | Soft sky blue | `eyebrow-sky-blue` | Supported (in the model) | Yes |
 | hero | hero | Title color | Default | `""` | Supported (in the model) | n/a (default) |
@@ -584,6 +655,11 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | hero | hero-cta | CTA Arrow | Auto (down for links to sections of this page) | `""` | Supported (in the model) | n/a (default) |
 | hero | hero-cta | CTA Arrow | Right | `right` | Supported (in the model) | Not checkable (data attribute / field value) |
 | hero | hero-cta | CTA Arrow | Down | `down` | Supported (in the model) | Not checkable (data attribute / field value) |
+| history-timeline | history-timeline | Milestone heading level | H2 | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| history-timeline | history-timeline | Milestone heading level | H3 | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| history-timeline | history-timeline | Milestone heading level | H4 | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| history-timeline | history-timeline | Milestone heading level | H5 | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| history-timeline | history-timeline | Milestone heading level | H6 | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
 | image-collage | image-collage | Title Type | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
 | image-collage | image-collage | Title Type | H2 | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
 | image-collage | image-collage | Title Type | H3 | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -673,10 +749,13 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | list | list | Image loading | Eager (first screen) | `eager` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | list | Desktop display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | list | Desktop display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| list | list | Desktop display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | list | Tablet display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | list | Tablet display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| list | list | Tablet display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | list | Mobile display | Grid | `grid` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | list | Mobile display | Horizontal scroll | `horizontal-scroll` | Supported (in the model) | Not checkable (data attribute / field value) |
+| list | list | Mobile display | Carousel (buttons on the cards) | `carousel` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | list | Snap alignment | Start | `start` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | list | Snap alignment | Center | `center` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | list | Scroll step | One card | `one-card` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -689,6 +768,7 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | list | list | Style options | Compact statistic title | `stat-compact` | Supported (in the model) | Yes |
 | list | list | Style options | Dividers between rows | `dividers` | Supported (in the model) | Yes |
 | list | list | Style options | Header centred | `header-center` | Supported (in the model) | Yes |
+| list | list | Style options | Impact cards (proven impact and outcomes) | `impact-cards` | Supported (in the model) | No |
 | list | list-item | Open in a new tab | As the list | `""` | Supported (in the model) | n/a (default) |
 | list | list-item | Open in a new tab | Yes | `true` | Supported (in the model) | Not checkable (data attribute / field value) |
 | list | list-item | Open in a new tab | No | `false` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -713,6 +793,7 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | media-contacts | media-contacts | Title Type | H5 | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Title Type | H6 | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Title color | Style default | `""` | Supported (in the model) | n/a (default) |
+| media-contacts | media-contacts | Title color | Black | `title-black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Title color | Dark | `title-dark` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Title color | White | `title-white` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Title color | Light blue | `title-light-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -720,14 +801,17 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | media-contacts | media-contacts | Columns on desktop | 2 | `2` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Columns on desktop | 3 | `3` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Territory title color | Style default | `""` | Supported (in the model) | n/a (default) |
+| media-contacts | media-contacts | Territory title color | Black | `black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Territory title color | Dark | `dark` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Territory title color | Brand blue | `brand` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Territory title color | Light blue | `light-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Email color | Style default | `""` | Supported (in the model) | n/a (default) |
+| media-contacts | media-contacts | Email color | Black | `black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Email color | Dark | `dark` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Email color | Brand blue | `brand` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Email color | Light blue | `light-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Phone color | Style default | `""` | Supported (in the model) | n/a (default) |
+| media-contacts | media-contacts | Phone color | Black | `black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Phone color | Dark | `dark` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Phone color | Brand blue | `brand` | Supported (in the model) | Not checkable (data attribute / field value) |
 | media-contacts | media-contacts | Phone color | Light blue | `light-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -736,11 +820,53 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | page-header | page-header | Layout | Secondary (title left, text right) | `secondary` | Supported (in the model) | Yes |
 | page-header | page-header | Layout | Article (meta row, author) | `article` | Supported (in the model) | Yes |
 | page-header | page-header | Layout | Display (large title) | `display` | Supported (in the model) | Yes |
+| page-header | page-header | Layout | Default (Only CTA Alignment Left) | `cta-alignment-left` | Supported (in the model) | No |
+| page-header | page-header | Title Font (Desktop) | H1 (64px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Desktop) | H2 (48px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Desktop) | H3 (40px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Desktop) | H4 (28px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Desktop) | H5 (24px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Desktop) | H6 (20px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Tablet) | H1 (40px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Tablet) | H2 (32px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Tablet) | H3 (28px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Tablet) | H4 (24px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Tablet) | H5 (18px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Tablet) | H6 (16px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Mobile) | H1 (40px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Mobile) | H2 (32px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Mobile) | H3 (28px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Mobile) | H4 (24px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Mobile) | H5 (18px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Title Font (Mobile) | H6 (16px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Description Font | Default Font | `""` | Supported (in the model) | n/a (default) |
+| page-header | page-header | Description Font | 1rem (16px) | `text-16px` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Description Font | 1.125rem (18px) | `text-18px` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Description Font | 1.25rem (20px) | `text-20px` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Description Font | 1.5rem (24px) | `text-24px` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Description Font | 2rem (32px) | `text-32px` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | Description Font | 2.5rem (40px) | `text-40px` | Supported (in the model) | Not checkable (data attribute / field value) |
 | page-header | page-header | CTA List › CTA Link Type | Default | `""` | Supported (in the model) | n/a (default) |
 | page-header | page-header | CTA List › CTA Link Type | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
 | page-header | page-header | CTA List › CTA Link Style | Text link | `""` | Supported (in the model) | n/a (default) |
 | page-header | page-header | CTA List › CTA Link Style | Primary Button | `primary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | page-header | page-header | CTA List › CTA Link Style | Secondary Button | `secondary` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Primary CTA Text Color (Primary only) | Style default | `""` | Supported (in the model) | n/a (default) |
+| page-header | page-header | CTA List › Primary CTA Text Color (Primary only) | White | `primary-text-white` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Primary CTA Text Color (Primary only) | Blue | `primary-text-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Primary CTA Text Color (Primary only) | Black | `primary-text-black` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Primary CTA Background (Primary only) | Style default | `""` | Supported (in the model) | n/a (default) |
+| page-header | page-header | CTA List › Primary CTA Background (Primary only) | White | `primary-bg-white` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Primary CTA Background (Primary only) | Blue | `primary-bg-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Primary CTA Background (Primary only) | Translucent white | `primary-bg-translucent` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Secondary CTA Text Color (Secondary only) | Style default | `""` | Supported (in the model) | n/a (default) |
+| page-header | page-header | CTA List › Secondary CTA Text Color (Secondary only) | White | `secondary-text-white` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Secondary CTA Text Color (Secondary only) | Blue | `secondary-text-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Secondary CTA Text Color (Secondary only) | Black | `secondary-text-black` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Secondary CTA Background (Secondary only) | Style default | `""` | Supported (in the model) | n/a (default) |
+| page-header | page-header | CTA List › Secondary CTA Background (Secondary only) | White | `secondary-bg-white` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Secondary CTA Background (Secondary only) | Blue | `secondary-bg-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
+| page-header | page-header | CTA List › Secondary CTA Background (Secondary only) | Translucent white | `secondary-bg-translucent` | Supported (in the model) | Not checkable (data attribute / field value) |
 | page-header | page-header-cta | CTA Link Type | Default | `""` | Supported (in the model) | n/a (default) |
 | page-header | page-header-cta | CTA Link Type | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
 | page-header | page-header-cta | CTA Link Style | Text link | `tertiary` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -960,9 +1086,11 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | table-list | table-list | Variation | Variation 5 - Label, large description (steps) | `approach` | Supported (in the model) | Not checkable (data attribute / field value) |
 | table-list | table-list | Variation | Variation 6 - Description, right-aligned title, small arrow | `platforms` | Supported (in the model) | Not checkable (data attribute / field value) |
 | table-list | table-list | Background color | White (default) | `white` | Supported (in the model) | Not checkable (data attribute / field value) |
+| table-list | table-list | Background color | Grey | `grey` | Supported (in the model) | Not checkable (data attribute / field value) |
 | table-list | table-list | Background color | Black | `black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | table-list | table-list | Background color | Dark Green | `dark-green` | Supported (in the model) | Not checkable (data attribute / field value) |
 | table-list | table-list | Background color | Navy | `navy` | Supported (in the model) | Not checkable (data attribute / field value) |
+| table-list | table-list | Heading Type | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
 | table-list | table-list | Heading Type | H2 | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
 | table-list | table-list | Heading Type | H3 | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
 | table-list | table-list | Heading Type | H4 | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -1139,7 +1267,7 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | tabs | tabs-block | Alignment | Full width (stretch) | `stretch` | Supported (in the model) | Not checkable (data attribute / field value) |
 | tabs | tabs-block | Orientation | Horizontal | `horizontal` | Supported (in the model) | Not checkable (data attribute / field value) |
 | tabs | tabs-block | Orientation | Vertical | `vertical` | Supported (in the model) | Not checkable (data attribute / field value) |
-| tcs-header | tcs-header | Header over the first block | Auto (over a light Hero) | `""` | Supported (in the model) | n/a (default) |
+| tcs-header | tcs-header | Header over the first block | Auto (based on first block) | `""` | Supported (in the model) | n/a (default) |
 | tcs-header | tcs-header | Header over the first block | Always (over the first block) | `always` | Supported (in the model) | Not checkable (data attribute / field value) |
 | tcs-header | tcs-header | Header over the first block | Never (the page starts below the header) | `never` | Supported (in the model) | Not checkable (data attribute / field value) |
 | tcs-header | tcs-header | Desktop behavior | Float (scrolls with the page) | `float` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -1148,12 +1276,27 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | tcs-header | tcs-header | Tablet behavior | Float (scrolls with the page) | `float` | Supported (in the model) | Not checkable (data attribute / field value) |
 | tcs-header | tcs-header | Mobile behavior | Sticky (stays at the top) | `sticky` | Supported (in the model) | Not checkable (data attribute / field value) |
 | tcs-header | tcs-header | Mobile behavior | Float (scrolls with the page) | `float` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | teaser | Title Type | H1 (64px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | teaser | Title Type | H2 (48px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | teaser | Title Type | H3 (40px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | teaser | Title Type | H4 (28px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | teaser | Title Type | H5 (24px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | teaser | Title Type | H6 (20px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Desktop) | H1 (64px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Desktop) | H2 (48px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Desktop) | H3 (40px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Desktop) | H4 (28px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Desktop) | H5 (24px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Desktop) | H6 (20px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Desktop) | 2.25rem (36px) | `title-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Tablet) | H1 (40px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Tablet) | H2 (32px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Tablet) | H3 (28px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Tablet) | H4 (24px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Tablet) | H5 (18px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Tablet) | H6 (16px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Tablet) | 2.25rem (36px) | `title-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Mobile) | H1 (40px) | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Mobile) | H2 (32px) | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Mobile) | H3 (28px) | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Mobile) | H4 (24px) | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Mobile) | H5 (18px) | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Mobile) | H6 (16px) | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title Type (Mobile) | 2.25rem (36px) | `title-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Date Format | DD-MM-YYYY | `dd-mm-yyyy` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Date Format | MM-DD-YYYY | `mm-dd-yyyy` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Date Format | MMM d, yyyy | `mmm-d-yyyy` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -1190,6 +1333,8 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | teaser | teaser | List arrow | Right | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | List arrow | Down right | `arrow-down-right` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | List arrow | None | `arrow-none` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Link Arrow Color | Default Color | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Link Arrow Color | Light Gray | `label-light-gray` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Primary CTA Link Type | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Primary CTA Link Type | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Primary CTA Link Style | Text link | `tertiary` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -1198,26 +1343,38 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | teaser | teaser | Primary CTA Link Style | Primary Button (no arrow) | `primary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Primary CTA Link Style | Secondary Button | `secondary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Primary CTA Link Style | Secondary Button (no arrow) | `secondary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Primary CTA Label Font | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Primary CTA Label Font | 0.875 rem (14px) | `font-14` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Primary CTA Label Color | Default Color | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Primary CTA Label Color | Soft Gray | `label-soft-gray` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Primary CTA Background | Style default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Primary CTA Background | White | `button-bg-white` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Primary CTA Background | Blue | `button-bg-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Primary CTA Background | Translucent white | `button-bg-translucent` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Primary CTA Shape | Style default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Primary CTA Shape | Rectangle | `button-rectangle` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | CTA Shadow (Primary Only) | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | CTA Shadow (Primary Only) | Shadow | `primary-button-shadow` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Link Type | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Secondary CTA Link Type | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Secondary CTA Label Font | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Secondary CTA Label Font | 0.875 rem (14px) | `font-14` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Link Style | Text link | `tertiary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Link Style | List | `list` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Link Style | Primary Button | `primary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Link Style | Primary Button (no arrow) | `primary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Link Style | Secondary Button | `secondary` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Link Style | Secondary Button (no arrow) | `secondary-no-arrow` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Secondary CTA Label Color | Default Color | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Secondary CTA Label Color | Soft Gray | `label-soft-gray` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Background | Style default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Secondary CTA Background | White | `button-bg-white` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Background | Blue | `button-bg-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Background | Translucent white | `button-bg-translucent` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Secondary CTA Shape | Style default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Secondary CTA Shape | Rectangle | `button-rectangle` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | CTA Shadow (Secondary Only) | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | CTA Shadow (Secondary Only) | Shadow | `secondary-button-shadow` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Layout | Image & Text | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Layout | Text split (title left, text right) | `no-image` | Supported (in the model) | Yes |
 | teaser | teaser | Layout | Background image | `background` | Supported (in the model) | Yes |
@@ -1238,17 +1395,56 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | teaser | teaser | Vertical alignment | Center | `valign-middle` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Vertical alignment | Bottom | `valign-bottom` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Title weight | Layout default | `""` | Supported (in the model) | n/a (default) |
-| teaser | teaser | Title weight | Regular | `title-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | teaser | Title weight | Semibold | `title-semibold` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title weight | Light (300) | `title-light` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title weight | Regular (400) | `title-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title weight | Medium (500) | `title-medium` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title weight | Semibold (600) | `title-semibold` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title weight | Bold (700) | `title-bold` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Title color | Style default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Title color | Dark | `title-dark` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Title color | White | `title-white` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Title color | Light blue | `title-light-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Title color | Royal blue | `title-royal-blue` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | teaser | Description size | Layout default | `""` | Supported (in the model) | n/a (default) |
-| teaser | teaser | Description size | 1rem (16px) | `text-normal` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | teaser | Description size | Regular (18px) | `text-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
-| teaser | teaser | Description size | Large (24px) | `text-large` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Title color | Soft Gray | `title-soft-gray` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Desktop) | Layout default | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Description size (Desktop) | 4rem (64px) | `description-4rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Desktop) | 3rem (48px) | `description-3rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Desktop) | 2.5rem (40px) | `description-2.5rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Desktop) | 2rem (32px) | `description-2rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Desktop) | 1.75rem (28px) | `description-1.75rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Desktop) | 1.25rem (20px) | `description-1.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Desktop) | 1rem (16px) | `text-normal` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Desktop) | Regular (18px) | `text-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Desktop) | Large (24px) | `text-large` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Desktop) | 2.25rem (36px) | `description-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Tablet) | Same as Desktop | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Description size (Tablet) | 4rem (64px) | `description-4rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Tablet) | 3rem (48px) | `description-3rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Tablet) | 2.5rem (40px) | `description-2.5rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Tablet) | 2rem (32px) | `description-2rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Tablet) | 1.75rem (28px) | `description-1.75rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Tablet) | 1.25rem (20px) | `description-1.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Tablet) | 1rem (16px) | `text-normal` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Tablet) | Regular (18px) | `text-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Tablet) | Large (24px) | `text-large` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Tablet) | 2.25rem (36px) | `description-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Mobile) | Same as Desktop | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Description size (Mobile) | 4rem (64px) | `description-4rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Mobile) | 3rem (48px) | `description-3rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Mobile) | 2.5rem (40px) | `description-2.5rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Mobile) | 2rem (32px) | `description-2rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Mobile) | 1.75rem (28px) | `description-1.75rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Mobile) | 1.25rem (20px) | `description-1.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Mobile) | 1rem (16px) | `text-normal` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Mobile) | Regular (18px) | `text-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Mobile) | Large (24px) | `text-large` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description size (Mobile) | 2.25rem (36px) | `description-2.25rem` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description weight | Layout default | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Description weight | Light (300) | `description-light` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description weight | Regular (400) | `description-regular` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description weight | Medium (500) | `description-medium` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description weight | Semibold (600) | `description-semibold` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Description weight | Bold (700) | `description-bold` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Description Color | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Description Color | Black | `description-black` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Description Color | White | `description-white` | Supported (in the model) | Not checkable (data attribute / field value) |
@@ -1257,12 +1453,24 @@ Categories of the master prompt: every option listed is **Supported** (in the mo
 | teaser | teaser | Eyebrow Style | Grey | `eyebrow-grey` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Eyebrow Style | White | `eyebrow-white` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Eyebrow Style | Rich Black | `eyebrow-rich-black` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Eyebrow Style | Medium Light Gray | `eyebrow-medium-light-gray` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Eyebrow Font size (Desktop) | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Eyebrow Font size (Desktop) | 0.75rem (12px) | `eyebrow-size-12` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Eyebrow Font size (Desktop) | 0.875rem (14px) | `eyebrow-size-14` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Eyebrow Font size (Tablet) | Same as Desktop | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Eyebrow Font size (Tablet) | 0.75rem (12px) | `eyebrow-size-12` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Eyebrow Font size (Tablet) | 0.875rem (14px) | `eyebrow-size-14` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Eyebrow Font size (Mobile) | Same as Desktop | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Eyebrow Font size (Mobile) | 0.75rem (12px) | `eyebrow-size-12` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Eyebrow Font size (Mobile) | 0.875rem (14px) | `eyebrow-size-14` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Top spacing | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Top spacing | Page header (extra space above) | `spacing-header` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Teaser Content Fixed Width | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser | Teaser Content Fixed Width | Fixed Width (824px) | `teaser-fixed-width` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Link CTA Alignment | Default | `right` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser | Link CTA Alignment | Left | `left` | Supported (in the model) | Not checkable (data attribute / field value) |
+| teaser | teaser | Column gap | Default | `""` | Supported (in the model) | n/a (default) |
+| teaser | teaser | Column gap | 1.5rem (24px) | `cg-24` | Supported (in the model) | No |
 | teaser | teaser-link | CTA Link Type | Default | `""` | Supported (in the model) | n/a (default) |
 | teaser | teaser-link | CTA Link Type | Open in New Window | `new-window` | Supported (in the model) | Not checkable (data attribute / field value) |
 | teaser | teaser-link | CTA Link Style | Text link | `""` | Supported (in the model) | n/a (default) |
@@ -1320,4 +1528,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

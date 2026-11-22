@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/form-variations/_form-variations.json"]
 relatedComponents: ["form-variations"]
 relatedPages: ["/design-block-master/en/block-library/form-variations","/design-block-master/en/block-library/form-variations/field-types","/design-block-master/en/block-library/form-variations/form-variations"]
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/form-variations/_form-variations.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -50,8 +50,17 @@ primary: false
 
 | Component | Field | Tab | Multiple | Options (label = value) | Default |
 | --- | --- | --- | --- | --- | --- |
-| `form-variations` | Theme (`classes`) | Content | No | Default = `""`; Dark = `dark` | `` |
+| `form-variations` | Heading level (`formHeadingLevel`) | Content | No | Default (H2) = `""`; H1 = `h1`; H2 = `h2`; H3 = `h3`; H4 = `h4`; H5 = `h5`; H6 = `h6` | — |
+| `form-variations` | Theme (`classes`) | Content | No | Default / Light = `default`; Dark = `dark` | `default` |
 | `field-text` | Input Type (`inputKind`) | — | No | Text = `text`; Email = `email`; Tel = `tel` | `text` |
+| `field-text` | Field Width (`fieldWidth`) | — | No | Auto / Name-based = `""`; Full width (100%) = `full-width`; Half width (50%) = `half-width` | `` |
+| `field-select` | Field Width (`fieldWidth`) | — | No | Full width (100%) = `full-width`; Half width (50%) = `half-width` | `full-width` |
+| `field-combined` | Field Width (`fieldWidth`) | — | No | Full width (100%) = `full-width`; Half width (50%) = `half-width` | `full-width` |
+| `field-textarea` | Field Width (`fieldWidth`) | — | No | Full width (100%) = `full-width`; Half width (50%) = `half-width` | `full-width` |
+| `field-checkbox` | Field Width (`fieldWidth`) | — | No | Full width (100%) = `full-width`; Half width (50%) = `half-width` | `full-width` |
+| `field-richtext` | Field Width (`fieldWidth`) | — | No | Full width (100%) = `full-width`; Half width (50%) = `half-width` | `full-width` |
+| `contact-card` | Field Width (`fieldWidth`) | — | No | Full width (100%) = `full-width`; Half width (50%) = `half-width` | `full-width` |
+| `field-submit` | Field Width (`fieldWidth`) | — | No | Full width (100%) = `full-width`; Half width (50%) = `half-width` | `full-width` |
 
 ## Matrix
 
@@ -59,11 +68,35 @@ Status: every option is supported by the model and the code that reads it. "In t
 
 | Component | Field | Option | Value | Status | In the block library |
 | --- | --- | --- | --- | --- | --- |
-| form-variations | Theme | Default | `""` | Supported (in the model) | n/a (default) |
+| form-variations | Heading level | Default (H2) | `""` | Supported (in the model) | n/a (default) |
+| form-variations | Heading level | H1 | `h1` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | Heading level | H2 | `h2` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | Heading level | H3 | `h3` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | Heading level | H4 | `h4` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | Heading level | H5 | `h5` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | Heading level | H6 | `h6` | Supported (in the model) | Not checkable (data attribute / field value) |
+| form-variations | Theme | Default / Light | `default` | Supported (in the model) | No |
 | form-variations | Theme | Dark | `dark` | Supported (in the model) | Yes |
 | field-text | Input Type | Text | `text` | Supported (in the model) | Not checkable (data attribute / field value) |
 | field-text | Input Type | Email | `email` | Supported (in the model) | Not checkable (data attribute / field value) |
 | field-text | Input Type | Tel | `tel` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-text | Field Width | Auto / Name-based | `""` | Supported (in the model) | n/a (default) |
+| field-text | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-text | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-select | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-select | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-combined | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-combined | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-textarea | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-textarea | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-checkbox | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-checkbox | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-richtext | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-richtext | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| contact-card | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| contact-card | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-submit | Field Width | Full width (100%) | `full-width` | Supported (in the model) | Not checkable (data attribute / field value) |
+| field-submit | Field Width | Half width (50%) | `half-width` | Supported (in the model) | Not checkable (data attribute / field value) |
 
 ## Narrative (block README)
 
@@ -143,4 +176,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -47,11 +47,11 @@ primary: true
 | --- | --- | --- |
 | Platform | AEM Sites as a Cloud Service (Universal Editor, xwalk) + Edge Delivery Services | AGENTS.md |
 | Repository | sradha-tcs/tcs-corp (main) | git |
-| Blocks | 32 | blocks/ |
-| Components | 72 | component-definition.json |
-| Model fields | 1030 | component-models.json |
-| Unit tests | 268 in 21 files | test/ |
-| Design tokens | 353 | styles/*.css |
+| Blocks | 34 | blocks/ |
+| Components | 76 | component-definition.json |
+| Model fields | 1140 | component-models.json |
+| Unit tests | 318 in 25 files | test/ |
+| Design tokens | 409 | styles/*.css |
 | Locales | 13 | utils/site.js |
 | Review roots | 3 | utils/site.js REVIEW_ROOTS |
 
@@ -71,4 +71,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

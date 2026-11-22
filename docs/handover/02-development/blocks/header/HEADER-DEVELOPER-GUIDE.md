@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/header/README.md","blocks/header/header.css","blocks/header/header.js"]
 relatedComponents: ["header"]
 relatedPages: ["/design-block-master/en/block-library/header","/design-block-master/en/block-library/header/header-careers","/design-block-master/en/block-library/header/header-default","/design-block-master/en/block-library/header/nav-careers","/design-block-master/en/block-library/header/nav-default"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 2026-11-15 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/header/README.md, blocks/header/header.css, blocks/header/header.js |
 | Related documents | [Variations](./HEADER-VARIATIONS.md), [Test coverage](./HEADER-TEST-COVERAGE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/header, /content/tcs-corp/design-block-master/en/block-library/header/header-careers, /content/tcs-corp/design-block-master/en/block-library/header/header-default |
@@ -91,7 +91,7 @@ primary: true
 **Logo size and spacing correction, 6 November 2026.** Below 1200px, including 1024px tablet, the site header uses TCS 112.82 x 26.89px and TATA 29.55 x 26px (rem equivalents in CSS). Left and right padding are 16px, with a 16px gap between logos. Tablet header height and desktop sizes and spacing are unchanged.
 
 - Desktop (>= 1200px): the Figma logo bar only, TCS logo left and TATA logo right, 124px high. There is no navigation in the header (strict Figma, product decision of 16 October 2026, handover F-72): the site navigation is in the Conversation Canvas.
-- Tablet (600–1199px): a 124px bar with both logos at the left and a circular menu button at the right. Mobile (< 600px): the same arrangement in a 90px bar. The current drawer expands second-level links as accordions.
+- Tablet (600–1199px) and mobile (< 600px): a 90px bar (`--nav-height: 5.625rem`; 124px until 20 November 2026 on tablet) with both logos at the left and a circular menu button at the right. The current drawer expands second-level links as accordions.
 - Desktop over a light hero: when the page's first section has a Hero that isn't `bg-dark`, `bg-dark-subtle` or `bg-black`, the header has no band and lies over the hero (Figma Logos 667:52520, Hero 4082:120388). With a TCS Header this applies at every width and its **Header over the first block** can change it (Always: over any first block; Never: never), and the logo bar stays fixed at the top on desktop too, see [TCS Header](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/tcs-header/README.md).
 
 Figma: *New Screens from New DS* (`yElx5Tf9wr8G2vCXopi49W`): Navigation (1124:25825; mobile menu frames 1124:27418, 1124:27432, 1124:27453), Home desktop / tablet / mobile (229:15426, 671:52732, 4082:120430).
@@ -161,7 +161,7 @@ blocks/header/
 | [`decorators/motion-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/motion-decorator.js) | `prepareMotion` (the Content animation and Background animation of the blocks of a section, before it is shown, or of a fragment, footer page or header Canvas once in the page: first frame paused, run by one Intersection | `header.js`: { prepareMotion } |
 | [`decorators/button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/button-decorator.js) | `decorateButton` (option `newTabHint`: a link opening a new tab says so), `createButton`, `setButtonDisabled`, `setButtonAlignment`, `removeButtonDecoration` | `header.js`: { removeButtonDecoration } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `header.js`: { getPlaceholders } |
-| [`utils/header-space.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/header-space.js) | `reserveHeaderSpace`, `rememberHeaderSpace` (the loaded header's height, the logo bar, remembered per breakpoint (`header-height-v2-*`) and reserved on the next pages before the header loads: no layout shift); `setHeader | `header.js`: { rememberHeaderSpace } |
+| [`utils/header-space.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/header-space.js) | `reserveHeaderSpace`, `rememberHeaderSpace` (the loaded header's height, the logo bar, remembered per breakpoint (`header-height-v3-*`; minimum reserved: 5.625rem below 1200px, 7.75rem from 1200px) and reserved on the ne | `header.js`: { rememberHeaderSpace } |
 | [`utils/inherited-metadata.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/inherited-metadata.js) | `getInheritedMetadata`, `INHERITED_METADATA` (nav, footer and error-page of the page, else of the nearest parent page up to Home; parent heads loaded in parallel and cached per session) | `header.js`: { getInheritedMetadata } |
 | [`utils/site.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/site.js) | `LOCALES`, `DEFAULT_LOCALE`, `getLocale`, `indexRoot`, `REVIEW_ROOTS` and `REVIEW_SHEETS` (the three review roots, KB-D-068: /language-master/en for testing, /language-masters/en the language master, /design-block-master | `header.js`: { resolvePagePath } |
 
@@ -181,7 +181,7 @@ blocks/header/
 6. `buildHamburger` only when there is a menu; tools are moved before it (DOM order = screen order).
 7. `toggleMenu(nav, navSections, isDesktop.matches)`, a `matchMedia('(min-width: 1200px)')` change listener, `keydown` (Escape) on `window`, `focusout` on the nav.
 8. Appends `div.nav-wrapper > nav`, then `div.nav-canvas` with the Canvas sections and runs `prepareMotion(navCanvas)`.
-9. Sets `--header-height` (rem) on `<html>`, `rememberHeaderSpace(header)` (localStorage `header-height-v2-{breakpoint}`, read by `reserveHeaderSpace` in the eager phase of the next page) and a `ResizeObserver` updating `--header-height`.
+9. Sets `--header-height` (rem) on `<html>`, `rememberHeaderSpace(header)` (localStorage `header-height-v3-{breakpoint}`, read by `reserveHeaderSpace` in the eager phase of the next page) and a `ResizeObserver` updating `--header-height`.
 
 **Rendered DOM contract.**
 
@@ -210,7 +210,7 @@ On desktop `nav[data-expanded]` is `"true"` (the boilerplate's desktop state) wh
 | Contract | Used by |
 | -------- | ------- |
 | `header .nav-wrapper` (fixed below 1200px) | `blocks/anchor-list` (offset below a fixed header) |
-| `--nav-height` (4rem; 7.75rem from 1200px, `styles/styles.css`) | `styles/styles.css` (`header` height), `blocks/tabs` (scroll margin), `blocks/hero`, `templates/home`, `404.html` |
+| `--nav-height` (5.625rem below 1200px; 7.75rem from 1200px, `styles/styles.css`) | `styles/styles.css` (`header` height), `blocks/tabs` (scroll margin), `blocks/hero`, `templates/home`, `404.html` |
 | `--header-height` (the header's height with its Canvas host, on `<html>`) | `blocks/hero`, `templates/home` (desktop header over a light hero) |
 | `--header-reserved` (the space kept until the header loads: `--nav-height`, or the height remembered by `utils/header-space.js`) | `styles/styles.css`, `blocks/hero`, `templates/home` |
 | `#nav`, `nav[data-expanded]`, `.nav-hamburger button[aria-expanded]`, `header:menu` | `header.js` itself (Escape), the Conversation Canvas controller |
@@ -252,7 +252,7 @@ Don't add Canvas logic to `header.js` (AGENTS.md "Floating Canvas"): header and 
 | Viewport | Layout | Image behavior | Interaction behavior |
 | -------- | ------ | -------------- | -------------------- |
 | Mobile (< 600px) | Fixed bar 5.625rem (90px), 1rem gutters: TCS logo, TATA logo, menu button | TCS logo 1.2104rem, TATA logo 1.5rem high | Menu button opens the full-screen menu, one level at a time |
-| Tablet (600–1199px) | 7.75rem (124px) bar with 1.5rem (24px) gutters; header Canvas search row 28.9375rem | TCS 1.9165rem, TATA 2.375rem | As mobile |
+| Tablet (600–1199px) | 5.625rem (90px) bar, as mobile, with 1rem (16px) gutters; header Canvas search row 28.9375rem | TCS 1.9165rem, TATA 2.375rem | As mobile |
 | Desktop (>= 1200px) | Logo bar 7.75rem (124px), 5rem (80px) gutters, not fixed (with a TCS Header: fixed at the top, `blocks/tcs-header`); no menu; over a light hero without a band; header Canvas search row 37.9375rem | TCS 2.175rem, TATA 2.75rem | No menu; crossing 1200px resets the menu state (`matchMedia` change) |
 
 ## Accessibility
@@ -487,4 +487,4 @@ Evidence to collect: page URL, viewport width, the `nav` meta value of the page 
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

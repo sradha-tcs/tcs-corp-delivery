@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/*/README.md"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: false
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/*/README.md |
 | Related documents | — |
 | Related AEM paths | — |
@@ -45,6 +45,7 @@ primary: false
 - [Column Break](#column-break)
 - [Columns](#columns)
 - [Columns Container](#columns-container)
+- [Configurable Media Contacts](#configurable-media-contacts)
 - [Conversation Canvas](#conversation-canvas)
 - [Embed](#embed)
 - [Filter List](#filter-list)
@@ -54,6 +55,7 @@ primary: false
 - [Gen Carousel](#gen-carousel)
 - [Header](#header)
 - [Hero](#hero)
+- [History Timeline](#history-timeline)
 - [Image Collage](#image-collage)
 - [Interactive Dashboard](#interactive-dashboard)
 - [List](#list)
@@ -154,6 +156,12 @@ primary: false
 | At most 4 columns per row | Wider rows not possible | More rows | Not planned |
 | Inside a tab only Columns per row is authorable | Gap, alignment and breakpoint fixed (Medium, Top, Desktop) | Use a Columns Container section | Not planned |
 | A section can't be placed in a column | No Tabs Container, Gen Carousel or Columns Container in a column | Use the Tabs block in a column | Not planned |
+
+## Configurable Media Contacts
+
+- The region names come only from the regions sheet; `region-desc` isn't shown.
+- Universal Editor offers the Media contacts ID as a free text field (no list of the config rows).
+- Screenshots of the block on AEM and of its dialog: Not recorded (no author access when it was built).
 
 ## Conversation Canvas
 
@@ -259,12 +267,21 @@ primary: false
 
 | Limitation | Impact | Workaround | Planned correction |
 | ---------- | ------ | ---------- | ------------------ |
-| No background video | Video banners can't be built with the Hero | Use the Video or Embed block | Not recorded |
+| Hero Image type Video has no pause / play button (KB-D-072, Proposed) | Not WCAG 2.2.2 conform for a video over 5 seconds | Use a video of 5 seconds or less, or turn the button on | Decision pending |
+| Background video only from a DAM file (Hero Image type Video): no YouTube / Vimeo, sound, controls, captions or poster | A video that needs them can't be the Hero background | Use the Video or Embed block | Not recorded |
+| DAM video files served only once published | Empty background on preview / live if not published | Publish the video | Operations |
 | Lottie JSON served only once published (R-B-2) | Empty background on preview / live if not published | Publish the asset | Operations |
 | Motion Type authored before can't be changed in the dialog (R-B-6) | Legacy animation stays | Migrate to Animation Type | Content migration |
 | Default overlay eyebrow contrast (R-B-4) | Brand eyebrow over the white overlay | — | Design sign-off pending |
 | Background animation delays LCP on the first Hero (F-94) | Slower LCP | Use it below the fold | Not planned |
 | Legacy CTA List items keep their stored CTA Arrow "right" (F-55) | No automatic down arrow for `#` links in those items | Choose Down, or re-create as CTA items (Auto) | Not planned |
+
+## History Timeline
+
+- Figma has only a desktop frame: the mobile and tablet layouts are derived from it.
+- In Figma the progress line is a static 149px of 1278px; the block fills it by the scroll position (one milestone's share at the start).
+- Figma shows both buttons in their default state; at the start / end the block shows the site's disabled button state (grey), as the List and Cards scrollers do.
+- Card sizes repeat every eight milestones; they don't adapt to the text length (a card grows only when its text doesn't fit).
 
 ## Image Collage
 
@@ -449,4 +466,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

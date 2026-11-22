@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/teaser/README.md","blocks/teaser/_teaser.json"]
 relatedComponents: ["teaser"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/teaser/README.md, blocks/teaser/_teaser.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -89,7 +89,7 @@ Minimum content: a Title, or any other content part. Recommended: Eyebrow, Title
 
 Model `teaser`; template name "Teaser" (the block class AEM renders); key-value block (one row per property); children: `teaser-link`, `teaser-stat`, `teaser-collage-image`.
 
-Stored on a new component (definition template): `titleType` = `"h2"`, `imagePosition` = `"left"`, `showEyebrow` = `true`, `showDescription` = `true`, `dateFormat` = `"dd-mm-yyyy"`, `primaryCtaStyle` = `"primary"`, `secondaryCtaStyle` = `"secondary"`.
+Stored on a new component (definition template): `titleType` = `"h2"`, `titleTypeTablet` = `"h2"`, `titleTypeMobile` = `"h2"`, `imagePosition` = `"left"`, `showEyebrow` = `true`, `showDescription` = `true`, `dateFormat` = `"dd-mm-yyyy"`, `primaryCtaStyle` = `"primary"`, `secondaryCtaStyle` = `"secondary"`.
 
 ##### Content tab — Teaser
 
@@ -98,7 +98,9 @@ Stored on a new component (definition template): `titleType` = `"h2"`, `imagePos
 | Eyebrow | `eyebrow` | text | No | — | — | — | Industry focus |
 | Show Eyebrow | `showEyebrow` | boolean | No | `true` | on / off | — | false |
 | Title | `title` | text | No | — | — | — | Banking in Europe |
-| Title Type | `titleType` | select | No | `h2` | H1 (64px) (`h1`), H2 (48px) (`h2`), H3 (40px) (`h3`), H4 (28px) (`h4`), H5 (24px) (`h5`), H6 (20px) (`h6`) | The heading level of the title, which also sets its size (desktop sizes; smaller on mobile). Use one H1 per page. Delivered with `title` (field collapse). | h1 |
+| Title Type (Desktop) | `titleType` | select | No | `h2` | H1 (64px) (`h1`), H2 (48px) (`h2`), H3 (40px) (`h3`), H4 (28px) (`h4`), H5 (24px) (`h5`), H6 (20px) (`h6`), 2.25rem (36px) (`title-2.25rem`) | The heading level of the title, which also sets its size (desktop sizes; smaller on mobile). Use one H1 per page. Delivered with `title` (field collapse). | h1 |
+| Title Type (Tablet) | `titleTypeTablet` | select | No | `h2` | H1 (40px) (`h1`), H2 (32px) (`h2`), H3 (28px) (`h3`), H4 (24px) (`h4`), H5 (18px) (`h5`), H6 (16px) (`h6`), 2.25rem (36px) (`title-2.25rem`) | The title's size from 600 to 1199px; the heading level (H1 to H6) stays the Title Type (Desktop)'s. | — |
+| Title Type (Mobile) | `titleTypeMobile` | select | No | `h2` | H1 (40px) (`h1`), H2 (32px) (`h2`), H3 (28px) (`h3`), H4 (24px) (`h4`), H5 (18px) (`h5`), H6 (16px) (`h6`), 2.25rem (36px) (`title-2.25rem`) | The title's size below 600px; the heading level (H1 to H6) stays the Title Type (Desktop)'s. | — |
 | Hide Title | `titleHidden` | boolean | No | `false` | on / off | The title stays available to screen readers. | true |
 | Description | `description` | richtext | No | "" | — | — | — |
 | Show Description | `showDescription` | boolean | No | `true` | on / off | — | false |
@@ -136,18 +138,25 @@ Stored on a new component (definition template): `titleType` = `"h2"`, `imagePos
 | Links (authored before Link items) › CTA Background | `ctaBackground` | select | No | "" | Style default (""), White (`button-bg-white`), Blue (`button-bg-blue`), Translucent white (`button-bg-translucent`) | Sets the background of this CTA button. Blue uses rgb(33 106 195). | — |
 | Links (authored before Link items) › CTA Shape | `ctaShape` | select | No | "" | Style default (""), Rectangle (`button-rectangle`) | Sets this CTA button's shape. Rectangle uses the grey-200 border. | — |
 | List arrow | `linkArrow` | select | No | "" | Right (""), Down right (`arrow-down-right`), None (`arrow-none`) | Right: the default arrows. Down right: the arrow of every link (List links, buttons, Text links) points down and right. None: List links without an arrow (buttons and Text links keep theirs). Links opening a new tab keep their own arrow. | arrow-down-right |
+| Link Arrow Color | `linkArrowColor` | select | No | "" | Default Color (""), Light Gray (`label-light-gray`) | Sets the link arrow color. | — |
 | Primary CTA Title | `primaryCtaText` | text | No | — | — | Shown when `multiLinks` is off or empty. Delivered with `primaryCta` (field collapse). | Read the outlook |
 | Primary CTA Link | `primaryCta` | aem-content | No | — | — | Shown when `multiLinks` is off or empty. | /design-block-master/en/dummy-pages/contact |
 | Primary CTA Link Type | `primaryCtaTarget` | select | No | "" | Default (""), Open in New Window (`new-window`) | Shown when `multiLinks` is off or empty. | — |
 | Primary CTA Link Style | `primaryCtaStyle` | select | No | `primary` | Text link (`tertiary`), List (`list`), Primary Button (`primary`), Primary Button (no arrow) (`primary-no-arrow`), Secondary Button (`secondary`), Secondary Button (no arrow) (`secondary-no-arrow`) | Shown when `multiLinks` is off or empty. | secondary |
+| Primary CTA Label Font | `primaryCtaLabelFont` | select | No | "" | Default (""), 0.875 rem (14px) (`font-14`) | Shown when `multiLinks` is off or empty. | — |
+| Primary CTA Label Color | `primaryCtaLabelColor` | select | No | "" | Default Color (""), Soft Gray (`label-soft-gray`) | Sets the Primary CTA button label color. Shown when `multiLinks` is off or empty. | — |
 | Primary CTA Background | `primaryCtaBackground` | select | No | "" | Style default (""), White (`button-bg-white`), Blue (`button-bg-blue`), Translucent white (`button-bg-translucent`) | Sets the Primary CTA button background. Blue uses rgb(33 106 195). Shown when `multiLinks` is off or empty. | — |
 | Primary CTA Shape | `primaryCtaShape` | select | No | "" | Style default (""), Rectangle (`button-rectangle`) | Sets the Primary CTA shape. Rectangle uses the grey-200 border. Shown when `multiLinks` is off or empty. | — |
+| CTA Shadow (Primary Only) | `primaryCtaShadow` | select | No | "" | Default (""), Shadow (`primary-button-shadow`) | Sets the Primary CTA shadow. Default has no shadow. | — |
 | Secondary CTA Title | `secondaryCtaText` | text | No | — | — | Shown when `multiLinks` is off or empty. Delivered with `secondaryCta` (field collapse). | Explore cloud services |
 | Secondary CTA Link | `secondaryCta` | aem-content | No | — | — | Shown when `multiLinks` is off or empty. | /design-block-master/en/dummy-pages/services/cloud |
 | Secondary CTA Link Type | `secondaryCtaTarget` | select | No | "" | Default (""), Open in New Window (`new-window`) | Shown when `multiLinks` is off or empty. | — |
+| Secondary CTA Label Font | `secondaryCtaLabelFont` | select | No | "" | Default (""), 0.875 rem (14px) (`font-14`) | Shown when `multiLinks` is off or empty. | — |
 | Secondary CTA Link Style | `secondaryCtaStyle` | select | No | `secondary` | Text link (`tertiary`), List (`list`), Primary Button (`primary`), Primary Button (no arrow) (`primary-no-arrow`), Secondary Button (`secondary`), Secondary Button (no arrow) (`secondary-no-arrow`) | Shown when `multiLinks` is off or empty. | list |
+| Secondary CTA Label Color | `secondaryCtaLabelColor` | select | No | "" | Default Color (""), Soft Gray (`label-soft-gray`) | Sets the Secondary CTA button label color. Shown when `multiLinks` is off or empty. | — |
 | Secondary CTA Background | `secondaryCtaBackground` | select | No | "" | Style default (""), White (`button-bg-white`), Blue (`button-bg-blue`), Translucent white (`button-bg-translucent`) | Sets the Secondary CTA button background. Blue uses rgb(33 106 195). Shown when `multiLinks` is off or empty. | — |
 | Secondary CTA Shape | `secondaryCtaShape` | select | No | "" | Style default (""), Rectangle (`button-rectangle`) | Sets the Secondary CTA shape. Rectangle uses the grey-200 border. Shown when `multiLinks` is off or empty. | — |
+| CTA Shadow (Secondary Only) | `secondaryCtaShadow` | select | No | "" | Default (""), Shadow (`secondary-button-shadow`) | Sets the Secondary CTA shadow. Default has no shadow. | — |
 | Buttons side by side | `buttonsSideBySide` | boolean | No | `false` | on / off | On: the CTAs and links in a row (wrapping when there is no room). Off: one below the other. List links always fill the width. | true |
 | Stats (authored before Stat items) | `stats` | container (multiple) | No | — | — | Kept for teasers authored before; add items with Add instead. | — |
 | Stats (authored before Stat items) › Stats Title | `statLabel` | richtext | No | "" | — | — | — |
@@ -161,11 +170,17 @@ Stored on a new component (definition template): `titleType` = `"h2"`, `imagePos
 | BG Color | `bgColor` | select | No | "" | Default (""), Grey (`grey`), Dark (`dark`), Dark green (`dark-green`), Navy (`navy`) | Only the background colour; set the space around the content with the Padding fields of the Additional tab. | grey |
 | Text alignment | `textAlignment` | select | No | "" | Layout default (""), Left (`text-left`), Center (`text-center`), Right (`text-right`), Justify (`text-justify`) | Controls content alignment. Left, Center, Right and Justify use the same content width. Justify applies to paragraph content while headings and buttons remain normally spaced. | text-left |
 | Vertical alignment | `verticalAlignment` | select | No | "" | Layout default (""), Top (`valign-top`), Center (`valign-middle`), Bottom (`valign-bottom`) | How the text and the image (or the two text columns) line up. Layout default: center, top for Text split. | valign-top |
-| Title weight | `titleWeight` | select | No | "" | Layout default (""), Regular (`title-regular`), Semibold (`title-semibold`) | — | title-regular |
-| Title color | `titleColor` | select | No | "" | Style default (""), Dark (`title-dark`), White (`title-white`), Light blue (`title-light-blue`), Royal blue (`title-royal-blue`) | Overrides the layout's default title colour. Dark uses rgb(48 48 48). | — |
-| Description size | `descriptionSize` | select | No | "" | Layout default (""), 1rem (16px) (`text-normal`), Regular (18px) (`text-regular`), Large (24px) (`text-large`) | — | text-regular |
+| Title weight | `titleWeight` | select | No | "" | Layout default (""), Light (300) (`title-light`), Regular (400) (`title-regular`), Medium (500) (`title-medium`), Semibold (600) (`title-semibold`), Bold (700) (`title-bold`) | — | title-regular |
+| Title color | `titleColor` | select | No | "" | Style default (""), Dark (`title-dark`), White (`title-white`), Light blue (`title-light-blue`), Royal blue (`title-royal-blue`), Soft Gray (`title-soft-gray`) | Overrides the layout's default title colour. Dark uses rgb(48 48 48). | — |
+| Description size (Desktop) | `descriptionSize` | select | No | "" | Layout default (""), 4rem (64px) (`description-4rem`), 3rem (48px) (`description-3rem`), 2.5rem (40px) (`description-2.5rem`), 2rem (32px) (`description-2rem`), 1.75rem (28px) (`description-1.75rem`), 1.25rem (20px) (`description-1.25rem`), 1rem (16px) (`text-normal`), Regular (18px) (`text-regular`), Large (24px) (`text-large`), 2.25rem (36px) (`description-2.25rem`) | The description's size from 1200px; also on tablet and mobile unless Description size (Tablet) / (Mobile) say otherwise. | text-regular |
+| Description size (Tablet) | `descriptionSizeTablet` | select | No | "" | Same as Desktop (""), 4rem (64px) (`description-4rem`), 3rem (48px) (`description-3rem`), 2.5rem (40px) (`description-2.5rem`), 2rem (32px) (`description-2rem`), 1.75rem (28px) (`description-1.75rem`), 1.25rem (20px) (`description-1.25rem`), 1rem (16px) (`text-normal`), Regular (18px) (`text-regular`), Large (24px) (`text-large`), 2.25rem (36px) (`description-2.25rem`) | The description's size from 600 to 1199px. Same as Desktop: the Description size (Desktop). | — |
+| Description size (Mobile) | `descriptionSizeMobile` | select | No | "" | Same as Desktop (""), 4rem (64px) (`description-4rem`), 3rem (48px) (`description-3rem`), 2.5rem (40px) (`description-2.5rem`), 2rem (32px) (`description-2rem`), 1.75rem (28px) (`description-1.75rem`), 1.25rem (20px) (`description-1.25rem`), 1rem (16px) (`text-normal`), Regular (18px) (`text-regular`), Large (24px) (`text-large`), 2.25rem (36px) (`description-2.25rem`) | The description's size below 600px. Same as Desktop: the Description size (Desktop). | — |
+| Description weight | `descriptionWeight` | select | No | "" | Layout default (""), Light (300) (`description-light`), Regular (400) (`description-regular`), Medium (500) (`description-medium`), Semibold (600) (`description-semibold`), Bold (700) (`description-bold`) | — | — |
 | Description Color | `descriptionColor` | select | No | "" | Default (""), Black (`description-black`), White (`description-white`) | — | — |
-| Eyebrow Style | `eyebrowStyle` | select | No | "" | Brand (""), Label (uppercase, grey) (`eyebrow-label`), Grey (`eyebrow-grey`), White (`eyebrow-white`), Rich Black (`eyebrow-rich-black`) | Controls the eyebrow appearance and colour. Grey uses rgb(90 90 90). White is intended for dark or image backgrounds. | eyebrow-label |
+| Eyebrow Style | `eyebrowStyle` | select | No | "" | Brand (""), Label (uppercase, grey) (`eyebrow-label`), Grey (`eyebrow-grey`), White (`eyebrow-white`), Rich Black (`eyebrow-rich-black`), Medium Light Gray (`eyebrow-medium-light-gray`) | Controls the eyebrow appearance and colour. Grey uses rgb(90 90 90). White is intended for dark or image backgrounds. | eyebrow-label |
+| Eyebrow Font size (Desktop) | `eyebrowFontSize` | select | No | "" | Default (""), 0.75rem (12px) (`eyebrow-size-12`), 0.875rem (14px) (`eyebrow-size-14`) | From 1200px, and on tablet and mobile unless Eyebrow Font size (Tablet) / (Mobile) say otherwise. Default: the size of the Eyebrow Style. | — |
+| Eyebrow Font size (Tablet) | `eyebrowFontSizeTablet` | select | No | "" | Same as Desktop (""), 0.75rem (12px) (`eyebrow-size-12`), 0.875rem (14px) (`eyebrow-size-14`) | From 600 to 1199px. Same as Desktop: the Eyebrow Font size (Desktop). | — |
+| Eyebrow Font size (Mobile) | `eyebrowFontSizeMobile` | select | No | "" | Same as Desktop (""), 0.75rem (12px) (`eyebrow-size-12`), 0.875rem (14px) (`eyebrow-size-14`) | Below 600px. Same as Desktop: the Eyebrow Font size (Desktop). | — |
 | Top spacing | `topSpacing` | select | No | "" | Default (""), Page header (extra space above) (`spacing-header`) | Page header: the larger space above a teaser that opens a page. | spacing-header |
 | Teaser Content Fixed Width | `teaserFixedWidth` | select | No | "" | Default (""), Fixed Width (824px) (`teaser-fixed-width`) | Fixed width for the teaser content. Applies to the Container that holds text, description, and button layout. | — |
 | Link CTA Alignment | `linkCtaAlignment` | select | No | `right` | Default (`right`), Left (`left`) | Where the links and CTAs go. Default: with the description. Left: after the text, below the title in the Text split layout. | — |
@@ -180,6 +195,7 @@ Stored on a new component (definition template): `titleType` = `"h2"`, `imagePos
 | Motion Speed | `classes_animationspeed` | select | No | "" | Medium (""), Fast (`motion-fast`), Slow (`motion-slow`) | How fast the block's animations run (Animation Type 0.3 / 0.6 / 0.9 s; the Background animation takes 1.5 times as long). Shown when (`classes_animation` is set and `classes_animation` is not empty) or (`classes_bganimation` is set and `classes_bganimation` is not empty). Delivered as a block class. | motion-fast |
 | Animation Trigger | `classes_animationtrigger` | select | No | "" | On Scroll / Viewport Entry (""), On Page Load (`motion-on-load`) | When the block's animations run. On Scroll: when the block comes into view (at once if it is in view when the page opens). On Page Load: as soon as the block is ready, wherever it is on the page. Shown when (`classes_animation` is set and `classes_animation` is not empty) or (`classes_bganimation` is set and `classes_bganimation` is not empty). Delivered as a block class. | motion-on-load |
 | Background animation | `classes_bganimation` | select | No | "" | None (""), Fade in (`bg-motion-fade-in`), Reveal from the centre (`bg-motion-reveal`), Wipe left to right (`bg-motion-wipe-right`), Wipe right to left (`bg-motion-wipe-left`), Wipe bottom to top (`bg-motion-wipe-up`), Scale reveal (`bg-motion-scale`) | How the block's background (its colour, image or overlay as set in the block) appears. It doesn't animate the content: see Animation Type. Motion Speed and Animation Trigger apply to it too. Not played in the editor or when the visitor prefers reduced motion. Shown when `bgColor` is set or `classes` is `background` or `classes` is `card`. Delivered as a block class. | bg-motion-scale |
+| Column gap | `classes_columngap` | select | No | "" | Default (""), 1.5rem (24px) (`cg-24`) | Delivered as a block class. | — |
 | Padding left | `classes_paddingleft` | select | No | "" | Default (""), 0 (none) (`pl-0`), 0.25rem (space-100) (`pl-100`), 0.5rem (space-200) (`pl-200`), 0.75rem (space-300) (`pl-300`), 1rem (space-400) (`pl-400`), 1.25rem (space-500) (`pl-500`), 1.5rem (space-600) (`pl-600`), 2rem (space-800) (`pl-800`), 2.5rem (space-1000) (`pl-1000`), 3rem (space-1200) (`pl-1200`), 4rem (space-1600) (`pl-1600`), 5rem (space-2000) (`pl-2000`), 6rem (space-2400) (`pl-2400`), 7.5rem (space-3000) (`pl-3000`) | Delivered as a block class. | pl-1000 |
 | Padding right | `classes_paddingright` | select | No | "" | Default (""), 0 (none) (`pr-0`), 0.25rem (space-100) (`pr-100`), 0.5rem (space-200) (`pr-200`), 0.75rem (space-300) (`pr-300`), 1rem (space-400) (`pr-400`), 1.25rem (space-500) (`pr-500`), 1.5rem (space-600) (`pr-600`), 2rem (space-800) (`pr-800`), 2.5rem (space-1000) (`pr-1000`), 3rem (space-1200) (`pr-1200`), 4rem (space-1600) (`pr-1600`), 5rem (space-2000) (`pr-2000`), 6rem (space-2400) (`pr-2400`), 7.5rem (space-3000) (`pr-3000`) | Delivered as a block class. | pr-1000 |
 | Padding top | `classes_paddingtop` | select | No | "" | Default (""), 0 (none) (`pt-0`), 0.25rem (space-100) (`pt-100`), 0.5rem (space-200) (`pt-200`), 0.75rem (space-300) (`pt-300`), 1rem (space-400) (`pt-400`), 1.25rem (space-500) (`pt-500`), 1.5rem (space-600) (`pt-600`), 2rem (space-800) (`pt-800`), 2.5rem (space-1000) (`pt-1000`), 3rem (space-1200) (`pt-1200`), 4rem (space-1600) (`pt-1600`), 5rem (space-2000) (`pt-2000`), 6rem (space-2400) (`pt-2400`), 7.5rem (space-3000) (`pt-3000`) | Delivered as a block class. | pt-1600 |
@@ -737,4 +753,4 @@ Evidence to collect: the page URL, viewport width, browser, a screenshot, the bl
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

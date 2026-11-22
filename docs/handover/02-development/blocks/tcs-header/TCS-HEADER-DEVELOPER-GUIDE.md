@@ -8,9 +8,9 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
-sourceFiles: ["blocks/tcs-header/README.md","blocks/tcs-header/_tcs-header.json","blocks/tcs-header/tcs-header.css","blocks/tcs-header/tcs-header.js"]
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
+sourceFiles: ["blocks/tcs-header/README.md","blocks/tcs-header/_tcs-header.json","blocks/tcs-header/header-theme.js","blocks/tcs-header/tcs-header.css","blocks/tcs-header/tcs-header.js"]
 relatedComponents: ["tcs-header"]
 relatedPages: []
 confidence: "Medium"
@@ -30,9 +30,9 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 2026-11-15 (model, files, imports from the code; reference pages from the live site) |
-| Source files | blocks/tcs-header/README.md, blocks/tcs-header/_tcs-header.json, blocks/tcs-header/tcs-header.css, blocks/tcs-header/tcs-header.js |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
+| Source files | blocks/tcs-header/README.md, blocks/tcs-header/_tcs-header.json, blocks/tcs-header/header-theme.js, blocks/tcs-header/tcs-header.css, blocks/tcs-header/tcs-header.js |
 | Related documents | [Variations](./TCS-HEADER-VARIATIONS.md), [Test coverage](./TCS-HEADER-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/tcs-header/TCS-HEADER-AUTHORING-GUIDE.md) |
 | Related AEM paths | — |
 
@@ -74,7 +74,7 @@ primary: true
 | Purpose | The TCS and TATA logos of the header, on the nav page |
 | Variations (summary) | — |
 | Children | — |
-| Code size | 768 lines of JS and CSS |
+| Code size | 934 lines of JS and CSS |
 
 ## Overview
 
@@ -96,6 +96,8 @@ primary: true
 
 **Working-copy correction, 6 November 2026.** The circular hamburger and accordion drawer now serve mobile and tablet below 1200px; the drawer starts below `--nav-height`. The site header owns logo layout and overlay contrast after extracting these elements: Always is transparent over a dark Hero at the top, with white logos changing to black as the bar becomes white while scrolling. Light Heroes use black logos. This uses the authored theme rather than image-pixel sampling. The current PNG logos retain their transparency but are not converted into vectors; transparent SVG originals are recommended. Escape closes the drawer and restores focus, and entering desktop closes it automatically. Earlier menu descriptions below refer to the previous level-by-level implementation.
 
+**Logo colour from the background, 19 November 2026.** The TCS and TATA logos follow the background behind the header bar instead of the scroll distance: white over a dark background, black over a light one. `setupDynamicLogoTheme` (`tcs-header.js`, started once when the block is in the header) finds the `main > .section` behind the bar's vertical middle on load, scroll, resize, `header:menu` and section changes (`MutationObserver`), measured in an animation frame, and sets `<html data-header-theme>` (`dark` / `light`, written only when it changes); `header-theme.js` decides (unit tested, `test/tcs-header/header-theme.test.mjs`). Light while the menu is open, with Header over the first block Never, or once the bar has turned white (`--header-scroll-progress` or its background alpha 0.6 and up); else the section's opening block, then the section: dark classes (`bg-dark`, `bg-dark-subtle`, `bg-dark-green`, `bg-black`, `dark`, `bg-charcoal-80`, `bg-navy-60`, `bg-charcoal-40`), light classes (`bg-light`, `bg-grey`, `bg-white`, `light`, `highlight`), else the background colour's luminance (alpha above 0.1, below 0.5 is dark); else dark for a section with a Hero without a light class, light otherwise. `tcs-header.css` applies it to the logos in the block and in the site header's nav (where `blocks/header` moves them), with a 0.2s filter transition (none for reduced motion). Before the script runs, the logos keep the colour `header.css` gives them.
+
 **Three-level drawer, 11 November 2026 (Figma TCS Designs 2957-18746).** Below 1200px the drawer lists the L1 pages below **Menu root path** as accordions. Each L1 label is a link to its page (`l1Node.path`). The row or its chevron button (`aria-expanded`, `aria-controls`, one accordion open at a time) shows the L2 pages in `.tcs-accordion-submenu`. An open L1 has the `#f2f6fc` background (`--tcs-nav-open-bg`, no design token) and a brand-blue label. An L2 page with child pages is a drill-down button with a right chevron. It replaces the main view (accordions and AI search) with the L3 panel (`.tcs-header-l3-panel`): a **Back to {L1 title}** button (placeholder `backTo`, focused on open) above the L3 pages as links on `#f2f6fc`. Back returns to the main view with the accordion still open and focus on the L2 button. Closing the menu (button, Escape, desktop width) returns to the main view. An L2 page without children is a link. Rows are at least 3rem high, L1 labels 1.5rem / 120%, L2 and L3 1.125rem / 150%, in the body font. L2 pages with children are reached through their L3 pages only (Figma has no link to them). With Menu depth below 3 there are no L3 pages, so every L2 page is a link. L1 pages without children are links only (no chevron).
 
 **When to use.** In the first section of every Navigation page.
@@ -110,6 +112,7 @@ primary: true
 | --- | --- |
 | `README.md` | [GitHub](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/tcs-header/README.md) |
 | `_tcs-header.json` | [GitHub](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/tcs-header/_tcs-header.json) |
+| `header-theme.js` | [GitHub](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/tcs-header/header-theme.js) |
 | `tcs-header.css` | [GitHub](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/tcs-header/tcs-header.css) |
 | `tcs-header.js` | [GitHub](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/tcs-header/tcs-header.js) |
 
@@ -155,6 +158,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | `../../utils/urls.js` |
 | `../../utils/site.js` |
 | `../../utils/query-index.js` |
+| `./header-theme.js` |
 
 ## For Developers
 
@@ -164,6 +168,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 blocks/tcs-header/
 ├── README.md
 ├── _tcs-header.json
+├── header-theme.js
 ├── tcs-header.css
 └── tcs-header.js
 ```
@@ -171,7 +176,7 @@ blocks/tcs-header/
 | Decorator/Utility | Purpose | Execution or dependency point |
 | ----------------- | ------- | ----------------------------- |
 | [`decorators/image-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/image-decorator.js) | `pictureOf` (image with its alt text field) | `tcs-header.js`: { pictureOf } |
-| [`utils/header-space.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/header-space.js) | `reserveHeaderSpace`, `rememberHeaderSpace` (the loaded header's height, the logo bar, remembered per breakpoint (`header-height-v2-*`) and reserved on the next pages before the header loads: no layout shift); `setHeader | `tcs-header.js`: { setHeaderOverlay, setHeaderPosition } |
+| [`utils/header-space.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/header-space.js) | `reserveHeaderSpace`, `rememberHeaderSpace` (the loaded header's height, the logo bar, remembered per breakpoint (`header-height-v3-*`; minimum reserved: 5.625rem below 1200px, 7.75rem from 1200px) and reserved on the ne | `tcs-header.js`: { setHeaderOverlay, setHeaderPosition } |
 | [`utils/links.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/links.js) | `NEW_WINDOW`, `linkOf`, `linkPathsOf` (the paths of a page property, one or many), `readLinkItems` (CTA lists with Link Type and the items' other select values), `readLinkRows` (the same from link item rows, e.g. Hero CT | `tcs-header.js`: { linkOf } |
 | [`utils/properties.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/properties.js) | `readProperties`, `textOf`, `isOn`, `isOnByDefault` (a toggle that defaults to on), `optionOf`, `normalizeKey`, `textSource` (key-value block properties) | `tcs-header.js`: { readProperties, textOf } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `tcs-header.js`: { getPlaceholders } |
@@ -333,6 +338,7 @@ Evidence to collect: the nav page path, the rendered `a.tcs-header-*` markup, th
 | Handover 2.29 | Re-audit: logo links typed without `https://` completed (R-D-15) | docs/handover revision history; docs/audit/REAUDIT-2026-10-20.md | 20 October 2026 |
 | Handover 2.31 | TATA logo link checked on the live pages (`https://www.tata.com`, "TATA Group") | docs/handover revision history | 20 October 2026 |
 | PR #141 | Header over the first block (Auto / Always / Never; every width from the sticky bar fix) | KB-D-052 (Proposed) | 22 October 2026 |
+| KB-D-071 (Approved), PR #228 | Page property Hide Header: `scripts.js` doesn't load the header on that page and keeps no header space (`utils/page-visibility.js`, `styles/styles.css`) | branch feature/header-footer-canvas-toggle | 16 November 2026 |
 
 ## Reference pages
 
@@ -438,4 +444,4 @@ Evidence to collect: the nav page path, the rendered `a.tcs-header-*` markup, th
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

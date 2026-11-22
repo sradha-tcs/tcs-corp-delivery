@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["component-definition.json","component-models.json"]
 relatedComponents: []
 relatedPages: []
@@ -30,46 +30,48 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | component-definition.json, component-models.json |
 | Related documents | — |
 | Related AEM paths | — |
 
 ## Contents
 
-- [Components (36)](#components-36)
+- [Components (38)](#components-38)
 - [Adding and configuring blocks](#adding-and-configuring-blocks)
 - [Screenshots](#screenshots)
 - [Known limitations](#known-limitations)
 - [Open items](#open-items)
 - [Change history](#change-history)
 
-## Components (36)
+## Components (38)
 
 | Component | Purpose | Fields (excl. Additional tab) | Guide |
 | --- | --- | --- | --- |
 | Accordion | Expandable question / answer or detail panels (native details / summary) | 2 | [ACCORDION-AUTHORING-GUIDE](../components/accordion/ACCORDION-AUTHORING-GUIDE.md) |
 | Anchor List | In-page navigation to section anchors, optionally sticky | 6 | [ANCHOR-LIST-AUTHORING-GUIDE](../components/anchor-list/ANCHOR-LIST-AUTHORING-GUIDE.md) |
 | Button | A link styled as a button, icon button or link button | 8 | [BUTTON-BLOCK-AUTHORING-GUIDE](../components/button-block/BUTTON-BLOCK-AUTHORING-GUIDE.md) |
-| Cards | Manually authored cards with the List's presentation (grid or horizontal scroll) | 77 | [CARDS-AUTHORING-GUIDE](../components/cards/CARDS-AUTHORING-GUIDE.md) |
+| Cards | Manually authored cards with the List's presentation (grid or horizontal scroll) | 86 | [CARDS-AUTHORING-GUIDE](../components/cards/CARDS-AUTHORING-GUIDE.md) |
 | Column Break | Starts a column in a Columns Container or a Tab | 1 | [COLUMN-BREAK-AUTHORING-GUIDE](../components/column-break/COLUMN-BREAK-AUTHORING-GUIDE.md) |
 | Columns | The built-in Columns block: columns of default content | 2 | [COLUMNS-AUTHORING-GUIDE](../components/columns/COLUMNS-AUTHORING-GUIDE.md) |
 | Columns Container | A section laid out in columns of default content and blocks | 23 | [COLUMNS-CONTAINER-AUTHORING-GUIDE](../components/columns-container/COLUMNS-CONTAINER-AUTHORING-GUIDE.md) |
+| Configurable Media Contacts | The regions of a media-contacts-config row of the data/conf-med-cont sheets, each with its contacts as its region action shows them | 3 | [CONF-MED-CONT-AUTHORING-GUIDE](../components/conf-med-cont/CONF-MED-CONT-AUTHORING-GUIDE.md) |
 | Conversation Canvas | Search prompt with quick actions; one floating journey across header, page and footer | 28 | [CONVERSATION-CANVAS-AUTHORING-GUIDE](../components/conversation-canvas/CONVERSATION-CANVAS-AUTHORING-GUIDE.md) |
 | Embed | Third-party embeds (YouTube, Vimeo, X and other URLs) behind a privacy-friendly facade | 3 | [EMBED-AUTHORING-GUIDE](../components/embed/EMBED-AUTHORING-GUIDE.md) |
 | Filter List | Filterable listing of the locale's pages from the query index | 45 | [FILTER-LIST-AUTHORING-GUIDE](../components/filter-list/FILTER-LIST-AUTHORING-GUIDE.md) |
 | Footer | Site footer bar on the footer reference page (copyright, links, Conversation Canvas) | 9 | [FOOTER-AUTHORING-GUIDE](../components/footer/FOOTER-AUTHORING-GUIDE.md) |
-| Form Variations | Forms (contact, download, subscribe) built from field items | 39 | [FORM-VARIATIONS-AUTHORING-GUIDE](../components/form-variations/FORM-VARIATIONS-AUTHORING-GUIDE.md) |
+| Form Variations | Forms (contact, download, subscribe) built from field items | 59 | [FORM-VARIATIONS-AUTHORING-GUIDE](../components/form-variations/FORM-VARIATIONS-AUTHORING-GUIDE.md) |
 | Fragment | Includes the sections of another page | 1 | [FRAGMENT-AUTHORING-GUIDE](../components/fragment/FRAGMENT-AUTHORING-GUIDE.md) |
 | Gen Carousel | A section whose Heroes or Teasers rotate as slides | 17 | [GEN-CAROUSEL-AUTHORING-GUIDE](../components/gen-carousel/GEN-CAROUSEL-AUTHORING-GUIDE.md) |
-| Hero | Full-width banner with image or Lottie, title, description and CTAs | 33 | [HERO-AUTHORING-GUIDE](../components/hero/HERO-AUTHORING-GUIDE.md) |
+| Hero | Full-width banner with image or Lottie, title, description and CTAs | 34 | [HERO-AUTHORING-GUIDE](../components/hero/HERO-AUTHORING-GUIDE.md) |
+| History Timeline | The company history as a horizontal strip of milestone cards (year, title, description, image, optional CTA) with a progress line and previous / next buttons | 12 | [HISTORY-TIMELINE-AUTHORING-GUIDE](../components/history-timeline/HISTORY-TIMELINE-AUTHORING-GUIDE.md) |
 | Image Collage | Centred eyebrow, title, description and CTAs on a dark background framed by up to nine floating decorative images | 23 | [IMAGE-COLLAGE-AUTHORING-GUIDE](../components/image-collage/IMAGE-COLLAGE-AUTHORING-GUIDE.md) |
 | Interactive Dashboard | Reserved for a future dashboard; renders nothing on the site | 0 | [INTERACTIVE-DASHBOARD-AUTHORING-GUIDE](../components/interactive-dashboard/INTERACTIVE-DASHBOARD-AUTHORING-GUIDE.md) |
 | List | Child pages, a fixed list or tagged pages from the query index, as cards or links | 98 | [LIST-AUTHORING-GUIDE](../components/list/LIST-AUTHORING-GUIDE.md) |
-| Media Contacts | The media contacts of the locale's Media Contacts sheet, grouped by designation and region | 12 | [MEDIA-CONTACTS-AUTHORING-GUIDE](../components/media-contacts/MEDIA-CONTACTS-AUTHORING-GUIDE.md) |
+| Media Contacts | The media contacts of the locale's Media Contacts sheet, grouped by designation and region | 13 | [MEDIA-CONTACTS-AUTHORING-GUIDE](../components/media-contacts/MEDIA-CONTACTS-AUTHORING-GUIDE.md) |
 | Modal | Opens a page's content in a dialog (button or auto-linked /modal/ links) | 2 | [MODAL-AUTHORING-GUIDE](../components/modal/MODAL-AUTHORING-GUIDE.md) |
-| Page Header | The title area of a page from its metadata (title, description, tags, author, dates) | 12 | [PAGE-HEADER-AUTHORING-GUIDE](../components/page-header/PAGE-HEADER-AUTHORING-GUIDE.md) |
+| Page Header | The title area of a page from its metadata (title, description, tags, author, dates) | 20 | [PAGE-HEADER-AUTHORING-GUIDE](../components/page-header/PAGE-HEADER-AUTHORING-GUIDE.md) |
 | Quote | A quotation with author, optional image and title | 10 | [QUOTE-AUTHORING-GUIDE](../components/quote/QUOTE-AUTHORING-GUIDE.md) |
 | Separator | A divider line between content | 42 | [SEPARATOR-AUTHORING-GUIDE](../components/separator/SEPARATOR-AUTHORING-GUIDE.md) |
 | Tab | Starts a tab panel in a Tabs Container | 4 | [TAB-AUTHORING-GUIDE](../components/tab/TAB-AUTHORING-GUIDE.md) |
@@ -77,14 +79,14 @@ primary: true
 | Table List | A numbered list of linked items (industries, services) | 21 | [TABLE-LIST-AUTHORING-GUIDE](../components/table-list/TABLE-LIST-AUTHORING-GUIDE.md) |
 | Tabs | Tabs Container section (Tab items and content) and the Tabs block (tabs of fragments) | 29 | [TABS-AUTHORING-GUIDE](../components/tabs/TABS-AUTHORING-GUIDE.md) |
 | TCS Header | The TCS and TATA logos of the header, on the nav page | 13 | [TCS-HEADER-AUTHORING-GUIDE](../components/tcs-header/TCS-HEADER-AUTHORING-GUIDE.md) |
-| Teaser | Title, text, image and links in one of four layouts | 80 | [TEASER-AUTHORING-GUIDE](../components/teaser/TEASER-AUTHORING-GUIDE.md) |
+| Teaser | Title, text, image and links in one of four layouts | 96 | [TEASER-AUTHORING-GUIDE](../components/teaser/TEASER-AUTHORING-GUIDE.md) |
 | Testimonial | A client testimonial with author, image and stats | 18 | [TESTIMONIAL-AUTHORING-GUIDE](../components/testimonial/TESTIMONIAL-AUTHORING-GUIDE.md) |
 | Video | A DAM, YouTube or Vimeo video inline or in a pop-up, with poster and captions | 22 | [VIDEO-AUTHORING-GUIDE](../components/video/VIDEO-AUTHORING-GUIDE.md) |
 | Text | Default content | 0 | [TEXT-AUTHORING-GUIDE](../components/text/TEXT-AUTHORING-GUIDE.md) |
 | Title | Default content | 2 | [TITLE-AUTHORING-GUIDE](../components/title/TITLE-AUTHORING-GUIDE.md) |
 | Image | Default content | 2 | [IMAGE-AUTHORING-GUIDE](../components/image/IMAGE-AUTHORING-GUIDE.md) |
 | Button (basic) | Default content | 4 | [BUTTON-AUTHORING-GUIDE](../components/button/BUTTON-AUTHORING-GUIDE.md) |
-| Section | Default content | 7 | [SECTION-AUTHORING-GUIDE](../components/section/SECTION-AUTHORING-GUIDE.md) |
+| Section | Default content | 10 | [SECTION-AUTHORING-GUIDE](../components/section/SECTION-AUTHORING-GUIDE.md) |
 
 ## Adding and configuring blocks
 
@@ -178,4 +180,4 @@ Container sections (Columns Container, Tabs Container, Gen Carousel) carry the s
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

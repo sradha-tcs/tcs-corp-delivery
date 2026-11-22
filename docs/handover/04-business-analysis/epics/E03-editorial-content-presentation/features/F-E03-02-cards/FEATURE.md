@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/cards"]
 relatedComponents: ["cards"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/cards |
 | Related documents | — |
 | Related AEM paths | — |
@@ -67,7 +67,7 @@ primary: true
 | Acceptance criteria | See the user stories |
 | Related user stories | US-F-E03-02-01, US-F-E03-02-02, US-F-E03-02-03 |
 | Related components | cards |
-| Related test cases | TC-CARDS-001, TC-CARDS-002, TC-CARDS-003, TC-CARDS-004, TC-CARDS-005, TC-CARDS-006, TC-CARDS-007, TC-CARDS-008, TC-CARDS-009, TC-CARDS-010, TC-CARDS-011, TC-CARDS-012, TC-CARDS-013, TC-CARDS-014, TC-CARDS-015, TC-CARDS-016, TC-CARDS-017, TC-CARDS-018, TC-CARDS-019, TC-CARDS-020, TC-CARDS-021, TC-CARDS-022, TC-CARDS-023, TC-CARDS-024, TC-CARDS-025, TC-CARDS-026 |
+| Related test cases | TC-CARDS-001, TC-CARDS-002, TC-CARDS-003, TC-CARDS-004, TC-CARDS-005, TC-CARDS-006, TC-CARDS-007, TC-CARDS-008, TC-CARDS-009, TC-CARDS-010, TC-CARDS-011, TC-CARDS-012, TC-CARDS-013, TC-CARDS-014, TC-CARDS-015, TC-CARDS-016, TC-CARDS-017, TC-CARDS-018, TC-CARDS-019, TC-CARDS-020, TC-CARDS-021, TC-CARDS-022, TC-CARDS-023, TC-CARDS-024, TC-CARDS-025, TC-CARDS-026, TC-CARDS-027, TC-CARDS-028, TC-CARDS-029, TC-CARDS-030, TC-CARDS-031 |
 | Definition of Ready | [DEFINITION-OF-READY](../../../../markdown/DEFINITION-OF-READY.md) |
 | Definition of Done | [DEFINITION-OF-DONE](../../../../markdown/DEFINITION-OF-DONE.md) |
 
@@ -89,4 +89,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

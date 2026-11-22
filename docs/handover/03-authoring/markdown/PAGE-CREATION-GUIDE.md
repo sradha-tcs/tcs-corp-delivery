@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["docs/handover/knowledge-base/authoring.md","models/_page.json"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | docs/handover/knowledge-base/authoring.md, models/_page.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -82,12 +82,15 @@ The page model is `page-metadata` in [models/_page.json](https://github.com/srad
 | Navigation | `nav` | Inherited (see [References](https://github.com/sradha-tcs/tcs-corp/blob/main/docs/handover/knowledge-base/authoring.md#references-navigation-footer-and-404)) |
 | Footer | `footer` | Inherited |
 | 404 Page | `error-page` | Inherited |
+| Hide Header | `hide-header` | Toggle, this page only: shows the page without the header (logo bar, menu, header Canvas); the page starts at the top. Sheet column `hide-header` (`true`) |
+| Hide Footer | `hide-footer` | Toggle, this page only: shows the page without the footer. Sheet column `hide-footer` |
+| Hide Conversation Canvas | `hide-canvas` | Toggle, this page only: hides every Conversation Canvas of the page (header, footer, content), shown faded in edit mode. Sheet column `hide-canvas` |
 
 `TEMPLATES` in [scripts/scripts.js](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/scripts.js) is `home`, `article`, `blog`, `press-release`; another value loads no template code but is still added as a body class.
 
 #### Sections
 
-A section is a band of the page with default content and blocks. Its fields (Section Name, Style Default / Grey / Dark / Dark Green, Width Type, Rounded edge, Background Image and its alt text, Anchor name) are in [models/_section.json](https://github.com/sradha-tcs/tcs-corp/blob/main/models/_section.json); the backgrounds and the dark theme contract are described in [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md#blocks) ("Backgrounds and theme"). Sections don't get `classes_*` fields delivered, so a section has no Additional tab; the container sections use `container*` fields instead.
+A section is a band of the page with default content and blocks. Its fields (Section Name, Style Default / Grey / Dark / Dark Green, Width Type, Text width per device (Mobile below 600px, Tablet 600 to 1199px, Desktop from 1200px: Full, 75%, 66%, 50% or 33% of the row for the section's text, headings and buttons, left-aligned; blocks keep their width), Rounded edge, Background Image and its alt text, Anchor name) are in [models/_section.json](https://github.com/sradha-tcs/tcs-corp/blob/main/models/_section.json); the backgrounds and the dark theme contract are described in [AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md#blocks) ("Backgrounds and theme"). Sections don't get `classes_*` fields delivered, so a section has no Additional tab; the container sections use `container*` fields instead.
 
 ## Adding and configuring blocks
 
@@ -190,4 +193,4 @@ Container sections (Columns Container, Tabs Container, Gen Carousel) carry the s
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
