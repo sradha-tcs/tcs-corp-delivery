@@ -49,10 +49,10 @@ primary: true
 
 | Check | Result |
 | --- | --- |
-| `npm run lint` | Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #265 (51885b3) |
-| `npm test` | 488 of 488 passed on main after PR #265 (51885b3) |
-| `npm run build:json` | Passed; no change to the committed files (main after PR #265) |
-| `npm run build:docs` | Passed; no change to the committed files (main after PR #265) |
+| `npm run lint` | Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #204 (4fb4a1d) |
+| `npm test` | 488 of 488 passed on main after PR #204 (4fb4a1d) |
+| `npm run build:json` | Passed; no change to the committed files (main after PR #204) |
+| `npm run build:docs` | Passed; no change to the committed files (main after PR #204) |
 | `node docs/handover/knowledge-base/validate-knowledge-base.mjs` | Passed (34 pages, nothing missing or failing) |
 | `node capture.mjs (documentation program)` | 8 November 2026: Completed: 200 pages, 800 screenshots; 22 November 2026: the 2 Configurable Media Contacts block library pages of /language-master/en added (8 screenshots, no console errors, failed requests or overflow) |
 | `node analyze-links.mjs (documentation program)` | 8 November 2026: Completed for the three roots |

@@ -58,7 +58,7 @@ primary: true
 | testCases | 350 |
 | tokens | 409 |
 
-Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #265 (51885b3).
+Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #204 (4fb4a1d).
 
 ## Fields without a description (415)
 

@@ -8,8 +8,8 @@ owner: "AMS / Support Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -150,6 +150,10 @@ primary: true
 | Packaged pages render without CTAs, stats, filters or footer links | Content written as composite multifields (`ctas/item0`) doesn't render (finding F-87) | `.plain.html`: empty item rows | Use item children (`hero-cta`, `teaser-link`, `footer-link`, …) | Items render on the published page |
 | Package procedure itself (build, install) unclear | Not recorded in the repository: the packages are built in the delivery workspace | — | Blocked: package build and install procedure from the delivery team | — |
 | New pages missing from lists after publishing | Not yet indexed, or the index predates a `helix-query.yaml` change | Search `/query-index.json` | Reindex: `POST https://admin.hlx.page/index/sradha-tcs/tcs-corp/main/{path}` per path (authenticated); publish sheets before pages so rows carry their metadata | Row present (e.g. 312 / 312 reindexed for 1.0.10); block library pages stay out by design |
+| A page can't be previewed (404, "the author returned no page") though it exists in AEM | Edge Delivery lower-cases and normalises the page's **own name** (a–z, 0–9, single hyphens, no `_`, no leading or trailing `-`) and asks the author for that path: `Articles`, `a--b`, `a_b`, `x_msm_moved`, `a-` aren't found. Parent folders keep their case (`…/Articles/page` publishes; `…/Articles` doesn't) | Admin API status: `webPath` (normalised) vs the AEM name | Rename the page on the author to the normalised name (its children move with it and change URL); update the links to it and the metadata / redirects sheet rows; republish; unpublish the old live URLs of moved children (9 November 2026: 125 pages and 3 folders below `/language-masters/en`, fix packages and tools in `consolidated/packages-fixes/` and `consolidated/tools/fix-unpublished/` on the branch migrated-page-content-edam) | Status 200 for preview and live at the normalised path |
+| A page with the built-in Image component and an SVG fails to publish, or shows `<img src="about:error">` | SVG files over 40 KB (the Edge Delivery limit) aren't delivered; a short author outage during a bulk preview also leaves `about:error` images | Size of the SVG's original rendition; `about:error` in the page's `.plain.html` | Convert SVGs over 40 KB to PNG (rendered with metric-compatible fonts) and reference the PNG; for an outage, preview and publish the page again | No `about:error` in the delivered HTML |
+| Bulk preview right after a large package install: many 504 (timeout after 10s) or 502 / 503 | The author is busy processing the install; the bulk job fetches pages in parallel | Job details: `GET https://admin.hlx.page/job/{org}/{site}/main/preview/{job}/details` | Retry the failed paths one at a time, after a pause if the author answers 503 | Every path 200 |
+| A bulk `live` job's details return 404 | Live jobs are filed under the topic `publish` | — | `GET …/job/{org}/{site}/main/publish/{job}/details` | Job state `stopped`, progress listed |
 | Live page still old after publish | Published to preview only; a reference (fragment, nav, footer, asset, sheet) not published; caching; inherited Navigation / Footer / 404 values cached per session (`sessionStorage` `tcs-inherited-metadata`) | Compare aem.page / aem.live in a private window; Admin API status | Republish with references; purge the cache; new browser session | Fresh `last-modified`; change visible |
 
 ## Further Site-Wide Issues
@@ -216,4 +220,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

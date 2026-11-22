@@ -67,10 +67,10 @@ primary: true
 
 | Command | Purpose | Result in this program |
 | --- | --- | --- |
-| `npm run lint` | ESLint (Airbnb, json, xwalk model rules) and Stylelint | Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #265 (51885b3) |
-| `npm test` | Unit tests (Node test runner) | 488 of 488 passed on main after PR #265 (51885b3) |
-| `npm run build:json` | Aggregate the Universal Editor models | Passed; no change to the committed files (main after PR #265) |
-| `npm run build:docs` | Generated sections of the block READMEs | Passed; no change to the committed files (main after PR #265) |
+| `npm run lint` | ESLint (Airbnb, json, xwalk model rules) and Stylelint | Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #204 (4fb4a1d) |
+| `npm test` | Unit tests (Node test runner) | 488 of 488 passed on main after PR #204 (4fb4a1d) |
+| `npm run build:json` | Aggregate the Universal Editor models | Passed; no change to the committed files (main after PR #204) |
+| `npm run build:docs` | Generated sections of the block READMEs | Passed; no change to the committed files (main after PR #204) |
 | `node docs/handover/knowledge-base/validate-knowledge-base.mjs` | Knowledge base structure and pointers | Passed (34 pages, nothing missing or failing) |
 | `node capture.mjs (documentation program)` | Automated checks and screenshots of 200 reference pages at 4 widths | 8 November 2026: Completed: 200 pages, 800 screenshots; 22 November 2026: the 2 Configurable Media Contacts block library pages of /language-master/en added (8 screenshots, no console errors, failed requests or overflow) |
 | `node analyze-links.mjs (documentation program)` | Links of the published pages of the roots | 8 November 2026: Completed for the three roots |
