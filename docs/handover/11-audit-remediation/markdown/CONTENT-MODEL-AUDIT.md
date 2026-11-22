@@ -54,11 +54,11 @@ primary: true
 | fields | 1140 |
 | variationFields | 589 |
 | variationOptions | 5076 |
-| testFiles | 25 |
-| testCases | 318 |
+| testFiles | 28 |
+| testCases | 350 |
 | tokens | 409 |
 
-Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #264 (3996bfd).
+Lint (eslint-plugin-xwalk rules): Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #265 (51885b3).
 
 ## Fields without a description (415)
 

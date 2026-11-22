@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["docs/handover/knowledge-base/development-standards.md",".eslintrc.js",".stylelintrc.json"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | docs/handover/knowledge-base/development-standards.md, .eslintrc.js, .stylelintrc.json |
 | Related documents | — |
 | Related AEM paths | — |
@@ -223,7 +223,7 @@ Mobile-first CSS with the three breakpoints above; `utils/viewport.js` names the
 
 ## Accessibility First
 
-WCAG 2.1 AA is the target (AGENTS.md "Accessibility"): real `<button>`s with `aria-expanded` / `aria-controls` for disclosures, Escape closes popups and returns focus, pause / play for moving content, `prefers-reduced-motion` honoured (nothing animates for reduced motion or in edit mode), new-tab links announced (`announceNewTab`), form errors next to the field and linked with `aria-describedby`, one `h1` per page, alt text fields on images, and **all UI text from placeholders**. Use the tokens so contrast holds on dark backgrounds.
+WCAG 2.2 AA is the target (AGENTS.md "Accessibility"): real `<button>`s with `aria-expanded` / `aria-controls` for disclosures, Escape closes popups and returns focus, pause / play for moving content, `prefers-reduced-motion` honoured (nothing animates for reduced motion or in edit mode), new-tab links announced (`announceNewTab`), form errors next to the field and linked with `aria-describedby`, one `h1` per page, alt text fields on images, and **all UI text from placeholders**. Use the tokens so contrast holds on dark backgrounds.
 
 ## Performance First
 
@@ -373,4 +373,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

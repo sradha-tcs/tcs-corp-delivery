@@ -48,7 +48,8 @@
    "../../utils/environment.js",
    "../../utils/multifield.js",
    "../../utils/properties.js",
-   "../../utils/placeholders.js"
+   "../../utils/placeholders.js",
+   "../../utils/urls.js"
   ]
  },
  {
@@ -243,6 +244,7 @@
    "../../utils/properties.js",
    "../../utils/urls.js",
    "../../utils/ids.js",
+   "../../utils/environment.js",
    "../../utils/page-visibility.js",
    "../../utils/placeholders.js",
    "./canvas-controller.js",
@@ -885,7 +887,8 @@
    "../../utils/placeholders.js",
    "../../utils/properties.js",
    "../fragment/fragment.js",
-   "../tab/tab.js"
+   "../tab/tab.js",
+   "../../utils/urls.js"
   ]
  },
  {
@@ -916,6 +919,7 @@
    "../../utils/urls.js",
    "../../utils/site.js",
    "../../utils/query-index.js",
+   "../../utils/ids.js",
    "./header-theme.js"
   ]
  },

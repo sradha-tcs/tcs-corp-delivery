@@ -602,41 +602,41 @@ Mapping checklist for a new Figma variation (practice from AGENTS.md "Blocks" an
 | `--nav-height` | `0rem` | styles/styles.css:381 | html[data-hide-header] |
 | `--header-overlay-space` | `var(--header-height, var(--header-reserved))` | styles/styles.css:402 | html[data-header-overlay='always'] body |
 | `--header-overlay-space` | `var(--header-height, var(--header-reserved))` | styles/styles.css:406 | html:not([data-header-overlay='never']) body:has(main > .section:first-child .hero:not(.bg-dark, .bg-dark-subtle, .bg-black, .bg-charcoal-80, .bg-navy-60, .bg-charcoal-40)) |
-| `--tag-color` | `var(--color-text-neutral)` | styles/styles.css:846 | .tag |
-| `--tag-bg` | `var(--color-bg-default)` | styles/styles.css:847 | .tag |
-| `--tag-border` | `var(--color-border-default)` | styles/styles.css:848 | .tag |
-| `--tag-hover-color` | `var(--color-text-on-brand)` | styles/styles.css:849 | .tag |
-| `--tag-hover-bg` | `var(--color-bg-brand)` | styles/styles.css:850 | .tag |
-| `--tag-hover-border` | `var(--color-border-brand)` | styles/styles.css:851 | .tag |
-| `--tag-color` | `var(--color-text-default)` | styles/styles.css:883 | .tag-filter |
-| `--tag-color` | `var(--color-text-on-brand)` | styles/styles.css:894 | .tag-filter[aria-current] |
-| `--tag-bg` | `var(--color-bg-brand)` | styles/styles.css:895 | .tag-filter[aria-current] |
-| `--tag-border` | `var(--color-border-brand)` | styles/styles.css:896 | .tag-filter[aria-current] |
-| `--tag-bg` | `transparent` | styles/styles.css:901 | .tag-industry |
-| `--tag-border` | `transparent` | styles/styles.css:902 | .tag-industry |
-| `--tag-hover-color` | `var(--color-text-brand)` | styles/styles.css:903 | .tag-industry |
-| `--tag-hover-bg` | `transparent` | styles/styles.css:904 | .tag-industry |
-| `--tag-hover-border` | `transparent` | styles/styles.css:905 | .tag-industry |
-| `--tag-color` | `var(--color-text-secondary)` | styles/styles.css:914 | .tag-card |
-| `--tag-color` | `var(--color-text-default)` | styles/styles.css:922 | .tag-industry |
-| `--avatar-size` | `2.5rem` | styles/styles.css:934 | .avatar |
-| `--avatar-size` | `2rem` | styles/styles.css:972 | .avatar.medium |
-| `--avatar-size` | `1.5rem` | styles/styles.css:980 | .avatar.small |
-| `--section-max-width` | `none` | styles/styles.css:1039 | main > .section |
-| `--section-padding-inline` | `0rem` | styles/styles.css:1046 | main > .section:not(.fixed-width) |
-| `--section-max-width` | `var(--content-max-width)` | styles/styles.css:1050 | main > .section.fixed-width |
-| `--color-text-default` | `var(--color-text-on-neutral)` | styles/styles.css:1158 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--color-text-secondary` | `rgb(255 255 255 / 70%)` | styles/styles.css:1159 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--color-text-brand` | `var(--brand-300)` | styles/styles.css:1160 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--color-border-brand` | `var(--brand-300); /* the focus ring */` | styles/styles.css:1161 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--link-color` | `var(--brand-300)` | styles/styles.css:1162 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--link-hover-color` | `var(--color-text-on-neutral)` | styles/styles.css:1163 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
-| `--color-text-default` | `var(--black-1000)` | styles/styles.css:1169 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
-| `--color-text-secondary` | `var(--slate-700)` | styles/styles.css:1170 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
-| `--color-text-brand` | `var(--brand-400)` | styles/styles.css:1171 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
-| `--color-border-brand` | `var(--brand-500)` | styles/styles.css:1172 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
-| `--link-color` | `var(--brand-400)` | styles/styles.css:1173 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
-| `--link-hover-color` | `var(--brand-600)` | styles/styles.css:1174 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--tag-color` | `var(--color-text-neutral)` | styles/styles.css:865 | .tag |
+| `--tag-bg` | `var(--color-bg-default)` | styles/styles.css:866 | .tag |
+| `--tag-border` | `var(--color-border-default)` | styles/styles.css:867 | .tag |
+| `--tag-hover-color` | `var(--color-text-on-brand)` | styles/styles.css:868 | .tag |
+| `--tag-hover-bg` | `var(--color-bg-brand)` | styles/styles.css:869 | .tag |
+| `--tag-hover-border` | `var(--color-border-brand)` | styles/styles.css:870 | .tag |
+| `--tag-color` | `var(--color-text-default)` | styles/styles.css:902 | .tag-filter |
+| `--tag-color` | `var(--color-text-on-brand)` | styles/styles.css:913 | .tag-filter[aria-current] |
+| `--tag-bg` | `var(--color-bg-brand)` | styles/styles.css:914 | .tag-filter[aria-current] |
+| `--tag-border` | `var(--color-border-brand)` | styles/styles.css:915 | .tag-filter[aria-current] |
+| `--tag-bg` | `transparent` | styles/styles.css:920 | .tag-industry |
+| `--tag-border` | `transparent` | styles/styles.css:921 | .tag-industry |
+| `--tag-hover-color` | `var(--color-text-brand)` | styles/styles.css:922 | .tag-industry |
+| `--tag-hover-bg` | `transparent` | styles/styles.css:923 | .tag-industry |
+| `--tag-hover-border` | `transparent` | styles/styles.css:924 | .tag-industry |
+| `--tag-color` | `var(--color-text-secondary)` | styles/styles.css:933 | .tag-card |
+| `--tag-color` | `var(--color-text-default)` | styles/styles.css:941 | .tag-industry |
+| `--avatar-size` | `2.5rem` | styles/styles.css:953 | .avatar |
+| `--avatar-size` | `2rem` | styles/styles.css:991 | .avatar.medium |
+| `--avatar-size` | `1.5rem` | styles/styles.css:999 | .avatar.small |
+| `--section-max-width` | `none` | styles/styles.css:1058 | main > .section |
+| `--section-padding-inline` | `0rem` | styles/styles.css:1065 | main > .section:not(.fixed-width) |
+| `--section-max-width` | `var(--content-max-width)` | styles/styles.css:1069 | main > .section.fixed-width |
+| `--color-text-default` | `var(--color-text-on-neutral)` | styles/styles.css:1177 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--color-text-secondary` | `rgb(255 255 255 / 70%)` | styles/styles.css:1178 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--color-text-brand` | `var(--brand-300)` | styles/styles.css:1179 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--color-border-brand` | `var(--brand-300); /* the focus ring */` | styles/styles.css:1180 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--link-color` | `var(--brand-300)` | styles/styles.css:1181 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--link-hover-color` | `var(--color-text-on-neutral)` | styles/styles.css:1182 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) |
+| `--color-text-default` | `var(--black-1000)` | styles/styles.css:1188 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--color-text-secondary` | `var(--slate-700)` | styles/styles.css:1189 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--color-text-brand` | `var(--brand-400)` | styles/styles.css:1190 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--color-border-brand` | `var(--brand-500)` | styles/styles.css:1191 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--link-color` | `var(--brand-400)` | styles/styles.css:1192 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
+| `--link-hover-color` | `var(--brand-600)` | styles/styles.css:1193 | main :is(.section, .block.columns-container):is(.bg-dark, .bg-dark-green) :is(.teaser, .block.columns-container).bg-grey |
 | `--motion-duration` | `600ms` | styles/motion.css:12 | :root |
 | `--motion-duration-background` | `900ms` | styles/motion.css:13 | :root |
 | `--motion-stagger` | `120ms` | styles/motion.css:14 | :root |

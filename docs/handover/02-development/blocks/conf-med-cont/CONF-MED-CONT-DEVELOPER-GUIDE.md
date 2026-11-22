@@ -198,7 +198,7 @@ blocks/conf-med-cont/
 
 - The title is a heading at the authored level, the region names one level below (H3 under an H2), so the outline stays in order.
 - Each link has a visually hidden label (placeholders `email` "Email", `phone` "Phone") before the address or number.
-- Underlined links in the text colour with a brand-colour hover and a 2px focus outline (WCAG 2.1 AA contrast: `--color-text-default` and `--color-text-brand` on white).
+- Underlined links in the text colour with a brand-colour hover and a 2px focus outline (WCAG 2.2 AA contrast: `--color-text-default` and `--color-text-brand` on white).
 - Contacts are lists (`ul` / `li`), people with a name are list items of their own.
 
 ## Data Layer and Analytics

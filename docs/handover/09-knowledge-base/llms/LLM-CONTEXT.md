@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -67,7 +67,7 @@ docs/handover/knowledge-base/decision-log.md. Code wins over documentation.
 - CSS: rem units (px only in media queries), mobile first with min-width 600 / 900 / 1200px,
   selectors scoped to the block, semantic tokens from styles/styles.css.
 - UI text from placeholders: const t = await getPlaceholders(); t('key', 'English fallback').
-- Accessibility WCAG 2.1 AA: real buttons, aria-expanded / aria-controls, Escape closes popups,
+- Accessibility WCAG 2.2 AA: real buttons, aria-expanded / aria-controls, Escape closes popups,
   pause for moving content, announceNewTab for new-tab links, labelled form errors.
 - Analytics: data-cmp-* attributes; the data layer decorator pushes events centrally. Adobe Tags,
   Web SDK, Target and consent are not implemented: don't add them without an approved decision.
@@ -103,4 +103,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

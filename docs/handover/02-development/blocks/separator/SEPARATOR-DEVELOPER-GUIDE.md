@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/separator/README.md","blocks/separator/_separator.json","blocks/separator/separator-config.js","blocks/separator/separator.css","blocks/separator/separator.js"]
 relatedComponents: ["separator"]
 relatedPages: ["/design-block-master/en/block-library/separator","/design-block-master/en/block-library/separator/option-reference","/design-block-master/en/block-library/separator/separator-variations","/design-block-master/en/block-library/separator/theme-auto"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/separator/README.md, blocks/separator/_separator.json, blocks/separator/separator-config.js, blocks/separator/separator.css, blocks/separator/separator.js |
 | Related documents | [Variations](./SEPARATOR-VARIATIONS.md), [Test coverage](./SEPARATOR-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/separator/SEPARATOR-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/separator, /content/tcs-corp/design-block-master/en/block-library/separator/option-reference, /content/tcs-corp/design-block-master/en/block-library/separator/separator-variations |
@@ -199,7 +199,7 @@ blocks/separator/
 
 | Decorator/Utility | Purpose | Execution or dependency point |
 | ----------------- | ------- | ----------------------------- |
-| [`utils/analytics.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/analytics.js) | `pushToDataLayer`, `pushComponents`, `pushComponentEvent` (Adobe Client Data Layer, Core Components schema; never throws) | `separator.js`: { pushComponents } |
+| [`utils/analytics.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/analytics.js) | `pushToDataLayer`, `pushComponents`, `pushComponentEvent` (Adobe Client Data Layer, Core Components schema; never throws); since KB-D-074 `pushDataLayerEvent`, `createDataLayerEvent`, `generateEventId`, `sanitizeDataLaye | `separator.js`: { pushComponents } |
 | [`utils/environment.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/environment.js) | `prefersReducedMotion`, `scrollBehavior`, `isEditing`, `isInEditor`, `isAuthor` (the page is rendered by AEM author, which has no query index) | `separator.js`: { isEditing, prefersReducedMotion } |
 | [`utils/ids.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/ids.js) | `nextInstance`, `uniqueId`, `createIdFactory` (unique ids per block instance), `availableId` (an authored id kept, suffixed -2, -3, ... only when taken) | `separator.js`: { uniqueId } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `separator.js`: { getPlaceholders } |
@@ -608,4 +608,4 @@ Evidence to collect (no secrets): URL, viewport, the block's classes and `id`, t
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

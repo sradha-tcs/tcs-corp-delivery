@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/gen-carousel/README.md","blocks/gen-carousel/_gen-carousel.json","blocks/gen-carousel/gen-carousel.css","blocks/gen-carousel/gen-carousel.js"]
 relatedComponents: ["gen-carousel"]
 relatedPages: ["/design-block-master/en/block-library/gen-carousel","/design-block-master/en/block-library/gen-carousel/auto","/design-block-master/en/block-library/gen-carousel/hero-slides","/design-block-master/en/block-library/gen-carousel/manual-and-auto","/design-block-master/en/block-library/gen-carousel/single-slide","/design-block-master/en/block-library/gen-carousel/teaser-slides","/design-block-master/en/curated-design-pages/who-we-are"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/gen-carousel/README.md, blocks/gen-carousel/_gen-carousel.json, blocks/gen-carousel/gen-carousel.css, blocks/gen-carousel/gen-carousel.js |
 | Related documents | [Variations](./GEN-CAROUSEL-VARIATIONS.md), [Test coverage](./GEN-CAROUSEL-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/gen-carousel/GEN-CAROUSEL-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/gen-carousel, /content/tcs-corp/design-block-master/en/block-library/gen-carousel/auto, /content/tcs-corp/design-block-master/en/block-library/gen-carousel/hero-slides |
@@ -169,7 +169,7 @@ blocks/gen-carousel/
 | ----------------- | ------- | ----------------------------- |
 | [`decorators/button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/button-decorator.js) | `decorateButton` (option `newTabHint`: a link opening a new tab says so), `createButton`, `setButtonDisabled`, `setButtonAlignment`, `removeButtonDecoration` | `gen-carousel.js`: { decorateButton } |
 | [`decorators/icon-button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/icon-button-decorator.js) | `createIconButton` | `gen-carousel.js`: { createIconButton } |
-| [`utils/analytics.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/analytics.js) | `pushToDataLayer`, `pushComponents`, `pushComponentEvent` (Adobe Client Data Layer, Core Components schema; never throws) | `gen-carousel.js`: { pushComponentEvent } |
+| [`utils/analytics.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/analytics.js) | `pushToDataLayer`, `pushComponents`, `pushComponentEvent` (Adobe Client Data Layer, Core Components schema; never throws); since KB-D-074 `pushDataLayerEvent`, `createDataLayerEvent`, `generateEventId`, `sanitizeDataLaye | `gen-carousel.js`: { pushComponentEvent } |
 | [`utils/environment.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/environment.js) | `prefersReducedMotion`, `scrollBehavior`, `isEditing`, `isInEditor`, `isAuthor` (the page is rendered by AEM author, which has no query index) | `gen-carousel.js`: { isEditing, prefersReducedMotion, scrollBehavior } |
 | [`utils/viewport.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/viewport.js) | `onVisible` (once), `watchVisibility` (on / off screen), `currentBreakpoint` (mobile / tablet / desktop) | `gen-carousel.js`: { watchVisibility } |
 | [`utils/ids.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/ids.js) | `nextInstance`, `uniqueId`, `createIdFactory` (unique ids per block instance), `availableId` (an authored id kept, suffixed -2, -3, ... only when taken) | `gen-carousel.js`: { uniqueId } |
@@ -443,4 +443,4 @@ Evidence to collect (no secrets): URL, viewport, the section's data attributes, 
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

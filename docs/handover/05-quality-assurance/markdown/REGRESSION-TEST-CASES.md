@@ -45,6 +45,8 @@ primary: false
 
 | File | Tests |
 | --- | --- |
+| `test/analytics/data-layer.test.mjs` | 13 |
+| `test/analytics/xdm-web-sdk.test.mjs` | 12 |
 | `test/cards/cards-data.test.mjs` | 23 |
 | `test/conf-med-cont/conf-med-cont-data.test.mjs` | 11 |
 | `test/conversation-canvas/canvas-journey.test.mjs` | 37 |
@@ -61,6 +63,7 @@ primary: false
 | `test/modules/module-graph.test.mjs` | 4 |
 | `test/motion/motion.test.mjs` | 15 |
 | `test/privacy/privacy.test.mjs` | 7 |
+| `test/seo/structured-data.test.mjs` | 7 |
 | `test/separator/separator-config.test.mjs` | 21 |
 | `test/site/index-root.test.mjs` | 23 |
 | `test/site/keywords.test.mjs` | 7 |

@@ -1116,6 +1116,42 @@
   "date": "22 November 2026"
  },
  {
+  "id": "KB-D-074",
+  "title": "Data layer and Web SDK readiness",
+  "role": "All",
+  "subject": "decision",
+  "sourceFiles": [
+   "docs/handover/knowledge-base/decision-log.md"
+  ],
+  "relatedComponents": [],
+  "relatedPages": [],
+  "status": "Approved (product owner, 22 November 2026)",
+  "lastValidatedDate": "2026-11-22",
+  "version": "1.0",
+  "owner": "Documentation Owner (proposed)",
+  "confidence": "High",
+  "openQuestions": [],
+  "date": "22 November 2026"
+ },
+ {
+  "id": "KB-D-075",
+  "title": "Accessibility standard",
+  "role": "All",
+  "subject": "decision",
+  "sourceFiles": [
+   "docs/handover/knowledge-base/decision-log.md"
+  ],
+  "relatedComponents": [],
+  "relatedPages": [],
+  "status": "Approved (product owner, 22 November 2026)",
+  "lastValidatedDate": "2026-11-22",
+  "version": "1.0",
+  "owner": "Documentation Owner (proposed)",
+  "confidence": "High",
+  "openQuestions": [],
+  "date": "22 November 2026"
+ },
+ {
   "id": "KB-D-058",
   "title": "List, List Item",
   "role": "All",

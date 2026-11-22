@@ -50,7 +50,7 @@ primary: true
 | Blocks | 34 | blocks/ |
 | Components | 76 | component-definition.json |
 | Model fields | 1140 | component-models.json |
-| Unit tests | 318 in 25 files | test/ |
+| Unit tests | 350 in 28 files | test/ |
 | Design tokens | 409 | styles/*.css |
 | Locales | 13 | utils/site.js |
 | Review roots | 3 | utils/site.js REVIEW_ROOTS |

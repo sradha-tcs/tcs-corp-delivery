@@ -429,6 +429,7 @@ Evidence to collect: page URL (preview / live), viewport width, the block's `.pl
 | Handover 2.34 | Theme contract: List / Cards image cards light on dark backgrounds | docs/handover revision history | 20 October 2026 |
 | Not recorded | Heading type H1 (Cards only, its own `titleType` field; the List keeps H2 to H6): 3rem (48px) desktop, 2.5rem (40px) tablet, 1.75rem (28px) mobile, `blocks/cards/cards.css`; the shared header fields split into `headerTitle`, `headerType`, `headerDetails` (`models/_card-list.json`) | Branch feature/cards-heading-h1 | 20 November 2026 |
 | Not recorded | Card CTA 1 and CTA 2 (Link, Title, Style, Open in a new tab, as the Teaser's Link) and Title size (96px, 48px, H1 to H6); panels with CTA buttons show the Label, description and buttons at the bottom (fixed CTA fields instead of a multifield, KB-D-015) | Branch feature/card-link-ctas | 20 November 2026 |
+| — | Call-to-action links keep the new-tab hint in their accessible name | Quality review (KB-D-074, KB-D-075) | 22 November 2026 |
 
 ## Reference pages
 

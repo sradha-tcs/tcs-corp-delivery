@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/modal/README.md","blocks/modal/_modal.json","blocks/modal/modal.css","blocks/modal/modal.js"]
 relatedComponents: ["modal"]
 relatedPages: ["/design-block-master/en/block-library/modal","/design-block-master/en/block-library/modal/auto-linked-modal","/design-block-master/en/block-library/modal/fragments","/design-block-master/en/block-library/modal/fragments/contact-form","/design-block-master/en/block-library/modal/fragments/privacy-notice","/design-block-master/en/block-library/modal/fragments/recognition","/design-block-master/en/block-library/modal/fragments/terms","/design-block-master/en/block-library/modal/modal-block","/design-block-master/en/block-library/modal/modal-long-content","/design-block-master/en/block-library/modal/modal-with-a-form"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/modal/README.md, blocks/modal/_modal.json, blocks/modal/modal.css, blocks/modal/modal.js |
 | Related documents | [Variations](./MODAL-VARIATIONS.md), [Test coverage](./MODAL-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/modal/MODAL-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/modal, /content/tcs-corp/design-block-master/en/block-library/modal/auto-linked-modal, /content/tcs-corp/design-block-master/en/block-library/modal/fragments |
@@ -156,8 +156,8 @@ blocks/modal/
 | [`scripts/scripts.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/scripts.js) | Page decoration (moveInstrumentation and shared page helpers) | `modal.js`: { moveInstrumentation } |
 | [`decorators/button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/button-decorator.js) | `decorateButton` (option `newTabHint`: a link opening a new tab says so), `createButton`, `setButtonDisabled`, `setButtonAlignment`, `removeButtonDecoration` | `modal.js`: { decorateButton } |
 | [`decorators/icon-button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/icon-button-decorator.js) | `createIconButton` | `modal.js`: { createIconButton } |
-| [`decorators/data-layer-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/data-layer-decorator.js) | `trackPage`, `trackBlocks`, `trackInteractions`, `componentIdOf` (Adobe Client Data Layer for every block, Core Components schema, read by Adobe Tags / Web SDK; see "Data layer" below) | `modal.js`: { componentIdOf } |
-| [`utils/analytics.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/analytics.js) | `pushToDataLayer`, `pushComponents`, `pushComponentEvent` (Adobe Client Data Layer, Core Components schema; never throws) | `modal.js`: { pushComponentEvent } |
+| [`decorators/data-layer-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/data-layer-decorator.js) | `trackPage`, `trackBlocks`, `trackInteractions`, `componentIdOf` (Adobe Client Data Layer for every block, Core Components schema, read by Adobe Tags / Web SDK; see "Data layer" below); `getComponentContext`; events page | `modal.js`: { componentIdOf } |
+| [`utils/analytics.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/analytics.js) | `pushToDataLayer`, `pushComponents`, `pushComponentEvent` (Adobe Client Data Layer, Core Components schema; never throws); since KB-D-074 `pushDataLayerEvent`, `createDataLayerEvent`, `generateEventId`, `sanitizeDataLaye | `modal.js`: { pushComponentEvent } |
 | [`utils/environment.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/environment.js) | `prefersReducedMotion`, `scrollBehavior`, `isEditing`, `isInEditor`, `isAuthor` (the page is rendered by AEM author, which has no query index) | `modal.js`: { isEditing } |
 | [`utils/ids.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/ids.js) | `nextInstance`, `uniqueId`, `createIdFactory` (unique ids per block instance), `availableId` (an authored id kept, suffixed -2, -3, ... only when taken) | `modal.js`: { uniqueId } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `modal.js`: { getPlaceholders } |
@@ -405,4 +405,4 @@ Evidence to collect: host page URL, Modal Content value, network status of the m
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

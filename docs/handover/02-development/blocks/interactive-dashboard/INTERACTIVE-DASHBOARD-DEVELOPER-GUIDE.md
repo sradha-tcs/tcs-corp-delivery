@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/interactive-dashboard/README.md","blocks/interactive-dashboard/_interactive-dashboard.json","blocks/interactive-dashboard/interactive-dashboard.css","blocks/interactive-dashboard/interactive-dashboard.js"]
 relatedComponents: ["interactive-dashboard"]
 relatedPages: ["/design-block-master/en/block-library/interactive-dashboard","/design-block-master/en/block-library/interactive-dashboard/interactive-dashboard"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/interactive-dashboard/README.md, blocks/interactive-dashboard/_interactive-dashboard.json, blocks/interactive-dashboard/interactive-dashboard.css, blocks/interactive-dashboard/interactive-dashboard.js |
 | Related documents | [Variations](./INTERACTIVE-DASHBOARD-VARIATIONS.md), [Test coverage](./INTERACTIVE-DASHBOARD-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/interactive-dashboard/INTERACTIVE-DASHBOARD-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/interactive-dashboard, /content/tcs-corp/design-block-master/en/block-library/interactive-dashboard/interactive-dashboard |
@@ -196,7 +196,7 @@ empty (the block options decorator sets the id from an `anchor-…` class).
 **Author responsibilities:** don't reference the dashboard in page content ("see the dashboard
 below").
 
-**Developer responsibilities:** a future implementation must meet WCAG 2.1 AA (text alternatives
+**Developer responsibilities:** a future implementation must meet WCAG 2.2 AA (text alternatives
 for charts, keyboard operation, no colour-only encoding) and take its UI text from placeholders.
 
 The block handles no keys.
@@ -342,4 +342,4 @@ Evidence to collect: page URL and the block's markup (no secrets involved).
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

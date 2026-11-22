@@ -74,7 +74,7 @@ primary: true
 | Purpose | A client testimonial with author, image and stats |
 | Variations (summary) | BG Color, show / hide options |
 | Children | testimonial-stat (Stat) |
-| Code size | 364 lines of JS and CSS |
+| Code size | 369 lines of JS and CSS |
 
 ## Overview
 
@@ -164,7 +164,7 @@ blocks/testimonial/
 
 | Decorator/Utility | Purpose | Execution or dependency point |
 | ----------------- | ------- | ----------------------------- |
-| [`decorators/a11y-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/a11y-decorator.js) | `hideVisually`, `createHiddenText` (with `.visually-hidden` in `styles/styles.css`) | `testimonial.js`: { hideVisually } |
+| [`decorators/a11y-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/a11y-decorator.js) | `hideVisually`, `createHiddenText` (with `.visually-hidden` in `styles/styles.css`); `addSkipLink` (the "Skip to main content" link, WCAG 2.4.1) | `testimonial.js`: { hideVisually } |
 | [`decorators/content-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/content-decorator.js) | `fromCell` (property content into an element, keeping editor instrumentation) | `testimonial.js`: { fromCell } |
 | [`decorators/editor-item-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/editor-item-decorator.js) | `buildEditorItems`, `editorItemHint` (in Universal Editor, an item the block doesn't render yet, e.g. a CTA just added, as a dashed placeholder the author can select; styles in `styles/lazy-styles.css`; the hint loaded o | `testimonial.js`: { editorItemHint } |
 | [`decorators/heading-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/heading-decorator.js) | `buildHeading` (Title + Title Type), `HEADINGS` | `testimonial.js`: { buildHeading } |
@@ -331,6 +331,7 @@ Evidence to collect: the page URL, viewport, browser, a screenshot, and the bloc
 | Handover 2.10 | Stats authored as Stat items (`testimonial-stat`); the multifield is still read (F-87) | docs/handover revision history | 17 October 2026 |
 | Handover 2.18 | Content and Background animation on the Additional tab | docs/handover revision history | 18 October 2026 |
 | Handover 2.27 | Block ecosystem audit: the Quote / Testimonial Style field removed | docs/handover revision history | 19 October 2026 |
+| — | The quote is rendered as text between the two quote-mark images (it was parsed as HTML) | Quality review (KB-D-074, KB-D-075) | 22 November 2026 |
 
 ## Reference pages
 

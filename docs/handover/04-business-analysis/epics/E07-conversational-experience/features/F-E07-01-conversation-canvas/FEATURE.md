@@ -63,7 +63,7 @@ primary: true
 | SEO requirements | Semantic headings; metadata from the page |
 | Localization requirements | UI text from placeholders with an English fallback |
 | Security/privacy requirements | No personal data; announced new-tab links |
-| Dependencies | ./canvas-journey.js, ../../scripts/aem.js, ../../scripts/scripts.js, ../../decorators/responsive-image-decorator.js, ../../utils/metadata.js, ../../utils/query-index.js, ../../utils/site.js, ../../utils/taxonomy.js, ../../decorators/a11y-decorator.js, ../../decorators/button-decorator.js, ../../decorators/icon-button-decorator.js, ../../utils/buttons.js, ../../utils/properties.js, ../../utils/urls.js, ../../utils/ids.js, ../../utils/page-visibility.js, ../../utils/placeholders.js, ./canvas-controller.js, ../../decorators/skeleton-decorator.js, ../../decorators/editor-item-decorator.js |
+| Dependencies | ./canvas-journey.js, ../../scripts/aem.js, ../../scripts/scripts.js, ../../decorators/responsive-image-decorator.js, ../../utils/metadata.js, ../../utils/query-index.js, ../../utils/site.js, ../../utils/taxonomy.js, ../../decorators/a11y-decorator.js, ../../decorators/button-decorator.js, ../../decorators/icon-button-decorator.js, ../../utils/buttons.js, ../../utils/properties.js, ../../utils/urls.js, ../../utils/ids.js, ../../utils/environment.js, ../../utils/page-visibility.js, ../../utils/placeholders.js, ./canvas-controller.js, ../../decorators/skeleton-decorator.js, ../../decorators/editor-item-decorator.js |
 | Acceptance criteria | See the user stories |
 | Related user stories | US-F-E07-01-01, US-F-E07-01-02, US-F-E07-01-03 |
 | Related components | conversation-canvas |

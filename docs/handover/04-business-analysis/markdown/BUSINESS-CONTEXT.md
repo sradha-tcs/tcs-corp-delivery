@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["docs/handover/knowledge-base/project-overview.md"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | docs/handover/knowledge-base/project-overview.md |
 | Related documents | — |
 | Related AEM paths | — |
@@ -62,7 +62,7 @@ The handover states that its objectives are derived from the delivered implement
 | BO-4 | Consistent brand experience | TCS.com Design System (Figma) patterns implemented as blocks; design tokens in [styles/styles.css](https://github.com/sradha-tcs/tcs-corp/blob/main/styles/styles.css) |
 | BO-5 | Content discovery | List, Filter List, Cards and Conversation Canvas over the query index and taxonomy |
 | BO-6 | Measurable digital experience | Adobe Client Data Layer for every page and block ([decorators/data-layer-decorator.js](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/data-layer-decorator.js)) |
-| BO-7 | Inclusive experience | WCAG 2.1 AA target in blocks and shared decorators |
+| BO-7 | Inclusive experience | WCAG 2.2 AA target in blocks and shared decorators |
 | BO-8 | Low operational overhead | Serverless delivery, Git-based deployment through AEM Code Sync, no build pipeline |
 | BO-9 | Business KPIs | Not recorded |
 
@@ -75,7 +75,7 @@ Program goals (handover 1.3), with their state on `main` at commit 2d06316:
 | PG-3 | 13 locale sites with their own references, error pages, sheets and data | Implemented in code and `paths.json`; content status per locale not recorded |
 | PG-4 | Templates for recurring page types | Home, Article, Blog, Press Release ([templates/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/templates/README.md)) |
 | PG-5 | Analytics readiness | Data layer implemented; Adobe Tags, Web SDK, Analytics, CJA, Target and AJO not configured |
-| PG-6 | Accessibility (WCAG 2.1 AA) | Implemented in blocks and decorators; a formal third-party audit is not recorded |
+| PG-6 | Accessibility (WCAG 2.2 AA) | Implemented in blocks and decorators; a formal third-party audit is not recorded |
 | PG-7 | Performance (Lighthouse / PageSpeed 100) | Handover revision 2.36 records Lighthouse 99–100 mobile and 100 desktop on the measured pages; no PageSpeed check runs in CI |
 | PG-8 | Handover to the run organisation (AMS) | The handover document; AMS acceptance not recorded |
 
@@ -117,7 +117,7 @@ No multi-brand or sub-brand mechanism exists in the code: one brand, one design 
 
 ## Scope
 
-**In scope (implemented on `main`).** 13 locale sites and the language master review; 30 block folders ([blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md): 28 Active, Columns Compatibility-only, Interactive Dashboard Experimental); default content through AEM's built-in Text, Title and Image (the built-in Button is "Button (basic)", no longer offered); three section containers (Columns Container, Tabs Container, Gen Carousel); four templates; the Additional tab, animations and skeletons; the data layer; placeholders, metadata, taxonomy, redirects and data sheets per locale; SEO head mapping ([decorators/seo-decorator.js](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/seo-decorator.js)); the 404 page with inherited error pages ([404.html](https://github.com/sradha-tcs/tcs-corp/blob/main/404.html)); WCAG 2.1 AA practices.
+**In scope (implemented on `main`).** 13 locale sites and the language master review; 30 block folders ([blocks/README.md](https://github.com/sradha-tcs/tcs-corp/blob/main/blocks/README.md): 28 Active, Columns Compatibility-only, Interactive Dashboard Experimental); default content through AEM's built-in Text, Title and Image (the built-in Button is "Button (basic)", no longer offered); three section containers (Columns Container, Tabs Container, Gen Carousel); four templates; the Additional tab, animations and skeletons; the data layer; placeholders, metadata, taxonomy, redirects and data sheets per locale; SEO head mapping ([decorators/seo-decorator.js](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/seo-decorator.js)); the 404 page with inherited error pages ([404.html](https://github.com/sradha-tcs/tcs-corp/blob/main/404.html)); WCAG 2.2 AA practices.
 
 **Out of scope or not implemented** (handover 1.6.2 and 16.4, checked against the code):
 
@@ -150,4 +150,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

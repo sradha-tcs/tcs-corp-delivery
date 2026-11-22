@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-13"
-lastValidated: "2026-11-13"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/image-collage/README.md","blocks/image-collage/_image-collage.json","blocks/image-collage/image-collage.css","blocks/image-collage/image-collage.js"]
 relatedComponents: ["image-collage","image-collage-item"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 13 November 2026 |
-| Last validated | 2026-11-13 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/image-collage/README.md, blocks/image-collage/_image-collage.json, blocks/image-collage/image-collage.css, blocks/image-collage/image-collage.js |
 | Related documents | [Variations](./IMAGE-COLLAGE-VARIATIONS.md), [Test coverage](./IMAGE-COLLAGE-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/image-collage/IMAGE-COLLAGE-AUTHORING-GUIDE.md) |
 | Related AEM paths | — |
@@ -175,7 +175,7 @@ blocks/image-collage/
 | ----------------- | ------- | ----------------------------- |
 | [`scripts/aem.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/aem.js) | Edge Delivery core library (block loading, CSS, metadata, optimized pictures) | `image-collage.js`: { toClassName } |
 | [`scripts/scripts.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/scripts/scripts.js) | Page decoration (moveInstrumentation and shared page helpers) | `image-collage.js`: { moveInstrumentation } |
-| [`decorators/a11y-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/a11y-decorator.js) | `hideVisually`, `createHiddenText` (with `.visually-hidden` in `styles/styles.css`) | `image-collage.js`: { hideVisually } |
+| [`decorators/a11y-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/a11y-decorator.js) | `hideVisually`, `createHiddenText` (with `.visually-hidden` in `styles/styles.css`); `addSkipLink` (the "Skip to main content" link, WCAG 2.4.1) | `image-collage.js`: { hideVisually } |
 | [`decorators/button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/button-decorator.js) | `decorateButton` (option `newTabHint`: a link opening a new tab says so), `createButton`, `setButtonDisabled`, `setButtonAlignment`, `removeButtonDecoration` | `image-collage.js`: { decorateButton } |
 | [`decorators/content-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/content-decorator.js) | `fromCell` (property content into an element, keeping editor instrumentation) | `image-collage.js`: { fromCell } |
 | [`decorators/editor-item-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/editor-item-decorator.js) | `buildEditorItems`, `editorItemHint` (in Universal Editor, an item the block doesn't render yet, e.g. a CTA just added, as a dashed placeholder the author can select; styles in `styles/lazy-styles.css`; the hint loaded o | `image-collage.js`: { buildEditorItems, editorItemHint, } |
@@ -333,4 +333,4 @@ Authored content only. No external HTML is injected, no personal data is read or
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 13 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -8,8 +8,8 @@ owner: "Documentation Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -179,7 +179,7 @@ Check the result at desktop, tablet and mobile widths (for example 1440, 700 and
 5. **Keep generated files generated.** Run `build:json`, `build:modules`, `build:docs` and `build:paths` when their inputs change and commit the output; never hand-edit generated sections.
 6. **Lint and test.** Run `npm run lint` and `npm test` before every commit and report the real results (Passed, Failed, Blocked); CI runs lint only.
 7. **Never fabricate.** No invented tests, results, measurements, fields, events, integrations, owners, dates or URLs. Unknown facts are "Not recorded"; missing inputs are `Blocked: <what is needed>`.
-8. **Accessibility first.** WCAG 2.1 AA: `<button>` for actions with `aria-expanded` / `aria-controls`, Escape closes popups and returns focus, pause / play for moving content, `announceNewTab` for new-tab links, form errors next to their field with `aria-describedby`, heading hierarchy, alt text.
+8. **Accessibility first.** WCAG 2.2 AA: `<button>` for actions with `aria-expanded` / `aria-controls`, Escape closes popups and returns focus, pause / play for moving content, `announceNewTab` for new-tab links, form errors next to their field with `aria-describedby`, heading hierarchy, alt text.
 9. **Performance by default.** Respect the three loading phases (eager, lazy, delayed), add no runtime dependency or framework, no layout reads while decorating, optimized images only, and keep the Lighthouse / PageSpeed target of 100.
 10. **Localizable and themeable.** UI text from placeholders with an English fallback; semantic tokens; rem units; locale-aware code through [utils/site.js](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/site.js).
 11. **Analytics and personalization only through decisions.** Reuse the data layer; no Tags, Web SDK, Target, AJO or consent code without an Approved entry in [decision-log.md](../../01-architecture/markdown/ARCHITECTURE-DECISIONS.md).
@@ -242,4 +242,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

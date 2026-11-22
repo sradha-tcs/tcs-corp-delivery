@@ -8,8 +8,8 @@ owner: "Content Lead / AEM Authoring Lead"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: []
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | — |
 | Related documents | — |
 | Related AEM paths | — |
@@ -49,7 +49,7 @@ primary: true
 
 ## Accessibility responsibilities
 
-The code implements WCAG 2.1 AA behaviour ([AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md#blocks), "Accessibility"); authors are responsible for the content:
+The code implements WCAG 2.2 AA behaviour ([AGENTS.md](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md#blocks), "Accessibility"); authors are responsible for the content:
 
 - One `h1` per page (Page Header, a Hero with H1 or a Title h1) and heading levels in order; don't choose a level for its size.
 - Alt text for every informative image and every Lottie / file reference; empty only for decorative images.
@@ -107,4 +107,4 @@ The code implements WCAG 2.1 AA behaviour ([AGENTS.md](https://github.com/sradha
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

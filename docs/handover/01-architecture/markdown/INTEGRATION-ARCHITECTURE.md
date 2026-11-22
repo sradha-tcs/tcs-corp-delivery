@@ -8,8 +8,8 @@ owner: "Solution Architect"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-15"
-lastValidated: "2026-11-15"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["docs/handover/knowledge-base/indexing-and-search.md","docs/handover/knowledge-base/personalization.md","docs/handover/knowledge-base/data-layer-and-analytics.md","helix-query.yaml"]
 relatedComponents: []
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 15 November 2026 |
-| Last validated | 15 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | docs/handover/knowledge-base/indexing-and-search.md, docs/handover/knowledge-base/personalization.md, docs/handover/knowledge-base/data-layer-and-analytics.md, helix-query.yaml |
 | Related documents | — |
 | Related AEM paths | — |
@@ -327,7 +327,7 @@ Requirements recorded for a future design; none is implemented, and the design i
 | Caching | Edge Delivery serves the same cached default content to every visitor; the design must define where variants are applied (browser or edge) and how they interact with the cache (cache keys) | Audit section 8 (cache-key tests blocked) |
 | Flicker and performance | Personalizing above-the-fold content conflicts with the eager LCP phase; any pre-hiding needs a performance review; keep the Core Web Vitals targets | Handover 2.9.8 and 11.7.7 |
 | Security | Offer content must respect the CSP (`strict-dynamic`) and be inserted with DOM APIs | Handover 2.9.8 |
-| Accessibility | Personalized content must meet the same WCAG 2.1 AA rules as the block it replaces (headings, names, focus, placeholders for UI text) | [`AGENTS.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md) (Accessibility) |
+| Accessibility | Personalized content must meet the same WCAG 2.2 AA rules as the block it replaces (headings, names, focus, placeholders for UI text) | [`AGENTS.md`](https://github.com/sradha-tcs/tcs-corp/blob/main/AGENTS.md) (Accessibility) |
 | Analytics | Personalized impressions and decisions must be measurable through the existing data layer (no parallel tracking) | [Data layer and analytics](../../02-development/markdown/ANALYTICS-DATA-LAYER-GUIDE.md) |
 | Authoring and QA modes | Nothing personalized in Universal Editor edit mode; preview, live and a forced-variant QA mode need defining | Blocked (personalization design) |
 
@@ -364,4 +364,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 15 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

@@ -40,7 +40,7 @@ primary: true
 
 - [Unit Tests](#unit-tests)
 - [Lint](#lint)
-- [Test inventory (25 files, 318 test cases)](#test-inventory-25-files-318-test-cases)
+- [Test inventory (28 files, 350 test cases)](#test-inventory-28-files-350-test-cases)
 - [Result in this program](#result-in-this-program)
 - [Screenshots](#screenshots)
 - [Known limitations](#known-limitations)
@@ -83,10 +83,12 @@ Not unit tested (no DOM test environment): block decoration, the data layer deco
 
 Ignored: `*.min.js`, `dompurify.min.js`, `docs/audit/tools` ([.eslintignore](https://github.com/sradha-tcs/tcs-corp/blob/main/.eslintignore)). Not linted: `templates/*/*.css`. `npm run lint:fix` fixes what it can.
 
-## Test inventory (25 files, 318 test cases)
+## Test inventory (28 files, 350 test cases)
 
 | File | Suites | Tests |
 | --- | --- | --- |
+| `test/analytics/data-layer.test.mjs` | createDataLayerEvent; sanitizeDataLayerPayload; validateDataLayerEvent; duplicate dispatch; consent | 13 |
+| `test/analytics/xdm-web-sdk.test.mjs` | dataLayerState; toXdm; Web SDK configuration; sectionsOf | 12 |
 | `test/cards/cards-data.test.mjs` | card items; shared card list settings; content type labels and long dates; cards call to action; card CTA buttons and Title size | 23 |
 | `test/conf-med-cont/conf-med-cont-data.test.mjs` | findConfig; actionOf; regionColumns; regionGroups | 11 |
 | `test/conversation-canvas/canvas-journey.test.mjs` | roles from placement; the journey down the page; transitions; HIDDEN; page variations; the header Canvas at the bottom of the window; a row in place that holds focus (focused) | 37 |
@@ -103,6 +105,7 @@ Ignored: `*.min.js`, `dompurify.min.js`, `docs/audit/tools` ([.eslintignore](htt
 | `test/modules/module-graph.test.mjs` | module graph (npm run build:modules) | 4 |
 | `test/motion/motion.test.mjs` | content animation; background animation; motion speed and trigger; stagger; background colour; authoring fields | 15 |
 | `test/privacy/privacy.test.mjs` | redactSearchTerm; contactLinkKind | 7 |
+| `test/seo/structured-data.test.mjs` | articleSchema; safeDecode; isSafeUrl and telHref (utils/links.js); redactPersonalData | 7 |
 | `test/separator/separator-config.test.mjs` | defaults; component id; accessibility mode; variants and line settings; width and alignment; responsive; decorations; animation, print and analytics | 21 |
 | `test/site/index-root.test.mjs` | indexRoot; localeSheetPath; localePagePath; on AEM author; pageLink; the language master root page; getParentPages (inherited Navigation, Footer, 404 Page) | 23 |
 | `test/site/keywords.test.mjs` | keywordActionOf; keywordsOf; resolveKeywords | 7 |
@@ -115,8 +118,8 @@ Ignored: `*.min.js`, `dompurify.min.js`, `docs/audit/tools` ([.eslintignore](htt
 
 ## Result in this program
 
-- `npm run lint`: Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #264 (3996bfd)
-- `npm test`: 456 of 456 passed on main after PR #264 (3996bfd)
+- `npm run lint`: Passed: no errors (1 warning in blocks/tcs-header/tcs-header.js) on main after PR #265 (51885b3)
+- `npm test`: 488 of 488 passed on main after PR #265 (51885b3)
 
 ## Screenshots
 

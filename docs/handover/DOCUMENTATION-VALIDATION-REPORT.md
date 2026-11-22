@@ -58,7 +58,7 @@ primary: false
 | Required sections (contents, screenshots, limitations, open items, change history) | Passed | Yes | 0 documents miss a section |
 | Unique document IDs | Passed | Yes | 526 IDs |
 | Index files without metadata (README indexes) | Passed | No | 104 README / index files (navigation only) |
-| Internal links resolve | Passed | Yes | 12165 links (2106 external, not fetched); 0 broken |
+| Internal links resolve | Passed | Yes | 12171 links (2110 external, not fetched); 0 broken |
 | Relative images resolve | Passed | Yes | 0 missing |
 | Heading anchors of internal links exist | Passed | No | 0 missing anchors |
 | No orphan screenshots | Passed | Yes | 1397 images; 0 not embedded |

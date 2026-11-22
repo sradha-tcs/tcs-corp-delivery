@@ -482,6 +482,7 @@ Evidence to collect: the page URL, the block's settings (screenshots of the dial
 | Handover 2.47 | Image card hover (Figma): the whole linked card fades the title to brand blue with an underline (300ms ease-out), no layout change | docs/handover revision history | 28 October 2026 |
 | Not recorded | Header CTA with CTA style Text link (e.g. See all, `.list-cta-slot .button.tertiary`): 0.875rem (`--label-font-size`, 14px) medium at every width (Figma "Carousel · 4 columns"); card links and the header's buttons unchanged | Branch fix/list-header-cta-type | 20 November 2026 |
 | Not recorded | Desktop / Tablet / Mobile display Carousel: Columns whole cards per view, previous / next on the image (brand blue, grey at the first and last card), shared with Cards | Branch feature/list-image-carousel | 20 November 2026 |
+| — | Call-to-action links keep the new-tab hint in their accessible name | Quality review (KB-D-074, KB-D-075) | 22 November 2026 |
 
 ## Reference pages
 

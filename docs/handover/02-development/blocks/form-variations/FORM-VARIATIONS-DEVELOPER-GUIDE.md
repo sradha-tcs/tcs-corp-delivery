@@ -74,7 +74,7 @@ primary: true
 | Purpose | Forms (contact, download, subscribe) built from field items |
 | Variations (summary) | Form variations and field items |
 | Children | field-text, field-select, field-textarea, field-checkbox, contact-card, field-submit |
-| Code size | 1429 lines of JS and CSS |
+| Code size | 1470 lines of JS and CSS |
 
 ## Overview
 
@@ -278,7 +278,7 @@ blocks/form-variations/
 | [`decorators/heading-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/heading-decorator.js) | `buildHeading` (Title + Title Type), `HEADINGS` | `form-variations.js`: { buildHeading } |
 | [`decorators/image-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/image-decorator.js) | `pictureOf` (image with its alt text field) | `form-variations.js`: { pictureOf } |
 | [`utils/environment.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/environment.js) | `prefersReducedMotion`, `scrollBehavior`, `isEditing`, `isInEditor`, `isAuthor` (the page is rendered by AEM author, which has no query index) | `form-variations.js`: { isInEditor } |
-| [`utils/links.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/links.js) | `NEW_WINDOW`, `linkOf`, `linkPathsOf` (the paths of a page property, one or many), `readLinkItems` (CTA lists with Link Type and the items' other select values), `readLinkRows` (the same from link item rows, e.g. Hero CT | `form-variations.js`: { linkOf } |
+| [`utils/links.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/links.js) | `NEW_WINDOW`, `linkOf`, `linkPathsOf` (the paths of a page property, one or many), `readLinkItems` (CTA lists with Link Type and the items' other select values), `readLinkRows` (the same from link item rows, e.g. Hero CT | `form-variations.js`: { linkOf, telHref } |
 | [`utils/properties.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/properties.js) | `readProperties`, `textOf`, `isOn`, `isOnByDefault` (a toggle that defaults to on), `optionOf`, `normalizeKey`, `textSource` (key-value block properties) | `form-variations.js`: { textOf } |
 | [`utils/ids.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/ids.js) | `nextInstance`, `uniqueId`, `createIdFactory` (unique ids per block instance), `availableId` (an authored id kept, suffixed -2, -3, ... only when taken) | `form-variations.js`: { createIdFactory, uniqueId } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `form-variations.js`: { fillPlaceholder, getPlaceholders } |
@@ -468,6 +468,7 @@ Evidence to collect (without secrets): page URL on aem.page, the item rows of `{
 | Handover 2.18 | Background animation offered on Form Variations (Additional tab) | docs/handover revision history | 18 October 2026 |
 | Handover 2.27 | Block audit: forms were empty on the published site (item node name and classes in the first cell, empty row per dialog tab); corrected | docs/handover revision history | 19 October 2026 |
 | Handover 2.29 | Re-audit: field keys in their own `fieldName` field, double-submit guard, integration outcomes (`detail.respondWith`) | docs/handover revision history | 20 October 2026 |
+| — | Labels visually hidden instead of display: none; autocomplete restored (1.3.5); the score unit select is named (formUnit); decorative contact icons; Back from the placeholder back; tel: links from telHref; outcome announced with form:result (cmp:formSuccess / cmp:formError) | Quality review (KB-D-074, KB-D-075) | 22 November 2026 |
 
 ## Reference pages
 

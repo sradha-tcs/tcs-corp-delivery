@@ -8,8 +8,8 @@ owner: "Technical Lead / Block Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/anchor-list/README.md","blocks/anchor-list/_anchor-list.json","blocks/anchor-list/anchor-list.css","blocks/anchor-list/anchor-list.js"]
 relatedComponents: ["anchor-list","anchor-list-item"]
 relatedPages: ["/design-block-master/en/block-library/anchor-list","/design-block-master/en/block-library/anchor-list/anchor-list","/design-block-master/en/block-library/anchor-list/anchor-list-sticky","/design-block-master/en/curated-design-pages/case-study","/design-block-master/en/curated-design-pages/story"]
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 2026-11-08 (model, files, imports from the code; reference pages from the live site) |
+| Last updated | 22 November 2026 |
+| Last validated | 2026-11-22 (model, files, imports from the code; reference pages from the live site) |
 | Source files | blocks/anchor-list/README.md, blocks/anchor-list/_anchor-list.json, blocks/anchor-list/anchor-list.css, blocks/anchor-list/anchor-list.js |
 | Related documents | [Variations](./ANCHOR-LIST-VARIATIONS.md), [Test coverage](./ANCHOR-LIST-TEST-COVERAGE.md), [Authoring guide](../../../03-authoring/components/anchor-list/ANCHOR-LIST-AUTHORING-GUIDE.md) |
 | Related AEM paths | /content/tcs-corp/design-block-master/en/block-library/anchor-list, /content/tcs-corp/design-block-master/en/block-library/anchor-list/anchor-list, /content/tcs-corp/design-block-master/en/block-library/anchor-list/anchor-list-sticky |
@@ -74,7 +74,7 @@ primary: true
 | Purpose | In-page navigation to section anchors, optionally sticky |
 | Variations (summary) | Sticky or static; Anchor Link items |
 | Children | anchor-list-item (Anchor Link) |
-| Code size | 294 lines of JS and CSS |
+| Code size | 295 lines of JS and CSS |
 
 ## Overview
 
@@ -137,6 +137,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | `../../utils/multifield.js` |
 | `../../utils/properties.js` |
 | `../../utils/placeholders.js` |
+| `../../utils/urls.js` |
 
 ## For Developers
 
@@ -160,6 +161,7 @@ blocks/anchor-list/
 | [`utils/multifield.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/multifield.js) | `readMultifieldItems` (composite multifield items, authored before item children) | `anchor-list.js`: { readMultifieldItems } |
 | [`utils/properties.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/properties.js) | `readProperties`, `textOf`, `isOn`, `isOnByDefault` (a toggle that defaults to on), `optionOf`, `normalizeKey`, `textSource` (key-value block properties) | `anchor-list.js`: { isOn, readProperties } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `anchor-list.js`: { getPlaceholders } |
+| [`utils/urls.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/urls.js) | `toSitePath` (AEM content paths to published paths, e.g. `/content/tcs-corp/de/de-de/x.html` → `/de-de/x`); `safeDecode` (decodeURIComponent that never throws) | `anchor-list.js`: { safeDecode } |
 
 <!-- END GENERATED: files -->
 
@@ -334,6 +336,7 @@ Evidence to collect (no secrets): page URL with the hash, viewport, a screenshot
 | Handover 2.10 | Anchor List links are Anchor Link items added with Add, instead of the composite multifield | docs/handover revision history | 17 October 2026 |
 | Handover 2.13 | The sticky Anchor List no longer pins while its section is hidden (layout shift 0.35 → 0.006 on article pages with a chapter list) | docs/handover revision history | 17 October 2026 |
 | Handover 2.17 | Item children in the Anchor List field specification | docs/handover revision history | 18 October 2026 |
+| — | A malformed URL fragment no longer breaks the block (safeDecode) | Quality review (KB-D-074, KB-D-075) | 22 November 2026 |
 
 ## Reference pages
 
@@ -419,4 +422,4 @@ Evidence to collect (no secrets): page URL with the hash, viewport, a screenshot
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

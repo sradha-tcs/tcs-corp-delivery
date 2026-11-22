@@ -8,8 +8,8 @@ owner: "Business Analyst / Product Owner"
 approver: "Product Owner (to be confirmed)"
 version: "1.0"
 status: "Draft for review"
-lastUpdated: "2026-11-08"
-lastValidated: "2026-11-08"
+lastUpdated: "2026-11-22"
+lastValidated: "2026-11-22"
 sourceFiles: ["blocks/tabs"]
 relatedComponents: ["tabs"]
 relatedPages: []
@@ -30,8 +30,8 @@ primary: true
 | Approver | Product Owner (to be confirmed) |
 | Version | 1.0 |
 | Status | Draft for review |
-| Last updated | 8 November 2026 |
-| Last validated | 8 November 2026 |
+| Last updated | 22 November 2026 |
+| Last validated | 22 November 2026 |
 | Source files | blocks/tabs |
 | Related documents | — |
 | Related AEM paths | — |
@@ -63,7 +63,7 @@ primary: true
 | SEO requirements | Semantic headings; metadata from the page |
 | Localization requirements | UI text from placeholders with an English fallback |
 | Security/privacy requirements | No personal data; announced new-tab links |
-| Dependencies | ../../decorators/data-layer-decorator.js, ../../utils/analytics.js, ../../scripts/aem.js, ../../scripts/scripts.js, ../../utils/buttons.js, ../../utils/cells.js, ../../utils/environment.js, ../../utils/ids.js, ../../utils/placeholders.js, ../../utils/properties.js, ../fragment/fragment.js, ../tab/tab.js |
+| Dependencies | ../../decorators/data-layer-decorator.js, ../../utils/analytics.js, ../../scripts/aem.js, ../../scripts/scripts.js, ../../utils/buttons.js, ../../utils/cells.js, ../../utils/environment.js, ../../utils/ids.js, ../../utils/placeholders.js, ../../utils/properties.js, ../fragment/fragment.js, ../tab/tab.js, ../../utils/urls.js |
 | Acceptance criteria | See the user stories |
 | Related user stories | US-F-E03-11-01, US-F-E03-11-02, US-F-E03-11-03 |
 | Related components | tabs |
@@ -89,4 +89,4 @@ No screenshot belongs to this document (it describes code, configuration or proc
 
 | Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | 8 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |
+| 1.0 | 22 November 2026 | Delivery team (documentation program) | First version of the role-specific documentation (master documentation prompt), generated from the repository and the published reference pages |

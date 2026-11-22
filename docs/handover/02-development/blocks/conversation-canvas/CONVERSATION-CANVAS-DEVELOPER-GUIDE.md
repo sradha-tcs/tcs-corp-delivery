@@ -74,7 +74,7 @@ primary: true
 | Purpose | Search prompt with quick actions; one floating journey across header, page and footer |
 | Variations (summary) | Primary (sticky dock), Secondary, journey options, action styles |
 | Children | conversation-canvas-button (Conversation Canvas Button) |
-| Code size | 3385 lines of JS and CSS |
+| Code size | 3392 lines of JS and CSS |
 
 ## Overview
 
@@ -175,6 +175,7 @@ The Additional tab fields (anchor, hide, padding, margin, animation) are common 
 | `../../utils/properties.js` |
 | `../../utils/urls.js` |
 | `../../utils/ids.js` |
+| `../../utils/environment.js` |
 | `../../utils/page-visibility.js` |
 | `../../utils/placeholders.js` |
 | `./canvas-controller.js` |
@@ -204,13 +205,14 @@ blocks/conversation-canvas/
 | [`utils/query-index.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/query-index.js) | `getPages` (the current locale's pages from `/query-index.json`, or a review root's own pages from its own index, `{root}/query-index.json`, `indexUrlOf`; requests of 1,000 rows, in parallel after the first, `remainingOf | `conversation-canvas.js`: { getPages } |
 | [`utils/site.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/site.js) | `LOCALES`, `DEFAULT_LOCALE`, `getLocale`, `indexRoot`, `REVIEW_ROOTS` and `REVIEW_SHEETS` (the three review roots, KB-D-068: /language-master/en for testing, /language-masters/en the language master, /design-block-master | `conversation-canvas.js`: { getLocale } |
 | [`utils/taxonomy.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/taxonomy.js) | `loadTaxonomy`, `resolveTags` (tag labels from the locale's taxonomy) | `conversation-canvas.js`: { resolveTags } |
-| [`decorators/a11y-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/a11y-decorator.js) | `hideVisually`, `createHiddenText` (with `.visually-hidden` in `styles/styles.css`) | `conversation-canvas.js`: { hideVisually } |
+| [`decorators/a11y-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/a11y-decorator.js) | `hideVisually`, `createHiddenText` (with `.visually-hidden` in `styles/styles.css`); `addSkipLink` (the "Skip to main content" link, WCAG 2.4.1) | `conversation-canvas.js`: { hideVisually } |
 | [`decorators/button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/button-decorator.js) | `decorateButton` (option `newTabHint`: a link opening a new tab says so), `createButton`, `setButtonDisabled`, `setButtonAlignment`, `removeButtonDecoration` | `conversation-canvas.js`: { createButton } |
 | [`decorators/icon-button-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/icon-button-decorator.js) | `createIconButton` | `conversation-canvas.js`: { createIconButton } |
 | [`utils/buttons.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/buttons.js) | `BUTTON_VIEWS`, `BUTTON_TYPES`, `BUTTON_ALIGNMENTS`, `pick`, `readButtonOptions` | `conversation-canvas.js`: { BUTTON_ALIGNMENTS, BUTTON_TYPES, BUTTON_VIEWS, readButtonOptions, } |
 | [`utils/properties.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/properties.js) | `readProperties`, `textOf`, `isOn`, `isOnByDefault` (a toggle that defaults to on), `optionOf`, `normalizeKey`, `textSource` (key-value block properties) | `conversation-canvas.js`: { normalizeKey as normalize, textOf } |
-| [`utils/urls.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/urls.js) | `toSitePath` (AEM content paths to published paths, e.g. `/content/tcs-corp/de/de-de/x.html` → `/de-de/x`) | `conversation-canvas.js`: { toSitePath } |
+| [`utils/urls.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/urls.js) | `toSitePath` (AEM content paths to published paths, e.g. `/content/tcs-corp/de/de-de/x.html` → `/de-de/x`); `safeDecode` (decodeURIComponent that never throws) | `conversation-canvas.js`: { toSitePath } |
 | [`utils/ids.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/ids.js) | `nextInstance`, `uniqueId`, `createIdFactory` (unique ids per block instance), `availableId` (an authored id kept, suffixed -2, -3, ... only when taken) | `conversation-canvas.js`: { uniqueId } |
+| [`utils/environment.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/environment.js) | `prefersReducedMotion`, `scrollBehavior`, `isEditing`, `isInEditor`, `isAuthor` (the page is rendered by AEM author, which has no query index) | `conversation-canvas.js`: { prefersReducedMotion } |
 | [`utils/page-visibility.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/page-visibility.js) | `pageHides`, `hiddenParts`, `markHiddenParts`, `isOn`, `PAGE_PARTS` (the page properties Hide Header, Hide Footer and Hide Conversation Canvas, or the metadata sheet's `hide-header`, `hide-footer`, `hide-canvas` columns: | `conversation-canvas.js`: { pageHides } |
 | [`utils/placeholders.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/utils/placeholders.js) | `getPlaceholders`, `loadPlaceholders`, `fillPlaceholder` (UI text from the locale's placeholders, with English fallbacks) | `conversation-canvas.js`: { fillPlaceholder, getPlaceholders } |
 | [`decorators/skeleton-decorator.js`](https://github.com/sradha-tcs/tcs-corp/blob/main/decorators/skeleton-decorator.js) | `renderWhenLoaded` (a block from data that may take time: directly within 150ms, else after a skeleton so its section is shown; removed on success and failure), `skeletonWhile` (a skeleton in a part that fills in by itse | `conversation-canvas.js`: { bone, skeletonElement, skeletonWhile } |
@@ -469,6 +471,7 @@ Evidence to collect (without secrets): the page URL on aem.page, `document.docum
 | Not recorded | Site menu pills as Figma 1124:27046, arrows only for pages with child pages, grey fade, blue menu icon; the menu closes on scroll (from 1f40578); typing in the search field restored (1f40578's Escape handler moved the focus on every key) | fix/block-issues | 22 October 2026 |
 | Not recorded | Site menu: an arrow on every panel row again (Figma 1124:26250); closing resets it to the first level (a pinned third-level panel stayed open after a click outside and hid the search row) | fix/block-issues | 22 October 2026 |
 | KB-D-071 (Approved), PR #228 | Page property Hide Conversation Canvas: every Canvas of the page gets Hide block; README corrected: Hide block hides header and footer Canvases too. `canvas-controller.js`: a footer that isn't rendered (Hide Footer, or while the sections load) counts as no footer, so the floating row isn't lifted off the screen | branch feature/header-footer-canvas-toggle | 16 November 2026 |
+| — | Escape closes the section panel (the check was inverted: every other key closed it); the rotating prompt changes the placeholder only, not the field's label, and not for reduced motion or in a background tab; prompts from placeholders canvasPrompt1 to canvasPrompt5 | Quality review (KB-D-074, KB-D-075) | 22 November 2026 |
 
 ## Reference pages
 
