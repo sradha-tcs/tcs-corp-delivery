@@ -49,7 +49,7 @@ export function businessAnalysis(ctx) {
             ['Business rules', 'Block README: Content and Asset Guidelines'], ['Analytics events', 'Component shown / clicked (data layer)'], ['Accessibility acceptance criteria', 'Keyboard reachable, named controls, alt text, visible focus'],
             ['Responsive acceptance criteria', 'No horizontal overflow at 375, 768, 1024, 1440 px'], ['SEO acceptance criteria', 'Heading order kept'], ['Localization acceptance criteria', 'UI text from placeholders'],
             ['Security/privacy acceptance criteria', 'No personal data in the data layer'], ['Dependencies', f.source], ['Assumptions', 'Derived from the implementation'], ['Out of scope', 'Back-end integrations not implemented (Tags, forms back end)'],
-            ['Related code', f.b ? `blocks/${f.b.name}/` : f.source], ['Related block-library example', f.b ? `${LIVE}/design-block-master/en/block-library/${f.b.name}` : '—'], ['Related curated page', f.b ? (ctx.pagesUsing(f.b.name).slice(0, 3).join(', ') || '—') : '—'],
+            ['Related code', f.b ? `blocks/${f.b.name}/` : f.source], ['Related block-library example', f.b ? `${LIVE}/${f.b.name === 'conf-med-cont' ? 'language-master' : 'design-block-master'}/en/block-library/${f.b.name}` : '—'], ['Related curated page', f.b ? (ctx.pagesUsing(f.b.name).slice(0, 3).join(', ') || '—') : '—'],
             ['Related test cases', s.tc.map((t) => t.id).join(', ') || '—'], ['Definition of Ready / Done', 'See the BA package'],
           ])}\n\n## Gherkin acceptance criteria\n\n\`\`\`gherkin\nFeature: ${f.name}\n\n${gherkin || 'Scenario: to be written with the business'}\n\`\`\``,
         });

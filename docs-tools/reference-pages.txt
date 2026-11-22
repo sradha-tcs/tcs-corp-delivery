@@ -198,3 +198,5 @@
 /design-block-master/en/curated-design-pages/story
 /design-block-master/en/curated-design-pages/what-we-do
 /design-block-master/en/curated-design-pages/who-we-are
+/language-master/en/block-library/conf-med-cont
+/language-master/en/block-library/conf-med-cont/conf-med-cont-variations

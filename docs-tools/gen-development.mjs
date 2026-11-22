@@ -89,7 +89,10 @@ export function development(ctx) {
 
   // --- blocks
   const refPages = Object.keys(evidence).sort();
-  const libPagesOf = (b) => refPages.filter((p) => p === `/design-block-master/en/block-library/${b}` || p.startsWith(`/design-block-master/en/block-library/${b}/`));
+  // the block's pages in the block library of /design-block-master/en (KB-D-068), else of the testing root
+  // /language-master/en (blocks whose library pages were only installed there, e.g. conf-med-cont)
+  const libPagesIn = (root, b) => refPages.filter((p) => p === `${root}/block-library/${b}` || p.startsWith(`${root}/block-library/${b}/`));
+  const libPagesOf = (b) => { const dbm = libPagesIn('/design-block-master/en', b); return dbm.length ? dbm : libPagesIn('/language-master/en', b); };
   const pagesUsing = (b) => refPages.filter((p) => p.includes('/curated-design-pages') && (evidence[p].dom?.blocks || []).some((x) => x.name === b));
   const classesOnLibrary = (b) => new Set(refPages.flatMap((p) => (evidence[p].dom?.blocks || []).filter((x) => x.name === b).flatMap((x) => x.classes.split(/\s+/))));
   const invRows = []; const varRows = []; const depRows = []; const limitRows = [];
@@ -126,7 +129,7 @@ export function development(ctx) {
       ...common, id: `DEV-B-${b.name}`, title: `${meta.name || b.name} Block — Developer Guide`, topic: 'block', components: [...new Set([b.name, ...comps.map((c) => c.id)])], pages: [...lib, ...used],
       purpose: `How the ${meta.name || b.name} block is built: files, model, structure, behaviour, variations, tests and limitations`,
       scope: `blocks/${b.name}/ and its components ${comps.map((c) => c.id).join(', ') || '(none)'}`,
-      sources: b.files.map((f) => `blocks/${b.name}/${f}`), aem: lib.slice(0, 3).map((p) => p.replace('/design-block-master/en', ROOTS.design)),
+      sources: b.files.map((f) => `blocks/${b.name}/${f}`), aem: lib.slice(0, 3).map((p) => p.replace('/design-block-master/en', ROOTS.design).replace(/^\/language-master\/en/, ROOTS.test)),
       related: [['Variations', `${dir}/${upper(b.name)}-VARIATIONS.md`], ['Test coverage', `${dir}/${upper(b.name)}-TEST-COVERAGE.md`], ...(comps.length ? [['Authoring guide', `03-authoring/components/${b.name}/${upper(b.name)}-AUTHORING-GUIDE.md`]] : [])],
       body: [
         `## Summary\n\n${table(['Attribute', 'Value'], [['Block', meta.name || b.name], ['Folder', code(`blocks/${b.name}`)], ['Type', meta.type || '—'], ['Category', meta.category || '—'], ['Status', meta.status || '—'], ['Purpose', meta.purpose || '—'], ['Variations (summary)', meta.variations || '—'], ['Children', (meta.children || []).join(', ') || '—'], ['Code size', `${b.lines} lines of JS and CSS`]])}`,
