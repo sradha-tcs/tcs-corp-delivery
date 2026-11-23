@@ -1,0 +1,55 @@
+{
+ "shifts": [
+  {
+   "value": 0.001,
+   "t": 1660,
+   "sources": [
+    {
+     "node": "#text",
+     "prev": [
+      363.140625,
+      122.375
+     ],
+     "cur": [
+      362.140625,
+      122.375
+     ]
+    }
+   ]
+  },
+  {
+   "value": 0.103,
+   "t": 3934,
+   "sources": [
+    {
+     "node": "html > body.press-release.appear > main#main-content",
+     "prev": [
+      90,
+      604.453125
+     ],
+     "cur": [
+      0,
+      604.453125
+     ]
+    },
+    {
+     "node": "html > body.press-release.appear > footer.footer-wrapper",
+     "prev": [
+      698.453125,
+      80
+     ],
+     "cur": [
+      608.453125,
+      80
+     ]
+    }
+   ]
+  }
+ ],
+ "total": 0.104,
+ "navHeight": "5.625rem",
+ "headerHeight": "5.625rem",
+ "reserved": "5.625rem",
+ "headerBox": 90,
+ "overlay": "always"
+}

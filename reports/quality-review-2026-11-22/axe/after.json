@@ -1,0 +1,36 @@
+{
+ "https://feature-quality-audit--tcs-corp--sradha-tcs.aem.page/design-block-master/en/curated-design-pages/home @1440": [
+  {
+   "id": "color-contrast",
+   "impact": "serious",
+   "tags": [
+    "wcag2aa",
+    "wcag143"
+   ],
+   "count": 1,
+   "sample": [
+    ".theme-brand > .list-card-kicker > span"
+   ]
+  }
+ ],
+ "https://feature-quality-audit--tcs-corp--sradha-tcs.aem.page/design-block-master/en/curated-design-pages/home @375": [
+  {
+   "id": "color-contrast",
+   "impact": "serious",
+   "tags": [
+    "wcag2aa",
+    "wcag143"
+   ],
+   "count": 1,
+   "sample": [
+    ".theme-brand > .list-card-kicker > span"
+   ]
+  }
+ ],
+ "https://feature-quality-audit--tcs-corp--sradha-tcs.aem.page/design-block-master/en/block-library/templates/press-release-template @1440": [],
+ "https://feature-quality-audit--tcs-corp--sradha-tcs.aem.page/design-block-master/en/block-library/templates/press-release-template @375": [],
+ "https://feature-quality-audit--tcs-corp--sradha-tcs.aem.page/design-block-master/en/block-library/form-variations/form-variations @1440": [],
+ "https://feature-quality-audit--tcs-corp--sradha-tcs.aem.page/design-block-master/en/block-library/form-variations/form-variations @375": [],
+ "https://feature-quality-audit--tcs-corp--sradha-tcs.aem.page/design-block-master/en/block-library/tabs @1440": [],
+ "https://feature-quality-audit--tcs-corp--sradha-tcs.aem.page/design-block-master/en/block-library/tabs @375": []
+}

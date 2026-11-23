@@ -1,0 +1,44 @@
+{
+ "shifts": [
+  {
+   "value": 0.001,
+   "t": 291,
+   "sources": [
+    {
+     "node": "#text",
+     "prev": [
+      273.140625,
+      122.375
+     ],
+     "cur": [
+      272.140625,
+      122.375
+     ]
+    }
+   ]
+  },
+  {
+   "value": 0.004,
+   "t": 346,
+   "sources": [
+    {
+     "node": "div.conversation-canvas.action-pills > div.conversation-canvas-content > div.conversation-canvas-intro > h2.conversation-canvas-title",
+     "prev": [
+      685.84375,
+      107
+     ],
+     "cur": [
+      663.453125,
+      107
+     ]
+    }
+   ]
+  }
+ ],
+ "total": 0.005,
+ "navHeight": "5.625rem",
+ "headerHeight": "5.625rem",
+ "reserved": "5.625rem",
+ "headerBox": 90,
+ "overlay": "always"
+}

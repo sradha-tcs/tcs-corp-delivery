@@ -1,0 +1,34 @@
+{
+ "http://localhost:3000/design-block-master/en/curated-design-pages/home @1440": [
+  {
+   "id": "color-contrast",
+   "impact": "serious",
+   "tags": [
+    "wcag2aa",
+    "wcag143"
+   ],
+   "count": 1,
+   "sample": [
+    ".theme-brand > .list-card-kicker > span"
+   ]
+  }
+ ],
+ "http://localhost:3000/design-block-master/en/curated-design-pages/home @375": [
+  {
+   "id": "color-contrast",
+   "impact": "serious",
+   "tags": [
+    "wcag2aa",
+    "wcag143"
+   ],
+   "count": 1,
+   "sample": [
+    ".theme-brand > .list-card-kicker > span"
+   ]
+  }
+ ],
+ "http://localhost:3000/design-block-master/en/block-library/form-variations/form-variations @1440": [],
+ "http://localhost:3000/design-block-master/en/block-library/form-variations/form-variations @375": [],
+ "http://localhost:3000/design-block-master/en/block-library/testimonial/testimonial @1440": [],
+ "http://localhost:3000/design-block-master/en/block-library/testimonial/testimonial @375": []
+}
